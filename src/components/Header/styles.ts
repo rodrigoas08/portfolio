@@ -5,17 +5,24 @@ type LogoProps = {
 };
 
 export const Wrapper = styled.div`
-  display: flex;
-  height: 100px;
-  justify-content: space-between;
-  background-image: linear-gradient(to left, #3178c6, white);
-  padding: ${({ theme }) => theme.spacings.xxsmall};
-    ${({ theme }) => theme.spacings.small};
-`
+  ${({ theme }) => css`
+    display: flex;
+    height: 100px;
+    border-bottom: 3px solid;
+    justify-content: space-between;
+    padding: ${theme.spacings.small} ${theme.spacings.xxsmall};
+    background-image: linear-gradient(
+      120deg,
+      #a1c4fd 0%,
+      ${theme.colors.primary} 100%
+    );
+    border-image: linear-gradient(to left, ${theme.colors.secondary} 90%, white)
+      1;
+  `}
+`;
 
 export const Logo = styled.div<LogoProps>`
   ${({ photo }) => css`
-    box-sizing: border-box;
     background-image: url(${photo});
   `}
 `;

@@ -3,7 +3,14 @@ export default {
     radius: "0.4rem",
   },
   font: {
-    family: "'Nunito Sans', sans-serif",
+    family: {
+      nunito: "'Nunito Sans', sans-serif",
+      inter: "'Inter', sans-serif",
+      azonix: "'Azonix', sans-serif",
+      doheyon: "'Do Hyeon', sans-serif",
+      josefin: "'Josefin Sans', sans-serif",
+    },
+    italic: 'italic',
     normal: 400,
     bold: 600,
   },

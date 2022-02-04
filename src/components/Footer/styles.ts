@@ -15,6 +15,7 @@ export const Footer = styled.div`
       #a1c4fd 0%,
       ${theme.colors.primary} 100%
     );
+    font-family: 'Azonix', sans-serif;
     border-image: linear-gradient(to left, ${theme.colors.secondary} 90%, white)
       1;
   `}

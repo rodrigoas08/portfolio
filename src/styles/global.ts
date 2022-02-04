@@ -18,8 +18,8 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  body, input, textarea, button {
-    font-family: ${({ theme }) => theme.font.family};   
+  body, input, textarea, button  {
+    font-family: ${({theme})=> theme.font.family.inter};   
   }
  
 `;

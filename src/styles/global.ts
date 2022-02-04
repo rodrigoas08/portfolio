@@ -18,8 +18,12 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  body, input, textarea, button  {
-    font-family: ${({theme})=> theme.font.family.inter};   
+  body, input, textarea  {
+    font-family: ${({ theme }) => theme.font.family.inter};
+  }
+
+  button {   
+    background-color: transparent;
   }
  
 `;

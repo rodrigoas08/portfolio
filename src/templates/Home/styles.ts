@@ -39,22 +39,35 @@ export const Title = styled.h1`
   `}
 `;
 
-export const Paragraph = styled.p`
+export const Paragraph = styled.h2`
   ${({ theme }) => css`
     top: 40rem;
     font-size: 5rem;
     position: absolute;
+    text-align: left;
+    font-weight: ${theme.font.light};
     font-family: ${theme.font.family.josefin};
+
+    animation: paragraphAnimation ease-out;
+    animation-duration: 2.4s;
+
+    @keyframes paragraphAnimation {
+      0% {
+        top: 40rem;
+      }
+      80% {
+        top: 40rem;
+      }
+      95% {
+        top: 41rem;
+      }
+      100% {
+        top: 40rem;
+      }
+    }
 
     &::first-letter {
       text-transform: uppercase;
     }
-  `}
-`;
-
-export const Nav = styled.div`
-  ${({ theme }) => css`
-    position: absolute;
-    padding: 1rem;
   `}
 `;

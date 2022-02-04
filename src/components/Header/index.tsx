@@ -1,12 +1,14 @@
 import * as S from "./styles";
-import * as C from 'components'
-
-export type HeaderProps = {
-  logo: string;
-};
+import { Button } from "components";
 
 export const Header = () => {
-  return <S.Wrapper><C.Logo  width="200px"/></S.Wrapper>;
+  return (
+    <S.Wrapper>
+      <Button>home</Button>
+      <Button>portfólio</Button>
+      <Button>contato</Button>
+    </S.Wrapper>
+  );
 };
 
 export default Header;

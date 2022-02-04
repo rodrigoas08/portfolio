@@ -1,5 +1,9 @@
 import * as S from "./styles";
 
-const Button = () => <S.Wrapper>Portfólios</S.Wrapper>;
+export type ButtonProps = {
+    children: React.ReactChild  
+};
+
+const Button = ({children}:ButtonProps ) => <S.Wrapper>{children}</S.Wrapper>;
 
 export default Button;

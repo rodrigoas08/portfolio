@@ -11,6 +11,7 @@ export default {
       josefin: "'Josefin Sans', sans-serif",
     },
     italic: 'italic',
+    light: 100,
     normal: 400,
     bold: 600,
   },

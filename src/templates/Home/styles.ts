@@ -1,21 +1,9 @@
 import styled, { css } from "styled-components";
 
-export const Wrapper = styled.div`
-  ${({ theme }) => css`
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    align-items: center;
-    flex-direction: column;
-    color: ${theme.colors.white};
-    font-family: "Azonix", sans-serif;
-  `}
-`;
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    top: 20rem;
+    top: 22rem;
     font-size: 8rem;
     position: absolute;
     text-align: center;
@@ -30,10 +18,10 @@ export const Title = styled.h1`
         top: -20rem;
       }
       80% {
-        top: 25rem;
+        top: 27rem;
       }
       100% {
-        top: 20rem;
+        top: 22rem;
       }
     }
   `}
@@ -41,7 +29,7 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.h2`
   ${({ theme }) => css`
-    top: 40rem;
+    top: 42rem;
     font-size: 5rem;
     position: absolute;
     text-align: left;
@@ -53,16 +41,16 @@ export const Paragraph = styled.h2`
 
     @keyframes paragraphAnimation {
       0% {
-        top: 40rem;
+        top: 42rem;
       }
       80% {
-        top: 40rem;
+        top: 42rem;
       }
       95% {
-        top: 41rem;
+        top: 43rem;
       }
       100% {
-        top: 40rem;
+        top: 42rem;
       }
     }
 

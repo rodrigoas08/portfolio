@@ -4,9 +4,9 @@ import { Button } from "components";
 export const Header = () => {
   return (
     <S.Wrapper>
-      <Button>home</Button>
-      <Button>portfólio</Button>
-      <Button>contato</Button>
+      <Button secondary>home</Button>
+      <Button secondary>portfólio</Button>
+      <Button secondary>contato</Button>
     </S.Wrapper>
   );
 };

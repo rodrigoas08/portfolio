@@ -4,18 +4,13 @@ export const Footer = styled.div`
   ${({ theme }) => css`
     bottom: 0;
     width: 100vw;
-    height: 300px;
+    height: auto;
     display: flex;
-    font-size: 10rem;
     position: absolute;
-    border-top: 5px solid;
-    justify-content: center;
-    background-image: linear-gradient(
-      120deg,
-      #a1c4fd 0%,
-      ${theme.colors.primary} 100%
-    );
-    font-family: 'Azonix', sans-serif;
+    padding: 2rem 2rem;
+    border-top: 2px solid;
+    background: rgba(0,0,0,0.7);
+    font-size: ${theme.font.sizes.xxsmall};
     border-image: linear-gradient(to left, ${theme.colors.secondary} 90%, white)
       1;
   `}

@@ -1,36 +1,89 @@
-import styled, { css } from "styled-components";
+import styled, { css, DefaultTheme } from "styled-components";
+import { ButtonProps } from ".";
 
-export const Wrapper = styled.button`
-  ${({ theme }) => css`
-    width: auto;
-    height: auto;
+const ButtonModifier = {
+  secondary: () => css`
+    border: none;
+    background-color: transparent;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0%;
+      height: 1px;
+      background: ${({ theme }) => theme.colors.white};
+      transition: 0.3s width ease-in-out;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: transparent;
+      transition: 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+      :before {
+        width: 0%;
+        height: 1px;
+        background: ${({ theme }) => theme.colors.white};
+      }
+    }
+  `,
+  fullWidth: () => css`
+    width: 100%;
+  `,
+  disabled: (theme: DefaultTheme) => css`
+    cursor: not-allowed;
+    color: ${theme.colors.gray};
+  `,
+};
+
+export const Wrapper = styled.button<
+  Pick<ButtonProps, "secondary" | "fullWidth" | "disabled">
+>`
+  ${({ theme, secondary, disabled, fullWidth }) => css`
+    border: none;
     cursor: pointer;
-    border-style: none;
     margin-left: 1rem;
+    border-radius: 5px;
     text-transform: uppercase;
     color: ${theme.colors.white};
     font-weight: ${theme.font.bold};
-    font-size: ${theme.sizes.xxlarge};
+    font-size: ${theme.font.sizes.xlarge};
     font-family: ${theme.font.family.nunito};
-    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
+    border: 1px solid ${theme.colors.primary};
+    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall};
 
-    animation: navAnimation ease-out;
+    animation: buttonAnimation ease-out;
     animation-duration: 3s;
 
-    @keyframes navAnimation {
+    @keyframes buttonAnimation {
       0% {
         color: transparent;
+        border: none;
       }
       95% {
         color: transparent;
+        border: none;
       }
       100% {
         color: white;
+        border: none;
       }
     }
 
     :first-child {
       margin-left: 0rem;
     }
+
+    ${secondary && ButtonModifier.secondary()}
+    ${fullWidth && ButtonModifier.fullWidth()}
+    ${disabled && ButtonModifier.disabled(theme)}
   `}
 `;

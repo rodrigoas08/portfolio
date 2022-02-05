@@ -1,9 +1,28 @@
 import * as S from "./styles";
+import { ButtonHTMLAttributes } from "react";
 
 export type ButtonProps = {
-    children: React.ReactChild  
-};
+    secondary?: boolean
+    fullWidth?: boolean
+} & ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button = ({children}:ButtonProps ) => <S.Wrapper>{children}</S.Wrapper>;
+const Button = ({
+  onClick,
+  children,
+  secondary,
+  fullWidth,
+  disabled = false,
+  ...props
+}: ButtonProps) => (
+  <S.Wrapper
+    onClick={onClick}
+    disabled={disabled}
+    secondary={secondary}
+    fullWidth={fullWidth}
+    {...props}
+  >
+    {children}
+  </S.Wrapper>
+);
 
 export default Button;

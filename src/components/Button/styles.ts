@@ -60,21 +60,14 @@ export const Wrapper = styled.button<
     border: 1px solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall};
 
-    animation: buttonAnimation ease-out;
-    animation-duration: 3s;
+    animation: buttonAnimation 5s ease-in-out;
 
     @keyframes buttonAnimation {
       0% {
-        color: transparent;
-        border: none;
-      }
-      95% {
-        color: transparent;
-        border: none;
+        color: rgba(0, 0, 0, 0);
       }
       100% {
-        color: white;
-        border: none;
+        color: rgba(0, 0, 0, 0).1;
       }
     }
 

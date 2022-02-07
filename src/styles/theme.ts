@@ -43,6 +43,7 @@ export default {
     primary: "#3178c6",
     secondary: "#EFC9AF",
     gray: "#8E8E8E",
+    lightGray: "#D3D3D3",
   },
   breakpoints: {
     mobile: "600px",

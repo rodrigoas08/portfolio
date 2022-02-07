@@ -8,7 +8,7 @@ export const Wrapper = styled.main`
     position: relative;
     align-items: center;
     flex-direction: column;
-    color: ${theme.colors.white};
-    font-family: "Azonix", sans-serif;
+    color: ${theme.colors.lightGray};
+    font-family: "Inter", sans-serif;
   `}
 `;

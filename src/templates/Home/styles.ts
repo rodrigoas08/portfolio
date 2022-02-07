@@ -1,27 +1,37 @@
 import styled, { css } from "styled-components";
 
-
 export const Title = styled.h1`
   ${({ theme }) => css`
     top: 22rem;
     font-size: 8rem;
+    border: 5px solid;
     position: absolute;
     text-align: center;
     letter-spacing: 1.7rem;
-    animation: titleAnimation ease-out;
-    animation-duration: 2.5s;
+    background: rgba(0, 0, 0, 0.1);
     font-style: ${theme.font.italic};
-    text-shadow: 2px 2px 2px ${theme.colors.black};
+    animation: titleAnimation 2.5s ease-out;
+    font-family: ${theme.font.family.azonix};
+    text-shadow: -4px 1px 1px ${theme.colors.black};
+    padding: ${theme.spacings.small} ${theme.spacings.small};
+    border-image: linear-gradient(
+        157deg,
+        #ccc 10%,
+        transparent 55%,
+        transparent 45%,
+        transparent 45%,
+        transparent 55%,
+        #ccc 90%
+      )1;
 
     @keyframes titleAnimation {
       0% {
-        top: -20rem;
-      }
-      80% {
-        top: 27rem;
+        left: -0rem;
+        letter-spacing: 4rem;
       }
       100% {
-        top: 22rem;
+        left: 38.25%;
+        letter-spacing: 1.7rem;
       }
     }
   `}
@@ -29,29 +39,24 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.h2`
   ${({ theme }) => css`
-    top: 42rem;
+    top: 47rem;
     font-size: 5rem;
-    position: absolute;
     text-align: left;
+    position: absolute;
+    color: ${theme.colors.white};
     font-weight: ${theme.font.light};
     font-family: ${theme.font.family.josefin};
-
-    animation: paragraphAnimation ease-out;
-    animation-duration: 2.4s;
+    animation: paragraphAnimation 2.4s ease-out;
 
     @keyframes paragraphAnimation {
       0% {
-        top: 42rem;
-      }
-      80% {
-        top: 42rem;
-      }
-      95% {
-        top: 43rem;
+        right: -0rem;
+        letter-spacing: 2rem;
       }
       100% {
-        top: 42rem;
+        right: 41.65%;
       }
+    }
     }
 
     &::first-letter {

@@ -2,13 +2,13 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    display: flex;
     width: 100vw;
     height: auto;
+    display: flex;
     background: rgba(0, 0, 0, 0.1);
     justify-content: space-between;
+    animation: headerAnimation 4s ease-in-out;
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};
-    animation: headerAnimation 5s ease-in-out;
 
     @keyframes headerAnimation {
       0% {
@@ -24,11 +24,12 @@ export const Wrapper = styled.div`
 export const ProfileWrapper = styled.div`
   width: 7rem;
   height: 7rem;
+  cursor: pointer;
   border-radius: 50%;
   animation: inherit;
   background-size: cover;
-  background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
   animation: profileAnimation 5s ease-in-out;
+  background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
 
   @keyframes profileAnimation {
     0% {

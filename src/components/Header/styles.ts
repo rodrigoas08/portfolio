@@ -3,8 +3,9 @@ import styled, { css } from "styled-components";
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     width: 100vw;
-    height: auto;
+    height: 8rem;
     display: flex;
+    align-items: center;
     background: rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     animation: headerAnimation 4s ease-in-out;
@@ -22,6 +23,14 @@ export const Wrapper = styled.div`
 `;
 
 export const ProfileWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  width: 500px;
+`
+
+
+
+export const ImageProfile = styled.div`
   width: 7rem;
   height: 7rem;
   cursor: pointer;
@@ -40,6 +49,16 @@ export const ProfileWrapper = styled.div`
     }
   }
 `;
+
+export const Nome = styled.h4`
+${({theme}) => css`
+font-size: 3rem;
+font-weight: ${theme.font.light};
+padding-left: ${theme.spacings.small};
+text-shadow: -4px 1px 1px ${theme.colors.black};
+font-family: ${({theme}) => theme.font.family.roboto};
+`}
+`
 
 export const NavWrapper = styled.div`
   display: flex;

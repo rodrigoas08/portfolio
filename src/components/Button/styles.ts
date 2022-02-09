@@ -8,20 +8,20 @@ const ButtonModifier = {
 
     &:after {
       content: "";
-      display: block;
       width: 0%;
       height: 1px;
+      display: block;
+      transition: 1s ease-in-out;
       background: ${({ theme }) => theme.colors.white};
-      transition: 0.3s width ease-in-out;
     }
 
     &:before {
       content: "";
-      display: block;
       width: 100%;
       height: 1px;
+      display: block;
       background: transparent;
-      transition: 0.3s ease-in-out;
+      transition: 1s ease-in-out;
     }
 
     &:hover {
@@ -54,7 +54,6 @@ export const Wrapper = styled.button<
     border-radius: 5px;
     text-transform: uppercase;
     color: ${theme.colors.white};
-    font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.xlarge};
     font-family: ${theme.font.family.nunito};
     border: 1px solid ${theme.colors.primary};

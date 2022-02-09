@@ -4,14 +4,13 @@ import { Wrapper } from "components";
 export const Home = () => {
   return (
     <Wrapper>
-      <>
+      <S.Content>
       <S.Title>
-        rodrigo
-        <br />
-        sobral
+        <span>hello,</span> i'm <br/>rodrigo sobral
       </S.Title>
-      <S.Paragraph>drawing the future!</S.Paragraph>
-      </>
+      <S.Paragraph>I'm a 
+web development student and microcomputer support technician</S.Paragraph>
+      </S.Content>
     </Wrapper>
   );
 };

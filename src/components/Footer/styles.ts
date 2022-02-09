@@ -4,9 +4,10 @@ export const Footer = styled.div`
   ${({ theme }) => css`
     bottom: 0;
     width: 100vw;
-    height: auto;
+    height: 8rem;
     display: flex;
     position: absolute;
+    align-items: center;
     background: rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     font-size: ${theme.font.sizes.xsmall};

@@ -1,17 +1,16 @@
 import * as S from "./styles";
-import { Wrapper } from "components";
 
 export const Home = () => {
   return (
-    <Wrapper>
-      <S.Content>
+    <S.Content>
       <S.Title>
-        <span>hello,</span> i'm <br/>rodrigo sobral
+        <span>hello,</span> i'm <br />
+        rodrigo sobral
       </S.Title>
-      <S.Paragraph>I'm a 
-web development student and microcomputer support technician</S.Paragraph>
-      </S.Content>
-    </Wrapper>
+      <S.Paragraph>
+        I'm a web development student and microcomputer support technician
+      </S.Paragraph>
+    </S.Content>
   );
 };
 

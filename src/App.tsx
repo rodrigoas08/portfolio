@@ -1,23 +1,27 @@
-import * as T from './templates'
+import * as T from "./templates";
 
 import theme from "styles/theme";
 import routes from "utils/routes";
 import GlobalStyle from "styles/global";
 
 import { ThemeProvider } from "styled-components";
-import { Router, RouteComponentProps, Redirect} from '@reach/router'
+import { Router, RouteComponentProps, Redirect } from "@reach/router";
+import { Wrapper } from "components";
 
 function App() {
-
-  const Home = (props: RouteComponentProps) => <T.Home />
+  const Home = (props: RouteComponentProps) => <T.Home />;
+  const Portfolio = (props: RouteComponentProps) => <T.Portfolio />;
 
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Router>
-        <Redirect from={routes.default} to={routes.home} />
-        <Home path={routes.home} />
-      </Router>
+      <Wrapper>
+        <Router>
+          <Redirect from={routes.default} to={routes.home} />
+          <Home path={routes.home} />
+          <Portfolio path={routes.portfolio} />
+        </Router>
+      </Wrapper>
     </ThemeProvider>
   );
 }

@@ -52,6 +52,7 @@ export const Wrapper = styled.button<
     cursor: pointer;
     margin-left: 1rem;
     border-radius: 5px;
+    text-decoration: none;
     text-transform: uppercase;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.xlarge};

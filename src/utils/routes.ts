@@ -1,4 +1,5 @@
 export default {
  default: '/',
- home: '/home'   
+ home: '/home',
+ portfolio: '/portfolio' 
 } as const

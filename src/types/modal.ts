@@ -1,4 +1,4 @@
 export type ModalState = {
     open: boolean
-    handleModal: ()=> void
+    handleModal?: ()=> void
 }

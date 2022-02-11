@@ -1,9 +1,9 @@
+import * as S from "./styles";
 import { Button } from "components";
 import { useEffect } from "react";
-import * as S from "./styles";
 
 export type ModalProps = {
-  showModal?: false;
+  showModal?: boolean;
   setShowModal: () => void;
 };
 
@@ -20,7 +20,7 @@ export const Modal = ({ showModal, setShowModal }: ModalProps) => {
   return (
     <S.Wrapper>
       <h1>Testando</h1>
-      <Button onClick={() => setShowModal()}>Teste</Button>
+      <Button onClick={() => showModal}>Teste</Button>
     </S.Wrapper>
   );
 };

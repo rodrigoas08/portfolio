@@ -1,16 +1,13 @@
 import * as S from "./styles";
 import routes from "utils/routes";
-import { Button } from "components";
+import { Button, Modal } from "components";
 import { navigate } from "@reach/router";
 import { useState } from "react";
-import Modal from "components/Modal";
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
-  const [closeModal, setCloseModal] = useState(false)
 
   function handleModal() {
-    setCloseModal(true)
     setShowModal(true)
   }
 

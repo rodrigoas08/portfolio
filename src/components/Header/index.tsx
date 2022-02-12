@@ -1,25 +1,17 @@
 import * as S from "./styles";
 import routes from "utils/routes";
-import { Button } from "components";
+import { Button, Modal } from "components";
 import { navigate } from "@reach/router";
 import { useState } from "react";
-import Modal from "components/Modal";
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
-  const [closeModal, setCloseModal] = useState(false)
-
-  function handleModal() {
-    setCloseModal(true)
-    setShowModal(true)
-  }
 
   return (
     <S.Wrapper>
-      {showModal && (<Modal setShowModal={() => handleModal} />)}
+      {showModal && <Modal handleClose={() => setShowModal(false)} />}
       <S.ProfileWrapper>
-        <S.ImageProfile />
-        {/* <S.Nome>Rodrigo Sobral</S.Nome> */}
+        <S.ImageProfile onClick={()=> navigate(routes.home)}/>
       </S.ProfileWrapper>
       <S.NavWrapper>
         <Button secondary onClick={() => navigate(routes.home)}>

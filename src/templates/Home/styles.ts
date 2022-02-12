@@ -13,40 +13,32 @@ export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: 15rem;
     font-weight: 800;
-    /* border: 5px solid; */
     text-align: center;
     position: relative;
-    letter-spacing: 1.7rem;
+    letter-spacing: 0;
     text-transform: capitalize;
     font-style: ${theme.font.normal};
     animation: titleAnimation 2.5s ease-out;
-    font-family: ${theme.font.family.josefin};
-    text-shadow: -4px 1px 1px ${theme.colors.black};
+    font-family: ${theme.font.family.roboto};
+    /* text-shadow: -4px 1px 1px ${theme.colors.black}; */
     padding: ${theme.spacings.small} ${theme.spacings.small};
     margin: ${theme.spacings.small} ${theme.spacings.small};
-    /* border-image: linear-gradient(
-        360deg,
-        #ccc 50%,
-        transparent 50%,
-        transparent 70%,
-        transparent 90%,
-        transparent 90%,
-        #ccc 5%
-      )
-      1; */
+    
 
     @keyframes titleAnimation {
       0% {
         letter-spacing: 2rem;
       }
       100% {
-        letter-spacing: 1.7rem;
+        letter-spacing: 0rem;
       }
     }
 
     > span {
-      color: ${theme.colors.black};
-      text-shadow: -4px 1px 1px ${theme.colors.white};
+      background: -webkit-linear-gradient(109deg, rgba(35,66,164,1) 11.3%, rgba(61,121,176,1) 91.1%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(0,0,0,0.1);
+      /* text-shadow: -4px 1px 1px ${theme.colors.white}; */
     }
   `}
 `;

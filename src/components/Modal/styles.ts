@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import * as ButtonStyles from "components/Button/styles";
 
 export const Shadow = styled.div`
   top: 0;
@@ -6,7 +7,10 @@ export const Shadow = styled.div`
   z-index: 1;
   width: 100%;
   height: 100vh;
+  display: flex;
   position: fixed;
+  align-items: center;
+  justify-content: center;
   background: rgb(0, 0, 0, 0.4);
   animation: openShadow 1s linear;
 
@@ -23,15 +27,20 @@ export const Shadow = styled.div`
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    position: fixed;
-    top: 10rem;
-    left: 37.3%;
-    width: 60rem;
-    right: 0rem;
-    height: 60rem;
-    background-color: ${theme.colors.white};
-    border: 1px solid red;
     z-index: 2;
+    right: 0rem;
+    width: 60rem;
     color: black;
+    height: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: ${theme.colors.white};
+    padding: ${theme.spacings.medium} ${theme.spacings.medium};
   `}
+
+  ${ButtonStyles.Wrapper} {
+    animation: none;
+    color: ${({ theme }) => theme.colors.primary};
+  }
 `;

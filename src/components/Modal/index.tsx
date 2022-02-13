@@ -20,6 +20,8 @@ export const Modal = ({ handleClose }: ModalProps) => {
     <S.Shadow>
       <S.Wrapper>
         <h1>Testando</h1>
+        <label>Nome</label>
+        <input></input>
         <Button onClick={handleClose}>Fechar</Button>
       </S.Wrapper>
     </S.Shadow>

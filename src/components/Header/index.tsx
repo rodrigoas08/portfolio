@@ -9,6 +9,7 @@ export const Header = () => {
 
   return (
     <S.Wrapper>
+      {/* se showModal for verdadeiro, exibe o modal ( o modal só aparecerá após ser clicado no botão "contact") */}
       {showModal && <Modal handleClose={() => setShowModal(false)} />}
       <S.ProfileWrapper>
         <S.ImageProfile onClick={()=> navigate(routes.home)}/>

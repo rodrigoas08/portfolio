@@ -34,7 +34,6 @@ export const Wrapper = styled.div`
     height: 60rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     background-color: ${theme.colors.white};
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
   `}
@@ -42,5 +41,28 @@ export const Wrapper = styled.div`
   ${ButtonStyles.Wrapper} {
     animation: none;
     color: ${({ theme }) => theme.colors.primary};
+  }
+`;
+
+export const Title = styled.h1`
+  ${({ theme }) => css`
+    align-self: center;
+    color: ${theme.colors.mineShaft};
+    font-size: ${theme.font.sizes.xxxlarge};
+  `}
+`;
+
+export const Form = styled.form`
+  ${({ theme }) => css`
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: ${theme.font.sizes.large};
+    padding-top: 2rem;
+  `}
+
+  >:nth-child(2n+2){
+    margin-bottom: 2rem;
   }
 `;

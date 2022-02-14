@@ -2,11 +2,8 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    width: 100vw;
-    height: 100vh;
-    /* display: flex;
-    align-items: center;
-    flex-direction: column; */
+    height: auto;
+    padding: 2rem 10rem 0 10rem;
     color: ${theme.colors.lightGray};
     font-family: "Inter", sans-serif;
   `}

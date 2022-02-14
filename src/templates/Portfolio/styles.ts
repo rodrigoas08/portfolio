@@ -1,17 +1,33 @@
 import styled from "styled-components";
 
-export const Polaroid = styled.div`
+export const Content = styled.div`
+  height: calc(100vh - 180px);
+  display: grid;
   position: relative;
-  top: 10rem;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid white;
+
+  > h1 {
+    background-color: red;
+  }
+`;
+
+export const Polaroid = styled.div`
   left: 40rem;
-  background-color: white;
   width: 200px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
   margin-bottom: 25px;
-  transform: rotate(20deg);
+  background-color: white;
+  align-self: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
 
 export const Container = styled.div`
   text-align: center;
   padding: 10px 20px;
+  border: 1px solid white;
+
+  > p {
+    color: black;
+  }
 `;

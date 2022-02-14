@@ -44,6 +44,7 @@ export default {
     secondary: "#EFC9AF",
     gray: "#8E8E8E",
     lightGray: "#D3D3D3",
+    mineShaft: "#232323",
   },
   breakpoints: {
     mobile: "600px",

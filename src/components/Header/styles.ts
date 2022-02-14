@@ -2,11 +2,10 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    width: 100vw;
     height: 8rem;
     display: flex;
+    position: relative;
     align-items: center;
-    background: rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     animation: headerAnimation 4s ease-in-out;
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};

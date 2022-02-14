@@ -19,9 +19,15 @@ export const Modal = ({ handleClose }: ModalProps) => {
   return (
     <S.Shadow>
       <S.Wrapper>
-        <h1>Testando</h1>
+        <S.Title>Testando</S.Title>
+        <S.Form>
         <label>Nome</label>
         <input></input>
+        <label>Email</label>
+        <input></input>
+        <textarea />
+        <button type="submit">Value</button>
+        </S.Form>
         <Button onClick={handleClose}>Fechar</Button>
       </S.Wrapper>
     </S.Shadow>

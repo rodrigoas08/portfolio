@@ -2,13 +2,10 @@ import styled, { css } from "styled-components";
 
 export const Footer = styled.div`
   ${({ theme }) => css`
-    bottom: 0;
-    width: 100vw;
     height: 8rem;
     display: flex;
-    position: absolute;
+    position: relative;
     align-items: center;
-    background: rgba(0, 0, 0, 0.1);
     justify-content: space-between;
     font-size: ${theme.font.sizes.xsmall};
     animation: footerAnimation 4s ease-in-out;

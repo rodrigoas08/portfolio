@@ -1,4 +1,5 @@
 import * as S from "./styles";
+import { memo } from "react";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitch } from "react-icons/fa";
 
 export const Footer = () => {
@@ -15,4 +16,4 @@ export const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

@@ -2,9 +2,10 @@ import styled, { css, DefaultTheme } from "styled-components";
 import { ButtonProps } from ".";
 
 const ButtonModifier = {
-  secondary: () => css`
+  btnMenu: () => css`
     border: none;
-    background-color: transparent;
+    background: transparent;
+    color: ${({ theme }) => theme.colors.white};
 
     &:after {
       content: "";
@@ -33,6 +34,7 @@ const ButtonModifier = {
         height: 1px;
         background: ${({ theme }) => theme.colors.white};
       }
+      background-color: transparent;
     }
   `,
   fullWidth: () => css`
@@ -45,37 +47,26 @@ const ButtonModifier = {
 };
 
 export const Wrapper = styled.button<
-  Pick<ButtonProps, "secondary" | "fullWidth" | "disabled">
+  Pick<ButtonProps, "btnMenu" | "fullWidth" | "disabled">
 >`
-  ${({ theme, secondary, disabled, fullWidth }) => css`
+  ${({ theme, btnMenu, disabled, fullWidth }) => css`
     border: none;
     cursor: pointer;
-    margin-left: 1rem;
-    border-radius: 5px;
+    border-radius: 2px;
     text-decoration: none;
-    text-transform: uppercase;
-    color: ${theme.colors.white};
+    text-transform: capitalize;
+    color: ${theme.colors.primary};
     font-size: ${theme.font.sizes.xlarge};
     font-family: ${theme.font.family.nunito};
-    border: 1px solid ${theme.colors.primary};
-    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall};
+    background: ${({ theme }) => theme.colors.white};
+    padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
-    animation: buttonAnimation 5s ease-in-out;
-
-    @keyframes buttonAnimation {
-      0% {
-        color: rgba(0, 0, 0, 0);
-      }
-      100% {
-        color: rgba(0, 0, 0, 0).1;
-      }
+    :hover {
+      color: ${theme.colors.white};
+      background: ${({ theme }) => theme.colors.primary};
     }
 
-    :first-child {
-      margin-left: 0rem;
-    }
-
-    ${secondary && ButtonModifier.secondary()}
+    ${btnMenu && ButtonModifier.btnMenu()}
     ${fullWidth && ButtonModifier.fullWidth()}
     ${disabled && ButtonModifier.disabled(theme)}
   `}

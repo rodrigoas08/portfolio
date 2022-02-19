@@ -9,10 +9,11 @@ const GlobalStyle = createGlobalStyle`
   
   html, body {
     height: auto;
-    /* background-image: linear-gradient( 109.6deg,  rgba(61,121,176,1) 11.3%, rgba(35,66,164,1) 91.1% );      */
-    background: #396afc; 
-    background: -webkit-linear-gradient(180deg, #2948ff, #396afc);
-    background: linear-gradient(180deg, #2948ff, #396afc); 
+    background: ${({ theme }) => theme.colors.primary}; 
+    background: linear-gradient(180deg, ${({ theme }) =>
+      theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); 
+    background: -webkit-linear-gradient(180deg, ${({ theme }) =>
+      theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon});
 
 
   }
@@ -22,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body, input, textarea  {
-    font-family: ${({ theme }) => theme.font.family.inter};
+    font-family: ${({ theme }) => theme.font.family.nunito};
   }
 
   button {   

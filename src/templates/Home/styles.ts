@@ -1,10 +1,11 @@
 import styled, { css } from "styled-components";
 
 export const Content = styled.div`
-  position: relative;
   display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: start;
   flex-direction: column;
-  justify-content: center;
   height: calc(100vh - 180px);
 `;
 
@@ -15,13 +16,13 @@ export const Title = styled.h1`
     position: relative;
     text-transform: capitalize;
     animation: titleAnimation 2.5s ease-out;
-    font-family: ${theme.font.family.roboto};
+    font-family: ${theme.font.family.nunito};
     padding: ${theme.spacings.small} ${theme.spacings.small};
-    /* text-shadow: -4px 1px 1px ${theme.colors.black}; */
+    text-shadow: -4px 14px 1px ${theme.colors.primary};
 
     @keyframes titleAnimation {
       0% {
-        letter-spacing: 2rem;
+        letter-spacing: -1rem;
       }
       100% {
         letter-spacing: 0rem;
@@ -31,12 +32,12 @@ export const Title = styled.h1`
     > span {
       background: -webkit-linear-gradient(
         109deg,
-        rgba(35, 66, 164, 1) 11.3%,
-        rgba(61, 121, 176, 1) 91.1%
+        rgba(${({theme}) => theme.colors.primary}) 11.3%,
+        rgba(${({theme}) => theme.colors.blueRibbon}) 91.1%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
-      /* text-shadow: -4px 1px 1px ${theme.colors.white}; */
+      /* text-shadow: -4px 1px 1px ; */
     }
   `}
 `;
@@ -54,7 +55,7 @@ export const Paragraph = styled.h2`
 
     @keyframes paragraphAnimation {
       0% {
-        letter-spacing: 0.7rem;
+        letter-spacing: 0.4rem;
       }
       100% {
       }

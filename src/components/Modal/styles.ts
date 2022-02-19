@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import * as ButtonStyles from "components/Button/styles";
 
 export const Shadow = styled.div`
   top: 0;
@@ -37,17 +36,12 @@ export const Wrapper = styled.div`
     background-color: ${theme.colors.white};
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
   `}
-
-  ${ButtonStyles.Wrapper} {
-    animation: none;
-    color: ${({ theme }) => theme.colors.primary};
-  }
 `;
 
 export const Title = styled.h1`
   ${({ theme }) => css`
     align-self: center;
-    color: ${theme.colors.mineShaft};
+    color: ${theme.colors.text};
     font-size: ${theme.font.sizes.xxxlarge};
   `}
 `;
@@ -56,10 +50,10 @@ export const Form = styled.form`
   ${({ theme }) => css`
     height: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: ${theme.font.sizes.large};
     padding-top: 2rem;
+    align-items: center;
+    flex-direction: column;
+    font-size: ${theme.font.sizes.large};
   `}
 
   >:nth-child(2n+2){

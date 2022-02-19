@@ -1,8 +1,8 @@
 import * as S from "./styles";
 import routes from "utils/routes";
-import { Button, Modal } from "components";
+import { useState, memo } from "react";
 import { navigate } from "@reach/router";
-import { useState } from "react";
+import { Button, Modal } from "components";
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -15,13 +15,13 @@ export const Header = () => {
         <S.ImageProfile onClick={()=> navigate(routes.home)}/>
       </S.ProfileWrapper>
       <S.NavWrapper>
-        <Button secondary onClick={() => navigate(routes.home)}>
+        <Button btnMenu onClick={() => navigate(routes.home)}>
           home
         </Button>
-        <Button secondary onClick={() => navigate(routes.portfolio)}>
-          portfolio
+        <Button btnMenu onClick={() => navigate(routes.curriculum)}>
+        Currículo
         </Button>
-        <Button secondary onClick={() => setShowModal(true)}>
+        <Button btnMenu onClick={() => setShowModal(true)}>
           contact
         </Button>
       </S.NavWrapper>
@@ -29,4 +29,4 @@ export const Header = () => {
   );
 };
 
-export default Header;
+export default memo(Header);

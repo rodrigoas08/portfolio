@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import * as ButtonStyles from 'components/Button/styles'
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
@@ -22,9 +23,7 @@ export const Wrapper = styled.div`
 `;
 
 export const ProfileWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  width: 500px;
+  
 `
 
 
@@ -33,11 +32,11 @@ export const ImageProfile = styled.div`
   width: 7rem;
   height: 7rem;
   cursor: pointer;
-  border-radius: 50%;
   animation: inherit;
+  border-radius: 50%;
   background-size: cover;
   animation: profileAnimation 5s ease-in-out;
-  background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
+  background-image: url(${process.env.PUBLIC_URL}/img/eu.jpg);
 
   @keyframes profileAnimation {
     0% {
@@ -48,6 +47,8 @@ export const ImageProfile = styled.div`
     }
   }
 `;
+
+
 
 export const Nome = styled.h4`
 ${({theme}) => css`
@@ -61,4 +62,21 @@ font-family: ${({theme}) => theme.font.family.roboto};
 
 export const NavWrapper = styled.div`
   display: flex;
+
+  ${ButtonStyles.Wrapper} {
+    margin-left: 1rem;
+    animation: buttonAnimation 5s ease-in-out;
+
+    @keyframes buttonAnimation {
+      0% {
+        color: rgba(0, 0, 0, 0);
+      }
+      100% {
+        color: rgba(0, 0, 0, 0) 0.1;
+      }
+    }
+    :first-child {
+      margin-left: 0rem;
+    }
+  }
 `;

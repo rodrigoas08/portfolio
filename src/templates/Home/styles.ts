@@ -44,7 +44,7 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.h2`
   ${({ theme }) => css`
-    font-size: 5rem;
+    font-size: 4rem;
     position: relative;
     text-align: center;
     font-weight: ${theme.font.light};

@@ -19,10 +19,10 @@ export const Header = () => {
           home
         </Button>
         <Button btnMenu onClick={() => navigate(routes.curriculum)}>
-        Currículo
+        currículo
         </Button>
         <Button btnMenu onClick={() => setShowModal(true)}>
-          contact
+          contato
         </Button>
       </S.NavWrapper>
     </S.Wrapper>

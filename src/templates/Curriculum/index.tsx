@@ -22,7 +22,7 @@ export const Curriculum = () => {
         </ul>
         <S.Title>perfil</S.Title>
         <S.Paragraph>
-          Analista de TI há mais de 8 anos com experiência na área de
+          Analista de TI com mais de 8 anos com experiência na área de
           microinformática, prestando suporte presencial e remotamente em
           diferentes níveis incluindo diretoria e CEOs, solucionando problemas
           de softwares e hardwares.
@@ -32,9 +32,10 @@ export const Curriculum = () => {
             <em> Desenvolvedor Front-end </em>
           </b>
           na área de desenvolvimento de software e não é por acaso, em meados
-          dos anos 2000, eu criei um blog e queria muito ter um estilo próprio e
+          dos anos 2000, criei um blog e queria muito ter um estilo próprio e
           estudei HTML e CSS mas acabei abandonando tudo e hoje tenho esta
-          oportunidade onde estou buscando aprender novas tecnologias.
+          oportunidade onde estou buscando aprender mais e também novas
+          tecnologias.
         </S.Paragraph>
       </S.Profile>
       <S.Experience>
@@ -55,11 +56,31 @@ export const Curriculum = () => {
         <S.Title>formação</S.Title>
         <ul>
           <li>
-            Graduação Análise e Desenvolvimento de Sistemas | <b>Unicarioca (2008)</b>
+            Graduação Análise e Desenvolvimento de Sistemas |{" "}
+            <b>Unicarioca (2008)</b>
           </li>
         </ul>
         <S.Title>extra curriculares</S.Title>
         <ul>
+          <li>
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://cursos.alura.com.br/user/rodrigo-sobral1/degree-html-e-css-232036/certificate"
+            >
+              Formação HTML5 e CSS3
+            </a>{" "}
+            /{" "}
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://cursos.alura.com.br/user/rodrigo-sobral1/degree-acessibilidade-web-2346/certificate"
+            >
+              {" "}
+              Acessibilidade Web{" "}
+            </a>
+            | <b>Alura (2021)</b>
+          </li>
           <li>
             Lab. Java com testes, JSF, Design Patterns / Java para
             Desenvolvimento Web / Java Orientação a Objetos |{" "}
@@ -69,7 +90,9 @@ export const Curriculum = () => {
             Rede de Computadores / Montagem e Configuração de Computadores |{" "}
             <b>Senai (2012)</b>
           </li>
-          <li>Inglês Básico | <b>CNA (2005)</b></li>
+          <li>
+            Inglês Básico | <b>CNA (2005)</b>
+          </li>
         </ul>
       </S.Experience>
     </S.Content>

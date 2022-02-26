@@ -55,15 +55,15 @@ export const Wrapper = styled.button<
     border-radius: 2px;
     text-decoration: none;
     text-transform: capitalize;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.white};
     font-size: ${theme.font.sizes.xlarge};
     font-family: ${theme.font.family.nunito};
-    background: ${({ theme }) => theme.colors.white};
+    background: ${({ theme }) => theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
     :hover {
       color: ${theme.colors.white};
-      background: ${({ theme }) => theme.colors.primary};
+      background: ${({ theme }) => theme.colors.blueRibbon};
     }
 
     ${btnMenu && ButtonModifier.btnMenu()}

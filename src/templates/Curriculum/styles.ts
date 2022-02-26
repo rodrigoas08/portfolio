@@ -5,7 +5,6 @@ export const Content = styled.div`
   position: relative;
   height: calc(100vh - 180px);
   grid-template-columns: 0.4fr 1fr;
-  padding-top: ${({ theme }) => theme.spacings.small};
 `;
 
 export const Profile = styled.div`
@@ -52,7 +51,7 @@ export const Title = styled.h1`
   text-transform: capitalize;
 
   :first-letter {
-      color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primary};
   }
 `;
 
@@ -72,8 +71,15 @@ export const Experience = styled.div`
     margin: 2.5rem 0;
     font-family: ${({ theme }) => theme.font.family.josefin};
 
+    > a {
+        text-decoration: none;
+        color: white;
+      }
+
     :last-child {
       padding-bottom: 2rem;
+
+      
     }
   }
 `;

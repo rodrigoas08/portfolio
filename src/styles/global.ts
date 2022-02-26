@@ -26,6 +26,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.family.nunito};
   }
 
+  
+
   button {   
     background-color: transparent;
   }

@@ -13,11 +13,10 @@ export const Footer = styled.div`
 
     @keyframes footerAnimation {
       0% {
-        background: rgba(0, 0, 0, 0);
-        color: transparent;
+        opacity: 0;
       }
       100% {
-        background: rgba(0, 0, 0, 0) 0.1;
+        opacity: 1;
       }
     }
   `}

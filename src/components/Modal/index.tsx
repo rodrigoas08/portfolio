@@ -14,21 +14,33 @@ export const Modal = ({ handleClose }: ModalProps) => {
     document.addEventListener("keyup", handleEsc);
 
     return () => document.removeEventListener("keyup", handleEsc);
-  }, []);
+  });
 
   return (
     <S.Shadow>
       <S.Wrapper>
-        <S.Title>Testando</S.Title>
+        <S.Title>Formulário de contato</S.Title>
+        <S.Hr />
         <S.Form>
-        <label>Nome</label>
-        <input></input>
-        <label>Email</label>
-        <input></input>
-        <textarea />
-        <button type="submit">Value</button>
+          <S.Label>
+            Nome <span>*</span>
+          </S.Label>
+          <S.Input placeholder="Nome completo" />
+          <S.Label>
+            Email <span>*</span>
+          </S.Label>
+          <S.Input placeholder="seuemail@exemplo.com" />
+          <S.Label>
+            Assunto <span>*</span>
+          </S.Label>
+          <S.Textarea placeholder="Escreva aqui sua mensagem..." />
+          <Button type="button" fullWidth>
+            enviar
+          </Button>
         </S.Form>
-        <Button onClick={handleClose}>Fechar</Button>
+        <Button type="button" onClick={handleClose}>
+          X
+        </Button>
       </S.Wrapper>
     </S.Shadow>
   );

@@ -2,14 +2,14 @@ import * as S from "./styles";
 import { ButtonHTMLAttributes, memo } from "react";
 
 export type ButtonProps = {
-    btnMenu?: boolean
-    fullWidth?: boolean
+  secondary?: boolean;
+  fullWidth?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
   onClick,
   children,
-  btnMenu,
+  secondary,
   fullWidth,
   disabled = false,
   ...props
@@ -17,7 +17,7 @@ const Button = ({
   <S.Wrapper
     onClick={onClick}
     disabled={disabled}
-    btnMenu={btnMenu}
+    secondary={secondary}
     fullWidth={fullWidth}
     {...props}
   >

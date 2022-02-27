@@ -12,17 +12,14 @@ export const Header = () => {
       {/* se showModal for verdadeiro, exibe o modal ( o modal só aparecerá após ser clicado no botão "contact") */}
       {showModal && <Modal handleClose={() => setShowModal(false)} />}
       <S.ProfileWrapper>
-        <S.ImageProfile onClick={()=> navigate(routes.home)}/>
+        <S.ImageProfile onClick={() => navigate(routes.home)} />
       </S.ProfileWrapper>
       <S.NavWrapper>
-        <Button btnMenu onClick={() => navigate(routes.home)}>
-          home
+        <Button secondary onClick={() => navigate(routes.home)}>
+          Home
         </Button>
-        <Button btnMenu onClick={() => navigate(routes.curriculum)}>
-        currículo
-        </Button>
-        <Button btnMenu onClick={() => setShowModal(true)}>
-          contato
+        <Button secondary onClick={() => setShowModal(true)}>
+          Contato
         </Button>
       </S.NavWrapper>
     </S.Wrapper>

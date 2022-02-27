@@ -2,8 +2,7 @@ import styled, { css } from "styled-components";
 
 export const Wrapper = styled.main`
   ${({ theme }) => css`
-    height: auto;
-    padding: 2rem 10rem 0 10rem;
+    padding: 0 10rem;
     color: ${theme.colors.white};
   `}
 `;

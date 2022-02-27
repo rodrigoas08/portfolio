@@ -1,5 +1,7 @@
-import { Button } from "components";
 import * as S from "./styles";
+import routes from "utils/routes";
+import { Button } from "components";
+import { navigate } from "@reach/router";
 
 export const Home = () => {
   return (
@@ -8,7 +10,9 @@ export const Home = () => {
       <S.Paragraph>
         I'm a web development student and microcomputer support technician
       </S.Paragraph>
-      <Button>entrar</Button>
+      <Button onClick={() => navigate(routes.curriculum)}>
+        Veja meu currículo
+      </Button>
     </S.Content>
   );
 };

@@ -4,11 +4,11 @@ export const Footer = styled.div`
   ${({ theme }) => css`
     height: 8rem;
     display: flex;
-    position: relative;
+    bottom: 0rem;
     align-items: center;
     justify-content: space-between;
-    font-size: ${theme.font.sizes.xsmall};
     animation: footerAnimation 4s ease-in-out;
+    font-size: ${theme.font.sizes.small};
     padding: ${theme.spacings.small} ${theme.spacings.xxlarge};
 
     @keyframes footerAnimation {
@@ -22,13 +22,16 @@ export const Footer = styled.div`
   `}
 `;
 
+export const Paragraph = styled.p``;
+
+export const SocialText = styled.p`
+`;
+
 export const IconsWrapper = styled.div`
   ${({ theme }) => css`
-    width: 10%;
+    width: 30%;
     display: flex;
-    margin-left: 1rem;
-    letter-spacing: 1.6rem;
-    justify-content: space-around;
-    font-size: ${theme.font.sizes.xlarge};
+    align-items: center;
+    justify-content: space-evenly;
   `}
 `;

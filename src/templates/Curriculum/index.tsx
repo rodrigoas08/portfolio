@@ -42,7 +42,7 @@ export const Curriculum = () => {
         <S.Title>experiência profissional</S.Title>
         <ul>
           <li>
-            <b>Estagiário</b> Desenvolvedor front-end |{" "}
+            Estagiário Desenvolvedor front-end |{" "}
             <b>Usabit (Nov 2021 - Atualmente)</b>
           </li>
           <li>

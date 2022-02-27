@@ -2,40 +2,17 @@ import styled, { css, DefaultTheme } from "styled-components";
 import { ButtonProps } from ".";
 
 const ButtonModifier = {
-  btnMenu: () => css`
-    border: none;
-    background: transparent;
-    color: ${({ theme }) => theme.colors.white};
-
-    &:after {
-      content: "";
-      width: 0%;
-      height: 1px;
-      display: block;
-      transition: 1s ease-in-out;
-      background: ${({ theme }) => theme.colors.white};
-    }
-
-    &:before {
-      content: "";
-      width: 100%;
-      height: 1px;
-      display: block;
+  secondary: () => css`
+    ${({ theme }) => css`
       background: transparent;
-      transition: 1s ease-in-out;
-    }
-
-    &:hover {
-      &:after {
-        width: 100%;
+      color: ${theme.colors.primary};
+      border: 1px solid ${theme.colors.primary};
+      :hover {
+        color: ${theme.colors.white};
+        background: ${theme.colors.blueRibbon};
+        border: 1px solid ${theme.colors.blueRibbon};
       }
-      :before {
-        width: 0%;
-        height: 1px;
-        background: ${({ theme }) => theme.colors.white};
-      }
-      background-color: transparent;
-    }
+    `}
   `,
   fullWidth: () => css`
     width: 100%;
@@ -47,26 +24,25 @@ const ButtonModifier = {
 };
 
 export const Wrapper = styled.button<
-  Pick<ButtonProps, "btnMenu" | "fullWidth" | "disabled">
+  Pick<ButtonProps, "secondary" | "fullWidth" | "disabled">
 >`
-  ${({ theme, btnMenu, disabled, fullWidth }) => css`
+  ${({ theme, secondary, disabled, fullWidth }) => css`
     border: none;
     cursor: pointer;
-    border-radius: 2px;
     text-decoration: none;
-    text-transform: capitalize;
     color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.xlarge};
+    font-weight: ${theme.font.bold};
+    border-radius: ${theme.border.radius};
+    font-size: ${theme.font.sizes.medium};
     font-family: ${theme.font.family.nunito};
     background: ${({ theme }) => theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
     :hover {
-      color: ${theme.colors.white};
-      background: ${({ theme }) => theme.colors.blueRibbon};
+      background: ${theme.colors.blueRibbon};
     }
 
-    ${btnMenu && ButtonModifier.btnMenu()}
+    ${secondary && ButtonModifier.secondary()}
     ${fullWidth && ButtonModifier.fullWidth()}
     ${disabled && ButtonModifier.disabled(theme)}
   `}

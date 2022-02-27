@@ -34,13 +34,15 @@ export const Modal = ({ handleClose }: ModalProps) => {
             Assunto <span>*</span>
           </S.Label>
           <S.Textarea placeholder="Escreva aqui sua mensagem..." />
-          <Button type="button" fullWidth>
-            enviar
-          </Button>
+          <S.FormAction>
+            <Button type="submit">
+              Enviar
+            </Button>
+            <Button secondary type="button" onClick={handleClose}>
+              Cancelar
+            </Button>
+          </S.FormAction>
         </S.Form>
-        <Button type="button" onClick={handleClose}>
-          X
-        </Button>
       </S.Wrapper>
     </S.Shadow>
   );

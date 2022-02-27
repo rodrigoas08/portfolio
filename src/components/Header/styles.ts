@@ -25,8 +25,8 @@ export const Wrapper = styled.div`
 export const ProfileWrapper = styled.div``;
 
 export const ImageProfile = styled.div`
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   cursor: pointer;
   animation: inherit;
   border-radius: 50%;
@@ -34,24 +34,45 @@ export const ImageProfile = styled.div`
   background-image: url(${process.env.PUBLIC_URL}/img/eu.jpg);
 `;
 
-export const Nome = styled.h4`
-  ${({ theme }) => css`
-    font-size: 3rem;
-    font-weight: ${theme.font.light};
-    padding-left: ${theme.spacings.small};
-    text-shadow: -4px 1px 1px ${theme.colors.black};
-    font-family: ${({ theme }) => theme.font.family.roboto};
-  `}
-`;
-
 export const NavWrapper = styled.div`
   display: flex;
 
   ${ButtonStyles.Wrapper} {
-    margin-left: 1rem;
+    border: none;
+    color: ${({ theme }) => theme.colors.white};
 
     :first-child {
       margin-left: 0rem;
+    }
+
+    &:after {
+      content: "";
+      width: 0%;
+      height: 1px;
+      display: block;
+      transition: 1s ease-in-out;
+      background: ${({ theme }) => theme.colors.white};
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 1px;
+      display: block;
+      background: transparent;
+      transition: 1s ease-in-out;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+      :before {
+        width: 0%;
+        height: 1px;
+        background: ${({ theme }) => theme.colors.white};
+      }
+      background-color: transparent;
     }
   }
 `;

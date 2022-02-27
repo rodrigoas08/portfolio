@@ -54,6 +54,10 @@ export const Title = styled.h1`
     align-self: start;
     color: ${theme.colors.text};
     font-size: ${theme.font.sizes.xxxlarge};
+
+    :first-letter {
+      color: ${theme.colors.primary};
+    }
   `}
 `;
 
@@ -74,27 +78,16 @@ export const Form = styled.form`
   >:nth-child(2n+2) {
     margin-bottom: 2rem;
   }
-
-  ${ButtonStyles.Wrapper} {
-    ${({ theme }) => css`
-      color: ${theme.colors.white};
-      margin-top: ${theme.spacings.xxsmall};
-      background-color: ${theme.colors.primary};
-      border: 1px solid ${theme.colors.primary};
-      :hover {
-        background-color: ${theme.colors.blueRibbon};
-      }
-    `}
-  }
 `;
 
 export const Label = styled.label`
   ${({ theme }) => css`
     align-self: start;
     color: ${theme.colors.text};
+    font-size: ${theme.font.sizes.small};
     padding-left: ${theme.spacings.xxxsmall};
     > span {
-      color: red;
+      color: ${theme.colors.error};
     }
   `}
 `;
@@ -106,6 +99,7 @@ export const Input = styled.input`
     height: 3.5rem;
     border-style: none;
     text-transform: lowercase;
+    border-radius: ${theme.border.radius};
     border: 1px solid ${theme.colors.primary};
     border-left: 10px solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
@@ -122,9 +116,21 @@ export const Textarea = styled.textarea`
     resize: none;
     height: 15rem;
     outline: none;
-    border-radius: 4px;
+    border-radius: ${theme.border.radius};
     border: 1px solid ${theme.colors.primary};
     border-left: 10px solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
   `}
+`;
+
+export const FormAction = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+
+  ${ButtonStyles.Wrapper} {
+    :not(:first-child) {
+      margin-left: ${({ theme }) => theme.spacings.xxsmall};
+    }
+  }
 `;

@@ -6,7 +6,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: start;
   flex-direction: column;
-  height: calc(100vh - 180px);
+  min-height: calc(100vh - 16rem);
 `;
 
 export const Title = styled.h1`
@@ -15,10 +15,11 @@ export const Title = styled.h1`
     text-align: center;
     position: relative;
     text-transform: capitalize;
+    font-weight: ${theme.font.bold};
     animation: titleAnimation 2.5s ease-out;
     font-family: ${theme.font.family.nunito};
-    padding: ${theme.spacings.small} ${theme.spacings.small};
     text-shadow: -4px 14px 1px ${theme.colors.primary};
+    padding: ${theme.spacings.small} ${theme.spacings.small};
 
     @keyframes titleAnimation {
       0% {
@@ -32,8 +33,8 @@ export const Title = styled.h1`
     > span {
       background: -webkit-linear-gradient(
         109deg,
-        rgba(${({theme}) => theme.colors.primary}) 11.3%,
-        rgba(${({theme}) => theme.colors.blueRibbon}) 91.1%
+        rgba(${({ theme }) => theme.colors.primary}) 11.3%,
+        rgba(${({ theme }) => theme.colors.blueRibbon}) 91.1%
       );
       -webkit-background-clip: text;
       -webkit-text-fill-color: rgba(0, 0, 0, 0.1);
@@ -44,7 +45,7 @@ export const Title = styled.h1`
 
 export const Paragraph = styled.h2`
   ${({ theme }) => css`
-    font-size: 4rem;
+    font-size: 3rem;
     position: relative;
     text-align: center;
     font-weight: ${theme.font.light};

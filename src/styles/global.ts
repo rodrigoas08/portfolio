@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
       theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); 
     background: -webkit-linear-gradient(180deg, ${({ theme }) =>
       theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon});
-
+      font-family: ${({ theme }) => theme.font.family.nunito};
 
   }
   
@@ -22,13 +22,13 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
   }
 
-  body, input, textarea  {
+  input, textarea  {
     font-family: ${({ theme }) => theme.font.family.nunito};
-  }
-
-  
+  }  
 
   button {   
+    border: none;
+    cursor: pointer;
     background-color: transparent;
   }
  

@@ -29,14 +29,14 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     z-index: 2;
     right: 0rem;
-    width: 45rem;
-    color: black;
+    width: 40rem;
     height: 60rem;
     display: flex;
+    color: red;
     flex-direction: column;
+    animation: openModal 1s linear;
     background-color: ${theme.colors.white};
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
-    animation: openModal 1s linear;
 
     @keyframes openModal {
       0% {
@@ -45,6 +45,18 @@ export const Wrapper = styled.div`
       100% {
         transform: scaleZ(1) rotateZ(360deg);
       }
+    }
+    > h1 {
+      ${({ theme }) => css`
+        :last-child {
+          position: relative;
+          top: 45%;
+          color: ${theme.colors.text};
+          ::first-letter {
+            color: ${theme.colors.primary};
+          }
+        }
+      `}
     }
   `}
 `;
@@ -80,13 +92,13 @@ export const Label = styled.label`
   ${({ theme }) => css`
     align-self: start;
     color: ${theme.colors.text};
+    font-weight: ${theme.font.extraBold};
     font-size: ${theme.font.sizes.small};
-    padding-left: ${theme.spacings.xxxsmall};
     > span {
       color: ${theme.colors.error};
     }
     :not(:first-child) {
-      margin-top: 1rem;
+      margin-top: ${theme.spacings.xxsmall};
     }
   `}
 `;
@@ -99,9 +111,14 @@ export const Input = styled.input`
     border-style: none;
     text-transform: lowercase;
     border-radius: ${theme.border.radius};
-    border: 1px solid ${theme.colors.primary};
+    border: 1px solid ${theme.colors.lightGray};
     border-left: 10px solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
+
+    &:focus {
+      border: 1px solid ${theme.colors.primary};
+      border-left: 10px solid ${theme.colors.primary};
+    }
 
     :nth-child(0n + 2) {
       text-transform: capitalize;
@@ -111,14 +128,19 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   ${({ theme }) => css`
-    width: 39rem;
+    width: 100%;
     resize: none;
     height: 15rem;
     outline: none;
     border-radius: ${theme.border.radius};
-    border: 1px solid ${theme.colors.primary};
+    border: 1px solid ${theme.colors.lightGray};
     border-left: 10px solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
+
+    &:focus {
+      border: 1px solid ${theme.colors.primary};
+      border-left: 10px solid ${theme.colors.primary};
+    }
   `}
 `;
 

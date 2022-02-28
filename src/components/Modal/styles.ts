@@ -69,15 +69,11 @@ export const Form = styled.form`
   ${({ theme }) => css`
     height: 100%;
     display: flex;
-    align-items: center;
+    justify-content: start;
     flex-direction: column;
     padding: ${theme.spacings.small} 0;
     font-size: ${theme.font.sizes.large};
   `}
-
-  >:nth-child(2n+2) {
-    margin-bottom: 2rem;
-  }
 `;
 
 export const Label = styled.label`
@@ -88,6 +84,9 @@ export const Label = styled.label`
     padding-left: ${theme.spacings.xxxsmall};
     > span {
       color: ${theme.colors.error};
+    }
+    :not(:first-child) {
+      margin-top: 1rem;
     }
   `}
 `;
@@ -123,12 +122,20 @@ export const Textarea = styled.textarea`
   `}
 `;
 
+export const Error = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.error};
+    font-size: ${theme.font.sizes.xxsmall};
+  `}
+`;
+
 export const FormAction = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
 
   ${ButtonStyles.Wrapper} {
+    margin-top: 1rem;
     :not(:first-child) {
       margin-left: ${({ theme }) => theme.spacings.xxsmall};
     }

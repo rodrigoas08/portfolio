@@ -6,7 +6,6 @@ import GlobalStyle from "styles/global";
 import { ThemeProvider } from "styled-components";
 import { Router, RouteComponentProps, Redirect } from "@reach/router";
 import { Wrapper } from "components";
-import Curriculum from "templates/Curriculum";
 
 function App() {
   const Home = (props: RouteComponentProps) => <T.Home />;

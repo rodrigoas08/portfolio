@@ -10,9 +10,11 @@ margin: 0 auto;
 opacity: 0.5;
 position: absolute;
 animation: rotacao 10s 5s linear infinite;
+
 :hover {
   animation-play-state: paused;
 }
+
 @keyframes rotacao {
   100%{
     transform: rotate(360deg) ;

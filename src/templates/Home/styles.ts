@@ -20,6 +20,7 @@ export const Title = styled.h1`
 		font-family: ${theme.font.family.nunito};
 		text-shadow: -4px 14px 1px ${theme.colors.primary};
 		padding: ${theme.spacings.small} ${theme.spacings.small};
+
 		@keyframes titleAnimation {
 			0% {
 				letter-spacing: -1rem;
@@ -51,6 +52,7 @@ export const Paragraph = styled.h2`
     animation: paragraphAnimation 2.4s ease-out;
     padding: ${theme.spacings.small} ${theme.spacings.small};
     margin: ${theme.spacings.small} ${theme.spacings.small};
+
     @keyframes paragraphAnimation {
       0% {
         letter-spacing: 0.4rem;

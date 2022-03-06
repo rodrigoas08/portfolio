@@ -13,12 +13,10 @@ export const Shadow = styled.div`
   justify-content: center;
   background: rgb(0, 0, 0, 0.4);
   animation: openShadow 1s linear;
-
   @keyframes openShadow {
     0% {
       background: rgba(0, 0, 0, 0);
     }
-
     100% {
       background: rgba(0, 0, 0, 0.4);
     }
@@ -28,23 +26,31 @@ export const Shadow = styled.div`
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     z-index: 2;
-    right: 0rem;
-    width: 45rem;
-    color: black;
-    height: 60rem;
+    right: -40rem;
+    width: 40rem;
+    height: 100vh;
     display: flex;
+    position: absolute;
     flex-direction: column;
+    animation: openModal 2s linear forwards;
     background-color: ${theme.colors.white};
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
-    animation: openModal 1s linear;
-
     @keyframes openModal {
-      0% {
-        transform: scaleX(0) rotateX(180deg);
+      to {
+        right: 0rem;
       }
-      100% {
-        transform: scaleZ(1) rotateZ(360deg);
-      }
+    }
+    > h1 {
+      ${({ theme }) => css`
+        :last-child {
+          position: relative;
+          top: 45%;
+          color: ${theme.colors.text};
+          ::first-letter {
+            color: ${theme.colors.primary};
+          }
+        }
+      `}
     }
   `}
 `;
@@ -54,7 +60,6 @@ export const Title = styled.h1`
     align-self: start;
     color: ${theme.colors.text};
     font-size: ${theme.font.sizes.xxxlarge};
-
     :first-letter {
       color: ${theme.colors.primary};
     }
@@ -69,25 +74,24 @@ export const Form = styled.form`
   ${({ theme }) => css`
     height: 100%;
     display: flex;
-    align-items: center;
+    justify-content: start;
     flex-direction: column;
     padding: ${theme.spacings.small} 0;
     font-size: ${theme.font.sizes.large};
   `}
-
-  >:nth-child(2n+2) {
-    margin-bottom: 2rem;
-  }
 `;
 
 export const Label = styled.label`
   ${({ theme }) => css`
     align-self: start;
     color: ${theme.colors.text};
+    font-weight: ${theme.font.extraBold};
     font-size: ${theme.font.sizes.small};
-    padding-left: ${theme.spacings.xxxsmall};
     > span {
       color: ${theme.colors.error};
+    }
+    :not(:first-child) {
+      margin-top: ${theme.spacings.xxsmall};
     }
   `}
 `;
@@ -100,10 +104,13 @@ export const Input = styled.input`
     border-style: none;
     text-transform: lowercase;
     border-radius: ${theme.border.radius};
-    border: 1px solid ${theme.colors.primary};
+    border: 1px solid ${theme.colors.lightGray};
     border-left: 10px solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
-
+    &:focus {
+      border: 1px solid ${theme.colors.primary};
+      border-left: 10px solid ${theme.colors.primary};
+    }
     :nth-child(0n + 2) {
       text-transform: capitalize;
     }
@@ -112,14 +119,25 @@ export const Input = styled.input`
 
 export const Textarea = styled.textarea`
   ${({ theme }) => css`
-    width: 39rem;
+    width: 100%;
     resize: none;
     height: 15rem;
     outline: none;
     border-radius: ${theme.border.radius};
-    border: 1px solid ${theme.colors.primary};
+    border: 1px solid ${theme.colors.lightGray};
     border-left: 10px solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
+    &:focus {
+      border: 1px solid ${theme.colors.primary};
+      border-left: 10px solid ${theme.colors.primary};
+    }
+  `}
+`;
+
+export const Error = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.error};
+    font-size: ${theme.font.sizes.xxsmall};
   `}
 `;
 
@@ -127,8 +145,8 @@ export const FormAction = styled.div`
   width: 100%;
   display: flex;
   justify-content: flex-start;
-
   ${ButtonStyles.Wrapper} {
+    margin-top: 1rem;
     :not(:first-child) {
       margin-left: ${({ theme }) => theme.spacings.xxsmall};
     }

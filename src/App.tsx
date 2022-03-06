@@ -8,23 +8,25 @@ import { Router, RouteComponentProps, Redirect } from "@reach/router";
 import { Wrapper } from "components";
 
 function App() {
-  const Home = (props: RouteComponentProps) => <T.Home />;
-  const Curriculum = (props: RouteComponentProps) => <T.Curriculum />;
-  const Portfolio = (props: RouteComponentProps) => <T.Portfolio />;
+	const Home = (props: RouteComponentProps) => <T.Home />;
+	const Curriculum = (props: RouteComponentProps) => <T.Curriculum />;
+	const Works = (props: RouteComponentProps) => <T.Works />;
+	const Store = (props: RouteComponentProps) => <T.Store />;
 
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <Wrapper>
-        <Router>
-          <Redirect from={routes.default} to={routes.home} />
-          <Home path={routes.home} />
-          <Curriculum path={routes.curriculum} />
-          <Portfolio path={routes.portfolio} />
-        </Router>
-      </Wrapper>
-    </ThemeProvider>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<GlobalStyle />
+			<Wrapper>
+				<Router>
+					<Redirect from={routes.default} to={routes.home} />
+					<Home path={routes.home} />
+					<Curriculum path={routes.curriculum} />
+					<Works path={routes.works} />
+					<Store path={routes.store} />
+				</Router>
+			</Wrapper>
+		</ThemeProvider>
+	);
 }
 
 export default App;

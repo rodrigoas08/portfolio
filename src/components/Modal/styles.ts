@@ -28,22 +28,19 @@ export const Shadow = styled.div`
 export const Wrapper = styled.div`
   ${({ theme }) => css`
     z-index: 2;
-    right: 0rem;
+    right: -40rem;
     width: 40rem;
-    height: 60rem;
+    height: 100vh;
     display: flex;
-    color: red;
+    position: absolute;
     flex-direction: column;
-    animation: openModal 1s linear;
+    animation: openModal 2s linear forwards;
     background-color: ${theme.colors.white};
     padding: ${theme.spacings.medium} ${theme.spacings.medium};
 
     @keyframes openModal {
-      0% {
-        transform: scaleX(0) rotateX(180deg);
-      }
-      100% {
-        transform: scaleZ(1) rotateZ(360deg);
+      to {
+        right: 0rem;
       }
     }
     > h1 {

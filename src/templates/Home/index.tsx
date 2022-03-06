@@ -13,6 +13,9 @@ export const Home = () => {
       <Button onClick={() => navigate(routes.curriculum)}>
         Veja meu currículo
       </Button>
+      <Button onClick={() => navigate(routes.portfolio)}>
+        Veja meu portfólio
+      </Button>
     </S.Content>
   );
 };

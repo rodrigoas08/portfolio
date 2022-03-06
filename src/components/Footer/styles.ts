@@ -7,18 +7,8 @@ export const Footer = styled.div`
     bottom: 0rem;
     align-items: center;
     justify-content: space-between;
-    animation: footerAnimation 4s ease-in-out;
     font-size: ${theme.font.sizes.small};
     padding: ${theme.spacings.small} ${theme.spacings.xxlarge};
-
-    @keyframes footerAnimation {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
   `}
 `;
 

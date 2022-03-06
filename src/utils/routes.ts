@@ -1,6 +1,7 @@
 export default {
- default: '/',
- home: '/home',
- portfolio: '/portfolio',
- curriculum: '/web-curriculum'
-} as const
+	default: "/",
+	home: "/home",
+	works: "/servicos",
+	curriculum: "/web-curriculum",
+	store: "/brecho",
+} as const;

@@ -4,17 +4,19 @@ import { Button } from "components";
 import { navigate } from "@reach/router";
 
 export const Home = () => {
-  return (
-    <S.Content>
-      <S.Title>rodrigo sobral</S.Title>
-      <S.Paragraph>
-        I'm a web development student and microcomputer support technician
-      </S.Paragraph>
-      <Button onClick={() => navigate(routes.curriculum)}>
-        Veja meu currículo
-      </Button>
-    </S.Content>
-  );
+	return (
+		<S.Content>
+			<S.Title>A solução está aqui</S.Title>
+			<S.Paragraph>
+				I'm a web development student and microcomputer support technician
+			</S.Paragraph>
+			<Button secondary onClick={() => navigate(routes.curriculum)}>
+				Veja meu currículo
+			</Button>
+			<Button rippling onClick={() => navigate(routes.works)}>
+				Conheça meus serviços
+			</Button>
+		</S.Content>
+	);
 };
-
 export default Home;

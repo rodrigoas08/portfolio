@@ -14,6 +14,7 @@ export default {
     light: 100,
     normal: 400,
     bold: 600,
+    extraBold: 900,
 
     sizes: {
       xxsmall: "1rem",

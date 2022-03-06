@@ -6,16 +6,27 @@ type ProfileProps = {
 };
 
 export const Img = styled.img`
-  border-radius: 50%;
+margin: 0 auto;
+opacity: 0.5;
+position: absolute;
+animation: rotacao 10s 5s linear infinite;
+:hover {
+  animation-play-state: paused;
+}
+@keyframes rotacao {
+  100%{
+    transform: rotate(360deg) ;
+  }
+}
 `
 
 const Profile = ({ width, height}: ProfileProps) => (
   <Img
     width={width}
     height={height}
-    title="Rodrigo Sobral"
-    alt="Foto perfil do Rodrigo Sobral"
-    src={`${process.env.PUBLIC_URL}/img/${"eu.jpg"}`}
+    title="Planeta Terra"
+    alt="Foto do planeta terra"
+    src={`${process.env.PUBLIC_URL}/img/${"Earth.svg"}`}
   />
 );
 export default Profile;

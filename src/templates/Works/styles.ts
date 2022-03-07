@@ -1,25 +1,19 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-	height: calc(100vh - 180px);
 	width: 100%;
-	border: 1px solid white;
-
-	> table {
-		border: none;
-		width: 100%;
-		max-height: 100%;
-		position: relative;
-		font-size: 2rem;
-		padding: 2rem;
-	}
+	display: flex;
+	height: calc(100vh - 180px);
 `;
 
-export const Tr = styled.tr`
-	border: 1px solid white;
+export const Ul = styled.ul`
+	width: 100%;
+	padding-top: 10rem;
+	font-size: 1.3rem;
+	list-style: inside square;
+	/* box-shadow: 0px 4px 4px 0px black; */
 `;
 
-export const Td = styled.td`
+export const Li = styled.li`
 	padding: 2rem;
-	box-shadow: 4px 4px 4px 2px black;
 `;

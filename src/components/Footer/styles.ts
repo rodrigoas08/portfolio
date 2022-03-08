@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Footer = styled.div`
   ${({ theme }) => css`
@@ -14,14 +14,11 @@ export const Footer = styled.div`
 
 export const Paragraph = styled.p``;
 
-export const SocialText = styled.p`
-`;
+export const SocialText = styled.p``;
 
 export const IconsWrapper = styled.div`
-  ${({ theme }) => css`
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-  `}
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;

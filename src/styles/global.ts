@@ -25,12 +25,6 @@ const GlobalStyle = createGlobalStyle`
   input, textarea  {
     font-family: ${({ theme }) => theme.font.family.nunito};
   }  
-
-  button {   
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-  }
  
 `;
 

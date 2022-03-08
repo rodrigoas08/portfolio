@@ -38,8 +38,8 @@ export default {
     xxlarge: "6rem",
   },
   colors: {
-    white: "#fff",
-    black: "#000",
+    white: "#FFFFFF",
+    black: "#000000",
     error: "#FF6262",
     primary: "#2948FF",
     blueRibbon: "#396AFC",

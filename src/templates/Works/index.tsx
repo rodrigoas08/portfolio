@@ -3,7 +3,10 @@ import * as S from './styles';
 export const Works = () => {
   return (
     <S.Content>
+      <div>
         <S.Title>Principais serviços</S.Title>
+        <S.Icon width="30px" height="30px" src={`${process.env.PUBLIC_URL}/img/services.svg`} />
+      </div>
       <S.Ul>
         <S.Li>
           Serviço de consultoria para montar seu computador incluindo orçamento

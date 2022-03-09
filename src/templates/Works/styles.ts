@@ -6,6 +6,10 @@ export const Content = styled.section`
   justify-content: center;
   grid-template-rows: 0.2fr 1fr;
   height: calc(100vh - 180px);
+
+  > div {
+    border: 1px solid black;
+  }
 `;
 
 export const Title = styled.h1`
@@ -18,12 +22,16 @@ export const Title = styled.h1`
   `}
 `;
 
+export const Icon = styled.img`
+  border: 1px solid black;
+`;
+
 export const Ul = styled.ul`
   width: 100%;
-  padding-top: 10rem;
+  padding: 1rem;
   font-size: 2.3rem;
-  list-style: inside square;
   border: 1px solid black;
+  list-style: inside url(${process.env.PUBLIC_URL}/img/check.svg);
 `;
 
 export const Li = styled.li`

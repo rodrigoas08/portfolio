@@ -1,39 +1,58 @@
 import styled, { css } from 'styled-components';
 
-export const Content = styled.section`
-  width: 100%;
-  display: grid;
-  justify-content: center;
-  grid-template-rows: 0.2fr 1fr;
-  height: calc(100vh - 180px);
+export const Section = styled.section`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 16rem);
+    background-color: rgba(0, 0, 0, 0.03);
 
-  > div {
-    border: 1px solid black;
-  }
+    > ul {
+      padding: 0 ${theme.spacings.xxsmall};
+      font-size: ${theme.font.sizes.xxlarge};
+      list-style: inside url(${process.env.PUBLIC_URL}/img/check.svg);
+
+      > li {
+        padding: ${theme.spacings.small};
+      }
+    }
+  `}
 `;
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    font-size: 4rem;
-    text-align: center;
-    letter-spacing: 0.5rem;
+    z-index: 2;
+    display: inline;
+    position: relative;
     text-transform: uppercase;
-    text-shadow: -4px 10px 1px ${theme.colors.primary};
+    color: ${theme.colors.white};
+    padding: ${theme.spacings.xlarge} 0;
+    font-size: ${theme.font.sizes.xxxlarge};
+    letter-spacing: ${theme.spacings.xxxsmall};
+
+    &:before {
+      content: '';
+      top: 30%;
+      left: -1.5%;
+      z-index: -1;
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      background: transparent;
+      border: 3px solid transparent;
+      width: ${theme.spacings.xlarge};
+      height: ${theme.spacings.xlarge};
+      border-top-color: ${theme.colors.white};
+      border-bottom-color: ${theme.colors.black};
+      animation: rotating 2s 2s ease-in-out alternate-reverse infinite;
+    }
+    @keyframes rotating {
+      to {
+        transform: rotate(1turn);
+        border-top-color: ${theme.colors.black};
+        border-bottom-color: ${theme.colors.white};
+      }
+    }
   `}
-`;
-
-export const Icon = styled.img`
-  border: 1px solid black;
-`;
-
-export const Ul = styled.ul`
-  width: 100%;
-  padding: 1rem;
-  font-size: 2.3rem;
-  border: 1px solid black;
-  list-style: inside url(${process.env.PUBLIC_URL}/img/check.svg);
-`;
-
-export const Li = styled.li`
-  padding: 2rem;
 `;

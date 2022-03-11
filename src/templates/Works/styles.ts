@@ -22,8 +22,6 @@ export const Section = styled.section`
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    z-index: 2;
-    display: inline;
     font-size: 5.5rem;
     position: relative;
     text-transform: uppercase;

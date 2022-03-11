@@ -11,8 +11,8 @@ export const Works = () => {
           e escolha de peças.
         </li>
         <li>
-          Manutenção preventiva com limpeza interna completa e troca de pasta
-          térmica aumentando a vida útil do seu computador.
+          Manutenção preventiva com limpeza interna e troca de pasta térmica
+          aumentando a vida útil do seu computador.
         </li>
         <li>Cable Management.</li>
         <li>Montagem de computadores.</li>

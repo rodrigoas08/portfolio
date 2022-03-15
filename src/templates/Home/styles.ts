@@ -15,17 +15,17 @@ export const Title = styled.h1`
     color: ${theme.colors.white};
     font-weight: ${theme.font.light};
     padding: ${theme.spacings.xlarge} 0;
-    text-shadow: -1px 4px 1px ${theme.colors.primary};
+    text-shadow: -1px 1px 1px ${theme.colors.black};
 
     > span {
       font-weight: ${theme.font.extraBold};
       background: -webkit-linear-gradient(
         109deg,
         rgba(255, 255, 255, 0.9),
-        rgba(123, 23, 203, 0.9)
-      );
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: rgba(29, 48, 255, 1);
+        rgba(255, 255, 255, 0.9)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(48, 101, 172, 0.2);
     }
   `}
 `;

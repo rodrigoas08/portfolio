@@ -12,10 +12,10 @@ const GlobalStyle = createGlobalStyle`
   html, body {
     height: auto;
     background: ${({ theme }) => theme.colors.primary}; 
-    background: linear-gradient(180deg, ${({ theme }) =>
+    /* background: linear-gradient(180deg, ${({ theme }) =>
       theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); 
     background: -webkit-linear-gradient(180deg, ${({ theme }) =>
-      theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon});
+      theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); */
 
   }
   

@@ -29,6 +29,7 @@ export const Title = styled.h1`
     font-weight: ${theme.font.light};
     padding: ${theme.spacings.xlarge} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
+    text-shadow: -1px 1px 1px ${theme.colors.black};
 
     :after {
       content: '';

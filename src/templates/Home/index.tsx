@@ -13,9 +13,9 @@ export const Home = () => {
       <S.Paragraph>
         I'm a web development student and microcomputer support technician
       </S.Paragraph>
-      <Button secondary onClick={() => navigate(routes.curriculum)}>
+      {/* <Button secondary onClick={() => navigate(routes.curriculum)}>
         Veja meu currículo
-      </Button>
+      </Button> */}
       <Button rippling onClick={() => navigate(routes.works)}>
         Conheça meus serviços
       </Button>

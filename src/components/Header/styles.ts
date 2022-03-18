@@ -13,18 +13,12 @@ export const Wrapper = styled.div`
   `}
 `;
 
-export const ProfileWrapper = styled.div``;
-
-export const ImageProfile = styled.div`
-  ${({ theme }) => css`
-    cursor: pointer;
-    animation: inherit;
-    border-radius: 50%;
-    background-size: cover;
-    width: ${theme.spacings.xxlarge};
-    height: ${theme.spacings.xxlarge};
-    background-image: url(${process.env.PUBLIC_URL}/img/eu.jpg);
-  `}
+export const ImgLogo = styled.div`
+  cursor: pointer;
+  background-size: 100% 100%;
+  width: 15rem;
+  height: 10rem;
+  background-image: url(${process.env.PUBLIC_URL}/img/rstecinfo.svg);
 `;
 
 export const NavWrapper = styled.div`

@@ -3,9 +3,11 @@ import styled, { css } from 'styled-components';
 export const Footer = styled.div`
   ${({ theme }) => css`
     height: 8rem;
-    display: flex;
     bottom: 0rem;
+    display: flex;
+    margin: 0 20rem;
     align-items: center;
+    color: ${theme.colors.white};
     justify-content: space-between;
     font-size: ${theme.font.sizes.small};
     padding: ${theme.spacings.small} ${theme.spacings.xxlarge};

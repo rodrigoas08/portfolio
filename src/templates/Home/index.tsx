@@ -7,15 +7,14 @@ export const Home = () => {
   return (
     <S.Content>
       <S.Title>
-        Seja muito bem vindo ao <br />
-        <span>RSTECINFO</span>
+        Seu <span>computador estragou</span>? <br />
       </S.Title>
+      <S.SubTitle>
+        Então veio ao <span>lugar certo</span>
+      </S.SubTitle>
       <S.Paragraph>
         I'm a web development student and microcomputer support technician
       </S.Paragraph>
-      {/* <Button secondary onClick={() => navigate(routes.curriculum)}>
-        Veja meu currículo
-      </Button> */}
       <Button rippling onClick={() => navigate(routes.works)}>
         Conheça meus serviços
       </Button>

@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   ${({ theme }) => css`
     height: 8rem;
     display: flex;
+    margin: 0 20rem;
     position: relative;
     align-items: center;
     justify-content: space-between;

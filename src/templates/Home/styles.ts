@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Content = styled.div`
   display: flex;
+  margin: 0 20rem;
   align-items: center;
   flex-direction: column;
   min-height: calc(100vh - 16rem);
@@ -9,23 +10,34 @@ export const Content = styled.div`
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    font-size: 7rem;
+    font-size: 5rem;
+    text-align: start;
     position: relative;
-    text-align: center;
+    color: ${theme.colors.white};
+    font-weight: ${theme.font.light};
+    padding: ${theme.spacings.xlarge} 0 0;
+    text-shadow: -1px 1px 1px ${theme.colors.black};
+    > span {
+      letter-spacing: 0.5rem;
+      color: ${theme.colors.error};
+      font-weight: ${theme.font.extraBold};
+    }
+  `}
+`;
+
+export const SubTitle = styled.h2`
+  ${({ theme }) => css`
+    font-size: 5rem;
+    text-align: start;
+    position: relative;
     color: ${theme.colors.white};
     font-weight: ${theme.font.light};
     padding: ${theme.spacings.xlarge} 0;
     text-shadow: -1px 1px 1px ${theme.colors.black};
-
     > span {
+      letter-spacing: 0.5rem;
+      color: ${theme.colors.success};
       font-weight: ${theme.font.extraBold};
-      background: -webkit-linear-gradient(
-        109deg,
-        rgba(255, 255, 255, 0.9),
-        rgba(255, 255, 255, 0.9)
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: rgba(48, 101, 172, 0.2);
     }
   `}
 `;

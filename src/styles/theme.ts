@@ -1,6 +1,6 @@
 export default {
   border: {
-    radius: "0.2rem",
+    radius: '0.2rem'
   },
   font: {
     family: {
@@ -8,51 +8,52 @@ export default {
       inter: "'Inter', sans-serif",
       azonix: "'Azonix', sans-serif",
       josefin: "'Josefin Sans', sans-serif",
-      roboto: "'Roboto', sans-serif",
+      roboto: "'Roboto', sans-serif"
     },
-    italic: "italic",
+    italic: 'italic',
     light: 100,
     normal: 400,
     bold: 600,
     extraBold: 900,
 
     sizes: {
-      xxsmall: "1rem",
-      xsmall: "1.2rem",
-      small: "1.4rem",
-      medium: "1.6rem",
-      large: "1.8rem",
-      xlarge: "2.0rem",
-      xxlarge: "2.4rem",
-      xxxlarge: "2.8rem",
-    },
+      xxsmall: '1rem',
+      xsmall: '1.2rem',
+      small: '1.4rem',
+      medium: '1.6rem',
+      large: '1.8rem',
+      xlarge: '2.0rem',
+      xxlarge: '2.4rem',
+      xxxlarge: '2.8rem'
+    }
   },
   spacings: {
-    xxxsmall: "0.5rem",
-    xxsmall: "1rem",
-    xsmall: "1.5rem",
-    small: "2rem",
-    medium: "3rem",
-    large: "4rem",
-    xlarge: "5rem",
-    xxlarge: "6rem",
+    xxxsmall: '0.5rem',
+    xxsmall: '1rem',
+    xsmall: '1.5rem',
+    small: '2rem',
+    medium: '3rem',
+    large: '4rem',
+    xlarge: '5rem',
+    xxlarge: '6rem'
   },
   colors: {
-    white: "#FFFFFF",
-    black: "#000000",
-    error: "#FF6262",
-    primary: "#00ACEE",
-    blueRibbon: "#87CEEB",
-    gray: "#8E8E8E",
-    lightGray: "#D3D3D3",
-    text: "#232323",
+    white: '#FFFFFF',
+    black: '#000000',
+    error: '#FF6262',
+    primary: '#00ACEE',
+    blueRibbon: '#87CEEB',
+    gray: '#8E8E8E',
+    lightGray: '#D3D3D3',
+    text: '#232323',
+    success: '#28A745'
   },
   breakpoints: {
-    mobile: "600px",
-    ipad: "768px",
-    smallTablet: "992px",
-    tablet: "1024px",
-    desktop: "1200px",
-    largeDestkop: "1640px",
-  },
+    mobile: '600px',
+    ipad: '768px',
+    smallTablet: '992px',
+    tablet: '1024px',
+    desktop: '1200px',
+    largeDestkop: '1640px'
+  }
 } as const;

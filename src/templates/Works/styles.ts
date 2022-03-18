@@ -6,7 +6,6 @@ export const Section = styled.section`
     align-items: center;
     flex-direction: column;
     min-height: calc(100vh - 16rem);
-    background-color: rgba(0, 0, 0, 0.03);
 
     > ul {
       padding: 0 ${theme.spacings.xxsmall};

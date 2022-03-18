@@ -13,7 +13,7 @@ export const Home = () => {
         Então veio ao <span>lugar certo</span>
       </S.SubTitle>
       <S.Paragraph>
-        I'm a web development student and microcomputer support technician
+        Entre em contato agora mesmo por um de nossos canais
       </S.Paragraph>
       <Button rippling onClick={() => navigate(routes.works)}>
         Conheça meus serviços

@@ -1,7 +1,9 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Content = styled.div`
-  height: calc(100vh - 180px);
   width: 100%;
-  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 16rem);
 `;

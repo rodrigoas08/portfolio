@@ -1,3 +1,4 @@
+/*eslint-disable*/
 import * as T from 'templates';
 import theme from 'styles/theme';
 import routes from 'utils/routes';
@@ -19,7 +20,7 @@ function App() {
       <Wrapper>
         <Router>
           <Redirect from={routes.default} to={routes.home} />
-          <Home path={routes.home} />
+          <Home default path={routes.home} />
           <Works path={routes.works} />
           <Store path={routes.store} />
           <Curriculum path={routes.curriculum} />

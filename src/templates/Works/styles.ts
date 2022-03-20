@@ -21,11 +21,11 @@ export const Section = styled.section`
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    font-size: 5.5rem;
+    font-size: 4rem;
     position: relative;
     text-transform: uppercase;
     color: ${theme.colors.white};
-    font-weight: ${theme.font.light};
+    font-weight: ${theme.font.bold};
     padding: ${theme.spacings.xlarge} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
     text-shadow: -1px 1px 1px ${theme.colors.black};

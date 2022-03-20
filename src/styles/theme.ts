@@ -6,9 +6,9 @@ export default {
     family: {
       nunito: "'Nunito Sans', sans-serif",
       inter: "'Inter', sans-serif",
-      azonix: "'Azonix', sans-serif",
       josefin: "'Josefin Sans', sans-serif",
-      roboto: "'Roboto', sans-serif"
+      roboto: "'Roboto', sans-serif",
+      montserrat: "'Montserrat', sans-serif"
     },
     italic: 'italic',
     light: 100,
@@ -46,7 +46,8 @@ export default {
     gray: '#8E8E8E',
     lightGray: '#D3D3D3',
     text: '#232323',
-    success: '#28A745'
+    success: '#28A745',
+    barberry: '#DED717'
   },
   breakpoints: {
     mobile: '600px',

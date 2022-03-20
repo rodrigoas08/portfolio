@@ -8,6 +8,7 @@ export const Wrapper = styled.div`
     position: relative;
     align-items: center;
     justify-content: space-between;
+    /* box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1); */
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};
   `}
 `;

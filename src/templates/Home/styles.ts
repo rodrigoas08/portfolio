@@ -4,33 +4,44 @@ export const Content = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   min-height: calc(100vh - 16rem);
 `;
+
+export const Article = styled.article``;
 
 export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: 5rem;
     color: ${theme.colors.white};
-    font-weight: ${theme.font.light};
-    font-weight: ${theme.font.extraBold};
+    font-weight: ${theme.font.bold};
     text-shadow: -1px 1px 1px ${theme.colors.black};
     > span {
-      letter-spacing: 0.5rem;
       color: ${theme.colors.error};
+    }
     }
   `}
 `;
 
-export const SubTitle = styled.h2`
+export const Title2 = styled.h1`
   ${({ theme }) => css`
     font-size: 5rem;
     color: ${theme.colors.white};
-    font-weight: ${theme.font.light};
-    font-weight: ${theme.font.extraBold};
+    font-weight: ${theme.font.bold};
     text-shadow: -1px 1px 1px ${theme.colors.black};
     > span {
-      letter-spacing: 0.5rem;
+      color: ${theme.colors.barberry};
+    }
+  `}
+`;
+
+export const Title3 = styled.h1`
+  ${({ theme }) => css`
+    font-size: 5rem;
+    color: ${theme.colors.white};
+    font-weight: ${theme.font.bold};
+    text-shadow: -1px 1px 1px ${theme.colors.black};
+    > span {
       color: ${theme.colors.success};
     }
   `}
@@ -38,9 +49,11 @@ export const SubTitle = styled.h2`
 
 export const Paragraph = styled.h2`
   ${({ theme }) => css`
-    font-size: 3rem;
+    font-size: 2rem;
     position: relative;
-    font-weight: ${theme.font.light};
+    text-align: center;
+    color: ${theme.colors.text};
+    font-weight: ${theme.font.bold};
     margin: ${theme.spacings.small} ${theme.spacings.small};
     }
 

@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.main`
-margin: 0 20rem;
+  display: flex;
+  flex-direction: column;
 `;

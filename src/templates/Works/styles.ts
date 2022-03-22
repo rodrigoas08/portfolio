@@ -3,9 +3,10 @@ import styled, { css } from 'styled-components';
 export const Section = styled.section`
   ${({ theme }) => css`
     display: flex;
+    height: 100vh;
     align-items: center;
     flex-direction: column;
-    min-height: calc(100vh - 16rem);
+    background-color: ${theme.colors.primary};
 
     > ul {
       padding: 0 ${theme.spacings.xxsmall};

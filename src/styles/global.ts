@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   
   html, body {
     height: auto;
-    background: ${({ theme }) => theme.colors.primary}; 
+    background-color: black;
     /* background: linear-gradient(180deg, ${({ theme }) =>
       theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); 
     background: -webkit-linear-gradient(180deg, ${({ theme }) =>

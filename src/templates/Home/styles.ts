@@ -1,64 +1,77 @@
 import styled, { css } from 'styled-components';
 
-export const Content = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-  min-height: calc(100vh - 16rem);
+export const Container = styled.div`
+  display: grid;
+  height: calc(100vh - 6rem);
+  grid-template-columns: 1fr 0.8fr;
 `;
 
-export const Article = styled.article``;
+export const Section = styled.section`
+  ${({ theme }) => css`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: ${theme.colors.primary};
+  `}
+`;
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    font-size: 5rem;
-    color: ${theme.colors.white};
-    font-weight: ${theme.font.bold};
-    text-shadow: -1px 1px 1px ${theme.colors.black};
-    > span {
-      color: ${theme.colors.error};
-    }
-    }
-  `}
-`;
-
-export const Title2 = styled.h1`
-  ${({ theme }) => css`
-    font-size: 5rem;
-    color: ${theme.colors.white};
-    font-weight: ${theme.font.bold};
-    text-shadow: -1px 1px 1px ${theme.colors.black};
-    > span {
-      color: ${theme.colors.barberry};
-    }
-  `}
-`;
-
-export const Title3 = styled.h1`
-  ${({ theme }) => css`
-    font-size: 5rem;
-    color: ${theme.colors.white};
-    font-weight: ${theme.font.bold};
-    text-shadow: -1px 1px 1px ${theme.colors.black};
-    > span {
-      color: ${theme.colors.success};
-    }
-  `}
-`;
-
-export const Paragraph = styled.h2`
-  ${({ theme }) => css`
-    font-size: 2rem;
+    font-size: 7rem;
     position: relative;
-    text-align: center;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
     color: ${theme.colors.text};
     font-weight: ${theme.font.bold};
-    margin: ${theme.spacings.small} ${theme.spacings.small};
-    }
+    text-shadow: 0px 2px 1px ${theme.colors.white};
 
-    &::first-letter {
-      text-transform: uppercase;
+    ::after {
+      content: '';
+      width: 100%;
+      height: 0.2rem;
+      display: block;
+      position: absolute;
+      background-color: white;
+      box-shadow: 5px 3px 1px rgba(0, 0, 0, 0.6);
+    }
+  `}
+`;
+
+export const Subtitle = styled.h4`
+  padding-top: 0.6rem;
+  padding-bottom: 5rem;
+  text-transform: uppercase;
+`;
+
+export const Article = styled.article`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 10rem;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: ${({ theme }) => theme.colors.text};
+  > button {
+    width: 25rem;
+    height: 8rem;
+    ::before {
+      border: 1.2rem solid ${({ theme }) => theme.colors.white};
+    }
+  }
+`;
+
+export const Paragraph = styled.p`
+  ${({ theme }) => css`
+    color: ${theme.colors.white};
+    font-weight: ${theme.font.bold};
+    font-size: ${theme.font.sizes.xxlarge};
+    text-shadow: -1px 1px 1px ${theme.colors.black};
+    > span {
+      color: ${theme.colors.primary};
     }
   `}
 `;

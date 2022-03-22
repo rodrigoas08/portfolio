@@ -3,9 +3,10 @@ import * as ButtonStyles from 'components/Button/styles';
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    width: 100%;
     height: 8rem;
     display: flex;
-    position: relative;
+    position: absolute;
     align-items: center;
     justify-content: space-between;
     /* box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1); */

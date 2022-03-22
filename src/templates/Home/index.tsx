@@ -2,29 +2,34 @@ import * as S from './styles';
 import routes from 'utils/routes';
 import { Button } from 'components';
 import { navigate } from '@reach/router';
+import Works from '../Works';
+import Localization from './Localization';
 
-export const Home = () => {
+const Home = () => {
   return (
-    <S.Content>
-      <S.Article>
-        <S.Title>
-          Seu <span>computador ficou lento</span>
-          <b>?</b> <br />
-        </S.Title>
-        <S.Title2>
-          Não sabe mais <span>como resolver isso</span>?
-        </S.Title2>
-        <S.Title3>
-          Então veio ao <span>lugar certo</span>.
-        </S.Title3>
-        <S.Paragraph>
-          Conserto computador, notebook, faço montagens e muito mais.
-        </S.Paragraph>
-      </S.Article>
-      <Button rippling onClick={() => navigate(routes.works)}>
-        Conheça meus serviços
-      </Button>
-    </S.Content>
+    <>
+      <S.Container>
+        <S.Section>
+          <S.Title>
+            Rodrigo
+            <br /> A. Sobral
+          </S.Title>
+          <S.Subtitle>Técnico em informática e desenvolvedor web</S.Subtitle>
+        </S.Section>
+
+        <S.Article>
+          <S.Paragraph>
+            Seu <span>computador ficou lento</span> e não sabe{' '}
+            <span> como resolver</span>?
+          </S.Paragraph>
+          <Button rippling onClick={() => navigate(routes.works)}>
+            Conheça meus serviços
+          </Button>
+        </S.Article>
+      </S.Container>
+      <Localization />
+      <Works />
+    </>
   );
 };
 

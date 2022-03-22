@@ -58,8 +58,22 @@ export const Article = styled.article`
   > button {
     width: 25rem;
     height: 8rem;
+    text-transform: uppercase;
+    font-weight: ${({ theme }) => theme.font.extraBold};
     ::before {
       border: 1.2rem solid ${({ theme }) => theme.colors.white};
+    }
+  }
+`;
+
+export const Seta = styled.img`
+  height: 6rem;
+  width: 6rem;
+  animation: is-bouncing 1.75s ease-in alternate infinite;
+
+  @keyframes is-bouncing {
+    to {
+      transform: translateY(40px);
     }
   }
 `;

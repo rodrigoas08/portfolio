@@ -22,6 +22,7 @@ const Home = () => {
             Seu <span>computador ficou lento</span> e não sabe{' '}
             <span> como resolver</span>?
           </S.Paragraph>
+          <S.Seta src={`${process.env.PUBLIC_URL}/img/seta.svg`} />
           <Button rippling onClick={() => navigate(routes.works)}>
             Conheça meus serviços
           </Button>

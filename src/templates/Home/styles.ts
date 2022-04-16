@@ -28,6 +28,17 @@ export const Title = styled.h1`
     font-family: ${theme.font.family.montserrat};
     /* text-shadow: 0px 2px 1px ${theme.colors.white}; */
 
+    :after {
+      content: '';
+      width: 0%;
+      opacity: 0.5;
+      display: block;
+      height: 0.1rem;
+      position: absolute;
+      background-color: transparent;
+      transition: 1s ease-in-out;
+    }
+
     &:hover {
       :after {
         content: '';
@@ -37,7 +48,6 @@ export const Title = styled.h1`
         height: 0.1rem;
         position: absolute;
         background-color: ${theme.colors.primary};
-        box-shadow: 5px 3px 1px rgba(0, 0, 0, 0.6);
       }
 
       ::before {

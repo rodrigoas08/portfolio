@@ -39,6 +39,7 @@ export const NavWrapper = styled.div`
       &:after {
         content: '';
         width: 0%;
+        opacity: 0.5;
         height: 0.1rem;
         display: block;
         transition: 1s ease-in-out;
@@ -48,6 +49,7 @@ export const NavWrapper = styled.div`
       &:before {
         content: '';
         width: 100%;
+        opacity: 0.5;
         height: 0.1rem;
         display: block;
         background: transparent;

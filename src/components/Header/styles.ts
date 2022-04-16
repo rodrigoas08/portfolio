@@ -25,12 +25,13 @@ export const ImgLogo = styled.div`
 
 export const NavWrapper = styled.div`
   display: flex;
+  gap: 1.5rem;
 
   ${ButtonStyles.Wrapper} {
     ${({ theme }) => css`
       border: none;
+      color: ${theme.colors.white};
       font-size: ${theme.font.sizes.xlarge};
-      color: ${({ theme }) => theme.colors.white};
 
       :first-child {
         margin-left: 0rem;

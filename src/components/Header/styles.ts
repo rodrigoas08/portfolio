@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     width: 100%;
     height: 8rem;
     display: flex;
-    position: absolute;
+    position: relative;
     align-items: center;
     justify-content: space-between;
     /* box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1); */
@@ -15,11 +15,12 @@ export const Wrapper = styled.div`
 `;
 
 export const ImgLogo = styled.div`
-  width: 15rem;
-  height: 4.5rem;
+  width: 5rem;
+  height: 5rem;
   cursor: pointer;
+  border-radius: 50%;
   background-size: 100% 100%;
-  background-image: url(${process.env.PUBLIC_URL}/img/rstecinfo.svg);
+  background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
 `;
 
 export const NavWrapper = styled.div`
@@ -38,16 +39,16 @@ export const NavWrapper = styled.div`
       &:after {
         content: '';
         width: 0%;
-        height: 1px;
+        height: 0.1rem;
         display: block;
         transition: 1s ease-in-out;
-        background: ${({ theme }) => theme.colors.white};
+        background: ${({ theme }) => theme.colors.primary};
       }
 
       &:before {
         content: '';
         width: 100%;
-        height: 1px;
+        height: 0.1rem;
         display: block;
         background: transparent;
         transition: 1s ease-in-out;
@@ -59,8 +60,8 @@ export const NavWrapper = styled.div`
         }
         :before {
           width: 0%;
-          height: 1px;
-          background: ${({ theme }) => theme.colors.white};
+          height: 0.1rem;
+          background: ${({ theme }) => theme.colors.primary};
         }
         background-color: transparent;
       }

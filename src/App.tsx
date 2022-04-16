@@ -3,7 +3,6 @@ import * as T from 'templates';
 import theme from 'styles/theme';
 import routes from 'utils/routes';
 import GlobalStyle from 'styles/global';
-
 import { Wrapper } from 'components';
 import { ThemeProvider } from 'styled-components';
 import { Router, RouteComponentProps, Redirect } from '@reach/router';
@@ -23,7 +22,7 @@ function App() {
           <Home default path={routes.home} />
           <Works path={routes.works} />
           <Store path={routes.store} />
-          <Curriculum path={routes.curriculum} />
+        <Curriculum path={routes.curriculum} />
         </Router>
       </Wrapper>
     </ThemeProvider>

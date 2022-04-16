@@ -1,12 +1,13 @@
 import styled, { css } from 'styled-components';
 
-export const Section = styled.section`
+export const Container = styled.div.attrs({ id: '2' })`
   ${({ theme }) => css`
+    width: 100%;
     display: flex;
-    height: 100vh;
     align-items: center;
     flex-direction: column;
-    background-color: ${theme.colors.primary};
+    height: calc(100vh - 16rem);
+    background-color: transparent;
 
     > ul {
       padding: 0 ${theme.spacings.xxsmall};
@@ -14,6 +15,7 @@ export const Section = styled.section`
       list-style: inside url(${process.env.PUBLIC_URL}/img/check.svg);
 
       > li {
+        color: ${theme.colors.white};
         padding: ${theme.spacings.small};
       }
     }
@@ -24,20 +26,20 @@ export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: 4rem;
     position: relative;
-    text-transform: uppercase;
-    color: ${theme.colors.white};
-    font-weight: ${theme.font.bold};
+    /* text-transform: uppercase; */
+    color: ${theme.colors.primary};
+    font-weight: ${theme.font.light};
     padding: ${theme.spacings.xlarge} 0;
-    letter-spacing: ${theme.spacings.xxxsmall};
-    text-shadow: -1px 1px 1px ${theme.colors.black};
 
-    :after {
+    &:hover:after {
       content: '';
       width: 100%;
-      height: 1px;
+      opacity: 0.5;
       display: block;
+      height: 0.1rem;
       position: absolute;
-      background: ${theme.colors.primary};
+      background-color: ${theme.colors.primary};
+      box-shadow: 5px 3px 1px rgba(0, 0, 0, 0.6);
     }
   `}
 `;

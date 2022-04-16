@@ -42,12 +42,12 @@ export const Title = styled.h1`
 
       ::before {
         content: '';
-        top: 1.1rem;
-        opacity: 0.4;
-        left: 12.45rem;
+        top: 1.5rem;
+        opacity: 0.7;
+        left: 17.4rem;
         display: block;
-        width: 0.57rem;
-        height: 0.57rem;
+        width: 0.86rem;
+        height: 0.86rem;
         border-radius: 50%;
         position: absolute;
         background-color: ${theme.colors.primary};

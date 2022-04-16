@@ -1,5 +1,5 @@
 import * as S from './styles';
-import routes from 'utils/routes';
+// import routes from 'utils/routes';
 // import { Button } from 'components';
 // import { navigate } from '@reach/router';
 

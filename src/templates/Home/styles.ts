@@ -20,7 +20,7 @@ export const Section = styled.section`
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    font-size: 5rem;
+    font-size: 7rem;
     cursor: default;
     position: relative;
     color: ${theme.colors.white};
@@ -67,6 +67,7 @@ export const Subtitle = styled.h4`
 `;
 
 export const Article = styled.article`
+  display: none;
   width: 100%;
   height: 100%;
   display: flex;
@@ -78,6 +79,7 @@ export const Article = styled.article`
 `;
 
 export const Seta = styled.img`
+  display: none;
   height: 2rem;
   width: 2rem;
   animation: is-bouncing 1.75s ease-in alternate infinite;
@@ -91,6 +93,7 @@ export const Seta = styled.img`
 
 export const Paragraph = styled.p`
   ${({ theme }) => css`
+    display: none;
     color: ${theme.colors.white};
     font-weight: ${theme.font.light};
     font-size: ${theme.font.sizes.xxlarge};

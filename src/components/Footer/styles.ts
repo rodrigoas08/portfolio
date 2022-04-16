@@ -2,9 +2,11 @@ import styled, { css } from 'styled-components';
 
 export const Footer = styled.div`
   ${({ theme }) => css`
+    width: 100vw;
     height: 8rem;
     bottom: 0rem;
     display: flex;
+    position: absolute;
     align-items: center;
     color: ${theme.colors.white};
     justify-content: space-between;

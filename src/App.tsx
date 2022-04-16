@@ -22,7 +22,6 @@ function App() {
           <Home default path={routes.home} />
           <Works path={routes.works} />
           <Store path={routes.store} />
-        <Curriculum path={routes.curriculum} />
         </Router>
       </Wrapper>
     </ThemeProvider>

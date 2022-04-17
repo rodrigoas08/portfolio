@@ -1,21 +1,28 @@
 import styled, { css } from 'styled-components';
+import * as ButtonStyles from 'components/Button/styles';
 
-export const Container = styled.div`
+export const Container = styled.div.attrs({ id: 'home' })`
+  height: 100vh;
   display: flex;
   position: relative;
-  flex-direction: column;
-  height: calc(100vh - 16rem);
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Section = styled.section`
-  width: 100%;
-  height: 100%;
   display: flex;
   position: relative;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   background-color: transparent;
+
+  ${ButtonStyles.Wrapper} {
+    > a {
+      text-decoration: none;
+      color: ${({ theme }) => theme.colors.primary};
+    }
+  }
 `;
 
 export const Title = styled.h1`
@@ -35,8 +42,8 @@ export const Title = styled.h1`
       display: block;
       height: 0.1rem;
       position: absolute;
-      background-color: transparent;
       transition: 1s ease-in-out;
+      background-color: transparent;
     }
 
     &:hover {
@@ -76,20 +83,7 @@ export const Subtitle = styled.h4`
   `}
 `;
 
-export const Article = styled.article`
-  display: none;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  padding: 10rem;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  background-color: transparent;
-`;
-
 export const Seta = styled.img`
-  display: none;
   height: 2rem;
   width: 2rem;
   animation: is-bouncing 1.75s ease-in alternate infinite;
@@ -103,7 +97,6 @@ export const Seta = styled.img`
 
 export const Paragraph = styled.p`
   ${({ theme }) => css`
-    display: none;
     color: ${theme.colors.white};
     font-weight: ${theme.font.light};
     font-size: ${theme.font.sizes.xxlarge};

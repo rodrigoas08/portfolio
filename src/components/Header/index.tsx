@@ -13,11 +13,11 @@ export const Header = () => {
       {showModal && <Modal handleClose={() => setShowModal(false)} />}
       <S.ImgLogo onClick={() => navigate(routes.home)} />
       <S.NavWrapper>
-        <Button secondary onClick={() => navigate(routes.home)}>
-          Home
+        <Button secondary>
+          <a href="#home">Home</a>
         </Button>
-        <Button secondary onClick={() => navigate(routes.works)}>
-          Serviços
+        <Button secondary>
+          <a href="#servicos">Serviços</a>
         </Button>
         <Button secondary onClick={() => navigate(routes.store)}>
           Brechó

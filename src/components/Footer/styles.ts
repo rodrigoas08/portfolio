@@ -6,7 +6,7 @@ export const Footer = styled.div`
     height: 8rem;
     bottom: 0rem;
     display: flex;
-    position: absolute;
+    position: relative;
     align-items: center;
     color: ${theme.colors.white};
     justify-content: space-between;

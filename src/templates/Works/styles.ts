@@ -1,13 +1,12 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div.attrs({ id: '2' })`
+export const Container = styled.div.attrs({ id: 'servicos' })`
   ${({ theme }) => css`
-    width: 100vw;
+    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: calc(100vh - 16rem);
-    background-color: transparent;
+    justify-content: center;
 
     > ul {
       padding: 0 ${theme.spacings.xxsmall};
@@ -29,7 +28,7 @@ export const Title = styled.h1`
     /* text-transform: uppercase; */
     color: ${theme.colors.primary};
     font-weight: ${theme.font.light};
-    padding: ${theme.spacings.xlarge} 0;
+    padding-bottom: ${theme.spacings.xlarge};
 
     &:hover:after {
       content: '';

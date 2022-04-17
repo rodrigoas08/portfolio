@@ -3,10 +3,11 @@ import * as ButtonStyles from 'components/Button/styles';
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
+    z-index: 1;
     width: 100%;
     height: 8rem;
     display: flex;
-    position: relative;
+    position: fixed;
     align-items: center;
     justify-content: space-between;
     /* box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1); */
@@ -30,14 +31,19 @@ export const NavWrapper = styled.div`
   ${ButtonStyles.Wrapper} {
     ${({ theme }) => css`
       border: none;
+      text-decoration: none;
       color: ${theme.colors.white};
       font-size: ${theme.font.sizes.xlarge};
+      > a {
+        text-decoration: none;
+        color: ${theme.colors.white};
+      }
 
       :first-child {
         margin-left: 0rem;
       }
 
-      &:after {
+      :after {
         content: '';
         width: 0%;
         opacity: 0.5;
@@ -47,7 +53,7 @@ export const NavWrapper = styled.div`
         background: ${({ theme }) => theme.colors.primary};
       }
 
-      &:before {
+      :before {
         content: '';
         width: 100%;
         opacity: 0.5;
@@ -57,13 +63,12 @@ export const NavWrapper = styled.div`
         transition: 1s ease-in-out;
       }
 
-      &:hover {
-        &:after {
+      :hover {
+        :after {
           width: 100%;
         }
         :before {
           width: 0%;
-          height: 0.1rem;
           background: ${({ theme }) => theme.colors.primary};
         }
         background-color: transparent;

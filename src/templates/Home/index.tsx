@@ -1,29 +1,29 @@
 import * as S from './styles';
-// import routes from 'utils/routes';
-// import { Button } from 'components';
-// import { navigate } from '@reach/router';
+import { Works } from 'templates';
+import { Button } from 'components';
 
 const Home = () => {
   return (
-    <S.Container>
-      <S.Section>
-        <S.Title>Rodrigo Sobral</S.Title>
-        <S.Subtitle>
-          Técnico em informática | estagiário desenvolvedor front-end
-        </S.Subtitle>
-      </S.Section>
-      {/* 
-      <S.Article>
-        <S.Paragraph>
-          Seu <span>computador ficou lento</span> e não sabe{' '}
-          <span> como resolver</span> ?
-        </S.Paragraph>
-        <S.Seta src={process.env.PUBLIC_URL + '/img/seta.svg'} />
-        <Button rippling onClick={() => navigate(routes.works)}>
-          Conheça meus serviços
-        </Button>
-      </S.Article> */}
-    </S.Container>
+    <>
+      <S.Container>
+        <S.Section>
+          <S.Title>Rodrigo Sobral</S.Title>
+          <S.Subtitle>
+            Técnico em informática | estagiário desenvolvedor front-end
+          </S.Subtitle>
+          {/* <S.Paragraph>
+            Seu <span>computador ficou lento</span> e não sabe{' '}
+            <span> como resolver</span> ?
+          </S.Paragraph> */}
+          <S.Seta src={process.env.PUBLIC_URL + '/img/seta.svg'} />
+          <Button rippling>
+            <a href="home#servicos">Conheça meus serviços</a>
+          </Button>
+        </S.Section>
+      </S.Container>
+
+      <Works />
+    </>
   );
 };
 

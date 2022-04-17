@@ -1,12 +1,22 @@
 import styled, { css } from 'styled-components';
 
-export const Container = styled.div.attrs({ id: 'servicos' })`
+export const Wrapper = styled.div.attrs({ id: 'servicos' })`
+  height: 100vh;
+  display: flex;
+  padding-top: 8rem;
+  align-items: start;
+  justify-content: center;
+`;
+
+export const Container = styled.div`
   ${({ theme }) => css`
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    border-top: 1px solid yellowgreen;
+    padding: 5rem 0;
+    width: 100%;
 
     > ul {
       padding: 0 ${theme.spacings.xxsmall};
@@ -38,7 +48,6 @@ export const Title = styled.h1`
       height: 0.1rem;
       position: absolute;
       background-color: ${theme.colors.primary};
-      box-shadow: 5px 3px 1px rgba(0, 0, 0, 0.6);
     }
   `}
 `;

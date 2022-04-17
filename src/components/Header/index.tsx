@@ -1,7 +1,5 @@
 import * as S from './styles';
-import routes from 'utils/routes';
 import { useState, memo } from 'react';
-import { navigate } from '@reach/router';
 import { Button, Modal } from 'components';
 
 export const Header = () => {
@@ -22,9 +20,7 @@ export const Header = () => {
         <Button secondary>
           <a href="#servicos">Serviços</a>
         </Button>
-        <Button secondary onClick={() => navigate(routes.store)}>
-          Brechó
-        </Button>
+        <Button secondary>Brechó</Button>
         <Button secondary onClick={() => setShowModal(true)}>
           Contato
         </Button>

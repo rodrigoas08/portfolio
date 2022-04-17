@@ -18,10 +18,7 @@ function App() {
       <GlobalStyle />
       <Wrapper>
         <Router>
-          <Redirect from={routes.default} to={routes.home} />
           <Home default path={routes.home} />
-          <Works path={routes.works} />
-          <Store path={routes.store} />
         </Router>
       </Wrapper>
     </ThemeProvider>

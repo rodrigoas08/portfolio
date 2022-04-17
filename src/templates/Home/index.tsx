@@ -17,7 +17,7 @@ const Home = () => {
           </S.Paragraph> */}
           <S.Seta src={process.env.PUBLIC_URL + '/img/seta.svg'} />
 
-          <a href="home#servicos">
+          <a href="#servicos">
             <Button rippling>Conheça meus serviços</Button>
           </a>
         </S.Section>

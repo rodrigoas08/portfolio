@@ -30,7 +30,10 @@ const ButtonModifier = {
       border-radius: ${theme.border.radius};
 
       ::before {
-        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         content: '';
         position: absolute;
         border-radius: ${theme.border.radius};
@@ -62,6 +65,7 @@ export const Wrapper = styled.button<
     cursor: pointer;
     text-decoration: none;
     color: ${theme.colors.white};
+    font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.medium};
     font-family: ${theme.font.family.nunito};
     background: ${({ theme }) => theme.colors.primary};

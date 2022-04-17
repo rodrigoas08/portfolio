@@ -5,7 +5,7 @@ import routes from 'utils/routes';
 import GlobalStyle from 'styles/global';
 import { Wrapper } from 'components';
 import { ThemeProvider } from 'styled-components';
-import { Router, RouteComponentProps, Redirect } from '@reach/router';
+import { Router, RouteComponentProps } from '@reach/router';
 
 function App() {
   const Home = (props: RouteComponentProps) => <T.Home />;

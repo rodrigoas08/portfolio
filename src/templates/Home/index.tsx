@@ -5,7 +5,7 @@ import { Button } from 'components';
 const Home = () => {
   return (
     <>
-      <S.Container>
+      <S.Wrapper>
         <S.Section>
           <S.Title>Rodrigo Sobral</S.Title>
           <S.Subtitle>
@@ -16,11 +16,12 @@ const Home = () => {
             <span> como resolver</span> ?
           </S.Paragraph> */}
           <S.Seta src={process.env.PUBLIC_URL + '/img/seta.svg'} />
-          <Button rippling>
-            <a href="home#servicos">Conheça meus serviços</a>
-          </Button>
+
+          <a href="home#servicos">
+            <Button rippling>Conheça meus serviços</Button>
+          </a>
         </S.Section>
-      </S.Container>
+      </S.Wrapper>
 
       <Works />
     </>

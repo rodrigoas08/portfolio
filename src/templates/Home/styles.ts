@@ -1,12 +1,12 @@
 import styled, { css } from 'styled-components';
 import * as ButtonStyles from 'components/Button/styles';
 
-export const Container = styled.div.attrs({ id: 'home' })`
-  height: 100vh;
+export const Wrapper = styled.div.attrs({ id: 'home' })`
   display: flex;
   position: relative;
   align-items: center;
   justify-content: center;
+  height: calc(100vh - 8rem);
 `;
 
 export const Section = styled.section`
@@ -33,7 +33,6 @@ export const Title = styled.h1`
     color: ${theme.colors.white};
     font-weight: ${theme.font.light};
     font-family: ${theme.font.family.montserrat};
-    /* text-shadow: 0px 2px 1px ${theme.colors.white}; */
 
     :after {
       content: '';

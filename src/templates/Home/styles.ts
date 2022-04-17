@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 import * as ButtonStyles from 'components/Button/styles';
 
 export const Wrapper = styled.div.attrs({ id: 'home' })`
+  width: 100%;
   display: flex;
   position: relative;
   align-items: center;

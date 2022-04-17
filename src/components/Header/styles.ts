@@ -9,8 +9,11 @@ export const Wrapper = styled.div`
     display: flex;
     position: fixed;
     align-items: center;
+    border-radius: 0.8rem;
+    backdrop-filter: blur(0.5rem);
     justify-content: space-between;
-    /* box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.1); */
+    background-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 12px rgba(255, 255, 255, 0.25);
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};
   `}
 `;

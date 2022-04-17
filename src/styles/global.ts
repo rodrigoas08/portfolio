@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
   
   html, body {
     height: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     background-color: black;
     /* background: linear-gradient(180deg, ${({ theme }) =>

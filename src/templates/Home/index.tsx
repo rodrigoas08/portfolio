@@ -11,16 +11,10 @@ const Home = () => {
           <S.Subtitle>
             Técnico em informática | estagiário desenvolvedor front-end
           </S.Subtitle>
-          {/* <S.Paragraph>
-            Seu <span>computador ficou lento</span> e não sabe{' '}
-            <span> como resolver</span> ?
-          </S.Paragraph> */}
-          <S.Seta src={process.env.PUBLIC_URL + '/img/seta.svg'} />
-
-          <a href="#servicos">
-            <Button rippling>Conheça meus serviços</Button>
-          </a>
         </S.Section>
+        <a href="#servicos">
+          <S.Arrow src={process.env.PUBLIC_URL + '/img/seta.svg'} />
+        </a>
       </S.Wrapper>
 
       <Works />

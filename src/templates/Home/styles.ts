@@ -1,13 +1,21 @@
 import styled, { css } from 'styled-components';
-import * as ButtonStyles from 'components/Button/styles';
 
 export const Wrapper = styled.div.attrs({ id: 'home' })`
-  width: 100%;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  height: calc(100vh - 8rem);
+  ${({ theme }) => css`
+    width: 100%;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 8rem);
+
+    > a {
+      position: absolute;
+      text-decoration: none;
+      color: ${theme.colors.primary};
+      bottom: ${theme.spacings.small};
+    }
+  `}
 `;
 
 export const Section = styled.section`
@@ -16,14 +24,6 @@ export const Section = styled.section`
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color: transparent;
-
-  ${ButtonStyles.Wrapper} {
-    > a {
-      text-decoration: none;
-      color: ${({ theme }) => theme.colors.primary};
-    }
-  }
 `;
 
 export const Title = styled.h1`
@@ -59,7 +59,6 @@ export const Title = styled.h1`
 
       ::before {
         content: '';
-        top: 1.5rem;
         opacity: 0.7;
         left: 17.4rem;
         display: block;
@@ -67,6 +66,7 @@ export const Title = styled.h1`
         height: 0.86rem;
         border-radius: 50%;
         position: absolute;
+        top: ${theme.spacings.xsmall};
         background-color: ${theme.colors.primary};
       }
     }
@@ -77,31 +77,22 @@ export const Subtitle = styled.h4`
   ${({ theme }) => css`
     cursor: default;
     padding-top: 0.6rem;
-    padding-bottom: 5rem;
     text-transform: uppercase;
     color: ${theme.colors.primary};
+    padding-bottom: ${theme.spacings.xlarge};
   `}
 `;
 
-export const Seta = styled.img`
-  height: 2rem;
-  width: 2rem;
-  animation: is-bouncing 1.75s ease-in alternate infinite;
-
-  @keyframes is-bouncing {
-    to {
-      transform: translateY(30px);
-    }
-  }
-`;
-
-export const Paragraph = styled.p`
+export const Arrow = styled.img`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
-    font-weight: ${theme.font.light};
-    font-size: ${theme.font.sizes.xxlarge};
-    > span {
-      color: ${theme.colors.primary};
+    width: ${theme.spacings.large};
+    height: ${theme.spacings.large};
+    animation: is-bouncing 1s ease-in alternate infinite;
+
+    @keyframes is-bouncing {
+      to {
+        transform: translateY(${theme.spacings.medium});
+      }
     }
   `}
 `;

@@ -9,9 +9,6 @@ import { Router, RouteComponentProps, Redirect } from '@reach/router';
 
 function App() {
   const Home = (props: RouteComponentProps) => <T.Home />;
-  const Curriculum = (props: RouteComponentProps) => <T.Curriculum />;
-  const Works = (props: RouteComponentProps) => <T.Works />;
-  const Store = (props: RouteComponentProps) => <T.Store />;
 
   return (
     <ThemeProvider theme={theme}>

@@ -11,7 +11,10 @@ export const Header = () => {
     <S.Wrapper>
       {/* se showModal for verdadeiro, exibe o modal ( o modal só aparecerá após ser clicado no botão "contact") */}
       {showModal && <Modal handleClose={() => setShowModal(false)} />}
-      <S.ImgLogo onClick={() => navigate(routes.home)} />
+
+      <a href="#home">
+        <S.ImgLogo />
+      </a>
       <S.NavWrapper>
         <Button secondary>
           <a href="#home">Home</a>

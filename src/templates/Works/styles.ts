@@ -18,16 +18,18 @@ export const Container = styled.div`
     justify-content: center;
     padding: ${theme.spacings.xlarge} 0;
     border-top: 1px solid ${theme.colors.primary};
+  `}
+`;
 
-    > ul {
-      padding: 0 ${theme.spacings.xxsmall};
-      font-size: ${theme.font.sizes.xxlarge};
-      list-style: inside url(${process.env.PUBLIC_URL}/img/check.svg);
+export const Ul = styled.ul`
+  ${({ theme }) => css`
+    padding: 0 ${theme.spacings.xxsmall};
+    font-size: ${theme.font.sizes.xxlarge};
+    list-style: inside url(${process.env.PUBLIC_URL}/img/check.svg);
 
-      > li {
-        color: ${theme.colors.white};
-        padding: ${theme.spacings.small};
-      }
+    > li {
+      color: ${theme.colors.white};
+      padding: ${theme.spacings.small};
     }
   `}
 `;

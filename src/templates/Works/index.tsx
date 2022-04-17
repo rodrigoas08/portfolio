@@ -6,11 +6,11 @@ export const Works = () => {
     <S.Wrapper>
       <S.Container>
         <S.Title>Principais Serviços</S.Title>
-        <ul>
+        <S.Ul>
           {ServiceList.map((item, index) => {
             return <li key={index}>{item.description}</li>;
           })}
-        </ul>
+        </S.Ul>
       </S.Container>
     </S.Wrapper>
   );

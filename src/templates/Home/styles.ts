@@ -12,11 +12,11 @@ export const Wrapper = styled.div.attrs({ id: 'home' })`
     > a {
       position: absolute;
       text-decoration: none;
-      font-size: ${theme.font.sizes.small};
-      color: ${theme.colors.primary};
-      bottom: ${theme.spacings.small};
-      right: 4rem;
       writing-mode: vertical-rl;
+      color: ${theme.colors.primary};
+      right: ${theme.spacings.large};
+      bottom: ${theme.spacings.small};
+      font-size: ${theme.font.sizes.small};
       animation: is-bouncing 1s ease-in alternate infinite;
 
       @keyframes is-bouncing {

@@ -1,7 +1,7 @@
-import * as S from "./styles";
-import { Button } from "components";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import * as S from './styles';
+import { Button } from 'components';
+import { useEffect, useState } from 'react';
+import { useForm } from 'react-hook-form';
 
 type ModalProps = {
   handleClose: () => void;
@@ -17,7 +17,7 @@ export const Modal = ({ handleClose }: ModalProps) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormState>();
   // const onSubmit: SubmitHandler<FormState> = (data) => console.log(data);
   const [modalSuccess, setModalSuccess] = useState(false);
@@ -34,11 +34,11 @@ export const Modal = ({ handleClose }: ModalProps) => {
     }, 3000);
 
     const handleEsc = ({ key }: KeyboardEvent) => {
-      key === "Escape" && handleClose();
+      key === 'Escape' && handleClose();
     };
-    document.addEventListener("keyup", handleEsc);
+    document.addEventListener('keyup', handleEsc);
 
-    return () => document.removeEventListener("keyup", handleEsc);
+    return () => document.removeEventListener('keyup', handleEsc);
   });
 
   return (
@@ -55,8 +55,8 @@ export const Modal = ({ handleClose }: ModalProps) => {
                 Nome <span>*</span>
               </S.Label>
               <S.Input
-                {...register("name", {
-                  required: true,
+                {...register('name', {
+                  required: true
                 })}
                 placeholder="Nome completo"
               />
@@ -66,13 +66,13 @@ export const Modal = ({ handleClose }: ModalProps) => {
               </S.Label>
               <S.Input
                 placeholder="seuemail@exemplo.com"
-                {...register("email", {
+                {...register('email', {
                   required: true,
                   pattern: {
-                    message: "Insira um e-mail válido",
+                    message: 'Insira um e-mail válido',
                     value:
-                      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi,
-                  },
+                      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi
+                  }
                 })}
               />
               {errors.email && <S.Error>Este campo é obrigatório.</S.Error>}
@@ -80,7 +80,7 @@ export const Modal = ({ handleClose }: ModalProps) => {
                 Assunto <span>*</span>
               </S.Label>
               <S.Textarea
-                {...register("subject", { required: true })}
+                {...register('subject', { required: true })}
                 placeholder="Escreva aqui sua mensagem..."
               />
               {errors.subject && <S.Error>Este campo é obrigatório.</S.Error>}

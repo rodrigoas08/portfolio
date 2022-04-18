@@ -28,10 +28,11 @@ export const ImgLogo = styled.div`
 
 export const NavWrapper = styled.div`
   display: flex;
-  gap: 1.5rem;
+  gap: 5rem;
 
   ${ButtonStyles.Wrapper} {
     ${({ theme }) => css`
+      padding: 0;
       border: none;
       text-decoration: none;
       color: ${theme.colors.white};

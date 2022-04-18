@@ -14,12 +14,14 @@ export const Header = () => {
         <S.ImgLogo />
       </a>
       <S.NavWrapper>
-        <Button secondary>
-          <a href="#home">Home</a>
-        </Button>
-        <Button secondary>
-          <a href="#servicos">Serviços</a>
-        </Button>
+        <a href="#home">
+          <Button secondary>Home</Button>
+        </a>
+
+        <a href="#servicos">
+          <Button secondary>Serviços</Button>
+        </a>
+
         <Button secondary>Brechó</Button>
         <Button secondary onClick={() => setShowModal(true)}>
           Contato

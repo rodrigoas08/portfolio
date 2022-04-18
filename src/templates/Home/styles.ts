@@ -12,8 +12,18 @@ export const Wrapper = styled.div.attrs({ id: 'home' })`
     > a {
       position: absolute;
       text-decoration: none;
+      font-size: ${theme.font.sizes.small};
       color: ${theme.colors.primary};
       bottom: ${theme.spacings.small};
+      right: 4rem;
+      writing-mode: vertical-rl;
+      animation: is-bouncing 1s ease-in alternate infinite;
+
+      @keyframes is-bouncing {
+        to {
+          transform: translateY(${theme.spacings.medium});
+        }
+      }
     }
   `}
 `;
@@ -87,12 +97,5 @@ export const Arrow = styled.img`
   ${({ theme }) => css`
     width: ${theme.spacings.large};
     height: ${theme.spacings.large};
-    animation: is-bouncing 1s ease-in alternate infinite;
-
-    @keyframes is-bouncing {
-      to {
-        transform: translateY(${theme.spacings.medium});
-      }
-    }
   `}
 `;

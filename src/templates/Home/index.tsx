@@ -12,7 +12,7 @@ const Home = () => {
             Técnico em informática | estagiário desenvolvedor front-end
           </S.Subtitle>
         </S.Section>
-        <a href="#servicos">
+        <a href="#servicos">Avançar
           <S.Arrow src={process.env.PUBLIC_URL + '/img/seta.svg'} />
         </a>
       </S.Wrapper>

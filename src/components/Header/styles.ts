@@ -42,9 +42,9 @@ export const NavWrapper = styled.div`
     ${({ theme }) => css`
       padding: 0;
       border: none;
-      text-decoration: none;
       text-transform: uppercase;
       color: ${theme.colors.white};
+      background-color: transparent;
       font-size: ${theme.font.sizes.small};
       > a {
         text-decoration: none;
@@ -61,8 +61,8 @@ export const NavWrapper = styled.div`
         opacity: 0.5;
         height: 0.1rem;
         display: block;
-        transition: 1s ease-in-out;
-        background: ${({ theme }) => theme.colors.primary};
+        transition: 1s all ease-in-out;
+        background-color: ${theme.colors.primary};
       }
 
       :before {
@@ -71,8 +71,7 @@ export const NavWrapper = styled.div`
         opacity: 0.5;
         height: 0.1rem;
         display: block;
-        background: transparent;
-        transition: 1s ease-in-out;
+        transition: 1s all ease-in-out;
       }
 
       :hover {
@@ -81,9 +80,8 @@ export const NavWrapper = styled.div`
         }
         :before {
           width: 0%;
-          background: ${({ theme }) => theme.colors.primary};
+          background-color: ${theme.colors.primary};
         }
-        background-color: transparent;
       }
     `}
   }

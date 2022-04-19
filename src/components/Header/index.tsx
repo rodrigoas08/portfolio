@@ -1,7 +1,7 @@
+import paths from './path';
 import * as S from './styles';
 import { useState, memo } from 'react';
 import { Button, Modal } from 'components';
-import { MenuLinks } from './mock';
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -14,16 +14,16 @@ export const Header = () => {
         <S.ImgLogo />
       </a>
       <S.NavWrapper>
-        {MenuLinks.map((link, index) => {
+        {paths.map((path) => {
           return (
-            <a href={link.ref || undefined} key={index}>
+            <a href={path.ref || undefined}>
               <Button
                 secondary
                 onClick={() => {
-                  link.title === 'Contato' && setShowModal(!showModal);
+                  path.title === 'Contato' && setShowModal(!showModal);
                 }}
               >
-                {link.title}
+                {path.title}
               </Button>
             </a>
           );

@@ -1,4 +1,4 @@
-export const MenuLinks = [
+export default [
   {
     title: 'Home',
     ref: '#home'

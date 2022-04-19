@@ -14,6 +14,10 @@ export const Wrapper = styled.div`
     background-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 0.1rem 0.5rem rgba(255, 255, 255, 0.25);
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      justify-content: center;
+    }
   `}
 `;
 
@@ -24,6 +28,10 @@ export const ImgLogo = styled.div`
   border-radius: 50%;
   background-size: 100% 100%;
   background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}) {
+    display: none;
+  }
 `;
 
 export const NavWrapper = styled.div`
@@ -35,8 +43,9 @@ export const NavWrapper = styled.div`
       padding: 0;
       border: none;
       text-decoration: none;
+      text-transform: uppercase;
       color: ${theme.colors.white};
-      font-size: ${theme.font.sizes.xlarge};
+      font-size: ${theme.font.sizes.small};
       > a {
         text-decoration: none;
         color: ${theme.colors.white};

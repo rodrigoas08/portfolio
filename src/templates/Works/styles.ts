@@ -63,14 +63,13 @@ export const Card = styled.div`
 
     :nth-child(2n) {
       align-self: end;
-      justify-content: start;
       border-right: 0;
-      /* border-left: 1rem solid ${theme.colors.primary}; */
+      justify-content: start;
 
       :before {
         content: '';
-        height: 100%;
         width: 1rem;
+        height: 100%;
         left: -1.01rem;
         position: absolute;
         background-color: ${theme.colors.primary};

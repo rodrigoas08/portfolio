@@ -3,11 +3,11 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div.attrs({ id: 'home' })`
   ${({ theme }) => css`
     width: 100%;
+    height: 100vh;
     display: flex;
     position: relative;
     align-items: center;
     justify-content: center;
-    height: calc(100vh - 8rem);
 
     > a {
       position: absolute;

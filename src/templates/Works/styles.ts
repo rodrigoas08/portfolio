@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'servicos' })`
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   padding-top: 8rem;
   align-items: start;
@@ -15,23 +15,15 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     padding: ${theme.spacings.xlarge} 0;
-    border-top: 1px solid ${theme.colors.primary};
   `}
 `;
 
-export const Ul = styled.ul`
-  ${({ theme }) => css`
-    padding: 0 ${theme.spacings.xxsmall};
-    font-size: ${theme.font.sizes.xxlarge};
-    list-style: inside url(${process.env.PUBLIC_URL}/img/check.svg);
-
-    > li {
-      color: ${theme.colors.white};
-      padding: ${theme.spacings.small};
-    }
-  `}
+export const Section = styled.section`
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Title = styled.h1`
@@ -50,6 +42,39 @@ export const Title = styled.h1`
       height: 0.1rem;
       position: absolute;
       background-color: ${theme.colors.primary};
+    }
+  `}
+`;
+
+export const Card = styled.div`
+  ${({ theme }) => css`
+    width: 50%;
+    color: white;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    backdrop-filter: blur(1.5rem);
+    padding: ${theme.spacings.small};
+    font-size: ${theme.font.sizes.small};
+    background-color: rgba(255, 255, 255, 0.1);
+    border-right: 1rem solid ${theme.colors.primary};
+    box-shadow: 0 0.1rem 0.5rem rgba(255, 255, 255, 0.25);
+
+    :nth-child(2n) {
+      align-self: end;
+      justify-content: start;
+      border-right: 0;
+      /* border-left: 1rem solid ${theme.colors.primary}; */
+
+      :before {
+        content: '';
+        height: 100%;
+        width: 1rem;
+        left: -1.01rem;
+        position: absolute;
+        background-color: ${theme.colors.primary};
+      }
     }
   `}
 `;

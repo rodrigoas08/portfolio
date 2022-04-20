@@ -6,11 +6,15 @@ export const Works = () => {
     <S.Wrapper>
       <S.Container>
         <S.Title>Principais Serviços</S.Title>
-        <S.Ul>
+        <S.Section>
           {ServiceList.map((item, index) => {
-            return <li key={index}>{item.description}</li>;
+            return (
+              <S.Card>
+                {index + 1} - {item.description}
+              </S.Card>
+            );
           })}
-        </S.Ul>
+        </S.Section>
       </S.Container>
     </S.Wrapper>
   );

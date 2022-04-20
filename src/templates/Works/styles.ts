@@ -50,7 +50,7 @@ export const Card = styled.div`
   ${({ theme }) => css`
     width: 50%;
     color: white;
-    height: 20rem;
+    height: 10rem;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -59,7 +59,7 @@ export const Card = styled.div`
     font-size: ${theme.font.sizes.small};
     background-color: rgba(255, 255, 255, 0.1);
     border-right: 1rem solid ${theme.colors.primary};
-    box-shadow: 0 0.1rem 0.5rem rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0.05rem 0.1rem rgba(255, 255, 255, 0.25);
 
     :nth-child(2n) {
       align-self: end;

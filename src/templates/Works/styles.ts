@@ -20,19 +20,10 @@ export const Container = styled.div`
 `;
 
 export const Section = styled.section`
-  width: 70%;
+  width: 40%;
   height: auto;
   display: flex;
   flex-direction: column;
-/* 
-  :before{
-    content: '';
-    height: 63.1%;
-    width: 0.3rem;
-    background-color: white;
-    position: absolute;
-    left: 50%;
-  } */
 `;
 
 export const Title = styled.h1`
@@ -42,32 +33,22 @@ export const Title = styled.h1`
     color: ${theme.colors.primary};
     font-weight: ${theme.font.light};
     padding-bottom: ${theme.spacings.xlarge};
-
-    &:hover:after {
-      content: '';
-      width: 100%;
-      opacity: 0.5;
-      display: block;
-      height: 0.1rem;
-      position: absolute;
-      background-color: ${theme.colors.primary};
-    }
   `}
 `;
 
 export const Card = styled.div`
   ${({ theme }) => css`
     width: 49%;
-    color: white;
-    height: 10rem;
+    height: 15rem;
     display: flex;
     align-items: center;
     justify-content: end;
+    color: ${theme.colors.white};
     backdrop-filter: blur(1.5rem);
     padding: ${theme.spacings.small};
     font-size: ${theme.font.sizes.small};
     background-color: rgba(255, 255, 255, 0.1);
-    border-top: 0.3rem solid ${theme.colors.primary};
+    border-top: 0.1rem solid ${theme.colors.primary};
 
     :nth-child(2n) {
       align-self: end;

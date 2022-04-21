@@ -24,6 +24,15 @@ export const Section = styled.section`
   height: auto;
   display: flex;
   flex-direction: column;
+/* 
+  :before{
+    content: '';
+    height: 63.1%;
+    width: 0.3rem;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+  } */
 `;
 
 export const Title = styled.h1`
@@ -48,7 +57,7 @@ export const Title = styled.h1`
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 50%;
+    width: 49%;
     color: white;
     height: 10rem;
     display: flex;
@@ -58,22 +67,12 @@ export const Card = styled.div`
     padding: ${theme.spacings.small};
     font-size: ${theme.font.sizes.small};
     background-color: rgba(255, 255, 255, 0.1);
-    border-right: 1rem solid ${theme.colors.primary};
-    /* box-shadow: 0 0.05rem 0.1rem rgba(255, 255, 255, 0.25); */
+    border-top: 0.3rem solid ${theme.colors.primary};
 
     :nth-child(2n) {
       align-self: end;
       border-right: 0;
       justify-content: start;
-
-      :before {
-        content: '';
-        width: 1rem;
-        height: 100%;
-        left: -1.01rem;
-        position: absolute;
-        background-color: ${theme.colors.primary};
-      }
     }
   `}
 `;

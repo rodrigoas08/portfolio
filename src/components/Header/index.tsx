@@ -38,13 +38,13 @@ export const Header = () => {
           spy={true}
           smooth={true}
           offset={0}
-          duration={700}
+          duration={600}
         >
           <Button secondary>Serviços</Button>
         </Link>
         <Link
           activeClass="active"
-          to="servicos"
+          to=""
           spy={true}
           smooth={true}
           offset={0}

@@ -7,7 +7,12 @@ const Home = () => {
   return (
     <>
       <S.Wrapper>
-        <S.Section>
+        <S.Section
+          data-aos="flip-left"
+          data-aos-delay="100"
+          data-aos-duration="10"
+          data-aos-easing="ease-in-out"
+        >
           <S.Title>
             Rodrigo Sobral<span>.</span>
           </S.Title>

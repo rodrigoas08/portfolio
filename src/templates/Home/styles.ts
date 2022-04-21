@@ -31,6 +31,7 @@ export const Wrapper = styled.div.attrs({ id: 'home' })`
 
 export const Section = styled.section`
   display: flex;
+  cursor: default;
   position: relative;
   align-items: center;
   flex-direction: column;
@@ -40,7 +41,6 @@ export const Section = styled.section`
 export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: 7rem;
-    cursor: default;
     position: relative;
     color: ${theme.colors.white};
     font-weight: ${theme.font.light};
@@ -89,12 +89,18 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h4`
   ${({ theme }) => css`
-    cursor: default;
     padding-top: 0.6rem;
     text-transform: uppercase;
     color: ${theme.colors.primary};
     padding-bottom: ${theme.spacings.xlarge};
   `}
+`;
+
+export const DivIcons = styled.div`
+  width: 70%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
 `;
 
 export const Arrow = styled.img`

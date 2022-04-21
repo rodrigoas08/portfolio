@@ -1,24 +1,30 @@
 import * as S from './styles';
 import { Works } from 'templates';
-import { Division } from 'components';
 import { Link } from 'react-scroll';
+import {
+  HtmlIcon,
+  CssIcon,
+  JSIcon,
+  ReactIcon
+} from 'components/Icons';
 
 const Home = () => {
   return (
     <>
       <S.Wrapper>
-        <S.Section
-          data-aos="flip-left"
-          data-aos-delay="100"
-          data-aos-duration="10"
-          data-aos-easing="ease-in-out"
-        >
+        <S.Section>
           <S.Title>
             Rodrigo Sobral<span>.</span>
           </S.Title>
           <S.Subtitle>
             Técnico em informática | estagiário desenvolvedor front-end
           </S.Subtitle>
+          <S.DivIcons>
+            <HtmlIcon />
+            <CssIcon />
+            <JSIcon />
+            <ReactIcon />
+          </S.DivIcons>
         </S.Section>
         <Link
           activeClass="active"

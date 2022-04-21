@@ -16,7 +16,7 @@ export const Wrapper = styled.div.attrs({ id: 'home' })`
       color: ${theme.colors.primary};
       right: ${theme.spacings.large};
       bottom: ${theme.spacings.small};
-      font-size: ${theme.font.sizes.small};
+      font-size: ${theme.font.sizes.medium};
       animation: is-bouncing 1s ease-in alternate infinite;
 
       @keyframes is-bouncing {
@@ -95,7 +95,7 @@ export const Subtitle = styled.h4`
 
 export const Arrow = styled.img`
   ${({ theme }) => css`
-    width: ${theme.spacings.large};
-    height: ${theme.spacings.large};
+    width: ${theme.spacings.medium};
+    height: ${theme.spacings.medium};
   `}
 `;

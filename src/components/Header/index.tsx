@@ -1,5 +1,6 @@
 import paths from './path';
 import * as S from './styles';
+import { Link } from 'react-scroll';
 import { useState, memo } from 'react';
 import { Button, Modal } from 'components';
 
@@ -10,24 +11,49 @@ export const Header = () => {
     <S.Wrapper>
       {showModal && <Modal handleClose={() => setShowModal(false)} />}
 
-      <a href="#home">
+      <Link
+        activeClass="active"
+        to="home"
+        spy={true}
+        smooth={true}
+        offset={0}
+        duration={600}
+      >
         <S.ImgLogo />
-      </a>
+      </Link>
       <S.NavWrapper>
-        {paths.map((path) => {
-          return (
-            <a href={path.ref || undefined}>
-              <Button
-                secondary
-                onClick={() => {
-                  path.title === 'Contato' && setShowModal(!showModal);
-                }}
-              >
-                {path.title}
-              </Button>
-            </a>
-          );
-        })}
+        <Link
+          activeClass="active"
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={600}
+        >
+          <Button secondary>Home</Button>
+        </Link>
+        <Link
+          activeClass="active"
+          to="servicos"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={700}
+        >
+          <Button secondary>Serviços</Button>
+        </Link>
+        <Link
+          activeClass="active"
+          to="servicos"
+          spy={true}
+          smooth={true}
+          offset={0}
+          duration={600}
+        >
+          <Button secondary onClick={() => setShowModal(!showModal)}>
+            Contato
+          </Button>
+        </Link>
       </S.NavWrapper>
     </S.Wrapper>
   );

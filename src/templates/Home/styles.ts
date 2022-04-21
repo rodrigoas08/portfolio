@@ -10,6 +10,7 @@ export const Wrapper = styled.div.attrs({ id: 'home' })`
     justify-content: center;
 
     > a {
+      cursor: pointer;
       position: absolute;
       text-decoration: none;
       writing-mode: vertical-rl;
@@ -44,6 +45,9 @@ export const Title = styled.h1`
     color: ${theme.colors.white};
     font-weight: ${theme.font.light};
     font-family: ${theme.font.family.montserrat};
+    > span {
+      color: ${theme.colors.primary};
+    }
 
     :after {
       content: '';

@@ -3,7 +3,7 @@ import * as ButtonStyles from 'components/Button/styles';
 
 export const Wrapper = styled.div`
   ${({ theme }) => css`
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     height: 8rem;
     display: flex;

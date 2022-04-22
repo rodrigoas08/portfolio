@@ -13,27 +13,33 @@ export const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    background: #b4b4b4;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
     padding: ${theme.spacings.xlarge} 0;
   `}
 `;
 
 export const Title = styled.h1`
   ${({ theme }) => css`
+    z-index: 1;
     font-size: 4rem;
     position: relative;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.text};
     font-weight: ${theme.font.light};
     padding-bottom: ${theme.spacings.xlarge};
 
     :before {
       content: '';
+      top: 30%;
+      left: -2%;
       width: 98%;
-      height: 10%;
-      display: block;
+      height: 20%;
+      z-index: -1;
+      opacity: 0.3;
       position: absolute;
-      background-color: white;
+      background-color: ${theme.colors.primary};
     }
   `}
 `;
@@ -42,7 +48,7 @@ export const Section = styled.section`
   ${({ theme }) => css`
     width: 100%;
     height: auto;
-    padding: 4rem 10rem;
+    padding: 4rem 25rem;
     backdrop-filter: blur(1.5rem);
     background-color: rgba(0, 0, 0 0.1);
   `}
@@ -53,16 +59,18 @@ export const Image = styled.div`
   width: 15rem;
   height: 15rem;
   margin-right: 2rem;
-  background-size: 90% 100%;
+  border-radius: 50%;
+  background-clip: content-box;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-image: url(/img/eu.jpg);
+  background-image: url(/img/euPedro.jpg);
 `;
 
 export const Paragraph = styled.p`
   ${({ theme }) => css`
-    width: 60%;
+    width: 100%;
     line-height: 3.2rem;
-    color: ${theme.colors.white};
+    color: ${theme.colors.text};
     font-size: ${theme.font.sizes.large};
   `}
 `;

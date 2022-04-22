@@ -9,10 +9,10 @@ export const AboutMe = () => {
         <S.Title>Quem sou...</S.Title>
         <S.Section>
           <S.Image
-            data-aos="fade-right"
+            data-aos="flip-up"
             data-aos-offset="200"
-            data-aos-delay="50"
-            data-aos-duration="1000"
+            data-aos-delay="10"
+            data-aos-duration="300"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"

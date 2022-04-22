@@ -24,13 +24,13 @@ export const Header = () => {
       <S.NavWrapper>
         <Link
           activeClass="active"
-          to="home"
+          to="aboutme"
           spy={true}
           smooth={true}
           offset={0}
           duration={600}
         >
-          <Button secondary>Home</Button>
+          <Button secondary>Sobre</Button>
         </Link>
         <Link
           activeClass="active"

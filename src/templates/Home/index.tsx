@@ -1,12 +1,7 @@
 import * as S from './styles';
-import { Works } from 'templates';
+import { Works, AboutMe } from 'templates';
 import { Link } from 'react-scroll';
-import {
-  HtmlIcon,
-  CssIcon,
-  JSIcon,
-  ReactIcon
-} from 'components/Icons';
+import { HtmlIcon, CssIcon, JSIcon, ReactIcon, TSIcon } from 'components/Icons';
 
 const Home = () => {
   return (
@@ -24,6 +19,7 @@ const Home = () => {
             <CssIcon />
             <JSIcon />
             <ReactIcon />
+            <TSIcon />
           </S.DivIcons>
         </S.Section>
         <Link
@@ -38,7 +34,7 @@ const Home = () => {
           <S.Arrow src={process.env.PUBLIC_URL + '/img/seta.svg'} />
         </Link>
       </S.Wrapper>
-      {/* <Division /> */}
+      <AboutMe />
       <Works />
     </>
   );

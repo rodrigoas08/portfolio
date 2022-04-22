@@ -7,7 +7,7 @@ export const Works = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        <S.Title>Principais Serviços</S.Title>
+        <S.Title>Serviços</S.Title>
         <S.Section>
           {ServiceList.map((item, index) => {
             return (

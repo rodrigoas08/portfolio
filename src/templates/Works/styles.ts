@@ -33,6 +33,18 @@ export const Title = styled.h1`
     color: ${theme.colors.primary};
     font-weight: ${theme.font.light};
     padding-bottom: ${theme.spacings.xlarge};
+
+    :before {
+      content: '';
+      top: 30%;
+      left: -2%;
+      width: 98%;
+      height: 20%;
+      z-index: -1;
+      opacity: 0.3;
+      position: absolute;
+      background-color: white;
+    }
   `}
 `;
 

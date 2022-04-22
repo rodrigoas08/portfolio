@@ -1,11 +1,10 @@
 export const ServiceList = [
   {
-    description:
-      'Serviço de consultoria para montar seu computador incluindo orçamento e escolha de peças.'
+    description: 'Consultoria para montar seu computador desde o zero.'
   },
   {
     description:
-      'Manutenção preventiva com limpeza interna e troca de pasta térmica aumentando a vida útil do seu computador.'
+      'Manutenção preventiva com limpeza e troca de pasta térmica do seu computador.'
   },
   {
     description: 'Cable Management.'
@@ -17,7 +16,6 @@ export const ServiceList = [
     description: 'Atendimento em domicílio ou remoto.'
   },
   {
-    description:
-      'Desenvolvimento de páginas web ( JavaScript, React, TypeScript... )'
+    description: 'Desenvolvimento de páginas web'
   }
 ];

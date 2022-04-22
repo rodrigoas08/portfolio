@@ -11,7 +11,7 @@ export const Works = () => {
         <S.Section>
           {ServiceList.map((item, index) => {
             return (
-              <S.Card
+              <S.Card key={index}
                 data-aos="fade-up"
                 data-aos-offset="200"
                 data-aos-delay="50"

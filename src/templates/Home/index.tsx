@@ -24,7 +24,7 @@ const Home = () => {
         </S.Section>
         <Link
           activeClass="active"
-          to="servicos"
+          to="aboutme"
           spy={true}
           smooth={true}
           offset={0}

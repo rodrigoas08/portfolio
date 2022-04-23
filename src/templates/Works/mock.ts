@@ -4,7 +4,7 @@ export const ServiceList = [
   },
   {
     description:
-      'Manutenção preventiva com limpeza e troca de pasta térmica do seu computador.'
+      'Manutenção preventiva com limpeza e troca de pasta térmica.'
   },
   {
     description: 'Cable Management.'

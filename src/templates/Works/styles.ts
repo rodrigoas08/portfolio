@@ -19,13 +19,6 @@ export const Container = styled.div`
   `}
 `;
 
-export const Section = styled.section`
-  width: 40%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-`;
-
 export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: 4rem;
@@ -48,13 +41,24 @@ export const Title = styled.h1`
   `}
 `;
 
+export const Section = styled.section`
+  width: 80%;
+  gap: 2rem;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 49%;
-    height: 15rem;
+    width: 25%;
     display: flex;
+    min-height: 15rem;
+    break-inside: auto;
     align-items: center;
-    justify-content: end;
+    word-wrap: break-word;
+    justify-content: center;
     color: ${theme.colors.white};
     backdrop-filter: blur(1.5rem);
     padding: ${theme.spacings.small};
@@ -62,10 +66,9 @@ export const Card = styled.div`
     background-color: rgba(255, 255, 255, 0.1);
     border-top: 0.1rem solid ${theme.colors.primary};
 
-    :nth-child(2n) {
+    /* :nth-child(2n) {
       align-self: end;
-      border-right: 0;
       justify-content: start;
-    }
+    } */
   `}
 `;

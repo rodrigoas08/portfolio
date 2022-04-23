@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Footer = styled.div`
+export const Footer = styled.footer`
   ${({ theme }) => css`
     z-index: 2;
     width: 100%;
@@ -33,7 +33,7 @@ export const DivCopyright = styled.div`
   `}
 `;
 
-export const IconsWrapper = styled.div`
+export const IconsWrapper = styled.nav`
   ${({ theme }) => css`
     width: 30%;
     display: flex;

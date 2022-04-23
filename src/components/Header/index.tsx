@@ -1,4 +1,3 @@
-import paths from './path';
 import * as S from './styles';
 import { Link } from 'react-scroll';
 import { useState, memo } from 'react';

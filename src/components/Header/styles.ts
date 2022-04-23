@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as ButtonStyles from 'components/Button/styles';
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.header`
   ${({ theme }) => css`
     z-index: 2;
     width: 100%;
@@ -34,7 +34,7 @@ export const ImgLogo = styled.div`
   }
 `;
 
-export const NavWrapper = styled.div`
+export const NavWrapper = styled.nav`
   display: flex;
   gap: 5rem;
 

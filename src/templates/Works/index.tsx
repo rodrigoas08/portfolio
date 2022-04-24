@@ -1,7 +1,9 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
+import { Card } from 'components';
 import { ServiceList } from './mock';
+
 
 export const Works = () => {
   return (
@@ -10,20 +12,7 @@ export const Works = () => {
         <S.Title>Serviços</S.Title>
         <S.Section>
           {ServiceList.map((item, index) => {
-            return (
-              <S.Card
-                key={index}
-                data-aos="fade-up"
-                data-aos-offset="200"
-                data-aos-delay="50"
-                data-aos-duration="1000"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="false"
-              >
-                {index + 1} - {item.description}
-              </S.Card>
-            );
+            return <Card key={index}>{item.description}</Card>;
           })}
         </S.Section>
       </S.Container>

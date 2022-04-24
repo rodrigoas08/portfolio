@@ -1,10 +1,9 @@
-export const ServiceList = [
+export const CardList = [
   {
     description: 'Consultoria para montar seu computador desde o zero.'
   },
   {
-    description:
-      'Manutenção preventiva com limpeza e troca de pasta térmica.'
+    description: 'Manutenção preventiva com limpeza e troca de pasta térmica.'
   },
   {
     description: 'Cable Management.'

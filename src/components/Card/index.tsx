@@ -1,13 +1,9 @@
-import { FC, useState } from 'react';
 import * as S from './styles';
-import { Button } from 'components';
 import CardModal from './Modal';
+import { Button } from 'components';
+import { FC, useState } from 'react';
 
-type CardModalProp = {
-  handleModal: () => void;
-};
-
-const Card: FC = ({ children }, { handleModal }: CardModalProp) => {
+const Card: FC = ({ children }) => {
   const [showCardModal, setShowCardModal] = useState(false);
 
   return (

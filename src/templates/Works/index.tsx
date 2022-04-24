@@ -1,7 +1,7 @@
-import * as S from './styles';
-import { ServiceList } from './mock';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import * as S from './styles';
+import { ServiceList } from './mock';
 
 export const Works = () => {
   return (

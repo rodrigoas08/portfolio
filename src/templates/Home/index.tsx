@@ -1,6 +1,6 @@
 import * as S from './styles';
-import { Works, AboutMe } from 'templates';
 import { Link } from 'react-scroll';
+import { Works, AboutMe } from 'templates';
 import { HtmlIcon, CssIcon, JSIcon, ReactIcon, TSIcon } from 'components/Icons';
 
 const Home = () => {

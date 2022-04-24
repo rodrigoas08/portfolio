@@ -1,10 +1,18 @@
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import { useState, memo } from 'react';
+import { useState, memo, useEffect } from 'react';
 import { Button, Modal } from 'components';
+
+type TitleName = 'HOME' | 'SOBRE' | 'SERVIÇOS';
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [title, setTitle] = useState<TitleName>('HOME');
+
+  useEffect(() => {
+    document.title = `${title} | Rodrigo Sobral - Montagem e manutenção de
+    computadores e desenvolvedor de sites`;
+  }, [title]);
 
   return (
     <S.Wrapper>
@@ -15,8 +23,9 @@ export const Header = () => {
         to="home"
         spy={true}
         smooth={true}
-        offset={0}
-        duration={600}
+        offset={1}
+        duration={2000}
+        onClick={() => setTitle('HOME')}
       >
         <S.ImgLogo />
       </Link>
@@ -26,8 +35,9 @@ export const Header = () => {
           to="aboutme"
           spy={true}
           smooth={true}
-          offset={0}
-          duration={600}
+          offset={1}
+          duration={2000}
+          onClick={() => setTitle('SOBRE')}
         >
           <Button secondary>Sobre</Button>
         </Link>
@@ -36,8 +46,9 @@ export const Header = () => {
           to="servicos"
           spy={true}
           smooth={true}
-          offset={0}
-          duration={600}
+          offset={1}
+          duration={2000}
+          onClick={() => setTitle('SERVIÇOS')}
         >
           <Button secondary>Serviços</Button>
         </Link>

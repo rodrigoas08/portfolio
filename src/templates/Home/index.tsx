@@ -28,7 +28,7 @@ const Home = () => {
           spy={true}
           smooth={true}
           offset={0}
-          duration={2000}
+          duration={600}
         >
           Avançar
           <S.Arrow src={process.env.PUBLIC_URL + '/img/seta.svg'} />

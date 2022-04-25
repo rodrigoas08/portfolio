@@ -23,7 +23,7 @@ export const Header = () => {
         to="home"
         spy={true}
         smooth={true}
-        offset={1}
+        offset={0}
         duration={600}
         onClick={() => setTitle('HOME')}
       >
@@ -35,7 +35,7 @@ export const Header = () => {
           to="aboutme"
           spy={true}
           smooth={true}
-          offset={1}
+          offset={0}
           duration={600}
           onClick={() => setTitle('SOBRE')}
         >
@@ -46,7 +46,7 @@ export const Header = () => {
           to="servicos"
           spy={true}
           smooth={true}
-          offset={1}
+          offset={0}
           duration={600}
           onClick={() => setTitle('SERVIÇOS')}
         >

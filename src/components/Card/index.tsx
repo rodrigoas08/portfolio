@@ -6,6 +6,10 @@ import { FC, useState } from 'react';
 const Card: FC = ({ children }) => {
   const [showCardModal, setShowCardModal] = useState(false);
 
+  showCardModal
+    ? (document.body.style.overflowY = 'hidden')
+    : (document.body.style.overflowY = 'scroll');
+
   return (
     <>
       {showCardModal && (

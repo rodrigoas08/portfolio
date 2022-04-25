@@ -8,10 +8,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: ${({ theme }) => theme.font.family.montserrat};
   }
   
-  html, body {
+  body {
     height: auto;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
     background-color: black;
     /* background: linear-gradient(180deg, ${({ theme }) =>
       theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); 
@@ -22,12 +22,11 @@ const GlobalStyle = createGlobalStyle`
       width: 0.3rem;
     }
 
-    /* Track */
+    
     ::-webkit-scrollbar-track {
       background: ${({ theme }) => theme.colors.black};
     }
 
-    /* Handle */
     ::-webkit-scrollbar-thumb {
       border-radius: 0.1rem;
       background: ${({ theme }) => theme.colors.primary};

@@ -42,10 +42,12 @@ export const Title = styled.h1`
 `;
 
 export const Section = styled.section`
-  width: 80%;
-  gap: 2rem;
-  height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  ${({ theme }) => css`
+    width: 80%;
+    gap: 2rem;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  `}
 `;

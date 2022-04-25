@@ -24,7 +24,7 @@ export const Header = () => {
         spy={true}
         smooth={true}
         offset={1}
-        duration={2000}
+        duration={600}
         onClick={() => setTitle('HOME')}
       >
         <S.ImgLogo />
@@ -36,7 +36,7 @@ export const Header = () => {
           spy={true}
           smooth={true}
           offset={1}
-          duration={2000}
+          duration={600}
           onClick={() => setTitle('SOBRE')}
         >
           <Button secondary>Sobre</Button>
@@ -47,7 +47,7 @@ export const Header = () => {
           spy={true}
           smooth={true}
           offset={1}
-          duration={2000}
+          duration={600}
           onClick={() => setTitle('SERVIÇOS')}
         >
           <Button secondary>Serviços</Button>

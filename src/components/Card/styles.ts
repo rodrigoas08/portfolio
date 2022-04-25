@@ -23,9 +23,17 @@ export const Card = styled.div`
       letter-spacing: 0.1rem;
       font-size: ${theme.font.sizes.xxsmall};
 
-      :hover{
+      :hover {
         opacity: 0.8;
       }
+    }
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      width: 80%;
+    }
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      width: 40%;
     }
   `}
 `;

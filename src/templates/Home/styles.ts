@@ -84,6 +84,10 @@ export const Title = styled.h1`
         background-color: ${theme.colors.primary};
       }
     }
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      font-size: 5rem;
+    }
   `}
 `;
 
@@ -93,6 +97,10 @@ export const Subtitle = styled.h4`
     text-transform: uppercase;
     color: ${theme.colors.primary};
     padding-bottom: ${theme.spacings.xlarge};
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      font-size: 0.8rem;
+    }
   `}
 `;
 

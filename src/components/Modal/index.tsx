@@ -28,10 +28,11 @@ export const Modal = ({ handleClose }: ModalProps) => {
   }
 
   useEffect(() => {
+    const maxTime = 3000;
     const timer = setTimeout(() => {
       if (modalSuccess) handleClose();
       return () => clearTimeout(timer);
-    }, 3000);
+    }, maxTime);
 
     const handleEsc = ({ key }: KeyboardEvent) => {
       key === 'Escape' && handleClose();

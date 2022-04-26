@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { useState, memo, useEffect } from 'react';
 import { Button, Modal } from 'components';
 
-type TitleName = 'HOME' | 'SOBRE' | 'SERVIÇOS';
+type TitleName = 'HOME' | 'SOBRE' | 'SERVIÇOS' | 'CONTATO';
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -54,15 +54,14 @@ export const Header = () => {
         </Link>
         <Link
           activeClass="active"
-          to=""
+          to="contato"
           spy={true}
           smooth={true}
           offset={0}
           duration={600}
+          onClick={() => setTitle('CONTATO')}
         >
-          <Button secondary onClick={() => setShowModal(!showModal)}>
-            Contato
-          </Button>
+          <Button secondary>Contato</Button>
         </Link>
       </S.NavWrapper>
     </S.Wrapper>

@@ -1,6 +1,6 @@
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import { Works, AboutMe } from 'templates';
+import { Works, AboutMe, Contact } from 'templates';
 import { HtmlIcon, CssIcon, JSIcon, ReactIcon, TSIcon } from 'components/Icons';
 
 const Home = () => {
@@ -36,6 +36,7 @@ const Home = () => {
       </S.Wrapper>
       <AboutMe />
       <Works />
+      <Contact />
     </>
   );
 };

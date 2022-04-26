@@ -6,7 +6,6 @@ export const Wrapper = styled.div.attrs({ id: 'servicos' })`
   display: flex;
   padding-top: 8rem;
   align-items: start;
-  justify-content: center;
 `;
 
 export const Container = styled.div`

@@ -36,7 +36,7 @@ export const Title = styled.h1`
       z-index: -1;
       opacity: 0.3;
       position: absolute;
-      background-color: white;
+      background-color: ${theme.colors.white};
     }
   `}
 `;
@@ -73,13 +73,14 @@ export const Input = styled.input`
     height: 3.5rem;
     border-style: none;
     text-transform: lowercase;
+    backdrop-filter: blur(1.5rem);
     border-radius: ${theme.border.radius};
+    background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid ${theme.colors.lightGray};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 
     &:focus {
-      border: 1px solid ${theme.colors.primary};
-      border-left: 10px solid ${theme.colors.primary};
+      border-color: ${theme.colors.primary};
     }
 
     :nth-child(0n + 2) {
@@ -94,14 +95,15 @@ export const Textarea = styled.textarea`
     resize: none;
     height: 15rem;
     outline: none;
+    color: ${theme.colors.white};
     backdrop-filter: blur(1.5rem);
-    background-color: rgba(255, 255, 255, 0.1);
+    padding: ${theme.spacings.xxxsmall};
     border-radius: ${theme.border.radius};
+    background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid ${theme.colors.lightGray};
-    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 
     &:focus {
-      border-color: red;
+      border-color: ${theme.colors.primary};
     }
   `}
 `;

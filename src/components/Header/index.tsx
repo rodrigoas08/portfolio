@@ -18,14 +18,15 @@ export const Header = () => {
 
     document.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
-      console.log(scrollPosition);
       scrollPosition >= 280
         ? setColorHeader({ color: 'black' })
         : setColorHeader({ color: 'transparent' });
+      console.log(scrollPosition);
     });
-    document.removeEventListener('scroll', function () {});
+    return () => {
+      document.removeEventListener('scroll', function () {});
+    };
   }, [title]);
-
   return (
     <S.Wrapper id="header" color={colorHeader.color}>
       {showModal && <Modal handleClose={() => setShowModal(false)} />}

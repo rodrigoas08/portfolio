@@ -1,12 +1,9 @@
+import './editor.css';
 import * as S from './styles';
 import ParticlesBg from 'particles-bg';
 import { Header } from 'components/Header';
 import { Footer } from 'components/Footer';
-import './editor.css';
-
-type WrapperProps = {
-  children: React.ReactChild;
-};
+import { WrapperProps } from 'interfaces/wrapper';
 
 export const Wrapper = ({ children }: WrapperProps) => {
   return (

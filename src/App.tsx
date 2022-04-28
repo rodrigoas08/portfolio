@@ -2,8 +2,8 @@
 import * as T from 'templates';
 import theme from 'styles/theme';
 import routes from 'utils/routes';
-import GlobalStyle from 'styles/global';
 import { Wrapper } from 'components';
+import GlobalStyle from 'styles/global';
 import { ThemeProvider } from 'styled-components';
 import { Router, RouteComponentProps } from '@reach/router';
 

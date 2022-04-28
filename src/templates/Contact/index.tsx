@@ -2,12 +2,7 @@ import * as S from './styles';
 import { useEffect } from 'react';
 import { Button } from 'components';
 import { useForm } from 'react-hook-form';
-
-type FormState = {
-  name: string;
-  email: string;
-  message: string;
-};
+import { FormState } from 'interfaces/form';
 
 const Contact = () => {
   const {

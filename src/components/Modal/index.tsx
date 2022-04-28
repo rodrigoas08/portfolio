@@ -1,17 +1,9 @@
 import * as S from './styles';
 import { Button } from 'components';
-import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-
-type ModalProps = {
-  handleClose: () => void;
-};
-
-type FormState = {
-  name: string;
-  email: string;
-  subject: string;
-};
+import { useEffect, useState } from 'react';
+import { FormState } from 'interfaces/form';
+import { ModalProps } from 'interfaces/modal';
 
 export const Modal = ({ handleClose }: ModalProps) => {
   const {
@@ -40,7 +32,7 @@ export const Modal = ({ handleClose }: ModalProps) => {
     document.addEventListener('keyup', handleEsc);
 
     return () => document.removeEventListener('keyup', handleEsc);
-  });
+  }, []);
 
   return (
     <S.Shadow>
@@ -81,10 +73,10 @@ export const Modal = ({ handleClose }: ModalProps) => {
                 Assunto <span>*</span>
               </S.Label>
               <S.Textarea
-                {...register('subject', { required: true })}
+                {...register('message', { required: true })}
                 placeholder="Escreva aqui sua mensagem..."
               />
-              {errors.subject && <S.Error>Este campo é obrigatório.</S.Error>}
+              {errors.message && <S.Error>Este campo é obrigatório.</S.Error>}
               <S.FormAction>
                 <Button type="submit">Enviar</Button>
                 <Button secondary type="button" onClick={handleClose}>

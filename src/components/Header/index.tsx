@@ -1,31 +1,33 @@
 /* eslint-disable */
 import * as S from './styles';
-import * as T from 'types/home';
 import { Link } from 'react-scroll';
-import { useState, memo, useEffect } from 'react';
 import { Button, Modal } from 'components';
+import { useState, memo, useEffect } from 'react';
+import { IColorProps, ITitleName } from 'interfaces/home';
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
-  const [title, setTitle] = useState<T.TitleName>('HOME');
-  const [colorHeader, setColorHeader] = useState<T.ColorProps>('transparent');
+  const [title, setTitle] = useState<ITitleName>({ title: 'HOME' });
+  const [colorHeader, setColorHeader] = useState<IColorProps>({
+    color: 'transparent'
+  });
 
   useEffect(() => {
-    document.title = `${title} | Rodrigo Sobral - Montagem e manutenção de
+    document.title = `${title.title} | Rodrigo Sobral - Montagem e manutenção de
     computadores e desenvolvedor de sites`;
 
     document.addEventListener('scroll', function () {
       const scrollPosition = window.scrollY;
       console.log(scrollPosition);
       scrollPosition >= 280
-        ? setColorHeader('black')
-        : setColorHeader('transparent');
+        ? setColorHeader({ color: 'black' })
+        : setColorHeader({ color: 'transparent' });
     });
     document.removeEventListener('scroll', function () {});
   }, [title]);
 
   return (
-    <S.Wrapper id="header" color={colorHeader}>
+    <S.Wrapper id="header" color={colorHeader.color}>
       {showModal && <Modal handleClose={() => setShowModal(false)} />}
 
       <Link
@@ -35,7 +37,7 @@ export const Header = () => {
         smooth={true}
         offset={0}
         duration={600}
-        onClick={() => setTitle('HOME')}
+        onClick={() => setTitle({ title: 'HOME' })}
       >
         <S.ImgLogo />
       </Link>
@@ -47,7 +49,7 @@ export const Header = () => {
           smooth={true}
           offset={0}
           duration={600}
-          onClick={() => setTitle('SOBRE')}
+          onClick={() => setTitle({ title: 'SOBRE' })}
         >
           <Button secondary>Sobre</Button>
         </Link>
@@ -58,7 +60,7 @@ export const Header = () => {
           smooth={true}
           offset={0}
           duration={600}
-          onClick={() => setTitle('SERVIÇOS')}
+          onClick={() => setTitle({ title: 'SERVIÇOS' })}
         >
           <Button secondary>Serviços</Button>
         </Link>
@@ -69,7 +71,7 @@ export const Header = () => {
           smooth={true}
           offset={0}
           duration={600}
-          onClick={() => setTitle('CONTATO')}
+          onClick={() => setTitle({ title: 'CONTATO' })}
         >
           <Button secondary>Contato</Button>
         </Link>

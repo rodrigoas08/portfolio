@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-
-type ImageProps = {
-  width?: string | number;
-  height?: string | number;
-};
+import { IImageProps } from 'interfaces/image';
 
 export const Img = styled.img`
   margin: 0 auto;
@@ -22,7 +18,7 @@ export const Img = styled.img`
   }
 `;
 
-const EarthImage = ({ width, height }: ImageProps) => (
+const EarthImage = ({ width, height }: IImageProps) => (
   <Img
     width={width}
     height={height}

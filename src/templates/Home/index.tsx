@@ -31,7 +31,7 @@ const Home = () => {
           duration={600}
         >
           Avançar
-          <S.Arrow src={process.env.PUBLIC_URL + '/img/seta.svg'} />
+          <S.Arrow src={`${process.env.PUBLIC_URL}/img/seta.svg`} />
         </Link>
       </S.Wrapper>
       <AboutMe />

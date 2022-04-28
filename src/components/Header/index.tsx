@@ -1,21 +1,31 @@
+/* eslint-disable */
 import * as S from './styles';
+import * as T from 'types/home';
 import { Link } from 'react-scroll';
 import { useState, memo, useEffect } from 'react';
 import { Button, Modal } from 'components';
 
-type TitleName = 'HOME' | 'SOBRE' | 'SERVIÇOS' | 'CONTATO';
-
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
-  const [title, setTitle] = useState<TitleName>('HOME');
+  const [title, setTitle] = useState<T.TitleName>('HOME');
+  const [colorHeader, setColorHeader] = useState<T.ColorProps>('transparent');
 
   useEffect(() => {
     document.title = `${title} | Rodrigo Sobral - Montagem e manutenção de
     computadores e desenvolvedor de sites`;
+
+    document.addEventListener('scroll', function () {
+      const scrollPosition = window.scrollY;
+      console.log(scrollPosition);
+      scrollPosition >= 280
+        ? setColorHeader('black')
+        : setColorHeader('transparent');
+    });
+    document.removeEventListener('scroll', function () {});
   }, [title]);
 
   return (
-    <S.Wrapper>
+    <S.Wrapper id="header" color={colorHeader}>
       {showModal && <Modal handleClose={() => setShowModal(false)} />}
 
       <Link

@@ -2,18 +2,19 @@ import styled, { css } from 'styled-components';
 import * as ButtonStyles from 'components/Button/styles';
 
 export const Wrapper = styled.header`
-  ${({ theme }) => css`
+  ${({ theme, color }) => css`
     z-index: 2;
     width: 100%;
     height: 8rem;
     display: flex;
     position: fixed;
     align-items: center;
-    backdrop-filter: blur(0.5rem);
+    background-color: ${color};
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0.1rem 0.5rem rgba(255, 255, 255, 0.25);
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};
+    box-shadow: ${color === 'black'
+      ? '0 0.1rem 0.5rem rgba(255, 255, 255, 0.25)'
+      : 'transparent'};
 
     @media (max-width: ${theme.breakpoints.mobile}) {
       justify-content: center;

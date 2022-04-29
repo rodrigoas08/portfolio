@@ -1,4 +1,4 @@
-import RouterView from 'utils/paths';
+import RouterView from 'router/paths';
 
 function App() {
   return <RouterView />;

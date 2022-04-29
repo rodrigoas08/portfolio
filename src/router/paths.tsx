@@ -4,7 +4,7 @@ import theme from 'styles/theme';
 import GlobalStyle from 'styles/global';
 import Wrapper from 'components/Wrapper';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 
 const RouterView = () => {
   return (
@@ -13,6 +13,10 @@ const RouterView = () => {
         <GlobalStyle />
         <Wrapper>
           <Routes>
+            <Route
+              path={routes.default}
+              element={<Navigate replace to={routes.home} />}
+            />
             <Route path={routes.home} element={<T.Home />} />
           </Routes>
         </Wrapper>

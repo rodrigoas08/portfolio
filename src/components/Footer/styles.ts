@@ -18,8 +18,8 @@ export const Footer = styled.footer`
     padding: ${theme.spacings.small} ${theme.spacings.xxlarge};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      gap: 2rem;
       height: auto;
+      gap: ${theme.spacings.small};
       flex-direction: column-reverse;
     }
   `}

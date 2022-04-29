@@ -4,7 +4,6 @@ import * as ButtonStyles from 'components/Button/styles';
 export const Card = styled.div`
   ${({ theme }) => css`
     width: 25%;
-    gap: 1rem;
     display: flex;
     min-height: 15rem;
     break-inside: auto;
@@ -12,6 +11,7 @@ export const Card = styled.div`
     flex-direction: column;
     color: ${theme.colors.white};
     backdrop-filter: blur(1.5rem);
+    gap: ${theme.spacings.xxsmall};
     justify-content: space-between;
     padding: ${theme.spacings.small};
     font-size: ${theme.font.sizes.small};

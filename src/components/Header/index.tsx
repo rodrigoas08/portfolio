@@ -3,7 +3,7 @@ import * as S from './styles';
 import { Link } from 'react-scroll';
 import { Button, Modal } from 'components';
 import { useState, memo, useEffect } from 'react';
-import { IColorProps, ITitleName } from 'interfaces/home';
+import { IColorProps, ITitleName } from 'interfaces/header';
 
 export const Header = () => {
   const [showModal, setShowModal] = useState(false);
@@ -52,7 +52,7 @@ export const Header = () => {
           duration={600}
           onClick={() => setTitle({ title: 'SOBRE' })}
         >
-          <Button secondary>Sobre</Button>
+          <Button navMenuHeader>Sobre</Button>
         </Link>
         <Link
           activeClass="active"
@@ -63,7 +63,7 @@ export const Header = () => {
           duration={600}
           onClick={() => setTitle({ title: 'SERVIÇOS' })}
         >
-          <Button secondary>Serviços</Button>
+          <Button navMenuHeader>Serviços</Button>
         </Link>
         <Link
           activeClass="active"
@@ -74,7 +74,7 @@ export const Header = () => {
           duration={600}
           onClick={() => setTitle({ title: 'CONTATO' })}
         >
-          <Button secondary>Contato</Button>
+          <Button navMenuHeader>Contato</Button>
         </Link>
       </S.NavWrapper>
     </S.Wrapper>

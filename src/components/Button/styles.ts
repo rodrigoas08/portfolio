@@ -13,6 +13,53 @@ const ButtonModifier = {
       }
     `}
   `,
+  navMenuHeader: () => css`
+    ${({ theme }) => css`
+      padding: 0;
+      border: none;
+      text-transform: uppercase;
+      color: ${theme.colors.white};
+      background-color: transparent;
+      font-size: ${theme.font.sizes.small};
+      > a {
+        text-decoration: none;
+        color: ${theme.colors.white};
+      }
+
+      :first-child {
+        margin-left: 0rem;
+      }
+
+      :after {
+        content: '';
+        width: 0%;
+        opacity: 0.5;
+        height: 0.1rem;
+        display: block;
+        transition: 1s all ease-in-out;
+        background-color: ${theme.colors.primary};
+      }
+
+      :before {
+        content: '';
+        width: 100%;
+        opacity: 0.5;
+        height: 0.1rem;
+        display: block;
+        transition: 1s all ease-in-out;
+      }
+
+      :hover {
+        :after {
+          width: 100%;
+        }
+        :before {
+          width: 0%;
+          background-color: ${theme.colors.primary};
+        }
+      }
+    `}
+  `,
   fullWidth: () => css`
     width: 100%;
   `,
@@ -23,10 +70,10 @@ const ButtonModifier = {
 
   rippling: () => css`
     ${({ theme }) => css`
-      margin-top: 3rem;
       position: relative;
       color: ${theme.colors.primary};
       background: ${theme.colors.white};
+      margin-top: ${theme.spacings.medium};
       border-radius: ${theme.border.radius};
 
       ::before {
@@ -55,9 +102,9 @@ const ButtonModifier = {
 };
 
 export const Wrapper = styled.button<
-  Pick<ButtonProps, 'secondary' | 'fullWidth' | 'disabled' | 'rippling'>
+  Pick<ButtonProps, 'secondary' | 'fullWidth' | 'disabled' | 'rippling' | 'navMenuHeader'>
 >`
-  ${({ theme, secondary, disabled, fullWidth, rippling }) => css`
+  ${({ theme, secondary, disabled, fullWidth, rippling, navMenuHeader }) => css`
     border: none;
     cursor: pointer;
     text-decoration: none;
@@ -71,5 +118,6 @@ export const Wrapper = styled.button<
     ${fullWidth && ButtonModifier.fullWidth()}
     ${disabled && ButtonModifier.disabled(theme)}
     ${rippling && ButtonModifier.rippling()}
+    ${navMenuHeader && ButtonModifier.navMenuHeader()}
   `}
 `;

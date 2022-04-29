@@ -86,7 +86,7 @@ export const Title = styled.h1`
     }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      font-size: 5rem;
+      font-size: ${theme.spacings.xlarge};
     }
   `}
 `;

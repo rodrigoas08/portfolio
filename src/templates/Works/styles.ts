@@ -35,7 +35,7 @@ export const Title = styled.h1`
       z-index: -1;
       opacity: 0.3;
       position: absolute;
-      background-color: white;
+      background-color: ${theme.colors.white};
     }
   `}
 `;
@@ -43,10 +43,10 @@ export const Title = styled.h1`
 export const Section = styled.section`
   ${({ theme }) => css`
     width: 80%;
-    gap: 2rem;
     height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: ${theme.spacings.small};
   `}
 `;

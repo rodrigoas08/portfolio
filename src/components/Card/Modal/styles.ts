@@ -13,7 +13,7 @@ export const BoxShadow = styled.div`
 export const BoxModal = styled.div`
   width: 40rem;
   height: 40rem;
-  background-color: white;
-  box-sizing: border-box;
   overflow: scroll;
+  box-sizing: border-box;
+  background-color: white;
 `;

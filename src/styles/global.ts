@@ -11,12 +11,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: auto;
     overflow-x: hidden;
-    /* scroll-behavior: smooth; */
     background-color: black;
-    /* background: linear-gradient(180deg, ${({ theme }) =>
-      theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); 
-    background: -webkit-linear-gradient(180deg, ${({ theme }) =>
-      theme.colors.primary}, ${({ theme }) => theme.colors.blueRibbon}); */
       
     ::-webkit-scrollbar {
       width: 0.3rem;

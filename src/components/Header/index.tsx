@@ -1,36 +1,24 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import { Button, Modal } from 'components';
+import { Button } from 'components';
 import { useState, memo, useEffect } from 'react';
 import { IColorProps, ITitleName } from 'interfaces/header';
+import { changeTitleOfPage, scrollPosition } from './functions';
 
 export const Header = () => {
-  const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState<ITitleName>({ title: 'HOME' });
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
   });
 
   useEffect(() => {
-    document.title = `${title.title} | Rodrigo Sobral - Montagem e manutenção de
-    computadores e desenvolvedor de sites`;
-
-    document.addEventListener('scroll', function () {
-      const scrollPosition = window.scrollY;
-      scrollPosition >= 280
-        ? setColorHeader({ color: 'black' })
-        : setColorHeader({ color: 'transparent' });
-      console.log(scrollPosition);
-    });
-    return () => {
-      document.removeEventListener('scroll', function () {});
-    };
+    changeTitleOfPage(title);
+    scrollPosition(setColorHeader);
   }, [title]);
+
   return (
     <S.Wrapper id="header" color={colorHeader.color}>
-      {showModal && <Modal handleClose={() => setShowModal(false)} />}
-
       <Link
         activeClass="active"
         to="home"

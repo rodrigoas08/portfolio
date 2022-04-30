@@ -8,11 +8,11 @@ export function changeTitleOfPage(title: ITitleName) {
 //function to change style of header when scrolling
 export function scrollPosition(setColorHeader: any) {
   document.addEventListener('scroll', function () {
+    const targetPosition = 280;
     const position = window.scrollY;
-    position >= 280
+    position >= targetPosition
       ? setColorHeader({ color: 'black' })
       : setColorHeader({ color: 'transparent' });
-    console.log(position);
   });
   return () => {
     /*eslint-disable-next-line*/

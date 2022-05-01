@@ -5,9 +5,8 @@ export function changeTitleOfPage(title: ITitleName) {
     computadores e desenvolvedor de sites`;
 }
 
-//function to change style of header when scrolling
 export function scrollPosition(setColorHeader: any) {
-  document.addEventListener('scroll', function () {
+  document.addEventListener('scroll', () => {
     const targetPosition = 280;
     const position = window.scrollY;
     position >= targetPosition
@@ -16,6 +15,6 @@ export function scrollPosition(setColorHeader: any) {
   });
   return () => {
     /*eslint-disable-next-line*/
-    document.removeEventListener('scroll', function () {});
+    document.removeEventListener('scroll', () => {});
   };
 }

@@ -24,9 +24,7 @@ const Contact = () => {
       <S.Container>
         <S.Title>Contato</S.Title>
         <S.Form onSubmit={handleSubmit(onSubmit)}>
-          <S.Label htmlFor="name">
-            Nome <span>*</span>
-          </S.Label>
+          <S.Label htmlFor="name">Nome</S.Label>
           <S.Input
             {...register('name', {
               required: true
@@ -34,9 +32,7 @@ const Contact = () => {
             placeholder="Nome completo"
           />
           {errors.name && <S.Error>Este campo é obrigatório.</S.Error>}
-          <S.Label htmlFor="email">
-            Email <span>*</span>
-          </S.Label>
+          <S.Label htmlFor="email">Email</S.Label>
           <S.Input
             placeholder="seuemail@exemplo.com"
             {...register('email', {
@@ -49,18 +45,18 @@ const Contact = () => {
             })}
           />
           {errors.email && <S.Error>Este campo é obrigatório.</S.Error>}
-          <S.Label>
-            Assunto <span>*</span>
-          </S.Label>
+          <S.Label>Assunto</S.Label>
           <S.Textarea
             {...register('message', { required: true })}
             placeholder="Escreva aqui sua mensagem..."
           />
           {errors.message && <S.Error>Este campo é obrigatório.</S.Error>}
           <S.FormAction>
-            <Button type="submit">Enviar</Button>
             <Button secondary type="button">
               Cancelar
+            </Button>
+            <Button type="submit" fullWidth>
+              Enviar
             </Button>
           </S.FormAction>
         </S.Form>

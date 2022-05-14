@@ -43,12 +43,14 @@ export const Title = styled.h1`
 
 export const Form = styled.form`
   ${({ theme }) => css`
-    width: 25%;
-    height: 100%;
+    width: 40%;
+    gap: 0.5rem;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding: ${theme.spacings.small} 0;
     font-size: ${theme.font.sizes.large};
+    /* border: 1px solid white; */
   `}
 `;
 
@@ -56,10 +58,8 @@ export const Label = styled.label`
   ${({ theme }) => css`
     align-self: start;
     color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.xlarge};
-    > span {
-      color: ${theme.colors.error};
-    }
+    font-size: ${theme.font.sizes.large};
+   
     :not(:first-child) {
       margin-top: ${theme.spacings.xxsmall};
     }
@@ -70,13 +70,12 @@ export const Input = styled.input`
   ${({ theme }) => css`
     width: 100%;
     outline: none;
-    height: 3.5rem;
-    border-style: none;
+    height: 4rem;
     text-transform: lowercase;
     backdrop-filter: blur(1.5rem);
+    border: 0.1rem solid transparent;
     border-radius: ${theme.border.radius};
     background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid ${theme.colors.lightGray};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 
     &:focus {
@@ -97,10 +96,10 @@ export const Textarea = styled.textarea`
     outline: none;
     color: ${theme.colors.white};
     backdrop-filter: blur(1.5rem);
+    border: 0.1rem solid transparent;
     padding: ${theme.spacings.xxxsmall};
     border-radius: ${theme.border.radius};
     background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid ${theme.colors.lightGray};
 
     &:focus {
       border-color: ${theme.colors.primary};

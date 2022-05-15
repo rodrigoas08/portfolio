@@ -51,14 +51,10 @@ const Contact = () => {
             placeholder="Escreva aqui sua mensagem..."
           />
           {errors.message && <S.Error>Este campo é obrigatório.</S.Error>}
-          <S.FormAction>
-            <Button secondary type="button">
-              Cancelar
-            </Button>
-            <Button type="submit" fullWidth>
-              Enviar
-            </Button>
-          </S.FormAction>
+
+          <Button type="submit" fullWidth>
+            Enviar
+          </Button>
         </S.Form>
       </S.Container>
     </S.Wrapper>

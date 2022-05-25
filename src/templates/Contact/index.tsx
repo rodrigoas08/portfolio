@@ -1,58 +1,57 @@
 import * as S from './styles';
-import { useEffect } from 'react';
-import { Button } from 'components';
+import { Button, Input } from 'components';
 import { useForm } from 'react-hook-form';
 import { FormState } from 'interfaces/form';
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<FormState>();
+  const { register, handleSubmit, formState } = useForm<FormState>({
+    mode: 'onChange'
+  });
 
-  async function onSubmit(values: FormState) {
+  function onSubmit(values: FormState) {
     console.log(values);
   }
-
-  useEffect(() => {
-    handleSubmit;
-  }, []);
 
   return (
     <S.Wrapper>
       <S.Container>
         <S.Title>Contato</S.Title>
         <S.Form onSubmit={handleSubmit(onSubmit)}>
-          <S.Label htmlFor="name">Nome</S.Label>
-          <S.Input
-            {...register('name', {
-              required: true
-            })}
-            placeholder="Nome completo"
+          <Input
+            fullWidth
+            label="Nome"
+            placeholder="Seu nome"
+            register={() =>
+              register('name', {
+                required: true
+              })
+            }
           />
-          {errors.name && <S.Error>Este campo é obrigatório.</S.Error>}
-          <S.Label htmlFor="email">Email</S.Label>
-          <S.Input
-            placeholder="seuemail@exemplo.com"
-            {...register('email', {
-              required: true,
-              pattern: {
-                message: 'Insira um e-mail válido',
-                value:
-                  /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi
-              }
-            })}
+          <Input
+            fullWidth
+            label="Email"
+            type="email"
+            placeholder="exemplo@email.com.br"
+            register={() =>
+              register('email', {
+                required: 'Required field',
+                pattern: {
+                  message: 'Invalid E-mail',
+                  value:
+                    /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-z]{2,3}\.?[a-z]{1,2}/
+                }
+              })
+            }
           />
-          {errors.email && <S.Error>Este campo é obrigatório.</S.Error>}
-          <S.Label>Assunto</S.Label>
           <S.Textarea
             {...register('message', { required: true })}
             placeholder="Escreva aqui sua mensagem..."
           />
-          {errors.message && <S.Error>Este campo é obrigatório.</S.Error>}
-
-          <Button type="submit" fullWidth>
+          <Button
+            type="submit"
+            fullWidth
+            disabled={!formState.isValid && !formState.isSubmitting}
+          >
             Enviar
           </Button>
         </S.Form>

@@ -44,47 +44,12 @@ export const Title = styled.h1`
 export const Form = styled.form`
   ${({ theme }) => css`
     width: 40%;
-    gap: 0.5rem;
     height: auto;
     display: flex;
     flex-direction: column;
+    gap: ${theme.spacings.xsmall};
     padding: ${theme.spacings.small} 0;
     font-size: ${theme.font.sizes.large};
-    /* border: 1px solid white; */
-  `}
-`;
-
-export const Label = styled.label`
-  ${({ theme }) => css`
-    align-self: start;
-    color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.large};
-   
-    :not(:first-child) {
-      margin-top: ${theme.spacings.xxsmall};
-    }
-  `}
-`;
-
-export const Input = styled.input`
-  ${({ theme }) => css`
-    width: 100%;
-    outline: none;
-    height: 4rem;
-    text-transform: lowercase;
-    backdrop-filter: blur(1.5rem);
-    border: 0.1rem solid transparent;
-    border-radius: ${theme.border.radius};
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
-
-    &:focus {
-      border-color: ${theme.colors.primary};
-    }
-
-    :nth-child(0n + 2) {
-      text-transform: capitalize;
-    }
   `}
 `;
 
@@ -105,17 +70,4 @@ export const Textarea = styled.textarea`
       border-color: ${theme.colors.primary};
     }
   `}
-`;
-
-export const Error = styled.span`
-  ${({ theme }) => css`
-    color: ${theme.colors.error};
-    font-size: ${theme.font.sizes.xxsmall};
-  `}
-`;
-
-export const FormAction = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
 `;

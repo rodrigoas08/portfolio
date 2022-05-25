@@ -15,6 +15,7 @@ export const Card = styled.div`
     justify-content: space-between;
     padding: ${theme.spacings.small};
     font-size: ${theme.font.sizes.small};
+    border-radius: ${theme.border.radius};
     background-color: rgba(255, 255, 255, 0.1);
     border-top: 0.1rem solid ${theme.colors.primary};
 

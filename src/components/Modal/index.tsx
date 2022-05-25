@@ -6,12 +6,7 @@ import { FormState } from 'interfaces/form';
 import { ModalProps } from 'interfaces/modal';
 
 export const Modal = ({ handleClose }: ModalProps) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm<FormState>();
-  // const onSubmit: SubmitHandler<FormState> = (data) => console.log(data);
+  const { handleSubmit } = useForm<FormState>();
   const [modalSuccess, setModalSuccess] = useState(false);
 
   async function onSubmit(values: FormState) {
@@ -44,7 +39,7 @@ export const Modal = ({ handleClose }: ModalProps) => {
             <S.Title>Formulário de contato</S.Title>
             <S.Hr />
             <S.Form onSubmit={handleSubmit(onSubmit)}>
-              <S.Label htmlFor="name">
+              {/* <S.Label htmlFor="name">
                 Nome <span>*</span>
               </S.Label>
               <S.Input
@@ -76,7 +71,7 @@ export const Modal = ({ handleClose }: ModalProps) => {
                 {...register('message', { required: true })}
                 placeholder="Escreva aqui sua mensagem..."
               />
-              {errors.message && <S.Error>Este campo é obrigatório.</S.Error>}
+              {errors.message && <S.Error>Este campo é obrigatório.</S.Error>} */}
               <S.FormAction>
                 <Button type="submit">Enviar</Button>
                 <Button secondary type="button" onClick={handleClose}>

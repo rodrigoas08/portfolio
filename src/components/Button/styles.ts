@@ -65,7 +65,8 @@ const ButtonModifier = {
   `,
   disabled: (theme: DefaultTheme) => css`
     cursor: not-allowed;
-    color: ${theme.colors.gray};
+    background: ${theme.colors.gray};
+    color: ${theme.colors.white};
   `,
 
   rippling: () => css`
@@ -102,7 +103,10 @@ const ButtonModifier = {
 };
 
 export const Wrapper = styled.button<
-  Pick<ButtonProps, 'secondary' | 'fullWidth' | 'disabled' | 'rippling' | 'navMenuHeader'>
+  Pick<
+    ButtonProps,
+    'secondary' | 'fullWidth' | 'disabled' | 'rippling' | 'navMenuHeader'
+  >
 >`
   ${({ theme, secondary, disabled, fullWidth, rippling, navMenuHeader }) => css`
     border: none;

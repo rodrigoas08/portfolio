@@ -3,7 +3,10 @@ import { Button } from 'components';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
 import { FormState } from 'interfaces/form';
-import { ModalProps } from 'interfaces/modal';
+
+type ModalProps = {
+  handleClose: () => void;
+};
 
 export const Modal = ({ handleClose }: ModalProps) => {
   const { handleSubmit } = useForm<FormState>();

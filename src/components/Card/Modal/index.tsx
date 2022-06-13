@@ -1,17 +1,9 @@
 import * as S from './styles';
 
-type CardModalProp = {
-  handleClose?: () => void;
-};
-
-const CardModal = ({ handleClose }: CardModalProp) => {
+const CardModal = () => {
   return (
     <S.BoxShadow>
       <S.BoxModal>
-        <header>
-          <button onClick={handleClose}>fechar</button>
-        </header>
-        <h1></h1>
         <div>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu
           enim eros. Proin sagittis velit at augue consectetur, a dapibus turpis

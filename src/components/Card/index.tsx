@@ -1,20 +1,24 @@
 import * as S from './styles';
 import CardModal from './Modal';
 import { Button } from 'components';
-import { FC, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
-const Card: FC = ({ children }) => {
+type CardProps = {
+  children: React.ReactChild;
+};
+
+const Card = ({ children }: CardProps) => {
   const [showCardModal, setShowCardModal] = useState(false);
 
-  showCardModal
-    ? (document.body.style.overflowY = 'hidden')
-    : (document.body.style.overflowY = 'scroll');
+  useLayoutEffect(() => {
+    showCardModal
+      ? (document.body.style.overflowY = 'hidden')
+      : (document.body.style.overflowY = 'scroll');
+  });
 
   return (
     <>
-      {showCardModal && (
-        <CardModal handleClose={() => setShowCardModal(false)} />
-      )}
+      {showCardModal && <CardModal />}
       <S.Card
         data-aos="fade-up"
         data-aos-offset="200"
@@ -25,7 +29,12 @@ const Card: FC = ({ children }) => {
         data-aos-once="false"
       >
         <S.Cardtext>{children}</S.Cardtext>
-        <Button onClick={() => setShowCardModal(true)}>+ Detalhes</Button>
+        <Button
+          onClick={() => setShowCardModal(true)}
+          onBlur={() => setShowCardModal(false)}
+        >
+          + Detalhes
+        </Button>
       </S.Card>
     </>
   );

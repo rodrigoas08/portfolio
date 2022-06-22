@@ -5,7 +5,6 @@ export type ButtonProps = {
   secondary?: boolean;
   fullWidth?: boolean;
   rippling?: boolean;
-  navMenuHeader?: boolean;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
 const Button = ({
@@ -14,7 +13,6 @@ const Button = ({
   secondary,
   fullWidth,
   rippling,
-  navMenuHeader,
   disabled = false,
   ...props
 }: ButtonProps) => (
@@ -24,7 +22,6 @@ const Button = ({
     secondary={secondary}
     fullWidth={fullWidth}
     rippling={rippling}
-    navMenuHeader={navMenuHeader}
     {...props}
   >
     {children}

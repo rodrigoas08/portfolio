@@ -1,13 +1,12 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import { Button } from 'components';
 import { useState, memo, useEffect } from 'react';
 import { IColorProps, ITitleName } from 'interfaces/header';
 import { changeTitleOfPage, scrollPosition } from './functions';
 
 export const Header = () => {
-  const [title, setTitle] = useState<ITitleName>({ title: 'HOME' });
+  const [title, setTitle] = useState<ITitleName>({ name: 'HOME' });
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
   });
@@ -26,7 +25,7 @@ export const Header = () => {
         smooth={true}
         offset={0}
         duration={600}
-        onClick={() => setTitle({ title: 'HOME' })}
+        onClick={() => setTitle({ name: 'HOME' })}
       >
         <S.ImgLogo />
       </Link>
@@ -38,9 +37,9 @@ export const Header = () => {
           smooth={true}
           offset={0}
           duration={600}
-          onClick={() => setTitle({ title: 'SOBRE' })}
+          onClick={() => setTitle({ name: 'SOBRE' })}
         >
-          <Button navMenuHeader>Sobre</Button>
+          <S.LinkMenu activeLink={title.name === 'SOBRE'}>Sobre</S.LinkMenu>
         </Link>
         <Link
           activeClass="active"
@@ -49,9 +48,11 @@ export const Header = () => {
           smooth={true}
           offset={0}
           duration={600}
-          onClick={() => setTitle({ title: 'SERVIÇOS' })}
+          onClick={() => setTitle({ name: 'SERVIÇOS' })}
         >
-          <Button navMenuHeader>Serviços</Button>
+          <S.LinkMenu activeLink={title.name === 'SERVIÇOS'}>
+            Serviços
+          </S.LinkMenu>
         </Link>
         <Link
           activeClass="active"
@@ -60,9 +61,9 @@ export const Header = () => {
           smooth={true}
           offset={0}
           duration={600}
-          onClick={() => setTitle({ title: 'CONTATO' })}
+          onClick={() => setTitle({ name: 'CONTATO' })}
         >
-          <Button navMenuHeader>Contato</Button>
+          <S.LinkMenu activeLink={title.name === 'CONTATO'}>Contato</S.LinkMenu>
         </Link>
       </S.NavWrapper>
     </S.Wrapper>

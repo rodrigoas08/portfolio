@@ -42,3 +42,54 @@ export const NavWrapper = styled.nav`
     gap: ${theme.spacings.xlarge};
   `}
 `;
+
+export type LinkMenuProps = {
+  activeLink: boolean;
+};
+
+export const LinkMenu = styled.a<LinkMenuProps>`
+  ${({ theme, activeLink }) => css`
+    cursor: pointer;
+    text-transform: uppercase;
+    color: ${theme.colors.white};
+    font-size: ${theme.font.sizes.large};
+
+    ${activeLink &&
+    css`
+      color: ${theme.colors.primary};
+    `}
+
+    :first-child {
+      margin-left: 0rem;
+    }
+
+    :after {
+      content: '';
+      width: 0%;
+      opacity: 0.5;
+      height: 0.1rem;
+      display: block;
+      transition: 1s all ease-in-out;
+      background-color: ${theme.colors.primary};
+    }
+
+    :before {
+      content: '';
+      width: 100%;
+      opacity: 0.5;
+      height: 0.1rem;
+      display: block;
+      transition: 1s all ease-in-out;
+    }
+
+    :hover {
+      :after {
+        width: 100%;
+      }
+      :before {
+        width: 0%;
+        background-color: ${theme.colors.primary};
+      }
+    }
+  `}
+`;

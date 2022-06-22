@@ -1,5 +1,5 @@
 export interface ITitleName {
-  title: TitleName;
+  name: TitleName;
 }[];
 
 export type TitleName = 'HOME' | 'SOBRE' | 'SERVIÇOS' | 'CONTATO';

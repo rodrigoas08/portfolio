@@ -36,7 +36,7 @@ export const ImgLogo = styled.div`
   `}
 `;
 
-export const NavWrapper = styled.nav`
+export const NavWrapper = styled.ul`
   ${({ theme }) => css`
     display: flex;
     gap: ${theme.spacings.xlarge};

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import { useState, memo, useEffect } from 'react';
+import { useState, memo, useLayoutEffect } from 'react';
 import { IColorProps, ITitleName } from 'interfaces/header';
 import { changeTitleOfPage, scrollPosition } from './functions';
 
@@ -11,7 +11,7 @@ export const Header = () => {
     color: 'transparent'
   });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     changeTitleOfPage(title);
     scrollPosition(setColorHeader);
   }, [title]);
@@ -30,41 +30,62 @@ export const Header = () => {
         <S.ImgLogo />
       </Link>
       <S.NavWrapper>
-        <Link
-          activeClass="active"
-          to="aboutme"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={600}
-          onClick={() => setTitle({ name: 'SOBRE' })}
-        >
-          <S.LinkMenu activeLink={title.name === 'SOBRE'}>Sobre</S.LinkMenu>
-        </Link>
-        <Link
-          activeClass="active"
-          to="servicos"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={600}
-          onClick={() => setTitle({ name: 'SERVIÇOS' })}
-        >
-          <S.LinkMenu activeLink={title.name === 'SERVIÇOS'}>
-            Serviços
-          </S.LinkMenu>
-        </Link>
-        <Link
-          activeClass="active"
-          to="contato"
-          spy={true}
-          smooth={true}
-          offset={0}
-          duration={600}
-          onClick={() => setTitle({ name: 'CONTATO' })}
-        >
-          <S.LinkMenu activeLink={title.name === 'CONTATO'}>Contato</S.LinkMenu>
-        </Link>
+        <li>
+          <Link
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={600}
+            onClick={() => setTitle({ name: 'HOME' })}
+          >
+            <S.LinkMenu activeLink={title.name === 'HOME'}>Início</S.LinkMenu>
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="aboutme"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={600}
+            onClick={() => setTitle({ name: 'SOBRE' })}
+          >
+            <S.LinkMenu activeLink={title.name === 'SOBRE'}>Sobre</S.LinkMenu>
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="servicos"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={600}
+            onClick={() => setTitle({ name: 'SERVIÇOS' })}
+          >
+            <S.LinkMenu activeLink={title.name === 'SERVIÇOS'}>
+              Serviços
+            </S.LinkMenu>
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass="active"
+            to="contato"
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={600}
+            onClick={() => setTitle({ name: 'CONTATO' })}
+          >
+            <S.LinkMenu activeLink={title.name === 'CONTATO'}>
+              Contato
+            </S.LinkMenu>
+          </Link>
+        </li>
       </S.NavWrapper>
     </S.Wrapper>
   );

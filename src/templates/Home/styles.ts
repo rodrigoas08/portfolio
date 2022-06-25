@@ -1,32 +1,12 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'home' })`
-  ${({ theme }) => css`
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-
-    > a {
-      cursor: pointer;
-      position: absolute;
-      text-decoration: none;
-      writing-mode: vertical-rl;
-      color: ${theme.colors.primary};
-      right: ${theme.spacings.large};
-      bottom: ${theme.spacings.small};
-      font-size: ${theme.font.sizes.medium};
-      animation: is-bouncing 1s ease-in alternate infinite;
-
-      @keyframes is-bouncing {
-        to {
-          transform: translateY(${theme.spacings.medium});
-        }
-      }
-    }
-  `}
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Section = styled.section`
@@ -64,23 +44,6 @@ export const Title = styled.h1`
       :after {
         content: '';
         width: 100%;
-        opacity: 0.5;
-        display: block;
-        height: 0.1rem;
-        position: absolute;
-        background-color: ${theme.colors.primary};
-      }
-
-      ::before {
-        content: '';
-        opacity: 0.7;
-        left: 17.4rem;
-        display: block;
-        width: 0.86rem;
-        height: 0.86rem;
-        border-radius: 50%;
-        position: absolute;
-        top: ${theme.spacings.xsmall};
         background-color: ${theme.colors.primary};
       }
     }
@@ -96,6 +59,7 @@ export const Subtitle = styled.h4`
     padding-top: 0.6rem;
     text-transform: uppercase;
     color: ${theme.colors.primary};
+    font-size: 1.5rem;
     padding-bottom: ${theme.spacings.xlarge};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {

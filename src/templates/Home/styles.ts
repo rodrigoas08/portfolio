@@ -67,17 +67,3 @@ export const Subtitle = styled.h4`
     }
   `}
 `;
-
-export const DivIcons = styled.div`
-  width: 70%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-`;
-
-export const Arrow = styled.img`
-  ${({ theme }) => css`
-    width: ${theme.spacings.medium};
-    height: ${theme.spacings.medium};
-  `}
-`;

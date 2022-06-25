@@ -1,6 +1,5 @@
 import * as S from './styles';
 import { Works, AboutMe, Contact } from 'templates';
-import { HtmlIcon, CssIcon, JSIcon, ReactIcon, TSIcon } from 'components/Icons';
 
 const Home = () => {
   return (
@@ -13,13 +12,6 @@ const Home = () => {
           <S.Subtitle>
             Técnico em informática | Estagiário desenvolvedor front-end
           </S.Subtitle>
-          <S.DivIcons>
-            <HtmlIcon />
-            <CssIcon />
-            <JSIcon />
-            <ReactIcon />
-            <TSIcon />
-          </S.DivIcons>
         </S.Section>
       </S.Wrapper>
       <AboutMe />

@@ -4,6 +4,7 @@ export const Wrapper = styled.div.attrs({ id: 'aboutme' })`
   width: 100%;
   height: 100vh;
   display: flex;
+  color: #cccccc;
   padding-top: 8rem;
   align-items: start;
   justify-content: center;
@@ -12,12 +13,11 @@ export const Wrapper = styled.div.attrs({ id: 'aboutme' })`
 export const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    opacity: 0.9;
     display: flex;
     flex-wrap: wrap;
-    background: #b4b4b4;
     align-items: center;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
     padding: ${theme.spacings.xlarge} 0;
   `}
 `;
@@ -27,7 +27,6 @@ export const Title = styled.h1`
     z-index: 1;
     font-size: 4rem;
     position: relative;
-    color: ${theme.colors.text};
     font-weight: ${theme.font.light};
     padding-bottom: ${theme.spacings.xlarge};
 
@@ -49,8 +48,6 @@ export const Section = styled.section`
   ${({ theme }) => css`
     width: 100%;
     height: auto;
-    backdrop-filter: blur(1.5rem);
-    background-color: rgba(0, 0, 0 0.1);
     padding: ${theme.spacings.large} 25rem;
   `}
 `;
@@ -72,7 +69,20 @@ export const Paragraph = styled.p`
   ${({ theme }) => css`
     width: 100%;
     line-height: 3.2rem;
-    color: ${theme.colors.text};
     font-size: ${theme.font.sizes.large};
   `}
+`;
+
+export const Habilities = styled.h4`
+  font-size: 1.8rem;
+  text-align: center;
+  margin: 2rem auto;
+  text-transform: uppercase;
+`;
+
+export const DivIcons = styled.div`
+  height: auto;
+  display: flex;
+  column-gap: 5rem;
+  justify-content: center;
 `;

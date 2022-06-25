@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
+import { HtmlIcon, CssIcon, JSIcon, ReactIcon, TSIcon } from 'components/Icons';
 
 export const AboutMe = () => {
   return (
@@ -18,17 +19,26 @@ export const AboutMe = () => {
             data-aos-once="false"
           />
           <S.Paragraph>
-            Eu sou Rodrigo, natural do Rio de Janeiro, Brasil. <br />
-            Solteiro, tenho um filho de 4 anos que é a coisa mais linda do
-            mundo.
+            Oi! Me chamo Rodrigo, sou um carioca apaixonado por praia, carnaval,
+            futebol e também por tecnologia. <br />
+            Trabalho com TI desde 2012, iniciei na área de Suporte Técnico em
+            Informática e no final de 2021 finalmente migrei pra área de
+            Programação graças ao meu irmão.
             <br />
-            Gosto de praia, futebol, games fps, surfar, jiu-jitsu, e ultimamente
-            meu hobbie principal esta sendo aprender a codar, estou há 5 meses
-            como estagiário desenvolvedor front-end na Usabit, uma Software
-            House fantástica e posso garantir que está sendo uma experiência
-            incrível e meu objetivo é me tornar um desenvolvedor qualificado
-            capaz de tonar a experiência do usuário a melhor possível.
+            Atualmente sou estagiário de front-end na Usabit, uma Software House
+            fantástica e posso garantir que está sendo uma experiência incrível,
+            pois estou tendo oportunidade de fazer cursos para aprender e
+            aperfeiçoar minhas habilidades e aplicar em alguns projetos dentro
+            da empresa.
           </S.Paragraph>
+          <S.Habilities>Algumas das tecnologias usadas:</S.Habilities>
+          <S.DivIcons>
+            <HtmlIcon text="HTML 5" />
+            <CssIcon text="CSS 3" />
+            <JSIcon text="Javascript" />
+            <ReactIcon text="ReactJS" />
+            <TSIcon text="Typescript" />
+          </S.DivIcons>
         </S.Section>
       </S.Container>
     </S.Wrapper>

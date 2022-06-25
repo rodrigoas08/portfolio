@@ -9,7 +9,6 @@ type IconProps = {
 export const TSIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      title="Typescript"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -36,7 +35,6 @@ export const TSIcon = ({ text }: IconProps) => {
 export const JSIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      title="JavaScript"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -60,7 +58,6 @@ export const JSIcon = ({ text }: IconProps) => {
 export const ReactIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      title="React"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -83,7 +80,6 @@ export const ReactIcon = ({ text }: IconProps) => {
 export const CssIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      title="CSS3"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -126,7 +122,6 @@ export const CssIcon = ({ text }: IconProps) => {
 export const HtmlIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      title="HTML5"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"

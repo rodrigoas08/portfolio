@@ -3,19 +3,17 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div.attrs({ id: 'home' })`
   width: 100%;
   height: 100vh;
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  align-items: end;
+  text-align: center;
+  margin: 0 auto;
+  grid-template-rows: 1fr 1fr;
 `;
 
-export const Section = styled.section`
-  display: flex;
-  cursor: default;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+const MediumContent = css`
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Title = styled.h1`
@@ -36,14 +34,14 @@ export const Title = styled.h1`
       display: block;
       height: 0.1rem;
       position: absolute;
+      ${MediumContent}
       transition: 1s ease-in-out;
       background-color: transparent;
     }
 
     &:hover {
       :after {
-        content: '';
-        width: 100%;
+        width: 33%;
         background-color: ${theme.colors.primary};
       }
     }
@@ -56,6 +54,7 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h4`
   ${({ theme }) => css`
+    align-self: start;
     padding-top: 0.6rem;
     text-transform: uppercase;
     color: ${theme.colors.primary};

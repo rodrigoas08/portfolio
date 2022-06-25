@@ -1,5 +1,5 @@
 export { default as Home } from './Home';
-export { default as Works } from './Works';
-export { default as Store } from './Store';
-export { default as AboutMe } from './AboutMe';
-export { default as Contact } from './Contact';
+export { default as Works } from './Home/Works';
+export { default as Store } from './Home/Store';
+export { default as AboutMe } from './Home/AboutMe';
+export { default as Contact } from './Home/Contact';

@@ -34,7 +34,7 @@ export const Card = styled.div`
     }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      width: 40%;
+      width: 100%;
     }
   `}
 `;

@@ -1,70 +1,81 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-export const Content = styled.div`
-	display: flex;
-	position: relative;
-	align-items: center;
-	justify-content: start;
-	flex-direction: column;
-	min-height: calc(100vh - 16rem);
+export const Wrapper = styled.div.attrs({ id: 'home' })`
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+`;
+
+const MediumContent = css`
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 export const Title = styled.h1`
-	${({ theme }) => css`
-		font-size: 9rem;
-		text-align: center;
-		position: relative;
-		text-transform: uppercase;
-		font-weight: ${theme.font.bold};
-		animation: titleAnimation 2.5s ease-out;
-		font-family: ${theme.font.family.nunito};
-		text-shadow: -4px 14px 1px ${theme.colors.primary};
-		padding: ${theme.spacings.small} ${theme.spacings.small};
+  ${({ theme }) => css`
+    font-size: 7rem;
+    position: relative;
+    color: ${theme.colors.white};
+    font-weight: ${theme.font.light};
+    font-family: ${theme.font.family.montserrat};
+    > span {
+      color: ${theme.colors.primary};
+    }
 
-		@keyframes titleAnimation {
-			0% {
-				letter-spacing: -1rem;
-			}
-			100% {
-				letter-spacing: 0rem;
-			}
-		}
+    :after {
+      content: '';
+      width: 0%;
+      opacity: 0.5;
+      display: block;
+      height: 0.1rem;
+      ${MediumContent};
+      position: absolute;
+      transition: 1s ease-in-out;
+      background-color: transparent;
+    }
 
-		> span {
-			background: -webkit-linear-gradient(
-				109deg,
-				rgba(${({ theme }) => theme.colors.primary}) 11.3%,
-				rgba(${({ theme }) => theme.colors.blueRibbon}) 91.1%
-			);
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: rgba(0, 0, 0, 0.1);
-			/* text-shadow: -4px 1px 1px ; */
-		}
-	`}
+    &:hover {
+      :after {
+        width: 33%;
+        background-color: ${theme.colors.primary};
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      font-size: ${theme.spacings.large};
+    }
+  `}
 `;
 
-export const Paragraph = styled.h2`
-	${({ theme }) => css`
-    font-size: 3rem;
-    position: relative;
-    text-align: center;
-    font-weight: ${theme.font.light};
-    font-family: ${theme.font.family.josefin};
-    animation: paragraphAnimation 2.4s ease-out;
-    padding: ${theme.spacings.small} ${theme.spacings.small};
-    margin: ${theme.spacings.small} ${theme.spacings.small};
+export const Subtitle = styled.h4`
+  ${({ theme }) => css`
+    padding-top: 0.6rem;
+    text-transform: uppercase;
+    color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.medium};
+    padding-bottom: ${theme.spacings.xlarge};
 
-    @keyframes paragraphAnimation {
-      0% {
-        letter-spacing: 0.4rem;
-      }
-      100% {
-      }
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      font-size: ${theme.spacings.xxsmall};
     }
-    }
+  `}
+`;
 
-    &::first-letter {
-      text-transform: uppercase;
+export const NavIcons = styled.nav`
+  ${({ theme }) => css`
+    display: flex;
+    column-gap: ${theme.spacings.medium};
+    > a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: ${theme.colors.white};
+      column-gap: ${theme.spacings.small};
+      font-size: ${theme.font.sizes.small};
     }
   `}
 `;

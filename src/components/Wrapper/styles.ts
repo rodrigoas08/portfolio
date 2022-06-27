@@ -1,8 +1,7 @@
-import styled, { css } from "styled-components";
+import styled from 'styled-components';
 
 export const Wrapper = styled.main`
-  ${({ theme }) => css`
-    padding: 0 10rem;
-    color: ${theme.colors.white};
-  `}
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
 `;

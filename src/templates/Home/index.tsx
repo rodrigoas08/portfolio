@@ -1,23 +1,39 @@
-import * as S from "./styles";
-import routes from "utils/routes";
-import { Button } from "components";
-import { navigate } from "@reach/router";
+import * as S from './styles';
+import { Works, AboutMe, Contact } from 'templates';
+import { GitHublIcon, LinkedInIcon } from 'components/Icons';
 
-export const Home = () => {
-	return (
-		<S.Content>
-			<S.Title>A solução está aqui</S.Title>
-			<S.Paragraph>
-				I'm a web development student and microcomputer support technician
-			</S.Paragraph>
-			<Button secondary onClick={() => navigate(routes.curriculum)}>
-				Veja meu currículo
-			</Button>
-			<Button rippling onClick={() => navigate(routes.works)}>
-				Conheça meus serviços
-			</Button>
-		</S.Content>
-	);
+const Home = () => {
+  return (
+    <>
+      <S.Wrapper>
+        <S.Title>
+          <span>{'<'}</span>Rodrigo Sobral<span>{'/>'}</span>
+        </S.Title>
+        <S.Subtitle>
+          Técnico em informática | Estagiário desenvolvedor front-end
+        </S.Subtitle>
+        <S.NavIcons>
+          <a
+            href="https://github.com/rodrigoas08"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <GitHublIcon text="GitHub" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/rodrigo-sobral-302012aa/"
+            target="blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInIcon text="LinkedIn" />
+          </a>
+        </S.NavIcons>
+      </S.Wrapper>
+      <AboutMe />
+      <Works />
+      <Contact />
+    </>
+  );
 };
 
 export default Home;

@@ -1,25 +1,15 @@
-import * as S from "./styles";
-import { Button } from "components";
-import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
+import * as S from './styles';
+import { Button } from 'components';
+import { useForm } from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import { FormState } from 'interfaces/form';
 
 type ModalProps = {
   handleClose: () => void;
 };
 
-type FormState = {
-  name: string;
-  email: string;
-  subject: string;
-};
-
 export const Modal = ({ handleClose }: ModalProps) => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<FormState>();
-  // const onSubmit: SubmitHandler<FormState> = (data) => console.log(data);
+  const { handleSubmit } = useForm<FormState>();
   const [modalSuccess, setModalSuccess] = useState(false);
 
   async function onSubmit(values: FormState) {
@@ -28,18 +18,19 @@ export const Modal = ({ handleClose }: ModalProps) => {
   }
 
   useEffect(() => {
+    const maxTime = 3000;
     const timer = setTimeout(() => {
       if (modalSuccess) handleClose();
       return () => clearTimeout(timer);
-    }, 3000);
+    }, maxTime);
 
     const handleEsc = ({ key }: KeyboardEvent) => {
-      key === "Escape" && handleClose();
+      key === 'Escape' && handleClose();
     };
-    document.addEventListener("keyup", handleEsc);
+    document.addEventListener('keyup', handleEsc);
 
-    return () => document.removeEventListener("keyup", handleEsc);
-  });
+    return () => document.removeEventListener('keyup', handleEsc);
+  }, []);
 
   return (
     <S.Shadow>
@@ -51,12 +42,12 @@ export const Modal = ({ handleClose }: ModalProps) => {
             <S.Title>Formulário de contato</S.Title>
             <S.Hr />
             <S.Form onSubmit={handleSubmit(onSubmit)}>
-              <S.Label htmlFor="name">
+              {/* <S.Label htmlFor="name">
                 Nome <span>*</span>
               </S.Label>
               <S.Input
-                {...register("name", {
-                  required: true,
+                {...register('name', {
+                  required: true
                 })}
                 placeholder="Nome completo"
               />
@@ -66,13 +57,13 @@ export const Modal = ({ handleClose }: ModalProps) => {
               </S.Label>
               <S.Input
                 placeholder="seuemail@exemplo.com"
-                {...register("email", {
+                {...register('email', {
                   required: true,
                   pattern: {
-                    message: "Insira um e-mail válido",
+                    message: 'Insira um e-mail válido',
                     value:
-                      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi,
-                  },
+                      /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi
+                  }
                 })}
               />
               {errors.email && <S.Error>Este campo é obrigatório.</S.Error>}
@@ -80,10 +71,10 @@ export const Modal = ({ handleClose }: ModalProps) => {
                 Assunto <span>*</span>
               </S.Label>
               <S.Textarea
-                {...register("subject", { required: true })}
+                {...register('message', { required: true })}
                 placeholder="Escreva aqui sua mensagem..."
               />
-              {errors.subject && <S.Error>Este campo é obrigatório.</S.Error>}
+              {errors.message && <S.Error>Este campo é obrigatório.</S.Error>} */}
               <S.FormAction>
                 <Button type="submit">Enviar</Button>
                 <Button secondary type="button" onClick={handleClose}>

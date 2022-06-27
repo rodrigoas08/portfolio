@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'aboutme' })`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   color: #cccccc;
   padding-top: 8rem;
@@ -49,6 +49,10 @@ export const Section = styled.section`
     width: 100%;
     height: auto;
     padding: ${theme.spacings.large} 25rem;
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      padding: 0 5rem;
+    }
   `}
 `;
 
@@ -62,6 +66,11 @@ export const Image = styled.div`
     background-repeat: no-repeat;
     margin-right: ${theme.spacings.small};
     background-image: url(/img/euPedro.jpg);
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      float: none;
+      margin: 0 auto;
+    }
   `}
 `;
 
@@ -70,19 +79,33 @@ export const Paragraph = styled.p`
     width: 100%;
     line-height: 3.2rem;
     font-size: ${theme.font.sizes.large};
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      padding-top: 2rem;
+      font-size: ${theme.font.sizes.medium};
+    }
   `}
 `;
 
 export const Habilities = styled.h4`
-  font-size: 1.8rem;
-  text-align: center;
-  margin: 2rem auto;
-  text-transform: uppercase;
+  ${({ theme }) => css`
+    text-align: center;
+    text-transform: uppercase;
+    font-size: ${theme.font.sizes.large};
+    margin: ${theme.spacings.small} auto;
+    padding-top: ${theme.spacings.medium};
+  `}
 `;
 
 export const DivIcons = styled.div`
-  height: auto;
-  display: flex;
-  column-gap: 5rem;
-  justify-content: center;
+  ${({ theme }) => css`
+    height: auto;
+    display: flex;
+    column-gap: 5rem;
+    justify-content: center;
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      column-gap: 4rem;
+    }
+  `}
 `;

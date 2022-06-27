@@ -12,7 +12,7 @@ export const AboutMe = () => {
           <S.Image
             data-aos="flip-up"
             data-aos-offset="200"
-            data-aos-delay="10"
+            data-aos-delay="500"
             data-aos-duration="300"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
@@ -23,7 +23,7 @@ export const AboutMe = () => {
             futebol e também por tecnologia. <br />
             Trabalho com TI desde 2012, iniciei na área de Suporte Técnico em
             Informática e no final de 2021 finalmente migrei pra área de
-            Programação graças ao meu irmão.
+            Programação graças ao meu irmão que atua nessa área há muitos anos.
             <br />
             Atualmente sou estagiário de front-end na Usabit, uma Software House
             fantástica e posso garantir que está sendo uma experiência incrível,
@@ -33,8 +33,8 @@ export const AboutMe = () => {
           </S.Paragraph>
           <S.Habilities>Algumas das tecnologias usadas:</S.Habilities>
           <S.DivIcons>
-            <HtmlIcon text="HTML 5" />
-            <CssIcon text="CSS 3" />
+            <HtmlIcon text="HTML" />
+            <CssIcon text="CSS" />
             <JSIcon text="Javascript" />
             <ReactIcon text="ReactJS" />
             <TSIcon text="Typescript" />

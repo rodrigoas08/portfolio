@@ -9,12 +9,6 @@ export const Wrapper = styled.div.attrs({ id: 'home' })`
   justify-content: center;
 `;
 
-const MediumContent = css`
-  bottom: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-`;
-
 export const Title = styled.h1`
   ${({ theme }) => css`
     font-size: 7rem;
@@ -24,25 +18,6 @@ export const Title = styled.h1`
     font-family: ${theme.font.family.montserrat};
     > span {
       color: ${theme.colors.primary};
-    }
-
-    :after {
-      content: '';
-      width: 0%;
-      opacity: 0.5;
-      display: block;
-      height: 0.1rem;
-      ${MediumContent};
-      position: absolute;
-      transition: 1s ease-in-out;
-      background-color: transparent;
-    }
-
-    &:hover {
-      :after {
-        width: 33%;
-        background-color: ${theme.colors.primary};
-      }
     }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {

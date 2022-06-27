@@ -25,7 +25,7 @@ export const Footer = styled.footer`
   `}
 `;
 
-export const DivCopyright = styled.div`
+export const TextCopyright = styled.p`
   ${({ theme }) => css`
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       text-align: center;
@@ -39,6 +39,10 @@ export const IconsWrapper = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    > a {
+      color: inherit;
+    }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       width: 70%;

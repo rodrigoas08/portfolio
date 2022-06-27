@@ -3,11 +3,10 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div.attrs({ id: 'home' })`
   width: 100%;
   height: 100vh;
-  display: grid;
-  align-items: end;
-  text-align: center;
-  margin: 0 auto;
-  grid-template-rows: 1fr 1fr;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 const MediumContent = css`
@@ -33,8 +32,8 @@ export const Title = styled.h1`
       opacity: 0.5;
       display: block;
       height: 0.1rem;
+      ${MediumContent};
       position: absolute;
-      ${MediumContent}
       transition: 1s ease-in-out;
       background-color: transparent;
     }
@@ -47,22 +46,36 @@ export const Title = styled.h1`
     }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      font-size: ${theme.spacings.xlarge};
+      font-size: ${theme.spacings.large};
     }
   `}
 `;
 
 export const Subtitle = styled.h4`
   ${({ theme }) => css`
-    align-self: start;
     padding-top: 0.6rem;
     text-transform: uppercase;
     color: ${theme.colors.primary};
-    font-size: 1.5rem;
+    font-size: ${theme.font.sizes.medium};
     padding-bottom: ${theme.spacings.xlarge};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      font-size: 0.8rem;
+      font-size: ${theme.spacings.xxsmall};
+    }
+  `}
+`;
+
+export const NavIcons = styled.nav`
+  ${({ theme }) => css`
+    display: flex;
+    column-gap: ${theme.spacings.medium};
+    > a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: ${theme.colors.white};
+      column-gap: ${theme.spacings.small};
+      font-size: ${theme.font.sizes.small};
     }
   `}
 `;

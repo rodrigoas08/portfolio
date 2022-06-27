@@ -1,18 +1,9 @@
 export const CardList = [
   {
-    description: 'Consultoria para montar PC.'
+    description: 'Montagem de Computadores'
   },
   {
-    description: 'Manutenção preventiva.'
-  },
-  {
-    description: 'Cable Management.'
-  },
-  {
-    description: 'Montagem de computadores.'
-  },
-  {
-    description: 'Atendimento em domicílio ou remoto.'
+    description: 'Manutenção preventiva'
   },
   {
     description: 'Desenvolvimento de sites'

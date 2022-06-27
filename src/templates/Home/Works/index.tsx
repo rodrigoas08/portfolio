@@ -11,7 +11,7 @@ export const Works = () => {
         <S.Title>Serviços</S.Title>
         <S.Section>
           {CardList.map((item, index) => {
-            return <Card key={index}>{item.description}</Card>;
+            return <Card key={index}>{item.description.toUpperCase()}</Card>;
           })}
         </S.Section>
       </S.Container>

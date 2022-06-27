@@ -50,6 +50,10 @@ export const Form = styled.form`
     gap: ${theme.spacings.xsmall};
     padding: ${theme.spacings.small} 0;
     font-size: ${theme.font.sizes.large};
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      width: 100%;
+    }
   `}
 `;
 

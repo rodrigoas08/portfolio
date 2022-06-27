@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'servicos' })`
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   padding-top: 8rem;
   align-items: start;
@@ -48,5 +48,10 @@ export const Section = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     gap: ${theme.spacings.small};
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      align-items: center;
+      flex-direction: column;
+    }
   `}
 `;

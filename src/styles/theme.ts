@@ -38,7 +38,7 @@ export default {
     xxlarge: '6rem'
   },
   colors: {
-    white: '#FFFFFF',
+    white: '#fafafa',
     black: '#000000',
     error: '#FF6262',
     primary: '#00ACEE',

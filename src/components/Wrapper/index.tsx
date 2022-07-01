@@ -1,8 +1,7 @@
 import './editor.css';
 import * as S from './styles';
 import ParticlesBg from 'particles-bg';
-import { Header } from 'components/Header';
-import { Footer } from 'components/Footer';
+import { Header, Footer } from 'components';
 
 type WrapperProps = {
   children: React.ReactChild;

@@ -27,7 +27,7 @@ export const Header = () => {
         duration={600}
         onClick={() => setTitle({ name: 'HOME' })}
       >
-        <S.ImgLogo />
+        <S.ImgProfile />
       </Link>
       <S.NavWrapper>
         <li>

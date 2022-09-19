@@ -78,6 +78,7 @@ export const Paragraph = styled.p`
   ${({ theme }) => css`
     width: 100%;
     line-height: 3.2rem;
+    color: ${theme.colors.text};
     font-size: ${theme.font.sizes.large};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {

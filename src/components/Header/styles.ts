@@ -4,15 +4,17 @@ export const Wrapper = styled.header`
   ${({ theme, color }) => css`
     z-index: 2;
     width: 100%;
-    height: 8rem;
+    height: ${color === 'black' ? '7rem' : '8rem'};
     display: flex;
     position: fixed;
     align-items: center;
     background-color: ${color};
     justify-content: space-between;
-    padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};
+    padding: ${color === 'black'
+      ? `${theme.spacings.xxsmall} 15rem`
+      : `${theme.spacings.xxxsmall} 15rem`};
     box-shadow: ${color === 'black'
-      ? '0 0.1rem 0.5rem rgba(255, 255, 255, 0.25)'
+      ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
       : 'transparent'};
 
     @media (max-width: ${theme.breakpoints.mobile}) {
@@ -21,7 +23,7 @@ export const Wrapper = styled.header`
   `}
 `;
 
-export const ImgLogo = styled.div`
+export const ImgProfile = styled.div`
   ${({ theme }) => css`
     cursor: pointer;
     border-radius: 50%;
@@ -39,6 +41,7 @@ export const ImgLogo = styled.div`
 export const NavWrapper = styled.ul`
   ${({ theme }) => css`
     display: flex;
+    list-style: none;
     gap: ${theme.spacings.xlarge};
   `}
 `;
@@ -50,7 +53,7 @@ export type LinkMenuProps = {
 export const LinkMenu = styled.a<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
     cursor: pointer;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.large};
 

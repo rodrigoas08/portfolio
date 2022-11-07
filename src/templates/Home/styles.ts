@@ -44,13 +44,5 @@ export const NavIcons = styled.nav`
   ${({ theme }) => css`
     display: flex;
     column-gap: ${theme.spacings.medium};
-    > a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: ${theme.colors.white};
-      column-gap: ${theme.spacings.small};
-      font-size: ${theme.font.sizes.small};
-    }
   `}
 `;

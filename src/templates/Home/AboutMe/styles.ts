@@ -2,9 +2,10 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'sobre' })`
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   color: #cccccc;
+  padding-top: 8rem;
   align-items: start;
   justify-content: center;
 `;
@@ -14,7 +15,6 @@ export const Container = styled.div`
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 8rem;
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.9);

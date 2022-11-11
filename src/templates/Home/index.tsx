@@ -6,16 +6,15 @@ const Home = () => {
   function openInNewTab(url: string) {
     window.open(url, '_blank', 'noopener,noreferrer');
   }
-
   return (
     <>
       <S.Wrapper>
-        <S.Title>
+        {/* <S.Title>
           <span>{'<'}</span>Rodrigo Sobral<span>{'/>'}</span>
         </S.Title>
         <S.Subtitle>
           Técnico em informática | Estagiário desenvolvedor front-end
-        </S.Subtitle>
+        </S.Subtitle> */}
         <CodingImage />
         <S.NavIcons>
           <GitHublIcon

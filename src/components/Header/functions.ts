@@ -1,15 +1,15 @@
-import { ITitleName, IColorProps } from 'interfaces/header';
+import { IColorProps, ITitleName } from 'interfaces/header';
 
 export function changeTitleOfPage(title: ITitleName) {
-  document.title = `${title.name} | Rodrigo Sobral - Montagem e manutenção de
-    computadores e desenvolvedor de sites`;
+  document.title = `${title.name} | Rodrigo Sobral`;
 }
 
-export function scrollPosition(setColorHeader: (type: IColorProps) => void) {
+export function handleScrollPosition(
+  setColorHeader: (type: IColorProps) => void
+) {
   document.addEventListener('scroll', () => {
-    const targetPosition = 280;
+    const targetPosition = 60;
     const position = window.scrollY;
-    console.log(position);
     position >= targetPosition
       ? setColorHeader({ color: 'black' })
       : setColorHeader({ color: 'transparent' });

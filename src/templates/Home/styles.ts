@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div.attrs({ id: 'home' })`
+export const Wrapper = styled.div.attrs({ id: 'inicio' })`
   width: 100%;
   height: 100vh;
   display: flex;

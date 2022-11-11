@@ -1,87 +1,106 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
+import { changeTitleOfPage, handleScrollPosition } from './functions';
 import { useState, memo, useLayoutEffect } from 'react';
 import { IColorProps, ITitleName } from 'interfaces/header';
-import { changeTitleOfPage, scrollPosition } from './functions';
 
 export const Header = () => {
-  const [title, setTitle] = useState<ITitleName>({ name: 'HOME' });
+  const [title, setTitle] = useState<ITitleName>({ name: 'INICIO' });
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
   });
 
   useLayoutEffect(() => {
-    changeTitleOfPage(title);
-    scrollPosition(setColorHeader);
-  }, [title]);
+    handleScrollPosition(setColorHeader);
+  }, []);
 
   return (
-    <S.Wrapper id="header" color={colorHeader.color}>
-      <Link
-        activeClass="active"
-        to="home"
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration={600}
-        onClick={() => setTitle({ name: 'HOME' })}
-      >
+    <S.Wrapper color={colorHeader.color}>
+      <Link to="inicio" spy={true} smooth={true}>
         <S.ImgProfile />
       </Link>
       <S.NavWrapper>
         <li>
           <Link
-            activeClass="active"
-            to="home"
+            to="inicio"
             spy={true}
             smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'HOME' })}
+            onSetActive={() => {
+              setTitle({ name: 'INICIO' });
+              changeTitleOfPage({ name: 'INICIO' });
+            }}
           >
-            <S.LinkMenu activeLink={title.name === 'HOME'}>Início</S.LinkMenu>
+            <S.LinkMenu
+              activeLink={title.name === 'INICIO'}
+              onClick={() => {
+                setTitle({ name: 'INICIO' });
+                changeTitleOfPage({ name: 'INICIO' });
+              }}
+            >
+              Início
+            </S.LinkMenu>
           </Link>
         </li>
         <li>
           <Link
-            activeClass="active"
-            to="aboutme"
+            to="sobre"
             spy={true}
             smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'SOBRE' })}
+            onSetActive={() => {
+              setTitle({ name: 'SOBRE' });
+              changeTitleOfPage({ name: 'SOBRE' });
+            }}
           >
-            <S.LinkMenu activeLink={title.name === 'SOBRE'}>Sobre</S.LinkMenu>
+            <S.LinkMenu
+              activeLink={title.name === 'SOBRE'}
+              onClick={() => {
+                setTitle({ name: 'SOBRE' });
+                changeTitleOfPage({ name: 'SOBRE' });
+              }}
+            >
+              Sobre
+            </S.LinkMenu>
           </Link>
         </li>
         <li>
           <Link
-            activeClass="active"
             to="servicos"
             spy={true}
             smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'SERVIÇOS' })}
+            onSetActive={() => {
+              setTitle({ name: 'SERVIÇOS' });
+              changeTitleOfPage({ name: 'SERVIÇOS' });
+            }}
           >
-            <S.LinkMenu activeLink={title.name === 'SERVIÇOS'}>
+            <S.LinkMenu
+              activeLink={title.name === 'SERVIÇOS'}
+              onClick={() => {
+                setTitle({ name: 'SERVIÇOS' });
+                changeTitleOfPage({ name: 'SERVIÇOS' });
+              }}
+            >
               Serviços
             </S.LinkMenu>
           </Link>
         </li>
         <li>
           <Link
-            activeClass="active"
             to="contato"
             spy={true}
             smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'CONTATO' })}
+            onSetActive={() => {
+              setTitle({ name: 'CONTATO' });
+              changeTitleOfPage({ name: 'CONTATO' });
+            }}
           >
-            <S.LinkMenu activeLink={title.name === 'CONTATO'}>
+            <S.LinkMenu
+              activeLink={title.name === 'CONTATO'}
+              onClick={() => {
+                setTitle({ name: 'CONTATO' });
+                changeTitleOfPage({ name: 'CONTATO' });
+              }}
+            >
               Contato
             </S.LinkMenu>
           </Link>

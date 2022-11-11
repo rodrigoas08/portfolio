@@ -4,15 +4,13 @@ export const Wrapper = styled.header`
   ${({ theme, color }) => css`
     z-index: 2;
     width: 100%;
-    height: ${color === 'black' ? '7rem' : '8rem'};
+    height: 8rem;
     display: flex;
     position: fixed;
     align-items: center;
     background-color: ${color};
     justify-content: space-between;
-    padding: ${color === 'black'
-      ? `${theme.spacings.xxsmall} 15rem`
-      : `${theme.spacings.xxxsmall} 15rem`};
+    padding: ${theme.spacings.xxsmall} 15rem;
     box-shadow: ${color === 'black'
       ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
       : 'transparent'};
@@ -47,18 +45,21 @@ export const NavWrapper = styled.ul`
 `;
 
 export type LinkMenuProps = {
-  activeLink: boolean;
+  activeLink?: boolean;
 };
 
-export const LinkMenu = styled.a<LinkMenuProps>`
+export const LinkMenu = styled.button<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
+    border: none;
     cursor: pointer;
     text-transform: capitalize;
     color: ${theme.colors.white};
+    background-color: transparent;
     font-size: ${theme.font.sizes.large};
 
     ${activeLink &&
     css`
+      transition: all 1.5s ease-in-out;
       color: ${theme.colors.primary};
     `}
 

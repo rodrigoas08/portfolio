@@ -2,9 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'contato' })`
   width: 100%;
+  height: 100vh;
   display: flex;
   padding-top: 8rem;
-  height: 100vh;
   align-items: start;
 `;
 

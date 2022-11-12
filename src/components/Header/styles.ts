@@ -49,13 +49,11 @@ export type LinkMenuProps = {
   activeLink?: boolean;
 };
 
-export const LinkMenu = styled.button<LinkMenuProps>`
+export const LinkText = styled.span<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
-    border: none;
     cursor: pointer;
     text-transform: capitalize;
     color: ${theme.colors.white};
-    background-color: transparent;
     font-size: ${theme.font.sizes.large};
 
     ${activeLink &&

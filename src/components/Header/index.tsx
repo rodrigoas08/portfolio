@@ -36,7 +36,7 @@ export const Header = () => {
 
   return (
     <S.Wrapper color={colorHeader.color}>
-      <Link to="inicio" spy={true} smooth={true}>
+      <Link to={Links[0].hash} spy={true} smooth={true}>
         <S.ImgProfile />
       </Link>
       <S.NavWrapper>
@@ -52,14 +52,9 @@ export const Header = () => {
                   changeTitleOfPage(link.name);
                 }}
               >
-                <S.LinkMenu
-                  activeLink={title.name === link.name}
-                  onClick={() => {
-                    changeTitleOfPage(link.name);
-                  }}
-                >
+                <S.LinkText activeLink={title.name === link.name}>
                   {link.name}
-                </S.LinkMenu>
+                </S.LinkText>
               </Link>
             </li>
           );

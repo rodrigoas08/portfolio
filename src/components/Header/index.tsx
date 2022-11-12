@@ -6,7 +6,7 @@ import { useState, memo, useLayoutEffect } from 'react';
 import { IColorProps, ITitleName } from 'interfaces/header';
 
 export const Header = () => {
-  const [title, setTitle] = useState<ITitleName>({ name: 'INICIO' });
+  const [title, setTitle] = useState<ITitleName>({ name: 'Início' });
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
   });
@@ -27,15 +27,15 @@ export const Header = () => {
             spy={true}
             smooth={true}
             onSetActive={() => {
-              setTitle({ name: 'INICIO' });
-              changeTitleOfPage({ name: 'INICIO' });
+              setTitle({ name: 'Início' });
+              changeTitleOfPage({ name: 'Início' });
             }}
           >
             <S.LinkMenu
-              activeLink={title.name === 'INICIO'}
+              activeLink={title.name === 'Início'}
               onClick={() => {
-                setTitle({ name: 'INICIO' });
-                changeTitleOfPage({ name: 'INICIO' });
+                setTitle({ name: 'Início' });
+                changeTitleOfPage({ name: 'Início' });
               }}
             >
               Início
@@ -48,15 +48,15 @@ export const Header = () => {
             spy={true}
             smooth={true}
             onSetActive={() => {
-              setTitle({ name: 'SOBRE' });
-              changeTitleOfPage({ name: 'SOBRE' });
+              setTitle({ name: 'Sobre' });
+              changeTitleOfPage({ name: 'Sobre' });
             }}
           >
             <S.LinkMenu
-              activeLink={title.name === 'SOBRE'}
+              activeLink={title.name === 'Sobre'}
               onClick={() => {
-                setTitle({ name: 'SOBRE' });
-                changeTitleOfPage({ name: 'SOBRE' });
+                setTitle({ name: 'Sobre' });
+                changeTitleOfPage({ name: 'Sobre' });
               }}
             >
               Sobre
@@ -69,15 +69,15 @@ export const Header = () => {
             spy={true}
             smooth={true}
             onSetActive={() => {
-              setTitle({ name: 'SERVIÇOS' });
-              changeTitleOfPage({ name: 'SERVIÇOS' });
+              setTitle({ name: 'Serviços' });
+              changeTitleOfPage({ name: 'Serviços' });
             }}
           >
             <S.LinkMenu
-              activeLink={title.name === 'SERVIÇOS'}
+              activeLink={title.name === 'Serviços'}
               onClick={() => {
-                setTitle({ name: 'SERVIÇOS' });
-                changeTitleOfPage({ name: 'SERVIÇOS' });
+                setTitle({ name: 'Serviços' });
+                changeTitleOfPage({ name: 'Serviços' });
               }}
             >
               Serviços
@@ -90,15 +90,15 @@ export const Header = () => {
             spy={true}
             smooth={true}
             onSetActive={() => {
-              setTitle({ name: 'CONTATO' });
-              changeTitleOfPage({ name: 'CONTATO' });
+              setTitle({ name: 'Contato' });
+              changeTitleOfPage({ name: 'Contato' });
             }}
           >
             <S.LinkMenu
-              activeLink={title.name === 'CONTATO'}
+              activeLink={title.name === 'Contato'}
               onClick={() => {
-                setTitle({ name: 'CONTATO' });
-                changeTitleOfPage({ name: 'CONTATO' });
+                setTitle({ name: 'Contato' });
+                changeTitleOfPage({ name: 'Contato' });
               }}
             >
               Contato

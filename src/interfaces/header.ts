@@ -2,7 +2,7 @@ export interface ITitleName {
   name: TitleName;
 }[];
 
-export type TitleName = 'INICIO' | 'SOBRE' | 'SERVIÇOS' | 'CONTATO';
+export type TitleName = 'Início' | 'Sobre' | 'Serviços' | 'Contato';
 
 export interface IColorProps {
   color: ColorProps;

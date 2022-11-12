@@ -1,7 +1,7 @@
-import { IColorProps, ITitleName } from 'interfaces/header';
+import { IColorProps } from 'interfaces/header';
 
-export function changeTitleOfPage(title: ITitleName) {
-  document.title = `${title.name} | Rodrigo Sobral`;
+export function changeTitleOfPage(title: string) {
+  document.title = `${title} | Rodrigo Sobral`;
 }
 
 export function handleScrollPosition(

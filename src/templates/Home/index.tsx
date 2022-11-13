@@ -10,7 +10,7 @@ const Home = () => {
     <>
       <S.Wrapper>
         <S.WrapperText>
-          <S.Welcome>seja bem-vindo,</S.Welcome>
+          <S.Welcome>seja bem-vindo(a),</S.Welcome>
           <S.Text>eu sou</S.Text>
           <S.Name>Rodrigo Sobral</S.Name>
           <S.Text>desenvolvedor front end.</S.Text>

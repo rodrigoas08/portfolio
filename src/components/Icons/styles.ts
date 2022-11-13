@@ -9,8 +9,6 @@ export const Wrapper = styled.div<IconProps>`
     display: flex;
     align-items: center;
     flex-direction: column;
-    text-decoration: none;
-    color: ${theme.colors.white};
     column-gap: ${theme.spacings.xxsmall};
     font-size: ${theme.font.sizes.small};
 

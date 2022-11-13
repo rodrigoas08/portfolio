@@ -1,23 +1,54 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'inicio' })`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
+  ${({ theme }) => css`
+    gap: 2rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding-left: 15rem;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      padding-left: 0;
+      align-items: center;
+    }
+  `}
 `;
 
-export const Title = styled.h1`
+export const WrapperText = styled.div`
+  ${({ theme }) => css`
+    p:nth-of-type(2) {
+      font-size: 1.4rem;
+      padding-top: 1rem;
+      color: ${theme.colors.white};
+    }
+  `}
+`;
+
+export const Welcome = styled.p`
+  ${({ theme }) => css`
+    font-size: 1.8rem;
+    padding-left: 0.2rem;
+    text-transform: uppercase;
+    color: ${theme.colors.primary};
+    font-family: ${theme.font.family.josefin};
+  `}
+`;
+
+export const Name = styled.p`
   ${({ theme }) => css`
     font-size: 7rem;
-    position: relative;
-    color: ${theme.colors.white};
-    font-weight: ${theme.font.light};
+    letter-spacing: 0.3rem;
+    padding-bottom: 0.5rem;
+    font-weight: ${theme.font.bold};
     font-family: ${theme.font.family.montserrat};
-    > span {
-      color: ${theme.colors.primary};
+    filter: drop-shadow(-1px 1px 0px ${theme.colors.primary});
+
+    :hover {
+      filter: none;
     }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
@@ -26,18 +57,8 @@ export const Title = styled.h1`
   `}
 `;
 
-export const Subtitle = styled.h4`
-  ${({ theme }) => css`
-    padding-top: 0.6rem;
-    text-transform: uppercase;
-    color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.medium};
-    padding-bottom: ${theme.spacings.xlarge};
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      font-size: ${theme.spacings.xxsmall};
-    }
-  `}
+export const Text = styled(Welcome)`
+  font-size: 16px;
 `;
 
 export const NavIcons = styled.nav`

@@ -1,6 +1,6 @@
 import * as S from './styles';
 import { Works, AboutMe, Contact } from 'templates';
-import { GitHublIcon, LinkedInIcon, CodingImage } from 'components/Icons';
+import { GitHublIcon, LinkedInIcon } from 'components/Icons';
 
 const Home = () => {
   function openInNewTab(url: string) {
@@ -9,13 +9,13 @@ const Home = () => {
   return (
     <>
       <S.Wrapper>
-        {/* <S.Title>
-          <span>{'<'}</span>Rodrigo Sobral<span>{'/>'}</span>
-        </S.Title>
-        <S.Subtitle>
-          Técnico em informática | Estagiário desenvolvedor front-end
-        </S.Subtitle> */}
-        <CodingImage />
+        <S.WrapperText>
+          <S.Welcome>seja bem-vindo,</S.Welcome>
+          <S.Text>eu sou</S.Text>
+          <S.Name>Rodrigo Sobral</S.Name>
+          <S.Text>desenvolvedor front end.</S.Text>
+        </S.WrapperText>
+        {/* <CodingImage /> */}
         <S.NavIcons>
           <GitHublIcon
             text="GitHub"

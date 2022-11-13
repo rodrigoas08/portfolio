@@ -156,7 +156,7 @@ export const GitHublIcon = ({ text, handleClick }: IconProps) => {
   return (
     <S.Wrapper
       sideText
-      data-aos="fade-right"
+      data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
       data-aos-duration="1000"
@@ -185,7 +185,7 @@ export const LinkedInIcon = ({ text, handleClick }: IconProps) => {
   return (
     <S.Wrapper
       sideText
-      data-aos="fade-left"
+      data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
       data-aos-duration="1000"

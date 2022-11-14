@@ -16,7 +16,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    box-shadow: 1px 4px 1rem black;
+    box-shadow: 0.1rem 0.4rem 1rem black;
     background-color: rgba(0, 0, 0, 0.9);
     padding: ${theme.spacings.xlarge} 0;
   `}
@@ -84,9 +84,9 @@ export const Article = styled.article`
     align-items: center;
     flex-direction: column;
     padding: ${theme.spacings.small};
+    border-radius: ${theme.border.radius};
     font-size: ${theme.font.sizes.medium};
     column-gap: ${theme.spacings.xxsmall};
-    border-radius: 0.5rem 0.5rem 1rem 1rem;
     background-color: rgba(255, 255, 255, 0.1);
     border-top: 0.1rem solid ${theme.colors.primary};
 

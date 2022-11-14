@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'servicos' })`
-  width: 100%;  
+  width: 100%;
   height: 100vh;
   display: flex;
   padding-top: 8rem;
@@ -20,22 +20,24 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    font-size: 4rem;
+    z-index: 1;
+    font-size: 3rem;
     position: relative;
-    color: ${theme.colors.primary};
+    font-family: 'Gotham';
+    text-transform: uppercase;
     font-weight: ${theme.font.light};
     padding-bottom: ${theme.spacings.xlarge};
 
     :before {
       content: '';
-      top: 30%;
       left: -2%;
-      width: 98%;
-      height: 20%;
+      width: 100%;
+      height: 50%;
       z-index: -1;
-      opacity: 0.3;
+      opacity: 0.5;
       position: absolute;
-      background-color: ${theme.colors.white};
+      border-radius: 1rem 4rem;
+      background-color: ${theme.colors.primary};
     }
   `}
 `;

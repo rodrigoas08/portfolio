@@ -2,9 +2,8 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'sobre' })`
   width: 100%;
-  height: 100vh;
   display: flex;
-  color: #cccccc;
+  max-height: 100vh;
   padding-top: 8rem;
   align-items: start;
   justify-content: center;
@@ -17,6 +16,7 @@ export const Container = styled.div`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    box-shadow: 1px 4px 1rem black;
     background-color: rgba(0, 0, 0, 0.9);
     padding: ${theme.spacings.xlarge} 0;
   `}
@@ -25,20 +25,22 @@ export const Container = styled.div`
 export const Title = styled.h1`
   ${({ theme }) => css`
     z-index: 1;
-    font-size: 4rem;
+    font-size: 3rem;
     position: relative;
+    font-family: 'Gotham';
+    text-transform: uppercase;
     font-weight: ${theme.font.light};
     padding-bottom: ${theme.spacings.xlarge};
 
     :before {
       content: '';
-      top: 30%;
       left: -2%;
-      width: 98%;
-      height: 20%;
+      width: 100%;
+      height: 50%;
       z-index: -1;
-      opacity: 0.3;
+      opacity: 0.5;
       position: absolute;
+      border-radius: 1rem 4rem;
       background-color: ${theme.colors.primary};
     }
   `}
@@ -48,6 +50,9 @@ export const Section = styled.section`
   ${({ theme }) => css`
     width: 100%;
     height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     padding: ${theme.spacings.large} 25rem;
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
@@ -58,9 +63,8 @@ export const Section = styled.section`
 
 export const Image = styled.div`
   ${({ theme }) => css`
-    float: left;
-    width: 15rem;
-    height: 15rem;
+    width: 20rem;
+    height: 20rem;
     border-radius: 50%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
@@ -68,45 +72,71 @@ export const Image = styled.div`
     background-image: url(/img/euPedro.jpg);
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      float: none;
-      margin: 0 auto;
     }
   `}
 `;
 
-export const Paragraph = styled.p`
+export const Article = styled.article`
   ${({ theme }) => css`
-    width: 100%;
-    line-height: 3.2rem;
-    color: ${theme.colors.text};
+    width: 35rem;
+    height: 25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: ${theme.spacings.small};
+    font-size: ${theme.font.sizes.medium};
+    column-gap: ${theme.spacings.xxsmall};
+    border-radius: 0.5rem 0.5rem 1rem 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 0.1rem solid ${theme.colors.primary};
+
+    > p {
+      color: ${theme.colors.text};
+      a {
+        cursor: pointer;
+      }
+    }
+    > ul {
+      align-self: flex-start;
+      padding-left: ${theme.spacings.small};
+    }
+    > ul,
+    li {
+      color: ${theme.colors.text};
+      padding-bottom: ${theme.spacings.xxxsmall};
+    }
+    li::marker {
+      color: ${theme.colors.primary};
+    }
+  `}
+`;
+
+export const TitleCard = styled.h3`
+  ${({ theme }) => css`
+    text-decoration: underline;
+    text-transform: capitalize;
+    text-underline-offset: 0.3rem;
+    font-weight: ${theme.font.normal};
     font-size: ${theme.font.sizes.large};
+    padding-bottom: ${theme.spacings.xxsmall};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding-top: 2rem;
+      padding-top: ${theme.spacings.small};
       font-size: ${theme.font.sizes.medium};
     }
   `}
 `;
 
-export const Habilities = styled.h4`
-  ${({ theme }) => css`
-    text-align: center;
-    text-transform: uppercase;
-    font-size: ${theme.font.sizes.large};
-    margin: ${theme.spacings.small} auto;
-    padding-top: ${theme.spacings.medium};
-  `}
+export const DivIcons = styled.div`
+  gap: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 `;
 
-export const DivIcons = styled.div`
+export const Span = styled.span`
   ${({ theme }) => css`
-    height: auto;
-    display: flex;
-    column-gap: 5rem;
-    justify-content: center;
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      column-gap: 4rem;
-    }
+    color: ${theme.colors.primary};
   `}
 `;

@@ -1,11 +1,9 @@
 import * as S from './styles';
 import { Works, AboutMe, Contact } from 'templates';
 import { GitHublIcon, LinkedInIcon } from 'components/Icons';
+import { openInNewTab } from 'utils/functions';
 
 const Home = () => {
-  function openInNewTab(url: string) {
-    window.open(url, '_blank', 'noopener,noreferrer');
-  }
   return (
     <>
       <S.Wrapper>

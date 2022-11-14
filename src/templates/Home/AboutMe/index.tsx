@@ -1,7 +1,17 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
-import { HtmlIcon, CssIcon, JSIcon, ReactIcon, TSIcon } from 'components/Icons';
+import { calculateYear, openInNewTab } from 'utils/functions';
+import {
+  HtmlIcon,
+  CssIcon,
+  JSIcon,
+  ReactIcon,
+  TSIcon,
+  GitIcon,
+  VueIcon,
+  VSCodeIcon
+} from 'components/Icons';
 
 export const AboutMe = () => {
   return (
@@ -11,34 +21,82 @@ export const AboutMe = () => {
         <S.Section>
           <S.Image
             data-aos="flip-up"
-            data-aos-offset="200"
-            data-aos-delay="500"
-            data-aos-duration="300"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
           />
-          <S.Paragraph>
-            Oi! Me chamo Rodrigo, sou um carioca apaixonado por praia, carnaval,
-            futebol e também por tecnologia. <br />
-            Trabalho com TI desde 2012, iniciei na área de Suporte Técnico em
-            Informática e no final de 2021 finalmente migrei pra área de
-            Programação graças ao meu irmão que atua nessa área há muitos anos.
-            <br />
-            Atualmente sou estagiário de front-end na Usabit, uma Software House
-            fantástica e posso garantir que está sendo uma experiência incrível,
-            pois estou tendo oportunidade de fazer cursos para aprender e
-            aperfeiçoar minhas habilidades e aplicar em alguns projetos dentro
-            da empresa.
-          </S.Paragraph>
-          <S.Habilities>Algumas das tecnologias usadas:</S.Habilities>
-          <S.DivIcons>
-            <HtmlIcon text="HTML" />
-            <CssIcon text="CSS" />
-            <JSIcon text="Javascript" />
-            <ReactIcon text="ReactJS" />
-            <TSIcon text="Typescript" />
-          </S.DivIcons>
+          <S.Article
+            data-aos="zoom-in"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <S.TitleCard>sobre</S.TitleCard>
+            <p>
+              Desenvolvedor front-end desde novembro de 2021 na{' '}
+              <a onClick={() => openInNewTab('https://www.usabit.com.br')}>
+                <S.Span>Usabit</S.Span>
+              </a>
+              . Estou focado em aprender as tecnologias mais usadas no mercado
+              para desenvolver sistemas web modernos, com alta performance,
+              responsivas e SEO. <br />
+              Atualmente estou buscando aprender vue.js e depois começar a
+              estudar react native para construir aplicações mobile.
+            </p>
+          </S.Article>
+          <S.Article
+            data-aos="zoom-in"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <S.TitleCard>habilidades</S.TitleCard>
+            <S.DivIcons>
+              <HtmlIcon text="HTML" />
+              <CssIcon text="CSS" />
+              <JSIcon text="JS" />
+              <ReactIcon text="React.js" />
+              <TSIcon text="TS" />
+              <GitIcon text="Git" />
+              <VSCodeIcon text="Vscode" />
+              <VueIcon text="Vue.js" />
+            </S.DivIcons>
+          </S.Article>
+          <S.Article
+            data-aos="zoom-in"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <S.TitleCard>experiência</S.TitleCard>
+            <ul>
+              <li>
+                1 ano - Analista Aux. Industrial <br />
+                <S.Span>Rio de Janeiro Refrescos (Coca-Cola)</S.Span>
+              </li>
+              <li>
+                7 anos e 8 meses - Analista de Suporte
+                <br />
+                <S.Span>Sonda IT</S.Span>
+              </li>
+              <li>
+                {calculateYear(11, 2021)} - Desenvolvedor frontend <br />
+                <S.Span>Usabit</S.Span>
+              </li>
+            </ul>
+          </S.Article>
         </S.Section>
       </S.Container>
     </S.Wrapper>

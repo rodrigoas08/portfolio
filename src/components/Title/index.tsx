@@ -11,13 +11,15 @@ const H1 = styled.h1`
 
     :before {
       content: '';
-      left: -2%;
-      width: 100%;
-      height: 100%;
+      top: 50%;
+      left: 50%;
+      width: 110%;
       z-index: -1;
+      height: 100%;
       opacity: 0.5;
       position: absolute;
       border-radius: 1rem 4rem;
+      transform: translate(-50%, -50%);
       background-color: ${theme.colors.primary};
     }
   `}

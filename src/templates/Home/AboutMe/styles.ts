@@ -13,51 +13,12 @@ export const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    box-shadow: 0.1rem 0.4rem 1rem black;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: ${theme.spacings.xlarge} 0;
-  `}
-`;
-
-export const Title = styled.h1`
-  ${({ theme }) => css`
-    z-index: 1;
-    font-size: 3rem;
-    position: relative;
-    font-family: 'Gotham';
-    text-transform: uppercase;
-    font-weight: ${theme.font.light};
-    padding-bottom: ${theme.spacings.xlarge};
-
-    :before {
-      content: '';
-      left: -2%;
-      width: 100%;
-      height: 50%;
-      z-index: -1;
-      opacity: 0.5;
-      position: absolute;
-      border-radius: 1rem 4rem;
-      background-color: ${theme.colors.primary};
-    }
-  `}
-`;
-
-export const Section = styled.section`
-  ${({ theme }) => css`
-    width: 100%;
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: ${theme.spacings.large} 25rem;
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding: 0 5rem;
-    }
+    background: rgba(0, 0, 0, 0.9);
+    padding: ${theme.spacings.xlarge} 15rem;
+    box-shadow: 0.1rem 0.4rem 1rem rgba(0, 0, 0, 0.9);
   `}
 `;
 
@@ -68,8 +29,20 @@ export const Image = styled.div`
     border-radius: 50%;
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin-right: ${theme.spacings.small};
+    margin: ${theme.spacings.large} 0;
     background-image: url(/img/euPedro.jpg);
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+    }
+  `}
+`;
+
+export const Section = styled.section`
+  ${({ theme }) => css`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: ${theme.spacings.small};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
     }
@@ -78,8 +51,8 @@ export const Image = styled.div`
 
 export const Article = styled.article`
   ${({ theme }) => css`
-    width: 35rem;
-    height: 25rem;
+    width: 45rem;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -92,6 +65,7 @@ export const Article = styled.article`
 
     > p {
       color: ${theme.colors.text};
+      line-height: 140%;
       a {
         cursor: pointer;
       }
@@ -103,7 +77,7 @@ export const Article = styled.article`
     > ul,
     li {
       color: ${theme.colors.text};
-      padding-bottom: ${theme.spacings.xxxsmall};
+      padding-bottom: ${theme.spacings.xsmall};
     }
     li::marker {
       color: ${theme.colors.primary};
@@ -118,21 +92,21 @@ export const TitleCard = styled.h3`
     text-underline-offset: 0.3rem;
     font-weight: ${theme.font.normal};
     font-size: ${theme.font.sizes.large};
-    padding-bottom: ${theme.spacings.xxsmall};
+    padding-bottom: ${theme.spacings.xsmall};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding-top: ${theme.spacings.small};
-      font-size: ${theme.font.sizes.medium};
     }
   `}
 `;
 
 export const DivIcons = styled.div`
-  gap: 1rem;
-  width: 100%;
-  display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  ${({ theme }) => css`
+    width: 100%;
+    display: grid;
+    gap: ${theme.spacings.xxsmall};
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  `}
 `;
 
 export const Span = styled.span`

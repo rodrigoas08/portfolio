@@ -2,17 +2,16 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'inicio' })`
   ${({ theme }) => css`
-    gap: 2rem;
     width: 100%;
     height: 100vh;
     display: flex;
-    padding-left: 15rem;
-    align-items: flex-start;
+    padding: 0 15rem;
     flex-direction: column;
+    align-items: flex-start;
     justify-content: center;
+    gap: ${theme.spacings.small};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding-left: 0;
       align-items: center;
     }
   `}
@@ -20,20 +19,20 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
 
 export const WrapperText = styled.div`
   ${({ theme }) => css`
-    p:nth-of-type(2) {
-      font-size: 1.4rem;
-      padding-top: 1rem;
+    h2:nth-of-type(2) {
       color: ${theme.colors.white};
+      font-size: ${theme.font.sizes.small};
+      padding-top: ${theme.spacings.xxsmall};
     }
   `}
 `;
 
-export const Welcome = styled.p`
+export const Welcome = styled.h2`
   ${({ theme }) => css`
-    font-size: 1.8rem;
     padding-left: 0.2rem;
     text-transform: uppercase;
     color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.large};
     font-family: ${theme.font.family.josefin};
   `}
 `;
@@ -41,9 +40,9 @@ export const Welcome = styled.p`
 export const Name = styled.p`
   ${({ theme }) => css`
     font-size: 7rem;
-    letter-spacing: 0.3rem;
-    padding-bottom: 0.5rem;
     font-weight: ${theme.font.bold};
+    letter-spacing: ${theme.spacings.xxxsmall};
+    padding-bottom: ${theme.spacings.xxxsmall};
     font-family: ${theme.font.family.montserrat};
     filter: drop-shadow(-1px 1px 0px ${theme.colors.primary});
 
@@ -52,13 +51,15 @@ export const Name = styled.p`
     }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      font-size: ${theme.spacings.large};
     }
   `}
 `;
 
 export const Text = styled(Welcome)`
-  font-size: 16px;
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    letter-spacing: ${theme.spacings.xxxsmall};
+  `}
 `;
 
 export const NavIcons = styled.nav`

@@ -1,14 +1,14 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
-import { Card } from 'components';
+import { Card, Title } from 'components';
 import { CardList } from './mock';
 
 export const Works = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        <S.Title>Serviços</S.Title>
+        <Title text="Serviços" />
         <S.Section>
           {CardList.map((item, index) => {
             return <Card key={index}>{item.description.toUpperCase()}</Card>;

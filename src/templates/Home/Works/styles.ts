@@ -18,30 +18,6 @@ export const Container = styled.div`
   `}
 `;
 
-export const Title = styled.h1`
-  ${({ theme }) => css`
-    z-index: 1;
-    font-size: 3rem;
-    position: relative;
-    font-family: 'Gotham';
-    text-transform: uppercase;
-    font-weight: ${theme.font.light};
-    padding-bottom: ${theme.spacings.xlarge};
-
-    :before {
-      content: '';
-      left: -2%;
-      width: 100%;
-      height: 50%;
-      z-index: -1;
-      opacity: 0.5;
-      position: absolute;
-      border-radius: 1rem 4rem;
-      background-color: ${theme.colors.primary};
-    }
-  `}
-`;
-
 export const Section = styled.section`
   ${({ theme }) => css`
     width: 80%;

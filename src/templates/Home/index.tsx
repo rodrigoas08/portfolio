@@ -13,7 +13,6 @@ const Home = () => {
           <S.Name>Rodrigo Sobral</S.Name>
           <S.Text>desenvolvedor front end.</S.Text>
         </S.WrapperText>
-        {/* <CodingImage /> */}
         <S.NavIcons>
           <GitHublIcon
             text="GitHub"

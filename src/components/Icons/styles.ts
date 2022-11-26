@@ -9,10 +9,14 @@ export const Wrapper = styled.div<IconProps>`
     display: flex;
     align-items: center;
     flex-direction: column;
-    text-decoration: none;
-    color: ${theme.colors.white};
     column-gap: ${theme.spacings.xxsmall};
     font-size: ${theme.font.sizes.small};
+
+    > p {
+      color: ${theme.colors.text};
+      padding: ${theme.spacings.xxsmall} 0;
+      font-size: ${theme.font.sizes.xsmall};
+    }
 
     ${sideText &&
     css`
@@ -20,15 +24,14 @@ export const Wrapper = styled.div<IconProps>`
       cursor: pointer;
       flex-direction: row;
       padding: 0 ${theme.spacings.small};
-      border-radius: ${theme.border.radius};
       font-size: ${theme.font.sizes.medium};
+      border-radius: ${theme.border.radius};
       background-color: rgba(255, 255, 255, 0.1);
       border-top: 0.1rem solid ${theme.colors.primary};
-    `}
 
-    > p {
-      padding: ${theme.spacings.xxsmall} 0;
-      font-size: ${theme.font.sizes.xsmall};
-    }
+      p {
+        color: ${theme.colors.white};
+      }
+    `}
   `}
 `;

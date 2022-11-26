@@ -6,7 +6,6 @@ const ButtonModifier = {
     ${({ theme }) => css`
       border: none;
       background: transparent;
-      color: ${theme.colors.white};
 
       :hover {
         background: ${theme.colors.blueRibbon};
@@ -20,7 +19,6 @@ const ButtonModifier = {
   disabled: (theme: DefaultTheme) => css`
     cursor: not-allowed;
     background: ${theme.colors.gray};
-    color: ${theme.colors.white};
   `,
 
   rippling: () => css`

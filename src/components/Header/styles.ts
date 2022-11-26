@@ -8,10 +8,10 @@ export const Wrapper = styled.header`
     display: flex;
     position: fixed;
     align-items: center;
-    background-color: ${color};
+    background: ${color};
     justify-content: space-between;
+    transition: all 0.1s ease-in-out;
     padding: ${theme.spacings.xxsmall} 15rem;
-    transition: all 0.5s ease-in-out;
     box-shadow: ${color === 'black'
       ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
       : 'transparent'};

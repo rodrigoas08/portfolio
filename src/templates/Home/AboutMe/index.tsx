@@ -1,44 +1,103 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
-import { HtmlIcon, CssIcon, JSIcon, ReactIcon, TSIcon } from 'components/Icons';
+import { Title } from 'components';
+import { openInNewTab } from 'utils/functions';
+import {
+  HtmlIcon,
+  CssIcon,
+  JSIcon,
+  ReactIcon,
+  TSIcon,
+  GitIcon,
+  VueIcon,
+  VSCodeIcon
+} from 'components/Icons';
 
 export const AboutMe = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        <S.Title>Quem sou...</S.Title>
+        <Title text="Quem sou..." />
+        <S.Image
+          data-aos="flip-up"
+          data-aos-offset="2"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+        />
         <S.Section>
-          <S.Image
-            data-aos="flip-up"
-            data-aos-offset="200"
-            data-aos-delay="500"
-            data-aos-duration="300"
+          <S.Article
+            data-aos="zoom-in"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1000"
             data-aos-easing="ease-in-out"
             data-aos-mirror="true"
             data-aos-once="false"
-          />
-          <S.Paragraph>
-            Oi! Me chamo Rodrigo, sou um carioca apaixonado por praia, carnaval,
-            futebol e também por tecnologia. <br />
-            Trabalho com TI desde 2012, iniciei na área de Suporte Técnico em
-            Informática e no final de 2021 finalmente migrei pra área de
-            Programação graças ao meu irmão que atua nessa área há muitos anos.
-            <br />
-            Atualmente sou estagiário de front-end na Usabit, uma Software House
-            fantástica e posso garantir que está sendo uma experiência incrível,
-            pois estou tendo oportunidade de fazer cursos para aprender e
-            aperfeiçoar minhas habilidades e aplicar em alguns projetos dentro
-            da empresa.
-          </S.Paragraph>
-          <S.Habilities>Algumas das tecnologias usadas:</S.Habilities>
-          <S.DivIcons>
-            <HtmlIcon text="HTML" />
-            <CssIcon text="CSS" />
-            <JSIcon text="Javascript" />
-            <ReactIcon text="ReactJS" />
-            <TSIcon text="Typescript" />
-          </S.DivIcons>
+          >
+            <S.TitleCard>sobre</S.TitleCard>
+            <p>
+              Comecei como estagiário desenvolvedor front-end em novembro de
+              2021 na{' '}
+              <a onClick={() => openInNewTab('https://www.usabit.com.br')}>
+                <S.Span>Usabit</S.Span>
+              </a>
+              . Estou focado em aprender as tecnologias mais usadas no mercado
+              para poder desenvolver sistemas web com alta performance,
+              responsivos e SEO. Atualmente estou buscando conhecimento em
+              vue.js e depois react native para construir aplicações mobile.
+            </p>
+          </S.Article>
+          <S.Article
+            data-aos="zoom-in"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <S.TitleCard>experiência</S.TitleCard>
+            <ul>
+              <li>
+                2010-2011 - Analista Auxiliar Industrial <br />
+                <S.Span>Rio de Janeiro Refrescos (Coca-Cola)</S.Span>
+              </li>
+              <li>
+                2012-2020 - Analista de Suporte Técnico N2
+                <br />
+                <S.Span>Sonda IT</S.Span>
+              </li>
+              <li>
+                2021 - Desenvolvedor frontend <br />
+                <S.Span>Usabit</S.Span>
+              </li>
+            </ul>
+          </S.Article>
+          <S.Article
+            data-aos="zoom-in"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+          >
+            <S.TitleCard>habilidades</S.TitleCard>
+            <S.DivIcons>
+              <HtmlIcon text="HTML" />
+              <CssIcon text="CSS" />
+              <JSIcon text="JS" />
+              <ReactIcon text="React.js" />
+              <TSIcon text="TS" />
+              <GitIcon text="Git" />
+              <VSCodeIcon text="Vscode" />
+              <VueIcon text="Vue.js" />
+            </S.DivIcons>
+          </S.Article>
         </S.Section>
       </S.Container>
     </S.Wrapper>

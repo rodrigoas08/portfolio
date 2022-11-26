@@ -1,6 +1,6 @@
 export default {
   border: {
-    radius: '0.2rem'
+    radius: '0.5rem'
   },
   font: {
     family: {

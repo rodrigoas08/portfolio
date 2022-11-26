@@ -1,5 +1,5 @@
 import * as S from './styles';
-import { Works, AboutMe, Contact } from 'templates';
+import { Portfolio, AboutMe, Contact } from 'templates';
 import { GitHublIcon, LinkedInIcon } from 'components/Icons';
 import { openInNewTab } from 'utils/functions';
 
@@ -29,7 +29,7 @@ const Home = () => {
         </S.NavIcons>
       </S.Wrapper>
       <AboutMe />
-      <Works />
+      <Portfolio />
       <Contact />
     </>
   );

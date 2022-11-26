@@ -25,8 +25,8 @@ export const Header = () => {
       hash: 'sobre'
     },
     {
-      name: 'Serviços',
-      hash: 'servicos'
+      name: 'Portfólio',
+      hash: 'portfolio'
     },
     {
       name: 'Contato',

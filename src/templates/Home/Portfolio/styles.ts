@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div.attrs({ id: 'servicos' })`
+export const Wrapper = styled.div.attrs({ id: 'portfolio' })`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -26,6 +26,7 @@ export const Section = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     gap: ${theme.spacings.small};
+    margin-top: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       align-items: center;

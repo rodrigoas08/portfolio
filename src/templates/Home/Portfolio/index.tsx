@@ -8,7 +8,7 @@ export const Works = () => {
   return (
     <S.Wrapper>
       <S.Container>
-        <Title text="Serviços" />
+        <Title text="Portfólio" />
         <S.Section>
           {CardList.map((item, index) => {
             return <Card key={index}>{item.description.toUpperCase()}</Card>;

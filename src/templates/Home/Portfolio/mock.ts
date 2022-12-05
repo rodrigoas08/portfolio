@@ -1,20 +1,26 @@
 export const CardList = [
   {
-    description: 'Desenvolvimento de sites'
+    projectName: 'ECBPORTO',
+    description: 'Desenvolvimento de sites',
+    background: '/img/portfolios/ecbporto.png',
+    link: '/img/portfolios/ecbporto.png'
   },
   {
-    description: 'Desenvolvimento de sites'
+    projectName: 'Projeto B',
+    description: 'Desenvolvimento de sites',
+    background: '',
+    link: ''
   },
   {
-    description: 'Desenvolvimento de sites'
+    projectName: 'Projeto C',
+    description: 'Desenvolvimento de sites',
+    background: '',
+    link: ''
   },
   {
-    description: 'Desenvolvimento de sites'
-  },
-  {
-    description: 'Desenvolvimento de sites'
-  },
-  {
-    description: 'Desenvolvimento de sites'
+    projectName: 'Projeto D',
+    description: 'Desenvolvimento de sites',
+    background: '',
+    link: ''
   }
 ];

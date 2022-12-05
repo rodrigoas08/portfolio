@@ -12,7 +12,12 @@ export const Portfolio = () => {
         <S.Section>
           {CardList.map((card, index) => {
             return (
-              <Card key={index} title={`${card.description.toUpperCase()}`} />
+              <Card
+                key={index}
+                link={`${card.link}`}
+                background={`${card.background}`}
+                title={`${card.projectName.toUpperCase()}`}
+              />
             );
           })}
         </S.Section>

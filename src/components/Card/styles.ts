@@ -1,25 +1,17 @@
 import styled, { css } from 'styled-components';
-// import * as ButtonStyles from 'components/Button/styles';
+import { CardProps } from '.';
 
-export const Card = styled.div`
-  ${({ theme }) => css`
-    width: 25%;
-    cursor: pointer;
+export const Card = styled.div<CardProps>`
+  ${({ theme, background }) => css`
+    width: 35%;
     min-height: 30rem;
+    background-size: cover;
     backdrop-filter: blur(1.5rem);
+    background-image: url(${background});
     font-size: ${theme.font.sizes.small};
     border-radius: ${theme.border.radius};
     background-color: rgba(255, 255, 255, 0.1);
     border-top: 0.3rem solid ${theme.colors.primary};
-    background-image: url(/img/portfolios/ecbporto.png);
-    background-size: cover;
-
-    :hover {
-      ${CardInfo} {
-        height: 50%;
-        transition: all 0.5s ease-in-out;
-      }
-    }
 
     @media (max-width: ${theme.breakpoints.mobile}) {
       width: 80%;
@@ -36,21 +28,28 @@ export const CardInfo = styled.div`
     bottom: 0;
     width: 100%;
     height: 20%;
+    cursor: pointer;
     position: absolute;
-    border-radius: 15px 15px 0 0;
-    backdrop-filter: blur(1.5rem);
-    transition: height 1.2s ease-out;
+    transition: height 1s ease-out;
     background: ${theme.colors.primary};
+    border-radius: 1.5rem 1.5rem 0.3rem 0.3rem;
+    box-shadow: 0.1rem 0rem 1.5rem rgba(0, 0, 0, 1);
+
+    :hover {
+      height: 50%;
+      transition: height 1s ease-out;
+    }
   `}
 `;
 
 export const Cardtext = styled.p`
   ${({ theme }) => css`
     text-align: center;
-    padding: 2rem 0;
-    color: ${theme.colors.text};
+    padding: ${theme.spacings.small} 0;
     > a {
+      font-family: 'Gotham';
       text-decoration: none;
+      letter-spacing: 0.2rem;
     }
   `}
 `;

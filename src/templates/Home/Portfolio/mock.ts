@@ -1,9 +1,18 @@
 export const CardList = [
   {
-    description: 'Montagem de Computadores'
+    description: 'Desenvolvimento de sites'
   },
   {
-    description: 'Manutenção preventiva'
+    description: 'Desenvolvimento de sites'
+  },
+  {
+    description: 'Desenvolvimento de sites'
+  },
+  {
+    description: 'Desenvolvimento de sites'
+  },
+  {
+    description: 'Desenvolvimento de sites'
   },
   {
     description: 'Desenvolvimento de sites'

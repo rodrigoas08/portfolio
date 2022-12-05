@@ -4,14 +4,16 @@ import * as S from './styles';
 import { Card, Title } from 'components';
 import { CardList } from './mock';
 
-export const Works = () => {
+export const Portfolio = () => {
   return (
     <S.Wrapper>
       <S.Container>
         <Title text="Portfólio" />
         <S.Section>
-          {CardList.map((item, index) => {
-            return <Card key={index}>{item.description.toUpperCase()}</Card>;
+          {CardList.map((card, index) => {
+            return (
+              <Card key={index} title={`${card.description.toUpperCase()}`} />
+            );
           })}
         </S.Section>
       </S.Container>
@@ -19,6 +21,6 @@ export const Works = () => {
   );
 };
 
-export default Works;
+export default Portfolio;
 AOS.init();
 AOS.refresh();

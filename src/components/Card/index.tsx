@@ -1,14 +1,14 @@
 import * as S from './styles';
 import CardModal from './Modal';
-import { Button } from 'components';
+// import { Button } from 'components';
 import { useLayoutEffect, useState } from 'react';
 
 type CardProps = {
-  children: React.ReactChild;
+  title: string;
 };
 
-const Card = ({ children }: CardProps) => {
-  const [showCardModal, setShowCardModal] = useState(false);
+const Card = ({ title }: CardProps) => {
+  const [showCardModal] = useState(false);
 
   useLayoutEffect(() => {
     showCardModal
@@ -28,13 +28,19 @@ const Card = ({ children }: CardProps) => {
         data-aos-mirror="true"
         data-aos-once="false"
       >
-        <S.Cardtext>{children}</S.Cardtext>
-        <Button
+        <S.CardInfo>
+          <S.Cardtext>
+            <a href="/img/portfolios/ecbporto.png" target="_blank">
+              {title}
+            </a>
+          </S.Cardtext>
+          {/* <Button
           onClick={() => setShowCardModal(true)}
           onBlur={() => setShowCardModal(false)}
-        >
+          >
           + Detalhes
-        </Button>
+        </Button> */}
+        </S.CardInfo>
       </S.Card>
     </>
   );

@@ -45,11 +45,12 @@ export const CardInfo = styled.div`
 export const Cardtext = styled.p`
   ${({ theme }) => css`
     text-align: center;
+    font-family: 'Gotham';
+    letter-spacing: 0.2rem;
     padding: ${theme.spacings.small} 0;
     > a {
-      font-family: 'Gotham';
+      font-family: inherit;
       text-decoration: none;
-      letter-spacing: 0.2rem;
     }
   `}
 `;

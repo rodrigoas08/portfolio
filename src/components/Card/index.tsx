@@ -29,15 +29,15 @@ const Card = ({ title, background, link }: CardProps) => {
         // data-aos-once="false"
       >
         <S.CardInfo>
-          <S.Cardtext>
-            {link === '' ? (
-              title
-            ) : (
+          {link === '' ? (
+            <S.Cardtext>{title}</S.Cardtext>
+          ) : (
+            <S.Cardtext>
               <a href={link} target="_blank" rel="noopener noreferrer">
                 {title}
               </a>
-            )}
-          </S.Cardtext>
+            </S.Cardtext>
+          )}
         </S.CardInfo>
       </S.Card>
     </>

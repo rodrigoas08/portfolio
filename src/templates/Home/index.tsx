@@ -8,8 +8,7 @@ const Home = () => {
     <>
       <S.Wrapper>
         <S.WrapperText>
-          <S.Welcome>seja bem-vindo(a),</S.Welcome>
-          <S.Text>eu sou</S.Text>
+          <S.Welcome>Seja bem-vindo(a), eu sou</S.Welcome>
           <S.Name>Rodrigo Sobral</S.Name>
           <S.Text>desenvolvedor front end.</S.Text>
         </S.WrapperText>

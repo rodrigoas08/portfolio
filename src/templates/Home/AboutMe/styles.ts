@@ -85,7 +85,7 @@ export const Article = styled.article`
   `}
 `;
 
-export const TitleCard = styled.h3`
+export const TitleCard = styled.h1`
   ${({ theme }) => css`
     text-decoration: underline;
     text-transform: capitalize;

@@ -291,25 +291,5 @@ export const LinkedInIcon = ({ text, handleClick }: IconProps) => {
   );
 };
 
-export const CodingImage = () => {
-  return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
-      <img
-        width="400"
-        height="400"
-        src={`${process.env.PUBLIC_URL + '/img/hand-coding-amico.png'}`}
-      ></img>
-    </S.Wrapper>
-  );
-};
-
 AOS.init();
 AOS.refresh();

@@ -14,9 +14,9 @@ export const Portfolio = () => {
             return (
               <Card
                 key={index}
-                link={`${card.link}`}
-                background={`${card.background}`}
-                title={`${card.projectName.toUpperCase()}`}
+                link={card.link}
+                background={card.background}
+                title={card.projectName.toUpperCase()}
               />
             );
           })}

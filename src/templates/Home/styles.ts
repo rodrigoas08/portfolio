@@ -27,10 +27,9 @@ export const WrapperText = styled.div`
   `}
 `;
 
-export const Welcome = styled.h2`
+export const Welcome = styled.p`
   ${({ theme }) => css`
     padding-left: 0.2rem;
-    text-transform: uppercase;
     color: ${theme.colors.primary};
     font-size: ${theme.font.sizes.large};
     font-family: ${theme.font.family.josefin};
@@ -41,8 +40,8 @@ export const Name = styled.p`
   ${({ theme }) => css`
     font-size: 7rem;
     font-weight: ${theme.font.bold};
+    padding: ${theme.spacings.xsmall} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
-    padding-bottom: ${theme.spacings.xxxsmall};
     font-family: ${theme.font.family.montserrat};
     filter: drop-shadow(-1px 1px 0px ${theme.colors.primary});
 
@@ -57,6 +56,7 @@ export const Name = styled.p`
 
 export const Text = styled(Welcome)`
   ${({ theme }) => css`
+    text-transform: uppercase;
     font-size: ${theme.font.sizes.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
   `}

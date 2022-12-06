@@ -28,21 +28,20 @@ export const CardInfo = styled.div`
     bottom: 0;
     width: 100%;
     height: 20%;
-    cursor: pointer;
+    opacity: 0.9;
     position: absolute;
     transition: height 1s ease-out;
     background: ${theme.colors.primary};
-    border-radius: 1.5rem 1.5rem 0.3rem 0.3rem;
+    border-radius: 0 0 0.3rem 0.3rem;
     box-shadow: 0.1rem 0rem 1.5rem rgba(0, 0, 0, 1);
 
     :hover {
-      height: 50%;
-      transition: height 1s ease-out;
+      opacity: 1;
     }
   `}
 `;
 
-export const Cardtext = styled.p`
+export const CardTitle = styled.h1`
   ${({ theme }) => css`
     text-align: center;
     font-family: 'Gotham';
@@ -54,3 +53,5 @@ export const Cardtext = styled.p`
     }
   `}
 `;
+
+export const CardDescription = styled.p``;

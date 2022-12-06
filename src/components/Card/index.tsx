@@ -7,8 +7,6 @@ export type CardProps = {
 };
 
 const Card = ({ title, background, link }: CardProps) => {
-  // const [showCardModal] = useState(false);
-
   // useLayoutEffect(() => {
   //   showCardModal
   //     ? (document.body.style.overflowY = 'hidden')
@@ -17,26 +15,25 @@ const Card = ({ title, background, link }: CardProps) => {
 
   return (
     <>
-      {/* {showCardModal && <CardModal />} */}
       <S.Card
         background={background}
-        // data-aos="fade-up"
-        // data-aos-offset="200"
-        // data-aos-delay="50"
-        // data-aos-duration="1000"
-        // data-aos-easing="ease-in-out"
-        // data-aos-mirror="true"
-        // data-aos-once="false"
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
       >
         <S.CardInfo>
           {link === '' ? (
-            <S.Cardtext>{title}</S.Cardtext>
+            <S.CardTitle>{title}</S.CardTitle>
           ) : (
-            <S.Cardtext>
+            <S.CardTitle>
               <a href={link} target="_blank" rel="noopener noreferrer">
                 {title}
               </a>
-            </S.Cardtext>
+            </S.CardTitle>
           )}
         </S.CardInfo>
       </S.Card>

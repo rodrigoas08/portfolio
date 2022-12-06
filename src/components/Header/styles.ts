@@ -29,7 +29,7 @@ export const ImgProfile = styled.div`
     background-size: 100% 100%;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
-    background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
+    background-image: url(/img/profile.jpeg);
 
     @media (max-width: ${theme.breakpoints.mobile}) {
       display: none;
@@ -49,10 +49,9 @@ export type LinkMenuProps = {
   activeLink?: boolean;
 };
 
-export const LinkText = styled.span<LinkMenuProps>`
+export const LinkText = styled.p<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
     cursor: pointer;
-    text-transform: capitalize;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.large};
 
@@ -72,7 +71,7 @@ export const LinkText = styled.span<LinkMenuProps>`
       opacity: 0.5;
       height: 0.1rem;
       display: block;
-      transition: 1s all ease-in-out;
+      transition: all 1s ease-in-out;
       background-color: ${theme.colors.primary};
     }
 

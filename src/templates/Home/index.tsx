@@ -1,7 +1,7 @@
 import * as S from './styles';
 import { Portfolio, AboutMe, Contact } from 'templates';
 import { GitHublIcon, LinkedInIcon } from 'components/Icons';
-import { openInNewTab } from 'utils/functions';
+import { openLinkInNewTab } from 'utils/functions';
 
 const Home = () => {
   return (
@@ -15,12 +15,12 @@ const Home = () => {
         <S.NavIcons>
           <GitHublIcon
             text="GitHub"
-            handleClick={() => openInNewTab('https://github.com/rodrigoas08')}
+            handleClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}
           />
           <LinkedInIcon
             text="LinkedIn"
             handleClick={() =>
-              openInNewTab(
+              openLinkInNewTab(
                 'https://www.linkedin.com/in/rodrigo-sobral-302012aa/'
               )
             }

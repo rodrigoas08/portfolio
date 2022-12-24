@@ -1,26 +1,20 @@
 export const CardList = [
   {
     projectName: 'ECBPORTO',
-    description: '',
     background: '/img/portfolios/ecbporto.png',
-    link: 'http://www.ecbporto.com'
+    link: 'http://www.ecbporto.com',
+    repository: 'teste'
   },
   {
-    projectName: 'Projeto B',
-    description: '',
+    projectName: '',
     background: '',
-    link: ''
+    link: '',
+    repository: ''
   },
   {
-    projectName: 'Projeto C',
-    description: '',
+    projectName: '',
     background: '',
-    link: ''
-  },
-  {
-    projectName: 'Projeto D',
-    description: '',
-    background: '',
-    link: ''
+    link: '',
+    repository: ''
   }
 ];

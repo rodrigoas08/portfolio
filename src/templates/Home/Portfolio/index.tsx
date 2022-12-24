@@ -1,5 +1,3 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import * as S from './styles';
 import { Card, Title } from 'components';
 import { CardList } from './mock';
@@ -15,6 +13,7 @@ export const Portfolio = () => {
               <Card
                 key={index}
                 link={card.link}
+                repository={card.repository}
                 background={card.background}
                 title={card.projectName.toUpperCase()}
               />
@@ -27,5 +26,3 @@ export const Portfolio = () => {
 };
 
 export default Portfolio;
-AOS.init();
-AOS.refresh();

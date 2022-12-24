@@ -2,7 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
 import { Title } from 'components';
-import { openInNewTab } from 'utils/functions';
+import { openLinkInNewTab } from 'utils/functions';
 import {
   HtmlIcon,
   CssIcon,
@@ -42,7 +42,7 @@ export const AboutMe = () => {
             <p>
               Comecei como estagiário desenvolvedor front-end em novembro de
               2021 na{' '}
-              <a onClick={() => openInNewTab('https://www.usabit.com.br')}>
+              <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
                 <S.Span>Usabit</S.Span>
               </a>
               . Estou focado em aprender as tecnologias mais usadas no mercado

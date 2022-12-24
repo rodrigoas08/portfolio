@@ -6,6 +6,6 @@ export function calculateYear(month: number, year: number) {
   } ${months > 1 ? `${months} meses` : `${months == 1 ? 'mês' : ``}`}`;
 }
 
-export function openInNewTab(url: string) {
+export function openLinkInNewTab(url: string) {
   window.open(url, '_blank', 'noopener,noreferrer');
 }

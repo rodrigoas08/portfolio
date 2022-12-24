@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'portfolio' })`
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   padding-top: 8rem;
   align-items: start;

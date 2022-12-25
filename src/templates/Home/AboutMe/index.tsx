@@ -2,6 +2,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
 import { Title } from 'components';
+import EuPedro from 'img/euPedro.jpg';
 import { openLinkInNewTab } from 'utils/functions';
 import {
   HtmlIcon,
@@ -28,7 +29,10 @@ export const AboutMe = () => {
           data-aos-mirror="true"
           data-aos-once="false"
         >
-          <S.Image />
+          <S.Image
+            src={EuPedro}
+            alt="Foto minha segurando meu filho na praia"
+          />
           <p>
             Então, ai nesta foto está minha razão de viver, meu filho.
             <br />

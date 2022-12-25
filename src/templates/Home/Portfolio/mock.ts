@@ -1,7 +1,9 @@
+import Ecbporto from 'img/portfolios/ecbporto.png';
+
 export const CardList = [
   {
     projectName: 'ECBPORTO',
-    background: '/img/portfolios/ecbporto.png',
+    background: `${Ecbporto}`,
     link: 'http://www.ecbporto.com',
     repository: 'teste'
   },

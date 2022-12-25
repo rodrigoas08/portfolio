@@ -22,14 +22,12 @@ export const Wrapper = styled.header`
   `}
 `;
 
-export const ImgProfile = styled.div`
+export const ImgProfile = styled.img`
   ${({ theme }) => css`
     cursor: pointer;
     border-radius: 50%;
-    background-size: 100% 100%;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
-    background-image: url(/img/profile.jpeg);
 
     @media (max-width: ${theme.breakpoints.mobile}) {
       display: none;

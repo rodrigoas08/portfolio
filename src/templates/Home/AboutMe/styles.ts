@@ -43,44 +43,13 @@ export const About = styled.div`
   `}
 `;
 
-export const Image = styled.div`
+export const Image = styled.img`
   ${({ theme }) => css`
     width: 20rem;
     height: 20rem;
-    filter: saturate(230%);
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+    filter: saturate(210%);
     margin-right: ${theme.spacings.large};
     border-radius: ${theme.border.radius};
-    background-image: url(/img/euPedro.jpg);
-
-    ::after {
-      content: '';
-      position: absolute;
-      /* display: block; */
-      width: 40%;
-      height: 40%;
-      top: -4px;
-      left: -4px;
-      border-radius: ${theme.border.radius};
-      border: 0.3rem solid ${theme.colors.primary};
-      border-bottom: 0;
-      border-right: 0;
-    }
-
-    ::before {
-      content: '';
-      position: absolute;
-      /* display: block; */
-      width: 40%;
-      height: 40%;
-      bottom: -4px;
-      right: -4px;
-      border-radius: ${theme.border.radius};
-      border: 0.3rem solid ${theme.colors.primary};
-      border-top: 0;
-      border-left: 0;
-    }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
     }
@@ -93,7 +62,7 @@ export const Section = styled.section`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: ${theme.spacings.small};
+    gap: ${theme.spacings.small};
     margin-top: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {

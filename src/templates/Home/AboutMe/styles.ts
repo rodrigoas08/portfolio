@@ -100,6 +100,9 @@ export const Card = styled.div`
     li::marker {
       color: ${theme.colors.primary};
     }
+    li a {
+      cursor: pointer;
+    }
   `}
 `;
 

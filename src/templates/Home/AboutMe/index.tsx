@@ -73,7 +73,7 @@ export const AboutMe = () => {
                 2012/2020 - Analista de Suporte Técnico N2
                 <br />
                 <a onClick={() => openLinkInNewTab('https://www.sonda.com/pt')}>
-                  <S.Span>Sonda IT</S.Span>
+                  <S.Span>Sonda</S.Span>
                 </a>
               </li>
               <li>

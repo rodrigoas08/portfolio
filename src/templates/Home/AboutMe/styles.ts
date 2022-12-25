@@ -10,6 +10,10 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
     justify-content: center;
 
     @media (max-width: ${theme.breakpoints.largeDestkop}) {
+      ${Card} {
+        font-size: ${theme.font.sizes.small};
+      }
+
       ${About} {
         display: inline;
         > img {

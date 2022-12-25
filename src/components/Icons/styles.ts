@@ -27,7 +27,7 @@ export const Wrapper = styled.div<IconProps>`
       font-size: ${theme.font.sizes.medium};
       border-radius: ${theme.border.radius};
       background-color: rgba(255, 255, 255, 0.1);
-      border-top: 0.1rem solid ${theme.colors.primary};
+      border-top: 0.3rem solid ${theme.colors.primary};
 
       p {
         color: ${theme.colors.white};

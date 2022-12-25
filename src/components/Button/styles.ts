@@ -24,9 +24,9 @@ const ButtonModifier = {
   rippling: () => css`
     ${({ theme }) => css`
       position: relative;
+      font-weight: bold;
       color: ${theme.colors.primary};
       background: ${theme.colors.white};
-      margin-top: ${theme.spacings.medium};
       border-radius: ${theme.border.radius};
 
       ::before {
@@ -34,7 +34,7 @@ const ButtonModifier = {
         content: '';
         position: absolute;
         border-radius: ${theme.border.radius};
-        border: 0.9rem solid ${theme.colors.white};
+        border: 0.6rem solid ${theme.colors.white};
       }
 
       :hover,
@@ -47,7 +47,7 @@ const ButtonModifier = {
       @keyframes rippling {
         to {
           opacity: 0;
-          transform: scale(1.12, 1.5);
+          transform: scale(1.12, 1.3);
         }
       }
     `}
@@ -63,7 +63,6 @@ export const Wrapper = styled.button<
     text-decoration: none;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.medium};
-    font-family: ${theme.font.family.nunito};
     background: ${({ theme }) => theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 

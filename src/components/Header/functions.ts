@@ -1,7 +1,7 @@
 import { IColorProps } from 'interfaces/header';
 
 export function changeTitleOfPage(title: string) {
-  document.title = `${title} | Rodrigo Sobral`;
+  document.title = `${title} | Rodrigo Sobral Desenvolvedor Front-end`;
 }
 
 export function handleScrollPosition(

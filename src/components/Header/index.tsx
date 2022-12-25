@@ -1,6 +1,7 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
+import FotoProfile from 'img/profile.jpeg';
 import { IColorProps } from 'interfaces/header';
 import { useState, memo, useLayoutEffect } from 'react';
 import { changeTitleOfPage, handleScrollPosition } from './functions';
@@ -18,33 +19,33 @@ export const Header = () => {
   const Links = [
     {
       name: 'Início',
-      hash: 'inicio'
+      id: 'inicio'
     },
     {
       name: 'Sobre',
-      hash: 'sobre'
+      id: 'sobre'
     },
     {
-      name: 'Serviços',
-      hash: 'servicos'
+      name: 'Portfólio',
+      id: 'portfolio'
     },
     {
       name: 'Contato',
-      hash: 'contato'
+      id: 'contato'
     }
   ];
 
   return (
     <S.Wrapper color={colorHeader.color}>
-      <Link to={Links[0].hash} spy={true} smooth={true}>
-        <S.ImgProfile />
+      <Link to={Links[0].id} spy={true} smooth={true}>
+        <S.ImgProfile src={FotoProfile} alt="Minha foto para perfil" />
       </Link>
       <S.NavWrapper>
         {Links.map((link, index) => {
           return (
             <li key={index}>
               <Link
-                to={link.hash}
+                to={link.id}
                 spy={true}
                 smooth={true}
                 onSetActive={() => {

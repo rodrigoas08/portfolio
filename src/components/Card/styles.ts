@@ -1,31 +1,28 @@
+import { CardProps } from '.';
 import styled, { css } from 'styled-components';
-import * as ButtonStyles from 'components/Button/styles';
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 25%;
-    display: flex;
-    min-height: 15rem;
-    break-inside: auto;
-    align-items: center;
-    flex-direction: column;
-    color: ${theme.colors.white};
+    width: 40%;
+    display: grid;
+    row-gap: 0.1rem;
+    min-height: 30rem;
     backdrop-filter: blur(1.5rem);
-    gap: ${theme.spacings.xxsmall};
-    justify-content: space-between;
-    padding: ${theme.spacings.small};
-    font-size: ${theme.font.sizes.small};
+    grid-template-rows: 1fr 0.8fr;
+    transition: all 0.8s ease-in-out;
     border-radius: ${theme.border.radius};
     background-color: rgba(255, 255, 255, 0.1);
-    border-top: 0.1rem solid ${theme.colors.primary};
+    border-top: 0.3rem solid ${theme.colors.primary};
 
-    ${ButtonStyles.Wrapper} {
-      width: 10rem;
-      letter-spacing: 0.1rem;
-      font-size: ${theme.font.sizes.xxsmall};
+    :hover {
+      grid-template-rows: 0.2fr 1fr;
 
-      :hover {
-        opacity: 0.8;
+      ${CardImage} {
+        opacity: 0.2;
+      }
+
+      ${CardInfo} {
+        background: transparent;
       }
     }
 
@@ -39,6 +36,46 @@ export const Card = styled.div`
   `}
 `;
 
-export const Cardtext = styled.p`
-  text-align: center;
+export const CardImage = styled.div<CardProps>`
+  ${({ background }) => css`
+    background-size: cover;
+    transition: 0.8s ease-in-out;
+    background-image: url(${background});
+  `}
+`;
+
+export const CardInfo = styled.div`
+  ${({ theme }) => css`
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.8s ease-in-out;
+    gap: ${theme.spacings.xxsmall};
+    border-radius: 0 0 0.3rem 0.3rem;
+    padding: ${theme.spacings.xxsmall};
+    background: ${theme.colors.primary};
+    box-shadow: 0.1rem 0rem 1.5rem rgba(0, 0, 0, 1);
+
+    > div {
+      display: flex;
+      justify-content: center;
+      gap: ${theme.spacings.xxsmall};
+    }
+
+    > a {
+      cursor: pointer;
+      font-family: inherit;
+      text-decoration: none;
+    }
+  `}
+`;
+
+export const CardTitle = styled.h1`
+  ${({ theme }) => css`
+    font-family: 'Gotham';
+    letter-spacing: 0.2rem;
+    font-size: ${theme.font.sizes.xlarge};
+  `}
 `;

@@ -1,12 +1,62 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'sobre' })`
-  width: 100%;
-  display: flex;
-  max-height: 100vh;
-  padding-top: 8rem;
-  align-items: start;
-  justify-content: center;
+  ${({ theme }) => css`
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 8rem;
+    align-items: start;
+    justify-content: center;
+
+    @media (max-width: ${theme.breakpoints.largeDestkop}) {
+      ${Card} {
+        font-size: ${theme.font.sizes.small};
+      }
+
+      ${About} {
+        display: inline;
+        > img {
+          float: left;
+        }
+        > p {
+          font-size: ${theme.font.sizes.medium};
+        }
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      ${Container} {
+        align-items: center;
+        padding: 8rem ${theme.spacings.small};
+      }
+
+      ${About} {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        > img {
+          margin: 0;
+        }
+
+        > p {
+          text-align: center;
+          word-break: keep-all;
+          padding: ${theme.spacings.xxsmall};
+          font-size: ${theme.font.sizes.small};
+        }
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      ${Section} {
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  `}
 `;
 
 export const Container = styled.div`
@@ -22,18 +72,34 @@ export const Container = styled.div`
   `}
 `;
 
-export const Image = styled.div`
+export const About = styled.div`
+  ${({ theme }) => css`
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: ${theme.spacings.large};
+
+    > p {
+      width: 100%;
+      font-size: 1.8rem;
+      line-height: 150%;
+      align-self: center;
+      word-break: keep-all;
+      font-family: ${theme.font.family.josefin};
+    }
+    a {
+      cursor: pointer;
+    }
+  `}
+`;
+
+export const Image = styled.img`
   ${({ theme }) => css`
     width: 20rem;
     height: 20rem;
-    border-radius: 50%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    margin: ${theme.spacings.large} 0;
-    background-image: url(/img/euPedro.jpg);
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-    }
+    filter: saturate(210%);
+    margin-right: ${theme.spacings.large};
+    border-radius: ${theme.border.radius};
   `}
 `;
 
@@ -41,17 +107,16 @@ export const Section = styled.section`
   ${({ theme }) => css`
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    column-gap: ${theme.spacings.small};
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-    }
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: ${theme.spacings.small};
+    margin-top: ${theme.spacings.large};
   `}
 `;
 
-export const Article = styled.article`
+export const Card = styled.div`
   ${({ theme }) => css`
-    width: 45rem;
+    width: 40%;
     height: auto;
     display: flex;
     align-items: center;
@@ -61,14 +126,11 @@ export const Article = styled.article`
     font-size: ${theme.font.sizes.medium};
     column-gap: ${theme.spacings.xxsmall};
     background-color: rgba(255, 255, 255, 0.1);
-    border-top: 0.1rem solid ${theme.colors.primary};
+    border-top: 0.3rem solid ${theme.colors.primary};
 
     > p {
       color: ${theme.colors.text};
       line-height: 140%;
-      a {
-        cursor: pointer;
-      }
     }
     > ul {
       align-self: flex-start;
@@ -82,20 +144,19 @@ export const Article = styled.article`
     li::marker {
       color: ${theme.colors.primary};
     }
+    li a {
+      cursor: pointer;
+    }
   `}
 `;
 
-export const TitleCard = styled.h3`
+export const TitleCard = styled.h1`
   ${({ theme }) => css`
     text-decoration: underline;
-    text-transform: capitalize;
     text-underline-offset: 0.3rem;
     font-weight: ${theme.font.normal};
     font-size: ${theme.font.sizes.large};
     padding-bottom: ${theme.spacings.xsmall};
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-    }
   `}
 `;
 

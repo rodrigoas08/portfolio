@@ -16,24 +16,27 @@ export const Wrapper = styled.header`
       ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
       : 'transparent'};
 
-    @media (max-width: ${theme.breakpoints.mobile}) {
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
       justify-content: center;
+      padding: 0 ${theme.spacings.small};
+
+      ${ImgProfile} {
+        display: none;
+      }
+
+      ${NavWrapper} {
+        gap: ${theme.spacings.small};
+      }
     }
   `}
 `;
 
-export const ImgProfile = styled.div`
+export const ImgProfile = styled.img`
   ${({ theme }) => css`
     cursor: pointer;
     border-radius: 50%;
-    background-size: 100% 100%;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
-    background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
-
-    @media (max-width: ${theme.breakpoints.mobile}) {
-      display: none;
-    }
   `}
 `;
 
@@ -49,10 +52,9 @@ export type LinkMenuProps = {
   activeLink?: boolean;
 };
 
-export const LinkText = styled.span<LinkMenuProps>`
+export const LinkText = styled.p<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
     cursor: pointer;
-    text-transform: capitalize;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.large};
 
@@ -72,7 +74,7 @@ export const LinkText = styled.span<LinkMenuProps>`
       opacity: 0.5;
       height: 0.1rem;
       display: block;
-      transition: 1s all ease-in-out;
+      transition: all 1s ease-in-out;
       background-color: ${theme.colors.primary};
     }
 

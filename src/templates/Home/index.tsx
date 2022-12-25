@@ -1,27 +1,28 @@
 import * as S from './styles';
-import { Works, AboutMe, Contact } from 'templates';
+import { Portfolio, AboutMe, Contact } from 'templates';
 import { GitHublIcon, LinkedInIcon } from 'components/Icons';
-import { openInNewTab } from 'utils/functions';
+import { openLinkInNewTab } from 'utils/functions';
 
 const Home = () => {
   return (
     <>
       <S.Wrapper>
         <S.WrapperText>
-          <S.Welcome>seja bem-vindo(a),</S.Welcome>
-          <S.Text>eu sou</S.Text>
+          <S.Welcome>Seja bem-vindo(a), eu sou</S.Welcome>
           <S.Name>Rodrigo Sobral</S.Name>
-          <S.Text>desenvolvedor front end.</S.Text>
+          <S.CarrerName>desenvolvedor front end.</S.CarrerName>
         </S.WrapperText>
         <S.NavIcons>
           <GitHublIcon
             text="GitHub"
-            handleClick={() => openInNewTab('https://github.com/rodrigoas08')}
+            handleClick={() =>
+              openLinkInNewTab('https://github.com/rodrigoas08')
+            }
           />
           <LinkedInIcon
             text="LinkedIn"
             handleClick={() =>
-              openInNewTab(
+              openLinkInNewTab(
                 'https://www.linkedin.com/in/rodrigo-sobral-302012aa/'
               )
             }
@@ -29,7 +30,7 @@ const Home = () => {
         </S.NavIcons>
       </S.Wrapper>
       <AboutMe />
-      <Works />
+      <Portfolio />
       <Contact />
     </>
   );

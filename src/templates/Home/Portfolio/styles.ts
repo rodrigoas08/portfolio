@@ -1,11 +1,23 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'portfolio' })`
-  width: 100%;
-  height: auto;
-  display: flex;
-  padding-top: 8rem;
-  align-items: start;
+  ${({ theme }) => css`
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 8rem;
+    padding: 8rem ${theme.spacings.small} 0 0;
+    align-items: start;
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      ${SubTitle} {
+        text-align: center;
+        padding: ${theme.spacings.large} ${theme.spacings.small} 0
+          ${theme.spacings.small};
+        font-size: ${theme.font.sizes.small};
+      }
+    } ;
+  `}
 `;
 
 export const Container = styled.div`

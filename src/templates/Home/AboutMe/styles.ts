@@ -1,12 +1,58 @@
 import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'sobre' })`
-  width: 100%;
-  display: flex;
-  max-height: 100vh;
-  padding-top: 8rem;
-  align-items: start;
-  justify-content: center;
+  ${({ theme }) => css`
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 8rem;
+    align-items: start;
+    justify-content: center;
+
+    @media (max-width: ${theme.breakpoints.largeDestkop}) {
+      ${About} {
+        display: inline;
+        > img {
+          float: left;
+        }
+        > p {
+          font-size: ${theme.font.sizes.medium};
+        }
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      ${Container} {
+        align-items: center;
+        padding: 8rem ${theme.spacings.small};
+      }
+
+      ${About} {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        > img {
+          margin: 0;
+        }
+
+        > p {
+          text-align: center;
+          word-break: keep-all;
+          padding: ${theme.spacings.xxsmall};
+          font-size: ${theme.font.sizes.small};
+        }
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      ${Section} {
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  `}
 `;
 
 export const Container = styled.div`
@@ -50,9 +96,6 @@ export const Image = styled.img`
     filter: saturate(210%);
     margin-right: ${theme.spacings.large};
     border-radius: ${theme.border.radius};
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-    }
   `}
 `;
 
@@ -64,15 +107,12 @@ export const Section = styled.section`
     justify-content: center;
     gap: ${theme.spacings.small};
     margin-top: ${theme.spacings.large};
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-    }
   `}
 `;
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 45rem;
+    width: 40%;
     height: auto;
     display: flex;
     align-items: center;
@@ -113,9 +153,6 @@ export const TitleCard = styled.h1`
     font-weight: ${theme.font.normal};
     font-size: ${theme.font.sizes.large};
     padding-bottom: ${theme.spacings.xsmall};
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-    }
   `}
 `;
 

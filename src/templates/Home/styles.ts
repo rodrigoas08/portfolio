@@ -13,6 +13,20 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       align-items: center;
+      padding: 0 2rem;
+
+      ${WrapperText} {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+      ${Name} {
+        text-align: center;
+      }
+      ${CarrerName} {
+        white-space: nowrap;
+        font-size: ${theme.font.sizes.xsmall};
+      }
     }
   `}
 `;
@@ -48,29 +62,20 @@ export const Name = styled.p`
     :hover {
       filter: none;
     }
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-    }
   `}
 `;
 
-export const Text = styled(Welcome)`
+export const CarrerName = styled(Welcome)`
   ${({ theme }) => css`
+    color: white;
+    background-clip: text;
     text-transform: uppercase;
+    -webkit-background-clip: text;
     font-weight: ${theme.font.bold};
+    -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
-
-    /* Primeiro passo: definir um degradê como fundo */
     background-image: linear-gradient(to right, #00aace, #fafafa, steelblue);
-
-    /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
-    background-clip: text;
-    -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
-
-    /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
-    -webkit-text-fill-color: transparent;
-    color: white;
   `}
 `;
 

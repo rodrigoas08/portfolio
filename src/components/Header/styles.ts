@@ -16,8 +16,17 @@ export const Wrapper = styled.header`
       ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
       : 'transparent'};
 
-    @media (max-width: ${theme.breakpoints.mobile}) {
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
       justify-content: center;
+      padding: 0 ${theme.spacings.small};
+
+      ${ImgProfile} {
+        display: none;
+      }
+
+      ${NavWrapper} {
+        gap: ${theme.spacings.small};
+      }
     }
   `}
 `;
@@ -28,10 +37,6 @@ export const ImgProfile = styled.img`
     border-radius: 50%;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
-
-    @media (max-width: ${theme.breakpoints.mobile}) {
-      display: none;
-    }
   `}
 `;
 

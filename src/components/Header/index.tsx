@@ -1,91 +1,65 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
+import FotoProfile from 'img/profile.jpeg';
+import { IColorProps } from 'interfaces/header';
 import { useState, memo, useLayoutEffect } from 'react';
-import { IColorProps, ITitleName } from 'interfaces/header';
-import { changeTitleOfPage, scrollPosition } from './functions';
+import { changeTitleOfPage, handleScrollPosition } from './functions';
 
 export const Header = () => {
-  const [title, setTitle] = useState<ITitleName>({ name: 'HOME' });
+  const [title, setTitle] = useState({ name: 'Início' });
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
   });
 
   useLayoutEffect(() => {
-    changeTitleOfPage(title);
-    scrollPosition(setColorHeader);
-  }, [title]);
+    handleScrollPosition(setColorHeader);
+  }, []);
+
+  const Links = [
+    {
+      name: 'Início',
+      id: 'inicio'
+    },
+    {
+      name: 'Sobre',
+      id: 'sobre'
+    },
+    {
+      name: 'Portfólio',
+      id: 'portfolio'
+    },
+    {
+      name: 'Contato',
+      id: 'contato'
+    }
+  ];
 
   return (
-    <S.Wrapper id="header" color={colorHeader.color}>
-      <Link
-        activeClass="active"
-        to="home"
-        spy={true}
-        smooth={true}
-        offset={0}
-        duration={600}
-        onClick={() => setTitle({ name: 'HOME' })}
-      >
-        <S.ImgLogo />
+    <S.Wrapper color={colorHeader.color}>
+      <Link to={Links[0].id} spy={true} smooth={true}>
+        <S.ImgProfile src={FotoProfile} alt="Minha foto para perfil" />
       </Link>
       <S.NavWrapper>
-        <li>
-          <Link
-            activeClass="active"
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'HOME' })}
-          >
-            <S.LinkMenu activeLink={title.name === 'HOME'}>Início</S.LinkMenu>
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass="active"
-            to="aboutme"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'SOBRE' })}
-          >
-            <S.LinkMenu activeLink={title.name === 'SOBRE'}>Sobre</S.LinkMenu>
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass="active"
-            to="servicos"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'SERVIÇOS' })}
-          >
-            <S.LinkMenu activeLink={title.name === 'SERVIÇOS'}>
-              Serviços
-            </S.LinkMenu>
-          </Link>
-        </li>
-        <li>
-          <Link
-            activeClass="active"
-            to="contato"
-            spy={true}
-            smooth={true}
-            offset={0}
-            duration={600}
-            onClick={() => setTitle({ name: 'CONTATO' })}
-          >
-            <S.LinkMenu activeLink={title.name === 'CONTATO'}>
-              Contato
-            </S.LinkMenu>
-          </Link>
-        </li>
+        {Links.map((link, index) => {
+          return (
+            <li key={index}>
+              <Link
+                to={link.id}
+                spy={true}
+                smooth={true}
+                onSetActive={() => {
+                  setTitle({ name: link.name });
+                  changeTitleOfPage(link.name);
+                }}
+              >
+                <S.LinkText activeLink={title.name === link.name}>
+                  {link.name}
+                </S.LinkText>
+              </Link>
+            </li>
+          );
+        })}
       </S.NavWrapper>
     </S.Wrapper>
   );

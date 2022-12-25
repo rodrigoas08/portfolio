@@ -8,54 +8,59 @@ export const Wrapper = styled.header`
     display: flex;
     position: fixed;
     align-items: center;
-    background-color: ${color};
+    background: ${color};
     justify-content: space-between;
-    padding: ${theme.spacings.xxsmall} ${theme.spacings.xxlarge};
+    transition: all 0.1s ease-in-out;
+    padding: ${theme.spacings.xxsmall} 15rem;
     box-shadow: ${color === 'black'
-      ? '0 0.1rem 0.5rem rgba(255, 255, 255, 0.25)'
+      ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
       : 'transparent'};
 
-    @media (max-width: ${theme.breakpoints.mobile}) {
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
       justify-content: center;
+      padding: 0 ${theme.spacings.small};
+
+      ${ImgProfile} {
+        display: none;
+      }
+
+      ${NavWrapper} {
+        gap: ${theme.spacings.small};
+      }
     }
   `}
 `;
 
-export const ImgLogo = styled.div`
+export const ImgProfile = styled.img`
   ${({ theme }) => css`
     cursor: pointer;
     border-radius: 50%;
-    background-size: 100% 100%;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
-    background-image: url(${process.env.PUBLIC_URL}/img/profile.jpeg);
-
-    @media (max-width: ${theme.breakpoints.mobile}) {
-      display: none;
-    }
   `}
 `;
 
 export const NavWrapper = styled.ul`
   ${({ theme }) => css`
     display: flex;
+    list-style: none;
     gap: ${theme.spacings.xlarge};
   `}
 `;
 
 export type LinkMenuProps = {
-  activeLink: boolean;
+  activeLink?: boolean;
 };
 
-export const LinkMenu = styled.a<LinkMenuProps>`
+export const LinkText = styled.p<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
     cursor: pointer;
-    text-transform: uppercase;
     color: ${theme.colors.white};
     font-size: ${theme.font.sizes.large};
 
     ${activeLink &&
     css`
+      transition: all 1.5s ease-in-out;
       color: ${theme.colors.primary};
     `}
 
@@ -69,7 +74,7 @@ export const LinkMenu = styled.a<LinkMenuProps>`
       opacity: 0.5;
       height: 0.1rem;
       display: block;
-      transition: 1s all ease-in-out;
+      transition: all 1s ease-in-out;
       background-color: ${theme.colors.primary};
     }
 

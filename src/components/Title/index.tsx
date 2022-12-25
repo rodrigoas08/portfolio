@@ -6,6 +6,7 @@ const H1 = styled.h1`
     z-index: 1;
     font-size: 3rem;
     position: relative;
+    white-space: nowrap;
     font-family: 'Gotham';
     text-transform: uppercase;
 

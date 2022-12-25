@@ -22,15 +22,65 @@ export const Container = styled.div`
   `}
 `;
 
+export const About = styled.div`
+  ${({ theme }) => css`
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: ${theme.spacings.large};
+
+    > p {
+      width: 100%;
+      font-size: 1.8rem;
+      line-height: 150%;
+      align-self: center;
+      word-break: keep-all;
+      font-family: ${theme.font.family.josefin};
+    }
+    a {
+      cursor: pointer;
+    }
+  `}
+`;
+
 export const Image = styled.div`
   ${({ theme }) => css`
     width: 20rem;
     height: 20rem;
-    border-radius: 50%;
+    filter: saturate(230%);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin: ${theme.spacings.large} 0;
+    margin-right: ${theme.spacings.large};
+    border-radius: ${theme.border.radius};
     background-image: url(/img/euPedro.jpg);
+
+    ::after {
+      content: '';
+      position: absolute;
+      /* display: block; */
+      width: 40%;
+      height: 40%;
+      top: -4px;
+      left: -4px;
+      border-radius: ${theme.border.radius};
+      border: 0.3rem solid ${theme.colors.primary};
+      border-bottom: 0;
+      border-right: 0;
+    }
+
+    ::before {
+      content: '';
+      position: absolute;
+      /* display: block; */
+      width: 40%;
+      height: 40%;
+      bottom: -4px;
+      right: -4px;
+      border-radius: ${theme.border.radius};
+      border: 0.3rem solid ${theme.colors.primary};
+      border-top: 0;
+      border-left: 0;
+    }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
     }
@@ -41,15 +91,17 @@ export const Section = styled.section`
   ${({ theme }) => css`
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     column-gap: ${theme.spacings.small};
+    margin-top: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
     }
   `}
 `;
 
-export const Article = styled.article`
+export const Card = styled.div`
   ${({ theme }) => css`
     width: 45rem;
     height: auto;
@@ -66,9 +118,6 @@ export const Article = styled.article`
     > p {
       color: ${theme.colors.text};
       line-height: 140%;
-      a {
-        cursor: pointer;
-      }
     }
     > ul {
       align-self: flex-start;
@@ -88,7 +137,6 @@ export const Article = styled.article`
 export const TitleCard = styled.h1`
   ${({ theme }) => css`
     text-decoration: underline;
-    text-transform: capitalize;
     text-underline-offset: 0.3rem;
     font-weight: ${theme.font.normal};
     font-size: ${theme.font.sizes.large};

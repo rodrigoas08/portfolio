@@ -15,7 +15,9 @@ const Home = () => {
         <S.NavIcons>
           <GitHublIcon
             text="GitHub"
-            handleClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}
+            handleClick={() =>
+              openLinkInNewTab('https://github.com/rodrigoas08')
+            }
           />
           <LinkedInIcon
             text="LinkedIn"

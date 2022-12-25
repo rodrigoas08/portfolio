@@ -19,18 +19,39 @@ export const AboutMe = () => {
     <S.Wrapper>
       <S.Container>
         <Title text="Quem sou..." />
-        <S.Image
-          data-aos="flip-up"
+        <S.About
+          data-aos="zoom-in"
           data-aos-offset="2"
           data-aos-delay="50"
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
           data-aos-once="false"
-        />
+        >
+          <S.Image />
+          <p>
+            Então, ai nesta foto está minha razão de viver, meu filho.
+            <br />
+            Eu sou uma pessoa comunicativa, proativa, tenho bom relacionamento
+            interpessoal. Tenho bastante conhecimento na área de tecnologia
+            voltado para área de Suporte Técnico (Help-Desk), trabalhei por
+            quase 8 anos nessa área e recentemente estou migrando para área de
+            programação como desenvolvedor frontend. Venho me aprimorando, me
+            atualizando para poder desenvolver sistemas web com alta
+            performance, boa acessibilidade, responsivos e também aplicando SEO.
+            Atualmente estou trabalhando na{' '}
+            <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
+              <S.Span>Usabit</S.Span>
+            </a>{' '}
+            como desenvolvedor estagiário e sou quase formado em Análise e
+            Desenvolvimento de Sistema. <br />
+            Abaixo você irá ver um pouco com o que já trabalhei e algumas
+            habilidades como desenvolvedor frontend.
+          </p>
+        </S.About>
         <S.Section>
-          <S.Article
-            data-aos="zoom-in"
+          <S.Card
+            data-aos="fade-right"
             data-aos-offset="2"
             data-aos-delay="50"
             data-aos-duration="1000"
@@ -38,47 +59,31 @@ export const AboutMe = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <S.TitleCard>sobre</S.TitleCard>
-            <p>
-              Comecei como estagiário desenvolvedor front-end em novembro de
-              2021 na{' '}
-              <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
-                <S.Span>Usabit</S.Span>
-              </a>
-              . Estou focado em aprender as tecnologias mais usadas no mercado
-              para poder desenvolver sistemas web com alta performance,
-              responsivos e SEO. Atualmente estou buscando conhecimento em
-              vue.js e depois react native para construir aplicações mobile.
-            </p>
-          </S.Article>
-          <S.Article
-            data-aos="zoom-in"
-            data-aos-offset="2"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-          >
-            <S.TitleCard>experiência</S.TitleCard>
+            <S.TitleCard>Experiência profissional</S.TitleCard>
             <ul>
               <li>
-                2010-2011 - Analista Auxiliar Industrial <br />
+                2010/2011 - Analista Auxiliar Industrial <br />
                 <S.Span>Rio de Janeiro Refrescos (Coca-Cola)</S.Span>
               </li>
               <li>
-                2012-2020 - Analista de Suporte Técnico N2
+                2012/2020 - Analista de Suporte Técnico N2
                 <br />
-                <S.Span>Sonda IT</S.Span>
+                <a onClick={() => openLinkInNewTab('https://www.sonda.com/pt')}>
+                  <S.Span>Sonda IT</S.Span>
+                </a>
               </li>
               <li>
-                2021 - Desenvolvedor frontend <br />
-                <S.Span>Usabit</S.Span>
+                2021/atualmente - Desenvolvedor Front End <br />
+                <a
+                  onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
+                >
+                  <S.Span>Usabit</S.Span>
+                </a>
               </li>
             </ul>
-          </S.Article>
-          <S.Article
-            data-aos="zoom-in"
+          </S.Card>
+          <S.Card
+            data-aos="fade-left"
             data-aos-offset="2"
             data-aos-delay="50"
             data-aos-duration="1000"
@@ -86,7 +91,7 @@ export const AboutMe = () => {
             data-aos-mirror="true"
             data-aos-once="false"
           >
-            <S.TitleCard>habilidades</S.TitleCard>
+            <S.TitleCard>Habilidades</S.TitleCard>
             <S.DivIcons>
               <HtmlIcon text="HTML" />
               <CssIcon text="CSS" />
@@ -97,7 +102,7 @@ export const AboutMe = () => {
               <VSCodeIcon text="Vscode" />
               <VueIcon text="Vue.js" />
             </S.DivIcons>
-          </S.Article>
+          </S.Card>
         </S.Section>
       </S.Container>
     </S.Wrapper>

@@ -57,8 +57,20 @@ export const Name = styled.p`
 export const Text = styled(Welcome)`
   ${({ theme }) => css`
     text-transform: uppercase;
+    font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
+
+    /* Primeiro passo: definir um degradê como fundo */
+    background-image: linear-gradient(to right, #00aace, #fafafa, steelblue);
+
+    /* Segundo passo: apagar do fundo tudo que não estiver imediatamente atrás de texto */
+    background-clip: text;
+    -webkit-background-clip: text; /* Alguns navegadores precisam do prefixo */
+
+    /* Terceiro passo: apagar o texto, deixando apenas o fundo atrás dele */
+    -webkit-text-fill-color: transparent;
+    color: white;
   `}
 `;
 

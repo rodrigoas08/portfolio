@@ -6,7 +6,7 @@ import Wrapper from 'components/Wrapper';
 import { ThemeProvider } from 'styled-components';
 import {
   BrowserRouter as Router,
-  Navigate,
+  // Navigate,
   Route,
   Routes
 } from 'react-router-dom';
@@ -18,11 +18,11 @@ const RouterView = () => {
       <Router>
         <Wrapper>
           <Routes>
-            <Route
+            {/* <Route
               path={routes.default}
               element={<Navigate replace to={routes.home} />}
-            />
-            <Route path={routes.home} element={<T.Home />} />
+            /> */}
+            <Route path={routes.default} element={<T.Home />} />
           </Routes>
         </Wrapper>
       </Router>

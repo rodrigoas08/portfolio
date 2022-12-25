@@ -18,25 +18,25 @@ export const Header = () => {
   const Links = [
     {
       name: 'Início',
-      hash: 'inicio'
+      id: 'inicio'
     },
     {
       name: 'Sobre',
-      hash: 'sobre'
+      id: 'sobre'
     },
     {
       name: 'Portfólio',
-      hash: 'portfolio'
+      id: 'portfolio'
     },
     {
       name: 'Contato',
-      hash: 'contato'
+      id: 'contato'
     }
   ];
 
   return (
     <S.Wrapper color={colorHeader.color}>
-      <Link to={Links[0].hash} spy={true} smooth={true}>
+      <Link to={Links[0].id} spy={true} smooth={true}>
         <S.ImgProfile />
       </Link>
       <S.NavWrapper>
@@ -44,7 +44,7 @@ export const Header = () => {
           return (
             <li key={index}>
               <Link
-                to={link.hash}
+                to={link.id}
                 spy={true}
                 smooth={true}
                 onSetActive={() => {

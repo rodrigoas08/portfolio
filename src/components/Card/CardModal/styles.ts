@@ -15,5 +15,5 @@ export const BoxModal = styled.div`
   height: 40rem;
   overflow: scroll;
   box-sizing: border-box;
-  background-color: white;
+  background-color: red;
 `;

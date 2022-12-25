@@ -1,111 +1,177 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div.attrs({ id: 'aboutme' })`
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  color: #cccccc;
-  padding-top: 8rem;
-  align-items: start;
-  justify-content: center;
+export const Wrapper = styled.div.attrs({ id: 'sobre' })`
+  ${({ theme }) => css`
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding-top: 8rem;
+    align-items: start;
+    justify-content: center;
+
+    @media (max-width: ${theme.breakpoints.largeDestkop}) {
+      ${Card} {
+        font-size: ${theme.font.sizes.small};
+      }
+
+      ${About} {
+        display: inline;
+        > img {
+          float: left;
+        }
+        > p {
+          font-size: ${theme.font.sizes.medium};
+        }
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      ${Container} {
+        align-items: center;
+        padding: 8rem ${theme.spacings.small};
+      }
+
+      ${About} {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        > img {
+          margin: 0;
+        }
+
+        > p {
+          text-align: center;
+          word-break: keep-all;
+          padding: ${theme.spacings.xxsmall};
+          font-size: ${theme.font.sizes.small};
+        }
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      ${Section} {
+        > div {
+          width: 100%;
+        }
+      }
+    }
+  `}
 `;
 
 export const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: ${theme.spacings.xlarge} 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: ${theme.spacings.xlarge} 15rem;
+    box-shadow: 0.1rem 0.4rem 1rem rgba(0, 0, 0, 0.9);
   `}
 `;
 
-export const Title = styled.h1`
+export const About = styled.div`
   ${({ theme }) => css`
-    z-index: 1;
-    font-size: 4rem;
-    position: relative;
-    font-weight: ${theme.font.light};
-    padding-bottom: ${theme.spacings.xlarge};
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top: ${theme.spacings.large};
 
-    :before {
-      content: '';
-      top: 30%;
-      left: -2%;
-      width: 98%;
-      height: 20%;
-      z-index: -1;
-      opacity: 0.3;
-      position: absolute;
-      background-color: ${theme.colors.primary};
+    > p {
+      width: 100%;
+      font-size: 1.8rem;
+      line-height: 150%;
+      align-self: center;
+      word-break: keep-all;
+      font-family: ${theme.font.family.josefin};
     }
+    a {
+      cursor: pointer;
+    }
+  `}
+`;
+
+export const Image = styled.img`
+  ${({ theme }) => css`
+    width: 20rem;
+    height: 20rem;
+    filter: saturate(210%);
+    margin-right: ${theme.spacings.large};
+    border-radius: ${theme.border.radius};
   `}
 `;
 
 export const Section = styled.section`
   ${({ theme }) => css`
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: ${theme.spacings.small};
+    margin-top: ${theme.spacings.large};
+  `}
+`;
+
+export const Card = styled.div`
+  ${({ theme }) => css`
+    width: 40%;
     height: auto;
-    padding: ${theme.spacings.large} 25rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: ${theme.spacings.small};
+    border-radius: ${theme.border.radius};
+    font-size: ${theme.font.sizes.medium};
+    column-gap: ${theme.spacings.xxsmall};
+    background-color: rgba(255, 255, 255, 0.1);
+    border-top: 0.3rem solid ${theme.colors.primary};
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding: 0 5rem;
+    > p {
+      color: ${theme.colors.text};
+      line-height: 140%;
+    }
+    > ul {
+      align-self: flex-start;
+      padding-left: ${theme.spacings.small};
+    }
+    > ul,
+    li {
+      color: ${theme.colors.text};
+      padding-bottom: ${theme.spacings.xsmall};
+    }
+    li::marker {
+      color: ${theme.colors.primary};
+    }
+    li a {
+      cursor: pointer;
     }
   `}
 `;
 
-export const Image = styled.div`
+export const TitleCard = styled.h1`
   ${({ theme }) => css`
-    float: left;
-    width: 15rem;
-    height: 15rem;
-    border-radius: 50%;
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    margin-right: ${theme.spacings.small};
-    background-image: url(/img/euPedro.jpg);
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      float: none;
-      margin: 0 auto;
-    }
-  `}
-`;
-
-export const Paragraph = styled.p`
-  ${({ theme }) => css`
-    width: 100%;
-    line-height: 3.2rem;
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    font-weight: ${theme.font.normal};
     font-size: ${theme.font.sizes.large};
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding-top: 2rem;
-      font-size: ${theme.font.sizes.medium};
-    }
-  `}
-`;
-
-export const Habilities = styled.h4`
-  ${({ theme }) => css`
-    text-align: center;
-    text-transform: uppercase;
-    font-size: ${theme.font.sizes.large};
-    margin: ${theme.spacings.small} auto;
-    padding-top: ${theme.spacings.medium};
+    padding-bottom: ${theme.spacings.xsmall};
   `}
 `;
 
 export const DivIcons = styled.div`
   ${({ theme }) => css`
-    height: auto;
-    display: flex;
-    column-gap: 5rem;
-    justify-content: center;
+    width: 100%;
+    display: grid;
+    gap: ${theme.spacings.xxsmall};
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  `}
+`;
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      column-gap: 4rem;
-    }
+export const Span = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
   `}
 `;

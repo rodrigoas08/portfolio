@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'contato' })`
   width: 100%;
-  height: auto;
+  height: 100vh;
   display: flex;
   padding-top: 8rem;
   align-items: start;

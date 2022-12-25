@@ -1,6 +1,6 @@
 export default {
   border: {
-    radius: '0.2rem'
+    radius: '0.5rem'
   },
   font: {
     family: {
@@ -45,7 +45,7 @@ export default {
     blueRibbon: '#87CEEB',
     gray: '#8E8E8E',
     lightGray: '#D3D3D3',
-    text: '#232323',
+    text: '#777777',
     success: '#28A745',
     barberry: '#DED717'
   },

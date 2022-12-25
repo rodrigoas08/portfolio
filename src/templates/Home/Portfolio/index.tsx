@@ -1,6 +1,6 @@
 import * as S from './styles';
-import { Card, Title } from 'components';
 import { CardList } from './mock';
+import { Card, Title } from 'components';
 
 export const Portfolio = () => {
   return (

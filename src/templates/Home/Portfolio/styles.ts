@@ -18,6 +18,14 @@ export const Container = styled.div`
   `}
 `;
 
+export const SubTitle = styled.h2`
+  ${({ theme }) => css`
+    font-weight: lighter;
+    padding-top: ${theme.spacings.large};
+    font-size: ${theme.font.sizes.medium};
+  `}
+`;
+
 export const Section = styled.section`
   ${({ theme }) => css`
     width: 80%;

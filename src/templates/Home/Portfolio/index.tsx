@@ -7,6 +7,9 @@ export const Portfolio = () => {
     <S.Wrapper>
       <S.Container>
         <Title text="Portfólio" />
+        <S.SubTitle>
+          Aqui você vai encontrar alguns trabalhos feitos por mim.
+        </S.SubTitle>
         <S.Section>
           {CardList.map((card, index) => {
             return (

@@ -20,15 +20,7 @@ const Card = ({ title, background, link, repository }: CardProps) => {
 
   return (
     <>
-      <S.Card
-      // data-aos="fade-up"
-      // data-aos-offset="200"
-      // data-aos-delay="50"
-      // data-aos-duration="1000"
-      // data-aos-easing="ease-in-out"
-      // data-aos-mirror="false"
-      // data-aos-once="false"
-      >
+      <S.Card>
         <S.CardImage
           background={
             background
@@ -49,7 +41,7 @@ const Card = ({ title, background, link, repository }: CardProps) => {
             )}
             {link && (
               <Button rippling onClick={() => openLinkInNewTab(`${link}`)}>
-                WebSite
+                Site
               </Button>
             )}
           </div>
@@ -59,5 +51,3 @@ const Card = ({ title, background, link, repository }: CardProps) => {
   );
 };
 export default Card;
-// AOS.init();
-// AOS.refresh();

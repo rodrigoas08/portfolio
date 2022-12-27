@@ -2,7 +2,7 @@ import * as S from './styles';
 import { memo } from 'react';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitch } from 'react-icons/fa';
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <S.Footer>
       <S.TextCopyright>

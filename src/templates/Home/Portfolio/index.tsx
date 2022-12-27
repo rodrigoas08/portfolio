@@ -1,8 +1,9 @@
+import Card from './Card';
 import * as S from './styles';
 import { CardList } from './mock';
-import { Card, Title } from 'components';
+import { Title } from 'components';
 
-export const Portfolio = () => {
+const Portfolio = () => {
   return (
     <S.Wrapper>
       <S.Container>

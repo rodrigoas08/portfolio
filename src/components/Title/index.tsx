@@ -30,7 +30,7 @@ type TitleProps = {
   text: string;
 };
 
-export const Title = ({ text }: TitleProps) => {
+const Title = ({ text }: TitleProps) => {
   return <H1>{text}</H1>;
 };
 export default memo(Title);

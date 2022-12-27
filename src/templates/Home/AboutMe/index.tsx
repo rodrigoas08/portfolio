@@ -15,7 +15,7 @@ import {
   VSCodeIcon
 } from 'components/Icons';
 
-export const AboutMe = () => {
+const AboutMe = () => {
   return (
     <S.Wrapper>
       <S.Container>

@@ -2,8 +2,19 @@ import Card from './Card';
 import * as S from './styles';
 import { CardList } from './mock';
 import { Title } from 'components';
+import InputSearch from './InputSearch';
+import { useMemo, useState } from 'react';
 
 const Portfolio = () => {
+  const [search, setSearch] = useState('');
+
+  const filteredPortfolios = useMemo(() => {
+    const lowerSearch = search.toLowerCase();
+    return CardList.filter((portfolio) =>
+      portfolio.projectName.toLowerCase().includes(lowerSearch)
+    );
+  }, [search]);
+
   return (
     <S.Wrapper>
       <S.Container>
@@ -11,8 +22,9 @@ const Portfolio = () => {
         <S.SubTitle>
           Aqui você vai encontrar alguns trabalhos feitos por mim.
         </S.SubTitle>
+        <InputSearch search={search} setSearch={setSearch} />
         <S.Section>
-          {CardList.map((card, index) => {
+          {filteredPortfolios.map((card, index) => {
             return (
               <Card
                 key={index}

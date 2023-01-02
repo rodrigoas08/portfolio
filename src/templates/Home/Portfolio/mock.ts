@@ -19,29 +19,4 @@ export const CardList = [
     link: '',
     repository: ''
   }
-  // ,
-  // {
-  //   projectName: 'coração',
-  //   background: '',
-  //   link: '',
-  //   repository: ''
-  // },
-  // {
-  //   projectName: 'abacate',
-  //   background: '',
-  //   link: '',
-  //   repository: ''
-  // },
-  // {
-  //   projectName: 'mocotó',
-  //   background: '',
-  //   link: '',
-  //   repository: ''
-  // },
-  // {
-  //   projectName: 'ciência',
-  //   background: '',
-  //   link: '',
-  //   repository: ''
-  // }
 ];

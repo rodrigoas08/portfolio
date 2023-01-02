@@ -11,7 +11,6 @@ const InputSearch = ({ search, setSearch }: IInputSearchProps) => {
   return (
     <Wrapper>
       <SearchInput
-        type="search"
         value={search}
         placeholder="Buscar"
         onChange={(event) => setSearch(event.target.value)}
@@ -30,16 +29,16 @@ const Wrapper = styled.div`
 const SearchInput = styled(Input)`
   ${({ theme }) => css`
     width: 100%;
-    text-overflow: ellipsis;
+    background: transparent;
+    text-overflow: ellipsis;    
+    transition: all 1.5s ease-in-out;
     padding-right: ${theme.spacings.medium};
-    transition: all 1s ease-in-out;
-    border-top: 0.1rem solid ${theme.colors.primary};
 
     :focus {
       border-radius: 0;
       background: transparent;
-      transition: all 1s ease-in-out;
       border: 0.1rem solid transparent;
+      transition: all 1.5s ease-in-out;
       border-bottom: 0.1rem solid ${theme.colors.primary};
     }
   `}

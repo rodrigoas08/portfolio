@@ -15,7 +15,7 @@ import {
   VSCodeIcon
 } from 'components/Icons';
 
-export const AboutMe = () => {
+const AboutMe = () => {
   return (
     <S.Wrapper>
       <S.Container>
@@ -40,14 +40,14 @@ export const AboutMe = () => {
             interpessoal. Tenho bastante conhecimento na área de tecnologia
             voltado para área de Suporte Técnico (Help-Desk), trabalhei por
             quase 8 anos nessa área e recentemente estou migrando para área de
-            programação como desenvolvedor frontend. Venho me aprimorando, me
+            programação como desenvolvedor front-end. Venho me aprimorando, me
             atualizando para poder desenvolver sistemas web com alta
             performance, boa acessibilidade, responsivos e também aplicando SEO.
             Atualmente estou trabalhando na{' '}
             <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
               <S.Span>Usabit</S.Span>
             </a>{' '}
-            como desenvolvedor estagiário e sou quase formado em Análise e
+            como desenvolvedor front-end e sou quase formado em Análise e
             Desenvolvimento de Sistema. <br />
             Abaixo você irá ver um pouco com o que já trabalhei e algumas
             habilidades como desenvolvedor frontend.

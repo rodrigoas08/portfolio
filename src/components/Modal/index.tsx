@@ -8,7 +8,7 @@ type ModalProps = {
   handleClose: () => void;
 };
 
-export const Modal = ({ handleClose }: ModalProps) => {
+const Modal = ({ handleClose }: ModalProps) => {
   const { handleSubmit } = useForm<FormState>();
   const [modalSuccess, setModalSuccess] = useState(false);
 

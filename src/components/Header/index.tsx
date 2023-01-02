@@ -6,7 +6,7 @@ import { IColorProps } from 'interfaces/header';
 import { useState, memo, useLayoutEffect } from 'react';
 import { changeTitleOfPage, handleScrollPosition } from './functions';
 
-export const Header = () => {
+const Header = () => {
   const [title, setTitle] = useState({ name: 'Início' });
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'

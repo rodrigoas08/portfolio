@@ -18,12 +18,12 @@ const InputModifiers = {
 
 export const Input = styled.input<InputType>`
   ${({ theme, fullWidth }) => css`
-    outline: none;
     height: 3rem;
+    outline: none;
     backdrop-filter: blur(1.5rem);
     border: 0.1rem solid transparent;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: ${theme.border.radius};
-    background-color: rgba(255, 255, 255, 0.1);
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 
     &:focus {

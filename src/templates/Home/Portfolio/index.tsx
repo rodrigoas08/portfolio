@@ -54,7 +54,9 @@ const Portfolio = () => {
               );
             })
           ) : (
-            <S.SubTitle>Nenhum resultado encontrado.</S.SubTitle>
+            <S.SubTitle>
+              Nenhum resultado encontrado para "{search.valueOf()}".
+            </S.SubTitle>
           )}
         </S.Section>
       </S.Container>

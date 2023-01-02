@@ -8,24 +8,7 @@ import { useMemo, useState } from 'react';
 const Portfolio = () => {
   const [search, setSearch] = useState('');
 
-  // function replaceSpecialChars(param: typeof search) {
-  //   param = param.replace(/[ÀÁÂÃÄÅ]/, 'A');
-  //   // param = param.replace(/[àáâãäå]/, 'a');
-  //   param = param.replace(/[ÈÉÊË]/, 'E');
-  //   // param = param.replace(/[èéêë]/, 'e');
-  //   param = param.replace(/[Ç]/, 'C');
-  //   param = param.replace(/[c]/, 'ç');
-  //   param = param.replace(/[e]/, 'ê');
-  //   // param = param.replace(/[a]/, 'á');
-  //   // param = param.replace(/[ÒÓÔÕÖ]/, 'O');
-
-  //   // o resto
-
-  //   return param.replace(/[^a-z0-9]/gi, '');
-  // }
-
   const filteredPortfolios = useMemo(() => {
-    // const lowerSearch = replaceSpecialChars(search.toLowerCase());
     const lowerSearch = search.toLowerCase();
     return CardList.filter((portfolio) =>
       portfolio.projectName.toLowerCase().includes(lowerSearch)

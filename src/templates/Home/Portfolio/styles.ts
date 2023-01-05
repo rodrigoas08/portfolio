@@ -6,8 +6,8 @@ export const Wrapper = styled.div.attrs({ id: 'portfolio' })`
     height: auto;
     display: flex;
     padding-top: 8rem;
-    padding: 8rem ${theme.spacings.small} 0 0;
     align-items: start;
+    padding: 8rem ${theme.spacings.small} 0 0;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
       ${SubTitle} {

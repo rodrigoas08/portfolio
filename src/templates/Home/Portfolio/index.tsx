@@ -20,7 +20,7 @@ const Portfolio = () => {
       <S.Container>
         <Title text="Portfólio" />
         <S.SubTitle>
-          Aqui você vai encontrar alguns trabalhos feitos por mim.
+          Veja aqui alguns trabalhos feitos por mim.
         </S.SubTitle>
         <InputSearch search={search} setSearch={setSearch} />
         <S.Section>

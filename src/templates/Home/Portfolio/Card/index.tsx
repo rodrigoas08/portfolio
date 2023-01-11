@@ -2,7 +2,7 @@ import AOS from 'aos';
 import * as S from './styles';
 import { Button } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
-import ImagemEmConstrucao from 'img/portfolios/em_construcao.jpg';
+import ImageEmConstrucao from 'img/portfolios/em_construcao.jpg';
 
 export type CardProps = {
   link?: string;
@@ -28,7 +28,7 @@ const Card = ({ title, background, link, repository }: CardProps) => {
       data-aos-mirror="true"
       data-aos-once="false"
     >
-      <S.CardImage background={background ? background : ImagemEmConstrucao} />
+      <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
         <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
         <div>

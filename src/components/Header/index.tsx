@@ -44,16 +44,13 @@ const Header = () => {
         {Links.map((link, index) => {
           return (
             <li key={index}>
-              <Link
-                to={link.id}
-                spy={true}
-                smooth={true}
-                onSetActive={() => {
-                  setTitle({ name: link.name });
-                  changeTitleOfPage(link.name);
-                }}
-              >
-                <S.LinkText activeLink={title.name === link.name}>
+              <Link to={link.id} spy={true} smooth={true}>
+                <S.LinkText
+                  onClick={() => {
+                    setTitle({ name: link.name }), changeTitleOfPage(link.name);
+                  }}
+                  activeLink={title.name === link.name}
+                >
                   {link.name}
                 </S.LinkText>
               </Link>

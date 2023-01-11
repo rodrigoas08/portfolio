@@ -17,6 +17,9 @@ const Card = ({ title, background, link, repository }: CardProps) => {
   //     : (document.body.style.overflowY = 'scroll');
   // });
 
+  const imageDefault =
+    'https://wp.ufpel.edu.br/ccz/files/2016/03/em_construcao1-424x190.jpg';
+
   return (
     <S.Card
       data-aos="fade-up"
@@ -27,13 +30,7 @@ const Card = ({ title, background, link, repository }: CardProps) => {
       data-aos-mirror="true"
       data-aos-once="false"
     >
-      <S.CardImage
-        background={
-          background
-            ? background
-            : 'https://wp.ufpel.edu.br/ccz/files/2016/03/em_construcao1-424x190.jpg'
-        }
-      />
+      <S.CardImage background={background ? background : imageDefault} />
       <S.CardInfo>
         <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
         <div>

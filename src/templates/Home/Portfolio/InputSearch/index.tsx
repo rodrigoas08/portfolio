@@ -22,20 +22,20 @@ const InputSearch = ({ search, setSearch }: IInputSearchProps) => {
 export default InputSearch;
 
 const Wrapper = styled.div`
-  width: 35rem;
+  width: 30rem;
   margin-top: 2rem;
 `;
 
 const SearchInput = styled(Input)`
   ${({ theme }) => css`
     width: 100%;
-    background: transparent;
-    text-overflow: ellipsis;    
+    border-radius: 0;
+    text-overflow: ellipsis;
     transition: all 1.5s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
     padding-right: ${theme.spacings.medium};
 
     :focus {
-      border-radius: 0;
       background: transparent;
       border: 0.1rem solid transparent;
       transition: all 1.5s ease-in-out;

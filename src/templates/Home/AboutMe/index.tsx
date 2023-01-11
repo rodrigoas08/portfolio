@@ -38,7 +38,7 @@ const AboutMe = () => {
             <br />
             Sou uma pessoa comunicativa, proativa, tenho bom relacionamento
             interpessoal. Tenho bastante conhecimento na área de tecnologia
-            voltado para área de Suporte Técnico (Help-Desk), Atuei por 8 anos
+            voltado para área de Suporte Técnico (Help-Desk), atuei por 8 anos
             nessa área e recentemente estou migrando para área de programação
             como desenvolvedor front end. Venho me aprimorando, me atualizando
             para desenvolver sistemas web com alta performance, boa

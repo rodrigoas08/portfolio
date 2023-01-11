@@ -62,7 +62,6 @@
     "eslint": "^8.10.0",
     "husky": "^7.0.4",
     "prettier": "^2.5.1",
-    "react-icons": "^4.3.1",
     "vite-tsconfig-paths": "^4.0.3"
   }
 }

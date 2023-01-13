@@ -1,6 +1,4 @@
 import RouterView from 'router/paths';
 
-function App() {
-  return <RouterView />;
-}
+const App = () => <RouterView />;
 export default App;

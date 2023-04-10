@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
 		position: absolute;
 		flex-direction: column;
 		animation: openModal 2s linear forwards;
-		background-color: ${theme.colors.white};
+		background-color: ${theme.colors.alabaster};
 		padding: ${theme.spacings.medium} ${theme.spacings.medium};
 
 		@keyframes openModal {

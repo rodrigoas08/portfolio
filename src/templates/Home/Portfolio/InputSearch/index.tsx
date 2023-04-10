@@ -32,7 +32,7 @@ const SearchInput = styled(Input)`
     border-radius: 0;
     text-overflow: ellipsis;
     transition: all 1.5s ease-in-out;
-    background: rgba(255, 255, 255, 0.1);
+    background: ${theme.colors.grayIce};
     padding-right: ${theme.spacings.medium};
 
     :focus {

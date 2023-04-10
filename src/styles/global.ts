@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: ${({ theme }) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.alabaster};
     font-family: ${({ theme }) => theme.font.family.roboto};
   }
   

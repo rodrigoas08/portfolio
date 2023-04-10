@@ -2,16 +2,17 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'contato' })`
   width: 100%;
-  height: 100vh;
+  height: 80rem;
   display: flex;
   padding-top: 8rem;
   align-items: start;
+  background-color: black;
 `;
 
 export const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    height: 80rem;
+    height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;

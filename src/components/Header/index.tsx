@@ -37,7 +37,14 @@ const Header = () => {
 
   return (
     <S.Wrapper color={colorHeader.color}>
-      <Link to={Links[0].id} spy={true} smooth={true}>
+      <Link
+        to={Links[0].id}
+        spy={true}
+        smooth={true}
+        onClick={() => {
+          setTitle({ name: Links[0].name }), changeTitleOfPage(Links[0].name);
+        }}
+      >
         <S.ImgProfile src={FotoProfile} alt="Minha foto para perfil" />
       </Link>
       <S.NavWrapper>

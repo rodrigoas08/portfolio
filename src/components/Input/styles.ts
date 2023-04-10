@@ -3,10 +3,22 @@ import { InputProps } from '.';
 
 type InputType = Pick<InputProps, 'fullWidth'>;
 
+export const Wrapper = styled.div`
+  position: relative;
+`;
+
 export const Label = styled.label`
   ${({ theme }) => css`
-    color: ${theme.colors.white};
-    font-size: ${theme.font.sizes.large};
+    top: 0;
+    left: 0.8rem;
+    position: absolute;
+    pointer-events: none;
+    letter-spacing: 0.05rem;
+    transition: all 0.3s ease;
+    transform: translateY(-50%);
+    color: ${theme.colors.primary};
+    font-weight: ${theme.font.bold};
+    font-size: ${theme.font.sizes.xsmall};
   `}
 `;
 
@@ -20,15 +32,10 @@ export const Input = styled.input<InputType>`
   ${({ theme, fullWidth }) => css`
     height: 3rem;
     outline: none;
-    backdrop-filter: blur(1.5rem);
+    border-radius: 0.1rem;
     border: 0.1rem solid transparent;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: ${theme.border.radius};
+    background-color: ${theme.colors.grayIce};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
-
-    &:focus {
-      border-color: ${theme.colors.primary};
-    }
 
     ${fullWidth && InputModifiers.fullWidth()}
   `}

@@ -125,7 +125,7 @@ export const Card = styled.div`
     border-radius: ${theme.border.radius};
     font-size: ${theme.font.sizes.medium};
     column-gap: ${theme.spacings.xxsmall};
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: ${theme.colors.grayIce};
     border-top: 0.3rem solid ${theme.colors.primary};
 
     > p {

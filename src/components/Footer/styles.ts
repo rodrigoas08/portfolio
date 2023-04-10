@@ -9,12 +9,12 @@ export const Footer = styled.footer`
     display: flex;
     position: relative;
     align-items: center;
-    color: ${theme.colors.white};
+    color: ${theme.colors.alabaster};
     backdrop-filter: blur(0.5rem);
     justify-content: space-between;
     font-size: ${theme.font.sizes.small};
     background-color: rgba(0, 0, 0, 0.1);
-    border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+    border-top: 0.1rem solid ${theme.colors.grayIce};
     padding: ${theme.spacings.small} ${theme.spacings.xxlarge};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {

@@ -11,7 +11,7 @@ export const Card = styled.div`
     grid-template-rows: 1fr 0.8fr;
     transition: all 0.8s ease-in-out;
     border-radius: ${theme.border.radius};
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: ${theme.colors.grayIce};
     border-top: 0.3rem solid ${theme.colors.primary};
 
     :hover {

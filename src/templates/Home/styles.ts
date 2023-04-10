@@ -34,7 +34,7 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
 export const WrapperText = styled.div`
   ${({ theme }) => css`
     h2:nth-of-type(2) {
-      color: ${theme.colors.white};
+      color: ${theme.colors.alabaster};
       font-size: ${theme.font.sizes.small};
       padding-top: ${theme.spacings.xxsmall};
     }

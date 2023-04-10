@@ -5,13 +5,12 @@ export const Footer = styled.footer`
     z-index: 2;
     width: 100%;
     bottom: 0rem;
-    height: 10rem;
     display: flex;
     position: relative;
     align-items: center;
+    justify-content: center;
     color: ${theme.colors.alabaster};
     backdrop-filter: blur(0.5rem);
-    justify-content: space-between;
     font-size: ${theme.font.sizes.small};
     background-color: rgba(0, 0, 0, 0.1);
     border-top: 0.1rem solid ${theme.colors.grayIce};
@@ -25,28 +24,4 @@ export const Footer = styled.footer`
   `}
 `;
 
-export const TextCopyright = styled.p`
-  ${({ theme }) => css`
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      text-align: center;
-    }
-  `}
-`;
-
-export const IconsWrapper = styled.nav`
-  ${({ theme }) => css`
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-
-    > a {
-      color: inherit;
-    }
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      width: 70%;
-      justify-content: space-between;
-    }
-  `}
-`;
+export const TextCopyright = styled.p``;

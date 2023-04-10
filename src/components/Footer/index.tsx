@@ -7,7 +7,6 @@ const Footer = () => {
       <S.TextCopyright>
         &copy; Copyright 2022 Rodrigo Sobral - Todos os direitos reservados.
       </S.TextCopyright>
-      <S.IconsWrapper></S.IconsWrapper>
     </S.Footer>
   );
 };

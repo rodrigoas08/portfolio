@@ -43,63 +43,66 @@ const Contact = () => {
     <S.Wrapper>
       <S.Container>
         <Title text="Contato" />
-        <S.Form onSubmit={handleSubmit(onSubmit)}>
-          <Input
-            fullWidth
-            label="Nome *"
-            autoComplete="off"
-            placeholder="Digite seu nome"
-            register={() =>
-              register('name', {
-                required: true
-              })
-            }
-          />
-          <Input
-            fullWidth
-            label="Email *"
-            type="email"
-            autoComplete="off"
-            placeholder="exemplo@email.com.br"
-            register={() =>
-              register('email', {
-                required: 'Required field',
-                pattern: {
-                  value:
-                    /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-z]{2,3}\.?[a-z]{1,2}/,
-                  message: 'Invalid E-mail'
-                }
-              })
-            }
-          />
-          <Input
-            fullWidth
-            label="Assunto *"
-            autoComplete="off"
-            placeholder="Digite sobre o que quer falar"
-            register={() =>
-              register('subject', {
-                required: true
-              })
-            }
-          />
-          <S.Textarea
-            {...register('message', { required: true })}
-            placeholder="Escreva aqui sua mensagem..."
-          />
-          <Button
-            type="submit"
-            fullWidth
-            disabled={
-              (!formState.isValid && !formState.isSubmitting) ||
-              formState.isSubmitSuccessful
-            }
-          >
-            {formState.isSubmitSuccessful
-              ? 'Formulário enviado'
-              : 'Enviar formulário'}
-          </Button>
-        </S.Form>
+        <section>
+          <S.Form onSubmit={handleSubmit(onSubmit)}>
+            <Input
+              fullWidth
+              label="Nome *"
+              autoComplete="off"
+              placeholder="Digite seu nome"
+              register={() =>
+                register('name', {
+                  required: true
+                })
+              }
+            />
+            <Input
+              fullWidth
+              label="Email *"
+              type="email"
+              autoComplete="off"
+              placeholder="exemplo@email.com.br"
+              register={() =>
+                register('email', {
+                  required: 'Required field',
+                  pattern: {
+                    value:
+                      /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-z]{2,3}\.?[a-z]{1,2}/,
+                    message: 'Invalid E-mail'
+                  }
+                })
+              }
+            />
+            <Input
+              fullWidth
+              label="Assunto *"
+              autoComplete="off"
+              placeholder="Digite sobre o que quer falar"
+              register={() =>
+                register('subject', {
+                  required: true
+                })
+              }
+            />
+            <S.Textarea
+              {...register('message', { required: true })}
+              placeholder="Escreva aqui sua mensagem..."
+            />
+            <Button
+              type="submit"
+              fullWidth
+              disabled={
+                (!formState.isValid && !formState.isSubmitting) ||
+                formState.isSubmitSuccessful
+              }
+            >
+              {formState.isSubmitSuccessful
+                ? 'Formulário enviado'
+                : 'Enviar formulário'}
+            </Button>
+          </S.Form>
+          <S.WhatsAppWrapper>testando</S.WhatsAppWrapper>
+        </section>
       </S.Container>
     </S.Wrapper>
   );

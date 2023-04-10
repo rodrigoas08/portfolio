@@ -29,6 +29,9 @@ Rodar o projeto localmente:
 > npm run dev
 
 
+Obs: Criar o arquivo .env.local baseado no .env.example
+
+
 A página irá fazer reload automaticamente a cada alteração feita.
 
 O Vite indicará essas mudanças e outras informações de status no console.

@@ -55,7 +55,7 @@ export type LinkMenuProps = {
 export const LinkText = styled.p<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
     cursor: pointer;
-    color: ${theme.colors.white};
+    color: ${theme.colors.alabaster};
     font-size: ${theme.font.sizes.large};
 
     ${activeLink &&

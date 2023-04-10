@@ -26,7 +26,7 @@ const ButtonModifier = {
       position: relative;
       font-weight: bold;
       color: ${theme.colors.primary};
-      background: ${theme.colors.white};
+      background: ${theme.colors.alabaster};
       border-radius: ${theme.border.radius};
 
       ::before {
@@ -34,7 +34,7 @@ const ButtonModifier = {
         content: '';
         position: absolute;
         border-radius: ${theme.border.radius};
-        border: 0.6rem solid ${theme.colors.white};
+        border: 0.6rem solid ${theme.colors.alabaster};
       }
 
       :hover,
@@ -61,9 +61,9 @@ export const Wrapper = styled.button<
     border: none;
     cursor: pointer;
     text-decoration: none;
-    color: ${theme.colors.white};
+    color: ${theme.colors.alabaster};
+    background: ${theme.colors.primary};
     font-size: ${theme.font.sizes.medium};
-    background: ${({ theme }) => theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
     ${secondary && ButtonModifier.secondary()}

@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 const H1 = styled.h1`
   ${({ theme }) => css`
     z-index: 1;
+    cursor: default;
     font-size: 3rem;
     position: relative;
     white-space: nowrap;

@@ -38,7 +38,7 @@ export default {
     xxlarge: '6rem'
   },
   colors: {
-    white: '#fafafa',
+    alabaster: '#fafafa',
     black: '#000000',
     error: '#FF6262',
     primary: '#00ACEE',
@@ -47,7 +47,8 @@ export default {
     lightGray: '#D3D3D3',
     text: '#777777',
     success: '#28A745',
-    barberry: '#DED717'
+    barberry: '#DED717',
+    grayIce: '#ffffff1a'
   },
   breakpoints: {
     mobile: '600px',

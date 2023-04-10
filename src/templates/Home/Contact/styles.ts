@@ -2,10 +2,9 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.div.attrs({ id: 'contato' })`
   width: 100%;
-  height: 80rem;
+  height: auto;
   display: flex;
   padding-top: 8rem;
-  align-items: start;
   background-color: black;
 `;
 
@@ -17,6 +16,14 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     padding: ${theme.spacings.xlarge};
+
+    > section {
+      gap: 1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+    }
   `}
 `;
 
@@ -37,7 +44,7 @@ export const Title = styled.h1`
       z-index: -1;
       opacity: 0.3;
       position: absolute;
-      background-color: ${theme.colors.white};
+      background-color: ${theme.colors.alabaster};
     }
   `}
 `;
@@ -45,12 +52,14 @@ export const Title = styled.h1`
 export const Form = styled.form`
   ${({ theme }) => css`
     width: 40%;
-    height: auto;
+    height: 40rem;
     display: flex;
     flex-direction: column;
-    gap: ${theme.spacings.xsmall};
-    padding: ${theme.spacings.small} 0;
+    gap: ${theme.spacings.small};
+    padding: ${theme.spacings.small};
     font-size: ${theme.font.sizes.large};
+    margin-top: ${theme.spacings.xlarge};
+    background-color: ${theme.colors.grayIce};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       width: 100%;
@@ -64,15 +73,27 @@ export const Textarea = styled.textarea`
     resize: none;
     height: 15rem;
     outline: none;
-    color: ${theme.colors.white};
-    backdrop-filter: blur(1.5rem);
+    border-radius: 0.1rem;
+    color: ${theme.colors.alabaster};
     border: 0.1rem solid transparent;
-    padding: ${theme.spacings.xxxsmall};
-    border-radius: ${theme.border.radius};
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: ${theme.colors.grayIce};
+    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall};
 
-    &:focus {
+    :focus {
       border-color: ${theme.colors.primary};
+
+      ::placeholder {
+        color: ${theme.colors.gray};
+      }
     }
+  `}
+`;
+
+export const WhatsAppWrapper = styled.div`
+  ${({ theme }) => css`
+    width: 40%;
+    height: 40rem;
+    margin-top: ${theme.spacings.xlarge};
+    /* background-color: ${theme.colors.grayIce}; */
   `}
 `;

@@ -3,17 +3,17 @@ import { UseFormRegisterReturn } from 'react-hook-form';
 import * as S from './styles';
 
 export type InputProps = {
-  label: string;
+  label?: string;
   fullWidth?: boolean;
   register: () => UseFormRegisterReturn;
 } & InputHTMLAttributes<HTMLInputElement>;
 
 const Input = ({ label, fullWidth, register, ...props }: InputProps) => {
   return (
-    <S.Label>
-      {label}
+    <S.Wrapper>
       <S.Input fullWidth={fullWidth} {...register()} {...props} />
-    </S.Label>
+      <S.Label>{label}</S.Label>
+    </S.Wrapper>
   );
 };
 

@@ -9,6 +9,7 @@ const Contact = () => {
     mode: 'onChange'
   });
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function onSubmit(values: FormState, e: any) {
     e.preventDefault();
     try {
@@ -45,8 +46,9 @@ const Contact = () => {
         <S.Form onSubmit={handleSubmit(onSubmit)}>
           <Input
             fullWidth
-            label="Nome"
-            placeholder="Seu nome"
+            label="Nome *"
+            autoComplete="off"
+            placeholder="Digite seu nome"
             register={() =>
               register('name', {
                 required: true
@@ -55,17 +57,29 @@ const Contact = () => {
           />
           <Input
             fullWidth
-            label="Email"
+            label="Email *"
             type="email"
+            autoComplete="off"
             placeholder="exemplo@email.com.br"
             register={() =>
               register('email', {
                 required: 'Required field',
                 pattern: {
-                  message: 'Invalid E-mail',
                   value:
-                    /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-z]{2,3}\.?[a-z]{1,2}/
+                    /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-z]{2,3}\.?[a-z]{1,2}/,
+                  message: 'Invalid E-mail'
                 }
+              })
+            }
+          />
+          <Input
+            fullWidth
+            label="Assunto *"
+            autoComplete="off"
+            placeholder="Digite sobre o que quer falar"
+            register={() =>
+              register('subject', {
+                required: true
               })
             }
           />
@@ -81,7 +95,9 @@ const Contact = () => {
               formState.isSubmitSuccessful
             }
           >
-            {formState.isSubmitting ? 'Enviando...' : 'Enviar'}
+            {formState.isSubmitSuccessful
+              ? 'Formulário enviado'
+              : 'Enviar formulário'}
           </Button>
         </S.Form>
       </S.Container>

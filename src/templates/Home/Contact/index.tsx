@@ -3,6 +3,8 @@ import { Button, Input, Title } from 'components';
 import { useForm } from 'react-hook-form';
 import { FormState } from 'interfaces/form';
 import emailjs from 'emailjs-com';
+import { NameIcon, EmailIcon, SubjectIcon } from 'components/Icons';
+import { openLinkInNewTab } from 'utils/functions';
 
 const Contact = () => {
   const { register, handleSubmit, formState } = useForm<FormState>({
@@ -23,9 +25,9 @@ const Contact = () => {
         .then(
           (result) => {
             if (result.status == 200) {
-              alert('Email enviado com suecesso');
+              alert('Email enviado com sucesso');
             } else {
-              alert('Algo deu errado');
+              alert('Falha ao enviar email');
             }
           },
           (error) => {
@@ -46,8 +48,8 @@ const Contact = () => {
         <section>
           <S.Form onSubmit={handleSubmit(onSubmit)}>
             <Input
+              icon={<NameIcon />}
               fullWidth
-              label="Nome *"
               autoComplete="off"
               placeholder="Digite seu nome"
               register={() =>
@@ -57,11 +59,11 @@ const Contact = () => {
               }
             />
             <Input
+              icon={<EmailIcon />}
               fullWidth
-              label="Email *"
               type="email"
               autoComplete="off"
-              placeholder="exemplo@email.com.br"
+              placeholder="Digite seu email"
               register={() =>
                 register('email', {
                   required: 'Required field',
@@ -74,10 +76,10 @@ const Contact = () => {
               }
             />
             <Input
+              icon={<SubjectIcon />}
               fullWidth
-              label="Assunto *"
               autoComplete="off"
-              placeholder="Digite sobre o que quer falar"
+              placeholder="Indique qual assunto"
               register={() =>
                 register('subject', {
                   required: true
@@ -101,7 +103,30 @@ const Contact = () => {
                 : 'Enviar formulário'}
             </Button>
           </S.Form>
-          <S.WhatsAppWrapper>Testando</S.WhatsAppWrapper>
+          <S.CTAWrapper>
+            <h1>Vamos conversar?</h1>
+            <p>
+              Você pode entrar em contato
+              <br /> preenchendo o <strong>formulário</strong>
+            </p>
+            <h2>ou</h2>
+            <p>
+              Iniciar uma conversa por
+              <br />
+              <strong>whatsapp</strong>
+              <br />
+              <sup>(21) 98514-1580</sup>
+            </p>
+            <Button
+              onClick={() =>
+                openLinkInNewTab(
+                  'https://api.whatsapp.com/send?phone=5521985141580&text=Ol%C3%A1%20gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20seus%20servi%C3%A7os'
+                )
+              }
+            >
+              CONVERSAR AGORA <S.ZapIcon />
+            </Button>
+          </S.CTAWrapper>
         </section>
       </S.Container>
     </S.Wrapper>

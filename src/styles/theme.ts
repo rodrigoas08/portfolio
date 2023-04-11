@@ -48,7 +48,8 @@ export default {
     text: '#777777',
     success: '#28A745',
     barberry: '#DED717',
-    grayIce: '#ffffff1a'
+    grayIce: '#ffffff1a',
+    whatsapp: '#40c351'
   },
   breakpoints: {
     mobile: '600px',

@@ -1,10 +1,11 @@
 import styled, { css } from 'styled-components';
+import * as ButtonStyles from 'components/Button/styles';
+import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp';
 
 export const Wrapper = styled.div.attrs({ id: 'contato' })`
   width: 100%;
   height: auto;
   display: flex;
-  padding-top: 8rem;
   background-color: black;
 `;
 
@@ -16,42 +17,30 @@ export const Container = styled.div`
     align-items: center;
     flex-direction: column;
     padding: ${theme.spacings.xlarge};
+    box-shadow: 0.1rem -0.4rem 1rem rgba(0, 0, 0, 0.9);
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      padding: ${theme.spacings.small};
+      padding-top: ${theme.spacings.xxlarge};
+    }
 
     > section {
-      gap: 1rem;
-      width: 100%;
+      width: 80%;
       display: flex;
       flex-direction: row-reverse;
-      justify-content: center;
-    }
-  `}
-`;
 
-export const Title = styled.h1`
-  ${({ theme }) => css`
-    font-size: 4rem;
-    position: relative;
-    color: ${theme.colors.primary};
-    font-weight: ${theme.font.light};
-    padding-bottom: ${theme.spacings.xlarge};
-
-    :before {
-      content: '';
-      top: 30%;
-      left: -2%;
-      width: 98%;
-      height: 20%;
-      z-index: -1;
-      opacity: 0.3;
-      position: absolute;
-      background-color: ${theme.colors.alabaster};
+      @media (max-width: ${theme.breakpoints.ipad}) {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: ${theme.spacings.small};
+      }
     }
   `}
 `;
 
 export const Form = styled.form`
   ${({ theme }) => css`
-    width: 40%;
+    width: 100%;
     height: 40rem;
     display: flex;
     flex-direction: column;
@@ -59,9 +48,10 @@ export const Form = styled.form`
     padding: ${theme.spacings.small};
     font-size: ${theme.font.sizes.large};
     margin-top: ${theme.spacings.xlarge};
+    border-radius: ${theme.border.radius};
     background-color: ${theme.colors.grayIce};
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
+    @media (max-width: ${theme.breakpoints.ipad}) {
       width: 100%;
     }
   `}
@@ -81,19 +71,64 @@ export const Textarea = styled.textarea`
 
     :focus {
       border-color: ${theme.colors.primary};
+    }
+  `}
+`;
 
-      ::placeholder {
-        color: ${theme.colors.gray};
+export const CTAWrapper = styled.div`
+  ${({ theme }) => css`
+    gap: 1rem;
+    width: 100%;
+    height: 40rem;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    padding: ${theme.spacings.small};
+    margin-top: ${theme.spacings.xlarge};
+    font-size: ${theme.font.sizes.medium};
+    /* background-color: ${theme.colors.grayIce}; */
+
+    > h1 {
+      font-size: 39px;
+      margin-bottom: 2rem;
+      color: ${theme.colors.primary};
+    }
+
+    > p {
+      line-height: 150%;
+
+      > strong {
+        text-transform: uppercase;
+        color: ${theme.colors.primary};
+      }
+    }
+
+    ${ButtonStyles.Wrapper} {
+      height: 4rem;
+      display: flex;
+      align-items: center;
+      gap: ${theme.spacings.xxsmall};
+      border-radius: ${theme.border.radius};
+      background-color: ${theme.colors.whatsapp};
+
+      :hover {
+        opacity: 0.9;
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      width: 100%;
+      height: auto;
+      font-size: ${theme.font.sizes.xsmall};
+
+      > p {
+        font-size: ${theme.font.sizes.small};
       }
     }
   `}
 `;
 
-export const WhatsAppWrapper = styled.div`
-  ${({ theme }) => css`
-    width: 40%;
-    height: 40rem;
-    margin-top: ${theme.spacings.xlarge};
-    /* background-color: ${theme.colors.grayIce}; */
-  `}
+export const ZapIcon = styled(Whatsapp)`
+  width: 2rem;
 `;

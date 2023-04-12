@@ -7,7 +7,6 @@ export const Wrapper = styled.div.attrs({ id: 'portfolio' })`
     display: flex;
     padding-top: 8rem;
     align-items: start;
-    padding: 8rem ${theme.spacings.small} 0 0;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
       ${SubTitle} {
@@ -26,7 +25,12 @@ export const Container = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: ${theme.spacings.xlarge} 0;
+    padding-bottom: ${theme.spacings.xlarge};
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      align-items: center;
+      flex-direction: column;
+    }
   `}
 `;
 
@@ -40,7 +44,7 @@ export const SubTitle = styled.h2`
 
 export const Section = styled.section`
   ${({ theme }) => css`
-    width: 80%;
+    width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
@@ -48,8 +52,11 @@ export const Section = styled.section`
     gap: ${theme.spacings.small};
     margin-top: ${theme.spacings.large};
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
+    @media (max-width: ${theme.breakpoints.desktop}) {
       align-items: center;
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
       flex-direction: column;
     }
   `}

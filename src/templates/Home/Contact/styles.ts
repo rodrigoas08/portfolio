@@ -51,6 +51,10 @@ export const Form = styled.form`
     border-radius: ${theme.border.radius};
     background-color: ${theme.colors.grayIce};
 
+    > button {
+      border-radius: 0;
+    }
+
     @media (max-width: ${theme.breakpoints.ipad}) {
       width: 100%;
     }
@@ -87,7 +91,6 @@ export const CTAWrapper = styled.div`
     padding: ${theme.spacings.small};
     margin-top: ${theme.spacings.xlarge};
     font-size: ${theme.font.sizes.medium};
-    /* background-color: ${theme.colors.grayIce}; */
 
     > h1 {
       font-size: 39px;
@@ -109,7 +112,7 @@ export const CTAWrapper = styled.div`
       display: flex;
       align-items: center;
       gap: ${theme.spacings.xxsmall};
-      border-radius: ${theme.border.radius};
+      font-size: ${theme.font.sizes.medium};
       background-color: ${theme.colors.whatsapp};
 
       :hover {

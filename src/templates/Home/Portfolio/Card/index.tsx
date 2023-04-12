@@ -33,14 +33,12 @@ const Card = ({ title, background, link, repository }: CardProps) => {
         <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
         <div>
           {repository && (
-            <Button rippling onClick={() => openLinkInNewTab(`${repository}`)}>
-              GitHub
+            <Button onClick={() => openLinkInNewTab(`${repository}`)}>
+              Repositório
             </Button>
           )}
           {link && (
-            <Button rippling onClick={() => openLinkInNewTab(`${link}`)}>
-              Site
-            </Button>
+            <Button onClick={() => openLinkInNewTab(`${link}`)}>Visitar</Button>
           )}
         </div>
       </S.CardInfo>

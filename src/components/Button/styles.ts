@@ -24,10 +24,8 @@ const ButtonModifier = {
   rippling: () => css`
     ${({ theme }) => css`
       position: relative;
-      font-weight: bold;
       color: ${theme.colors.primary};
       background: ${theme.colors.alabaster};
-      border-radius: ${theme.border.radius};
 
       ::before {
         inset: 0;
@@ -63,7 +61,7 @@ export const Wrapper = styled.button<
     text-decoration: none;
     color: ${theme.colors.alabaster};
     background: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.medium};
+    border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
     ${secondary && ButtonModifier.secondary()}

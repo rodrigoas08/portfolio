@@ -6,7 +6,7 @@ export const Card = styled.div`
   ${({ theme }) => css`
     width: 25%;
     display: grid;
-    min-height: 30rem;
+    height: 30rem;
     grid-template-rows: 1fr 0.8fr;
     padding: ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
@@ -20,10 +20,23 @@ export const Card = styled.div`
       width: 50%;
     }
 
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      width: 30rem;
+      padding: ${theme.spacings.xxsmall};
+
+      ${ButtonWrapper} {
+        gap: ${theme.spacings.small};
+      }
+
+      ${CardTitle} {
+        font-size: ${theme.font.sizes.medium};
+      }
+    }
+
     :hover {
       background-color: ${theme.colors.primary};
 
-      ${CardImage}{
+      ${CardImage} {
         transition: all 1s linear;
         transform: scale(103%);
       }

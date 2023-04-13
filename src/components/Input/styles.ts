@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   :focus-within #icon {
     animation: bg 1s;
     filter: brightness(50%);
-    transition: 1s ease-in-out;
+    transition: all 1s linear ease;
 
     @keyframes bg {
       from {

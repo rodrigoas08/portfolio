@@ -1,6 +1,6 @@
 import * as S from './styles';
 import { Portfolio, AboutMe, Contact } from 'templates';
-import { GitHublIcon, LinkedInIcon } from 'components/Icons';
+import { GitHubIcon, LinkedInIcon } from 'components/Icons';
 import { openLinkInNewTab } from 'utils/functions';
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
           <S.CarrerName>desenvolvedor front end.</S.CarrerName>
         </S.WrapperText>
         <S.NavIcons>
-          <GitHublIcon
+          <GitHubIcon
             text="GitHub"
             handleClick={() =>
               openLinkInNewTab('https://github.com/rodrigoas08')

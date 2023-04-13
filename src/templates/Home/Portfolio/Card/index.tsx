@@ -3,6 +3,7 @@ import * as S from './styles';
 import { Button } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
 import ImageEmConstrucao from 'img/portfolios/em_construcao.jpg';
+import { GitHubIconFilled, EyeIcon } from 'components/Icons';
 
 export type CardProps = {
   link?: string;
@@ -20,27 +21,30 @@ const Card = ({ title, background, link, repository }: CardProps) => {
 
   return (
     <S.Card
-      data-aos="fade-up"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
+    data-aos="fade-up"
+    data-aos-offset="2"
+    data-aos-delay="50"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out"
+    data-aos-mirror="true"
+    data-aos-once="false"
     >
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
         <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
-        <div>
+        {(repository || link) && <S.HR />}
+        <S.ButtonWrapper>
           {repository && (
-            <Button onClick={() => openLinkInNewTab(`${repository}`)}>
-              Repositório
+            <Button secondary onClick={() => openLinkInNewTab(`${repository}`)}>
+              <GitHubIconFilled /> Repositório
             </Button>
           )}
           {link && (
-            <Button onClick={() => openLinkInNewTab(`${link}`)}>Visitar</Button>
+            <Button secondary onClick={() => openLinkInNewTab(`${link}`)}>
+              Visitar <EyeIcon />
+            </Button>
           )}
-        </div>
+        </S.ButtonWrapper>
       </S.CardInfo>
     </S.Card>
   );

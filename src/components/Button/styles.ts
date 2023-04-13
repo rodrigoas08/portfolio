@@ -6,9 +6,10 @@ const ButtonModifier = {
     ${({ theme }) => css`
       border: none;
       background: transparent;
+      color: ${theme.colors.black};
 
       :hover {
-        background: ${theme.colors.blueRibbon};
+        color: ${theme.colors.alabaster};
       }
     `}
   `,

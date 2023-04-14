@@ -10,7 +10,7 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
     padding: 8rem 0;
     align-items: center;
     flex-direction: column;
-    background-color: black;
+    background: rgba(0, 0, 0, 0.9);
     box-shadow: 0.1rem -0.4rem 1rem rgba(0, 0, 0, 0.9);
 
     @media (max-width: ${theme.breakpoints.ipad}) {
@@ -88,8 +88,8 @@ export const CTAWrapper = styled.div`
 
     > h1 {
       font-size: 39px;
-      margin-bottom: 2rem;
       color: ${theme.colors.primary};
+      margin-bottom: ${theme.spacings.small};
     }
 
     > p {

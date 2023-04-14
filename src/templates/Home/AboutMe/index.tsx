@@ -30,11 +30,12 @@ const AboutMe = () => {
           data-aos-once="false"
         >
           <S.Image
+            loading="lazy"
             src={EuPedro}
             alt="Foto minha segurando meu filho na praia"
           />
           <p>
-            Então, ai nesta foto está minha razão de viver, meu filho.
+            Então, ai nesta foto está eu e minha razão de viver, meu filho.
             <br />
             Sou uma pessoa comunicativa, proativa, tenho bom relacionamento
             interpessoal. Tenho bastante conhecimento na área de tecnologia
@@ -50,8 +51,8 @@ const AboutMe = () => {
             </a>{' '}
             como desenvolvedor front end e estou me formando em Análise e
             Desenvolvimento de Sistema. <br />
-            Abaixo mostro um pouco da minha trajetória e algumas habilidades
-            adquiridas como desenvolvedor front end.
+            Abaixo mostro um pouco de algumas habilidades que venho adquirindo
+            como desenvolvedor front end.
           </p>
         </S.About>
         <S.Card

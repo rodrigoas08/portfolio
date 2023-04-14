@@ -20,20 +20,39 @@ const AboutMe = () => {
     <S.Wrapper>
       <Title text="Quem sou..." />
       <S.Section>
-        <S.About
-          data-aos="zoom-in"
-          data-aos-offset="2"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
+        <S.AboutCard>
+          <S.TopInfo>
+            <S.Image
+              data-aos="flip-left"
+              data-aos-offset="2"
+              data-aos-delay="50"
+              data-aos-duration="1000"
+              data-aos-easing="ease-in-out"
+              data-aos-mirror="true"
+              data-aos-once="false"
+              loading="lazy"
+              src={EuPedro}
+              alt="Eu segurando meu filho na praia"
+            />
+
+            <h1>Rodrigo Sobral</h1>
+            <p>@rodrigoas08</p>
+            <p>Rio de janeiro, Brazil</p>
+            <S.DivIcons>
+              <HtmlIcon text="HTML" />
+              <CssIcon text="CSS" />
+              <JSIcon text="JS" />
+            </S.DivIcons>
+          </S.TopInfo>
+        </S.AboutCard>
+        <div
+          style={{
+            background: 'pink',
+            gridArea: 'aboutText',
+            width: '100%',
+            height: '100%'
+          }}
         >
-          <S.Image
-            loading="lazy"
-            src={EuPedro}
-            alt="Foto minha segurando meu filho na praia"
-          />
           <p>
             Então, ai nesta foto está eu e minha razão de viver, meu filho.
             <br />
@@ -41,7 +60,7 @@ const AboutMe = () => {
             interpessoal. Tenho bastante conhecimento na área de tecnologia
             voltado para área de Suporte Técnico (Help-Desk), atuei por 8 anos
             nessa área e recentemente estou migrando para área de programação
-            como desenvolvedor front end. Venho me aprimorando, me atualizando
+            como desenvolvedor front end e venho me aprimorando, me atualizando
             para desenvolver sistemas web com alta performance, boa
             acessibilidade, responsivos e também aplicando SEO.
             <br />
@@ -54,15 +73,14 @@ const AboutMe = () => {
             Abaixo mostro um pouco de algumas habilidades que venho adquirindo
             como desenvolvedor front end.
           </p>
-        </S.About>
-        <S.Card
-          data-aos="fade-left"
-          data-aos-offset="2"
-          data-aos-delay="50"
-          data-aos-duration="1000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
+        </div>
+        <div
+          style={{
+            background: 'tomato',
+            gridArea: 'skills',
+            width: '100%',
+            height: '100%'
+          }}
         >
           <S.TitleCard>Habilidades</S.TitleCard>
           <S.DivIcons>
@@ -75,7 +93,7 @@ const AboutMe = () => {
             <VSCodeIcon text="Vscode" />
             <VueIcon text="Vue.js" />
           </S.DivIcons>
-        </S.Card>
+        </div>
       </S.Section>
     </S.Wrapper>
   );

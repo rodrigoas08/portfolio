@@ -17,7 +17,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
         font-size: ${theme.font.sizes.small};
       }
 
-      ${About} {
+      ${AboutCard} {
         display: inline;
         > img {
           float: left;
@@ -32,7 +32,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
       align-items: center;
       padding: 9rem ${theme.spacings.small};
 
-      ${About} {
+      ${AboutCard} {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -62,43 +62,77 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
 
 export const Section = styled.section`
   ${({ theme }) => css`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: ${theme.spacings.small};
+    width: 90%;
+    height: auto;
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'aboutCard aboutText'
+      'aboutCard skills';
     margin-top: ${theme.spacings.large};
   `}
 `;
 
-export const About = styled.div`
+export const AboutCard = styled.div`
   ${({ theme }) => css`
-    width: 80%;
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-top: ${theme.spacings.large};
+    width: 100%;
+    height: auto;
+    grid-area: aboutCard;
+    border-radius: ${theme.border.radius};
+    border: 0.4rem solid ${theme.colors.primary};
+  `}
+`;
 
-    > p {
-      width: 100%;
-      font-size: 1.8rem;
-      line-height: 150%;
-      align-self: center;
-      word-break: keep-all;
-      font-family: ${theme.font.family.josefin};
+export const TopInfo = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    gap: ${theme.spacings.xxsmall};
+    font-size: ${theme.font.sizes.small};
+    padding: 1rem ${theme.spacings.small} ${theme.spacings.small};
+    background: linear-gradient(
+      to top,
+      ${theme.colors.grayIce} 65%,
+      ${theme.colors.primary} 0%
+    );
+
+    h1 {
+      margin-top: 2rem;
+      font-family: sans-serif;
     }
-    a {
-      cursor: pointer;
+
+    p:not(:last-child) {
+      text-align: center;
+      font-family: sans-serif;
+      color: ${theme.colors.text};
+    }
+
+    b {
+      letter-spacing: 0.2rem;
     }
   `}
 `;
 
 export const Image = styled.img`
   ${({ theme }) => css`
-    width: 20rem;
-    height: 20rem;
+    width: 15rem;
+    height: 15rem;
     filter: saturate(210%);
-    margin-right: ${theme.spacings.large};
-    border-radius: ${theme.border.radius};
+    border-radius: ${theme.border.rounded};
+    border: 0.4rem solid ${theme.colors.primary};
+  `}
+`;
+
+export const Span = styled.span`
+  ${({ theme }) => css`
+    color: ${theme.colors.primary};
   `}
 `;
 
@@ -128,15 +162,8 @@ export const TitleCard = styled.h1`
 
 export const DivIcons = styled.div`
   ${({ theme }) => css`
-    width: 100%;
     display: flex;
     justify-content: center;
     gap: ${theme.spacings.medium};
-  `}
-`;
-
-export const Span = styled.span`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
   `}
 `;

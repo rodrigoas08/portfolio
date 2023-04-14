@@ -5,7 +5,7 @@ export const Wrapper = styled.div.attrs({ id: 'portfolio' })`
     width: 100%;
     height: auto;
     display: flex;
-    padding-top: 8rem;
+    padding: 9rem 0;
     align-items: start;
 
     @media (max-width: ${theme.breakpoints.ipad}) {

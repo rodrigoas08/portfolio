@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Footer = styled.footer`
   ${({ theme }) => css`
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     align-items: center;
     backdrop-filter: blur(0.5rem);

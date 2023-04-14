@@ -7,10 +7,10 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
     width: 100%;
     height: auto;
     display: flex;
+    padding: 8rem 0;
     align-items: center;
     flex-direction: column;
     background-color: black;
-    padding: ${theme.spacings.xlarge};
     box-shadow: 0.1rem -0.4rem 1rem rgba(0, 0, 0, 0.9);
 
     @media (max-width: ${theme.breakpoints.ipad}) {

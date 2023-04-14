@@ -18,8 +18,8 @@ import {
 const AboutMe = () => {
   return (
     <S.Wrapper>
-      <S.Container>
-        <Title text="Quem sou..." />
+      <Title text="Quem sou..." />
+      <S.Section>
         <S.About
           data-aos="zoom-in"
           data-aos-offset="2"
@@ -54,63 +54,28 @@ const AboutMe = () => {
             adquiridas como desenvolvedor front end.
           </p>
         </S.About>
-        <S.Section>
-          <S.Card
-            data-aos="fade-right"
-            data-aos-offset="2"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-          >
-            <S.TitleCard>Experiência profissional</S.TitleCard>
-            <ul>
-              <li>
-                2021/atualmente - Desenvolvedor Front End <br />
-                <a
-                  onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
-                >
-                  <S.Span>Usabit</S.Span>
-                </a>
-              </li>
-
-              <li>
-                2012/2020 - Analista de Suporte Técnico N2
-                <br />
-                <a onClick={() => openLinkInNewTab('https://www.sonda.com/pt')}>
-                  <S.Span>Sonda</S.Span>
-                </a>
-              </li>
-              <li>
-                2010/2011 - Analista Auxiliar Industrial <br />
-                <S.Span>Rio de Janeiro Refrescos (Coca-Cola)</S.Span>
-              </li>
-            </ul>
-          </S.Card>
-          <S.Card
-            data-aos="fade-left"
-            data-aos-offset="2"
-            data-aos-delay="50"
-            data-aos-duration="1000"
-            data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-          >
-            <S.TitleCard>Habilidades</S.TitleCard>
-            <S.DivIcons>
-              <HtmlIcon text="HTML" />
-              <CssIcon text="CSS" />
-              <JSIcon text="JS" />
-              <ReactIcon text="React.js" />
-              <TSIcon text="TS" />
-              <GitIcon text="Git" />
-              <VSCodeIcon text="Vscode" />
-              <VueIcon text="Vue.js" />
-            </S.DivIcons>
-          </S.Card>
-        </S.Section>
-      </S.Container>
+        <S.Card
+          data-aos="fade-left"
+          data-aos-offset="2"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+        >
+          <S.TitleCard>Habilidades</S.TitleCard>
+          <S.DivIcons>
+            <HtmlIcon text="HTML" />
+            <CssIcon text="CSS" />
+            <JSIcon text="JS" />
+            <ReactIcon text="React.js" />
+            <TSIcon text="TS" />
+            <GitIcon text="Git" />
+            <VSCodeIcon text="Vscode" />
+            <VueIcon text="Vue.js" />
+          </S.DivIcons>
+        </S.Card>
+      </S.Section>
     </S.Wrapper>
   );
 };

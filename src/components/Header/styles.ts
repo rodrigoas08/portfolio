@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.header`
   ${({ theme, color }) => css`
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 8rem;
     display: flex;

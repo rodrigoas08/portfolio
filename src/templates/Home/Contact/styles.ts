@@ -3,19 +3,13 @@ import * as ButtonStyles from 'components/Button/styles';
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp';
 
 export const Wrapper = styled.div.attrs({ id: 'contato' })`
-  width: 100%;
-  height: auto;
-  display: flex;
-  background-color: black;
-`;
-
-export const Container = styled.div`
   ${({ theme }) => css`
     width: 100%;
     height: auto;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: black;
     padding: ${theme.spacings.xlarge};
     box-shadow: 0.1rem -0.4rem 1rem rgba(0, 0, 0, 0.9);
 
@@ -111,6 +105,7 @@ export const CTAWrapper = styled.div`
       height: 4rem;
       display: flex;
       align-items: center;
+      text-transform: uppercase;
       gap: ${theme.spacings.xxsmall};
       font-size: ${theme.font.sizes.medium};
       background-color: ${theme.colors.whatsapp};

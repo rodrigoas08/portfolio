@@ -34,9 +34,9 @@ export const Wrapper = styled.header`
 export const ImgProfile = styled.img`
   ${({ theme }) => css`
     cursor: pointer;
-    border-radius: 50%;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
+    border-radius: ${theme.border.rounded};
   `}
 `;
 

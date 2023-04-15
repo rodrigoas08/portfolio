@@ -1,3 +1,4 @@
+import { openLinkInNewTab } from 'utils/functions';
 import * as S from './styles';
 
 type ProfileCardprops = {
@@ -20,7 +21,15 @@ const ProfileCard = ({
   skills
 }: ProfileCardprops) => {
   return (
-    <S.AboutCard>
+    <S.AboutCard
+      data-aos="zoom-in"
+      data-aos-offset="2"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
       <S.TopInfo>
         <S.Image
           data-aos="flip-left"
@@ -34,14 +43,20 @@ const ProfileCard = ({
           src={image}
           alt="Eu segurando meu filho na praia"
         />
-        <h1>{name}</h1>
-        <p>{githubName}</p>
-        <p>{localization}</p>
-        <b>{occupation}</b>
-        <p>
+        <S.Title>{name}</S.Title>
+        <S.Text>
+          <a onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}>
+            {githubName}
+          </a>
+        </S.Text>
+        <S.Text>{localization}</S.Text>
+        <S.Text>
+          <b>{occupation}</b>
+        </S.Text>
+        <S.Text>
           <br />
           {skills}
-        </p>
+        </S.Text>
         <S.DivIcons>{icons}</S.DivIcons>
       </S.TopInfo>
     </S.AboutCard>

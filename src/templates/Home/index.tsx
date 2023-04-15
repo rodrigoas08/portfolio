@@ -10,7 +10,7 @@ const Home = () => {
         <S.WrapperText>
           <S.Welcome>Seja bem-vindo(a), eu sou</S.Welcome>
           <S.Name>Rodrigo Sobral</S.Name>
-          <S.CarrerName>desenvolvedor front end.</S.CarrerName>
+          <S.CarrerName>desenvolvedor front-end.</S.CarrerName>
         </S.WrapperText>
         <S.NavIcons>
           <GitHubIcon

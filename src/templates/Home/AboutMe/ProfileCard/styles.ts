@@ -9,23 +9,9 @@ export const AboutCard = styled.div`
     border: 0.4rem solid ${theme.colors.primary};
 
     @media (max-width: ${theme.breakpoints.tablet}) {
-      ${TopInfo} {
-        background: linear-gradient(
-          to top,
-          ${theme.colors.grayIce} 28rem,
-          ${theme.colors.primary} 0%
-        );
-      }
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      ${TopInfo} {
-        background: linear-gradient(
-          to top,
-          ${theme.colors.grayIce} 28rem,
-          ${theme.colors.primary} 0%
-        );
-      }
     }
   `}
 `;
@@ -33,34 +19,20 @@ export const AboutCard = styled.div`
 export const TopInfo = styled.div`
   ${({ theme }) => css`
     width: 100%;
-    height: 100%;
+    height: auto;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
     font-size: ${theme.font.sizes.small};
-    padding: 1rem ${theme.spacings.small} ${theme.spacings.small};
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.small}
+      ${theme.spacings.small};
     background: linear-gradient(
       to top,
-      ${theme.colors.grayIce} 33rem,
+      ${theme.colors.grayIce} 32rem,
       ${theme.colors.primary} 0%
     );
-
-    h1 {
-      font-family: sans-serif;
-      margin-top: ${theme.spacings.small};
-    }
-
-    p {
-      text-align: center;
-      font-family: sans-serif;
-      color: ${theme.colors.text};
-    }
-
-    b {
-      font-family: sans-serif;
-    }
   `}
 `;
 
@@ -74,11 +46,44 @@ export const Image = styled.img`
   `}
 `;
 
+export const Text = styled.p`
+  ${({ theme }) => css`
+    text-align: center;
+    font-family: sans-serif;
+    color: ${theme.colors.text};
+
+    b {
+      font-family: inherit;
+    }
+
+    a {
+      color: inherit;
+      cursor: pointer;
+    }
+  `}
+`;
+
+export const Title = styled.h1`
+  ${({ theme }) => css`
+    font-family: sans-serif;
+    margin-top: ${theme.spacings.small};
+  `}
+`;
+
 export const DivIcons = styled.div`
   ${({ theme }) => css`
-    margin-top: 2rem;
     display: flex;
     justify-content: center;
     gap: ${theme.spacings.medium};
+    margin-top: ${theme.spacings.small};
+
+    svg {
+      transition: 1s ease;
+    }
+
+    svg:hover {
+      transition: 1s ease;
+      fill: ${theme.colors.primary};
+    }
   `}
 `;

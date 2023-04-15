@@ -59,60 +59,59 @@ const AboutMe = () => {
           name="Rodrigo Sobral"
           githubName="@rodrigoas08"
           localization="Rio de janeiro, Brasil"
-          occupation="Desenvolvedor Front end"
+          occupation="Desenvolvedor Front-end"
           skills="HTML | CSS | JavaScript | ReactJs | Typescript | Styled Components"
           image={EuPedro}
           icons={ProfilecardIcons}
         />
-        <div
-          style={{
-            background: 'pink',
-            gridArea: 'aboutText',
-            width: '100%',
-            height: '100%'
-          }}
+        <S.AboutText
+          data-aos="fade-left"
+          data-aos-offset="2"
+          data-aos-delay="50"
+          data-aos-duration="1000"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
         >
-          {/* <p>
-            Então, ai nesta foto está eu e minha razão de viver, meu filho.
-            <br />
-            Sou uma pessoa comunicativa, proativa, tenho bom relacionamento
-            interpessoal. Tenho bastante conhecimento na área de tecnologia
-            voltado para área de Suporte Técnico (Help-Desk), atuei por 8 anos
-            nessa área e recentemente estou migrando para área de programação
-            como desenvolvedor front end e venho me aprimorando, me atualizando
-            para desenvolver sistemas web com alta performance, boa
-            acessibilidade, responsivos e também aplicando SEO.
-            <br />
-            Atualmente atuo na{' '}
+          <S.Text>
+            Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro,
+            recentemente fiz migração de carreira saindo da área de help-desk e
+            vim para a programação e atualmente sou desenvolvedor front-end na
             <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
-              <S.Span>Usabit</S.Span>
+              <S.Span> Usabit</S.Span>
             </a>{' '}
-            como desenvolvedor front end e estou me formando em Análise e
-            Desenvolvimento de Sistema. <br />
-            Abaixo mostro um pouco de algumas habilidades que venho adquirindo
-            como desenvolvedor front end.
-          </p> */}
-        </div>
-        <div
-          style={{
-            background: 'tomato',
-            gridArea: 'skills',
-            width: '100%',
-            height: '100%'
-          }}
-        >
-          <S.TitleCard>Habilidades</S.TitleCard>
+            e estou me formando em Análise e Desenvolvimento de Sistema.
+            <br />
+            <br />
+            Gosto de trabalhar em equipe mas tem momentos que também gosto de
+            trabalhar sozinho e as vezes de madrugada, sou proativo e bem
+            comunicativo. Tenho bastante conhecimento na área de tecnologia
+            voltado para área de Suporte Técnico (Help-Desk), atuei por 8 anos
+            nessa área, então que tal montar um computador comigo?
+            <br />
+            <br />
+            Venho me atualizando, me aprimorando para desenvolver sistemas web
+            aplicando técnicas SEO (Search Engine Optimization), tudo isso
+            visando sites responsivos, alta performance e boa acessibilidade
+            web. As tecnologias que tenho um conhecimento mais sólido para
+            criação de sites é React.js, Typescript e Styled Component. Hoje
+            venho me aventurando no mundo do Vue.js e busco aprender outras
+            tecnologias para ampliar meus conhecimentos.
+          </S.Text>
+          <S.HR />
+        </S.AboutText>
+        <S.SkillsCard>
           <S.Div>
-            <HtmlIcon text="HTML" />
-            <CssIcon text="CSS" />
-            <JSIcon text="JS" />
-            <ReactIcon text="React.js" />
-            <TSIcon text="TS" />
-            <GitIcon text="Git" />
-            <VSCodeIcon text="Vscode" />
-            <VueIcon text="Vue.js" />
+            <HtmlIcon />
+            <CssIcon />
+            <JSIcon />
+            <ReactIcon />
+            <TSIcon />
+            <GitIcon />
+            <VSCodeIcon />
+            <VueIcon />
           </S.Div>
-        </div>
+        </S.SkillsCard>
       </S.Section>
     </S.Wrapper>
   );

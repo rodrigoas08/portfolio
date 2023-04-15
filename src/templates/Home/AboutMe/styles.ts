@@ -90,16 +90,15 @@ export const SkillsCard = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  grid-area: skills;
   align-items: end;
+  grid-area: skills;
   justify-content: center;
 `;
 
 export const HR = styled.div`
-  z-index: 2;
   width: 100%;
-  height: 0.1rem;
   opacity: 0.3;
+  height: 0.1rem;
   background-color: ${({ theme }) => theme.colors.primary};
 `;
 
@@ -115,8 +114,8 @@ export const Div = styled.div`
     }
 
     div:hover svg {
-      transform: scale(1.1);
       opacity: 1;
+      transform: scale(1.1);
     }
   `}
 `;

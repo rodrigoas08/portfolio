@@ -3,7 +3,7 @@ import * as S from './styles';
 import { Button } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
 import ImageEmConstrucao from 'img/portfolios/em_construcao.jpg';
-import { GitHubIconFilled, EyeIcon } from 'components/Icons';
+import { FaEye, FaGithub } from 'react-icons/fa';
 
 export type CardProps = {
   link?: string;
@@ -21,13 +21,13 @@ const Card = ({ title, background, link, repository }: CardProps) => {
 
   return (
     <S.Card
-    data-aos="fade-up"
-    data-aos-offset="2"
-    data-aos-delay="50"
-    data-aos-duration="1000"
-    data-aos-easing="ease-in-out"
-    data-aos-mirror="true"
-    data-aos-once="false"
+      data-aos="fade-up"
+      data-aos-offset="2"
+      data-aos-delay="50"
+      data-aos-duration="1000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
     >
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
@@ -36,12 +36,12 @@ const Card = ({ title, background, link, repository }: CardProps) => {
         <S.ButtonWrapper>
           {repository && (
             <Button secondary onClick={() => openLinkInNewTab(`${repository}`)}>
-              <GitHubIconFilled /> Repositório
+              <FaGithub /> Repositório
             </Button>
           )}
           {link && (
             <Button secondary onClick={() => openLinkInNewTab(`${link}`)}>
-              Visitar <EyeIcon />
+              Visitar <FaEye />
             </Button>
           )}
         </S.ButtonWrapper>

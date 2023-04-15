@@ -19,10 +19,10 @@ export const Wrapper = styled.div<IconProps>`
     css`
       :hover:before {
         content: '${ballonText}';
-        min-width: 5rem;
-        bottom: -3.5rem;
         height: auto;
         display: flex;
+        bottom: -3.5rem;
+        min-width: 5rem;
         position: absolute;
         align-items: center;
         justify-content: center;
@@ -37,8 +37,8 @@ export const Wrapper = styled.div<IconProps>`
         width: 0;
         height: 0;
         display: block;
-        position: absolute;
         bottom: -1.5rem;
+        position: absolute;
         border-left: 1rem solid transparent;
         border-right: 1rem solid transparent;
         border-bottom: 1rem solid ${theme.colors.primary};

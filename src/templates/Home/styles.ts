@@ -57,7 +57,7 @@ export const Name = styled.p`
     padding: ${theme.spacings.xsmall} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
     font-family: ${theme.font.family.montserrat};
-    filter: drop-shadow(-1px 1px 0px ${theme.colors.primary});
+    filter: drop-shadow(-0.1rem 0.1rem 0px ${theme.colors.primary});
 
     :hover {
       filter: none;

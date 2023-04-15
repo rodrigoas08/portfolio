@@ -45,7 +45,7 @@ export const Card = styled.div`
         display: flex;
         opacity: 1;
         transition: all 1.1s linear ease;
-        transform: translateY(10px);
+        transform: translateY(1rem);
         animation: animate 1s linear;
       }
       @keyframes animate {
@@ -54,7 +54,7 @@ export const Card = styled.div`
           transform: translateY(-8px);
         }
         to {
-          transform: translateY(10px);
+          transform: translateY(1rem);
         }
       }
     }

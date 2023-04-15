@@ -105,13 +105,13 @@ export const Input = styled.input`
 		border-style: none;
 		text-transform: lowercase;
 		border-radius: ${theme.border.radius};
-		border: 1px solid ${theme.colors.lightGray};
-		border-left: 10px solid ${theme.colors.primary};
+		border: 0.1rem solid ${theme.colors.lightGray};
+		border-left: 1rem solid ${theme.colors.primary};
 		padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 
 		&:focus {
-			border: 1px solid ${theme.colors.primary};
-			border-left: 10px solid ${theme.colors.primary};
+			border: 0.1rem solid ${theme.colors.primary};
+			border-left: 1rem solid ${theme.colors.primary};
 		}
 		:nth-child(0n + 2) {
 			text-transform: capitalize;
@@ -126,13 +126,13 @@ export const Textarea = styled.textarea`
 		height: 15rem;
 		outline: none;
 		border-radius: ${theme.border.radius};
-		border: 1px solid ${theme.colors.lightGray};
-		border-left: 10px solid ${theme.colors.primary};
+		border: 0.1rem solid ${theme.colors.lightGray};
+		border-left: 1rem solid ${theme.colors.primary};
 		padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 
 		&:focus {
-			border: 1px solid ${theme.colors.primary};
-			border-left: 10px solid ${theme.colors.primary};
+			border: 0.1rem solid ${theme.colors.primary};
+			border-left: 1rem solid ${theme.colors.primary};
 		}
 	`}
 `;

@@ -26,7 +26,6 @@ export const Wrapper = styled.div`
 
 export const Icon = styled.div`
   ${({ theme }) => css`
-    top: 10;
     width: 3rem;
     height: 100%;
     display: flex;
@@ -35,6 +34,10 @@ export const Icon = styled.div`
     justify-content: center;
     transition: 1s ease-in-out;
     background-color: ${theme.colors.grayIce};
+
+    path {
+      fill: ${theme.colors.primary};
+    }
   `}
 `;
 

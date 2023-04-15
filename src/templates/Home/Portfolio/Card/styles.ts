@@ -106,6 +106,10 @@ export const ButtonWrapper = styled.div`
       align-items: end;
       gap: ${theme.spacings.xxsmall};
 
+      path {
+        fill: ${theme.colors.black};
+      }
+
       :hover path {
         fill: ${theme.colors.alabaster};
       }

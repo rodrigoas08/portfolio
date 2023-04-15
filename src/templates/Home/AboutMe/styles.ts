@@ -115,6 +115,7 @@ export const Div = styled.div`
     }
 
     div:hover svg {
+      transform: scale(1.1);
       opacity: 1;
     }
   `}

@@ -75,19 +75,19 @@ export const Textarea = styled.textarea`
 
 export const CTAWrapper = styled.div`
   ${({ theme }) => css`
-    gap: 1rem;
     width: 100%;
     height: 40rem;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
+    gap: ${theme.spacings.xxsmall};
     padding: ${theme.spacings.small};
     margin-top: ${theme.spacings.xlarge};
     font-size: ${theme.font.sizes.medium};
 
     > h1 {
-      font-size: 39px;
+      font-size: 3.9rem;
       color: ${theme.colors.primary};
       margin-bottom: ${theme.spacings.small};
     }

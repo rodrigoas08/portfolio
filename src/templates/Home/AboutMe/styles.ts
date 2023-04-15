@@ -41,10 +41,10 @@ export const Section = styled.section`
     width: 90%;
     height: auto;
     display: grid;
-    place-items: center;
+    justify-items: center;
+    gap: ${theme.spacings.small};
     grid-template-rows: 1fr 0.6fr;
-    grid-template-columns: 1fr 3fr;
-    gap: ${theme.spacings.xxxsmall};
+    grid-template-columns: 34rem 3fr;
     margin-top: ${theme.spacings.xxlarge};
     grid-template-areas:
       'aboutCard aboutText'

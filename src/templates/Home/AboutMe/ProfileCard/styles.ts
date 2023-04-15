@@ -5,8 +5,6 @@ export const AboutCard = styled.div`
     width: 32rem;
     height: auto;
     grid-area: aboutCard;
-    border-radius: ${theme.border.radius};
-    border: 0.4rem solid ${theme.colors.primary};
 
     @media (max-width: ${theme.breakpoints.tablet}) {
     }
@@ -26,6 +24,8 @@ export const TopInfo = styled.div`
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
     font-size: ${theme.font.sizes.small};
+    border-radius: ${theme.border.radius};
+    border: 0.4rem solid ${theme.colors.primary};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.small}
       ${theme.spacings.small};
     background: linear-gradient(

@@ -1,10 +1,10 @@
 import * as S from './styles';
-import { Button, Input, Title } from 'components';
+import emailjs from 'emailjs-com';
 import { useForm } from 'react-hook-form';
 import { FormState } from 'interfaces/form';
-import emailjs from 'emailjs-com';
-import { NameIcon, EmailIcon, SubjectIcon } from 'components/Icons';
+import { Button, Input, Title } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
+import { SubjectIcon, NameIcon, EmailIcon } from 'components/Icons';
 
 const Contact = () => {
   const { register, handleSubmit, formState } = useForm<FormState>({
@@ -78,7 +78,7 @@ const Contact = () => {
             icon={<SubjectIcon />}
             fullWidth
             autoComplete="off"
-            placeholder="Indique qual assunto"
+            placeholder="Qual será o assunto"
             register={() =>
               register('subject', {
                 required: true

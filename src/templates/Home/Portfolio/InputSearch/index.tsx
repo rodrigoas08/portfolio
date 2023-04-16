@@ -23,7 +23,7 @@ export default InputSearch;
 
 const Wrapper = styled.div`
   width: 30rem;
-  margin-top: 2rem;
+  margin-top: ${({ theme }) => theme.spacings.small};
 `;
 
 const SearchInput = styled(Input)`

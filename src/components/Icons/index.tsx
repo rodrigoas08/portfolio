@@ -64,7 +64,6 @@ export const LinkedInIcon = ({ text, handleClick }: IconProps) => {
 };
 // FINAL : ICONS HOME SECTION
 
-
 export const SubjectIcon = () => {
   return (
     <svg
@@ -118,6 +117,57 @@ export const NameIcon = () => {
 // FINAL : ICONS CARD PORTFOLIO
 
 // START : ICONS COLORED ABOUT ME SECTION
+export const VuetifyIcon = ({ text }: IconProps) => {
+  return (
+    <S.Wrapper
+      ballonText="Vuetify"
+      data-aos="zoom-in"
+      data-aos-offset="2"
+      data-aos-delay="50"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
+      <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
+        <path d="M64.004 0H34.102l29.902 61.848" fill="#1697F6"></path>
+        <path
+          d="M64.004 80v48L0 18.664h33.527L64.004 80zm0-80h29.898L64.004 61.848"
+          fill="#7BC6FF"
+        ></path>
+        <path
+          d="M94.473 18.664H128L64.004 128V80l30.469-61.336z"
+          fill="#AEDDFF"
+        ></path>
+      </svg>
+      {text ? <p>{text}</p> : null}
+    </S.Wrapper>
+  );
+};
+
+export const NpmIcon = ({ text }: IconProps) => {
+  return (
+    <S.Wrapper
+      ballonText="npm"
+      data-aos="zoom-in"
+      data-aos-offset="2"
+      data-aos-delay="50"
+      data-aos-duration="1500"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
+      <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
+        <path
+          fill="#cb3837"
+          d="M2 38.5h124v43.71H64v7.29H36.44v-7.29H2zm6.89 36.43h13.78V53.07h6.89v21.86h6.89V45.79H8.89zm34.44-29.14v36.42h13.78v-7.28h13.78V45.79zm13.78 7.29H64v14.56h-6.89zm20.67-7.29v29.14h13.78V53.07h6.89v21.86h6.89V53.07h6.89v21.86h6.89V45.79z"
+        ></path>
+      </svg>
+      {text ? <p>{text}</p> : null}
+    </S.Wrapper>
+  );
+};
+
 export const TSIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper

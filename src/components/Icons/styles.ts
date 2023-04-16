@@ -25,7 +25,7 @@ export const Wrapper = styled.div<IconProps>`
         position: absolute;
         align-items: center;
         justify-content: center;
-        animation: growup 0.2s linear;
+        animation: growup 0.6s linear;
         font-size: ${theme.font.sizes.xxsmall};
         border-radius: ${theme.border.radius};
         padding: 0.3rem ${theme.spacings.xxsmall};
@@ -39,7 +39,7 @@ export const Wrapper = styled.div<IconProps>`
         display: block;
         bottom: -1.5rem;
         position: absolute;
-        animation: growup 0.2s linear;
+        animation: growup 0.6s linear;
         border-left: 1rem solid transparent;
         border-right: 1rem solid transparent;
         border-bottom: 1rem solid ${theme.colors.primary};

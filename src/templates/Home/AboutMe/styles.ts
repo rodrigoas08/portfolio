@@ -70,8 +70,8 @@ export const AboutText = styled.div`
 
 export const Text = styled.p`
   ${({ theme }) => css`
-    line-height: 150%;
-    font-size: ${theme.font.sizes.large};
+    line-height: 120%;
+    font-size: ${theme.font.sizes.medium};
     font-family: ${theme.font.family.montserrat};
   `}
 
@@ -104,10 +104,13 @@ export const HR = styled.div`
 
 export const Div = styled.div`
   ${({ theme }) => css`
-    display: flex;
+    display: grid;
     align-items: end;
+    column-gap: 8rem;
     justify-content: center;
-    gap: ${theme.spacings.medium};
+    row-gap: ${theme.spacings.xxlarge};
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     div svg {
       opacity: 0.4;

@@ -13,9 +13,12 @@ import {
   TSIcon,
   GitIcon,
   VueIcon,
-  VSCodeIcon
+  VSCodeIcon,
+  NpmIcon,
+  VuetifyIcon
 } from 'components/Icons';
 import ProfileCard from './ProfileCard';
+import { Vuetify } from 'styled-icons/simple-icons';
 
 const AboutMe = () => {
   const ProfilecardIcons = [
@@ -98,7 +101,7 @@ const AboutMe = () => {
             venho me aventurando no mundo do Vue.js e busco aprender outras
             tecnologias para ampliar meus conhecimentos.
           </S.Text>
-          <S.HR />
+          {/* <S.HR /> */}
         </S.AboutText>
         <S.SkillsCard>
           <S.Div>
@@ -107,9 +110,11 @@ const AboutMe = () => {
             <JSIcon />
             <ReactIcon />
             <TSIcon />
-            <GitIcon />
-            <VSCodeIcon />
             <VueIcon />
+            <VuetifyIcon />
+            <VSCodeIcon />
+            <GitIcon />
+            <NpmIcon />
           </S.Div>
         </S.SkillsCard>
       </S.Section>

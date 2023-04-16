@@ -11,7 +11,6 @@ export const Wrapper = styled.div<IconProps>`
     position: relative;
     align-items: center;
     flex-direction: column;
-    transition: all 1s ease;
     font-size: ${theme.font.sizes.small};
     column-gap: ${theme.spacings.xxsmall};
 
@@ -21,12 +20,13 @@ export const Wrapper = styled.div<IconProps>`
         content: '${ballonText}';
         height: auto;
         display: flex;
-        bottom: -3.5rem;
+        bottom: -3rem;
         min-width: 5rem;
         position: absolute;
         align-items: center;
         justify-content: center;
-        font-size: ${theme.font.sizes.xsmall};
+        animation: growup 0.2s linear;
+        font-size: ${theme.font.sizes.xxsmall};
         border-radius: ${theme.border.radius};
         padding: 0.3rem ${theme.spacings.xxsmall};
         background-color: ${theme.colors.primary};
@@ -39,9 +39,19 @@ export const Wrapper = styled.div<IconProps>`
         display: block;
         bottom: -1.5rem;
         position: absolute;
+        animation: growup 0.2s linear;
         border-left: 1rem solid transparent;
         border-right: 1rem solid transparent;
         border-bottom: 1rem solid ${theme.colors.primary};
+      }
+
+      @keyframes growup {
+        from {
+          transform: translateY(1rem);
+        }
+        to {
+          transform: translateY(0rem);
+        }
       }
     `}
 

@@ -65,8 +65,9 @@ export const Form = styled.form`
     border-radius: ${theme.border.radius};
     background-color: ${theme.colors.grayIce};
 
-    > button {
+    ${ButtonStyles.Wrapper} {
       border-radius: 0;
+      text-transform: uppercase;
     }
   `}
 `;

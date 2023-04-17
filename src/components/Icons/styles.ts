@@ -69,6 +69,7 @@ export const Wrapper = styled.div<IconProps>`
     ${sideText &&
     css`
       width: 15rem;
+      height: 4rem;
       cursor: pointer;
       flex-direction: row;
       padding: 0 ${theme.spacings.small};

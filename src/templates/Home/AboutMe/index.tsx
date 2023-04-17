@@ -56,7 +56,7 @@ const AboutMe = () => {
 
   return (
     <S.Wrapper>
-      <Title text="Quem sou..." />
+      <Title text="Sobre mim" />
       <S.Section>
         <ProfileCard
           name="Rodrigo Sobral"
@@ -77,22 +77,18 @@ const AboutMe = () => {
           data-aos-once="false"
         >
           <S.Text>
-            Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro,
-            recentemente fiz migração de carreira saindo da área de help-desk e
-            vim para a programação e atualmente sou desenvolvedor front-end na
+            Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro. Em
+            dezembro de 2021 saí da área de help-desk e começei a estudar
+            programação e atualmente sou desenvolvedor front-end na
             <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
               <S.Span> Usabit</S.Span>
             </a>{' '}
-            e estou me formando em Análise e Desenvolvimento de Sistema.
+            e estou cursando Análise e Desenvolvimento de Sistema.
             <br />
             <br />
             Gosto de trabalhar em equipe mas tem momentos que também gosto de
             trabalhar sozinho e as vezes de madrugada, sou proativo e bem
-            comunicativo. Tenho bastante conhecimento na área de tecnologia
-            voltado para área de Suporte Técnico (Help-Desk), atuei por 8 anos
-            nessa área, então que tal montar um computador comigo?
-            <br />
-            <br />
+            comunicativo. <br />
             Venho me atualizando, me aprimorando para desenvolver sistemas web
             aplicando técnicas SEO (Search Engine Optimization), tudo isso
             visando sites responsivos, alta performance e boa acessibilidade
@@ -100,6 +96,11 @@ const AboutMe = () => {
             criação de sites é React.js, Typescript e Styled Component. Hoje
             venho me aventurando no mundo do Vue.js e busco aprender outras
             tecnologias para ampliar meus conhecimentos.
+            <br />
+            <br />
+            Além de trabalhar hoje com programação eu também faço montagem de
+            computador, faço uma consultoria para ajudar pessoas a escolherem as
+            melhores peças para cada tipo de uso.
           </S.Text>
           {/* <S.HR /> */}
         </S.AboutText>

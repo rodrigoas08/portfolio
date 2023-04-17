@@ -148,7 +148,7 @@ export const VuetifyIcon = ({ text }: IconProps) => {
 export const NpmIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="npm"
+      ballonText="Npm"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"

@@ -25,7 +25,7 @@ export const Wrapper = styled.div<IconProps>`
         content: '${ballonText}';
         height: auto;
         display: flex;
-        bottom: -3rem;
+        bottom: -2rem;
         min-width: 5rem;
         position: absolute;
         align-items: center;
@@ -42,7 +42,7 @@ export const Wrapper = styled.div<IconProps>`
         width: 0;
         height: 0;
         display: block;
-        bottom: -1.5rem;
+        bottom: -0.5rem;
         position: absolute;
         animation: growup 0.6s linear;
         border-left: 1rem solid transparent;

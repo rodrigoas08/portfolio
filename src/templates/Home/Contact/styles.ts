@@ -37,7 +37,9 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
 
     @media (max-width: ${theme.breakpoints.tablet}) {
       ${Content} {
-        flex-direction: row;
+        gap: 0;
+        align-items: center;
+        flex-direction: column;
       }
     }
   `}

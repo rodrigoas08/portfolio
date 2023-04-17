@@ -51,6 +51,7 @@ export const Input = styled.input<InputType>`
   ${({ theme, fullWidth }) => css`
     height: 3rem;
     outline: none;
+    position: relative;
     border-radius: 0.1rem;
     border: 0.1rem solid transparent;
     background-color: ${theme.colors.grayIce};
@@ -61,5 +62,16 @@ export const Input = styled.input<InputType>`
     :focus {
       border: 0.1rem solid ${theme.colors.primary};
     }
+  `}
+`;
+
+export const ErrorMessage = styled.p`
+  ${({ theme }) => css`
+    top: 3.1rem;
+    display: block;
+    position: absolute;
+    font-family: sans-serif;
+    color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.xsmall};
   `}
 `;

@@ -52,16 +52,6 @@ export const Section = styled.section`
   `}
 `;
 
-export const TitleCard = styled.h1`
-  ${({ theme }) => css`
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
-    font-weight: ${theme.font.normal};
-    padding-bottom: ${theme.spacings.xsmall};
-    font-size: ${theme.font.sizes.large};
-  `}
-`;
-
 export const AboutText = styled.div`
   width: 100%;
   height: auto;

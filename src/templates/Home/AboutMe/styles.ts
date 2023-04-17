@@ -95,13 +95,6 @@ export const SkillsCard = styled.div`
   justify-content: center;
 `;
 
-export const HR = styled.div`
-  width: 100%;
-  opacity: 0.3;
-  height: 0.1rem;
-  background-color: ${({ theme }) => theme.colors.primary};
-`;
-
 export const Div = styled.div`
   ${({ theme }) => css`
     display: grid;

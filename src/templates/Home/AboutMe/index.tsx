@@ -18,7 +18,6 @@ import {
   VuetifyIcon
 } from 'components/Icons';
 import ProfileCard from './ProfileCard';
-import { Vuetify } from 'styled-icons/simple-icons';
 
 const AboutMe = () => {
   const ProfilecardIcons = [
@@ -102,7 +101,6 @@ const AboutMe = () => {
             computador, faço uma consultoria para ajudar pessoas a escolherem as
             melhores peças para cada tipo de uso.
           </S.Text>
-          {/* <S.HR /> */}
         </S.AboutText>
         <S.SkillsCard>
           <S.Div>

@@ -14,27 +14,47 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
     box-shadow: 0.1rem -0.4rem 1rem rgba(0, 0, 0, 0.9);
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      padding: ${theme.spacings.small};
-      padding-top: ${theme.spacings.xxlarge};
+      padding: 8rem ${theme.spacings.small};
+
+      ${Content} {
+        width: 90%;
+      }
+
+      ${Form} {
+        width: 100%;
+      }
+
+      ${CTAWrapper} {
+        width: 100%;
+        height: auto;
+        font-size: ${theme.font.sizes.xsmall};
+
+        > p {
+          font-size: ${theme.font.sizes.small};
+        }
+      }
     }
 
-    > section {
-      width: 80%;
-      display: flex;
-      flex-direction: row-reverse;
-
-      @media (max-width: ${theme.breakpoints.ipad}) {
-        display: flex;
-        flex-direction: column-reverse;
-        padding: ${theme.spacings.small};
+    @media (max-width: ${theme.breakpoints.tablet}) {
+      ${Content} {
+        flex-direction: row;
       }
     }
   `}
 `;
 
+export const Content = styled.div`
+  ${({ theme }) => css`
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    gap: ${theme.spacings.xlarge};
+  `}
+`;
+
 export const Form = styled.form`
   ${({ theme }) => css`
-    width: 100%;
+    width: 45rem;
     height: 40rem;
     display: flex;
     flex-direction: column;
@@ -47,10 +67,6 @@ export const Form = styled.form`
 
     > button {
       border-radius: 0;
-    }
-
-    @media (max-width: ${theme.breakpoints.ipad}) {
-      width: 100%;
     }
   `}
 `;
@@ -75,7 +91,7 @@ export const Textarea = styled.textarea`
 
 export const CTAWrapper = styled.div`
   ${({ theme }) => css`
-    width: 100%;
+    width: auto;
     height: 40rem;
     display: flex;
     text-align: center;
@@ -112,16 +128,6 @@ export const CTAWrapper = styled.div`
 
       :hover {
         opacity: 0.9;
-      }
-    }
-
-    @media (max-width: ${theme.breakpoints.ipad}) {
-      width: 100%;
-      height: auto;
-      font-size: ${theme.font.sizes.xsmall};
-
-      > p {
-        font-size: ${theme.font.sizes.small};
       }
     }
   `}

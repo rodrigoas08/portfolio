@@ -77,13 +77,13 @@ const AboutMe = () => {
         >
           <S.Text>
             Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro. Em
-            dezembro de 2021 saí da área de help-desk e começei a estudar
-            programação e atualmente sou desenvolvedor front-end na
+            dezembro de 2021 entrei na{' '}
             <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
-              <S.Span> Usabit</S.Span>
+              <S.Span>Usabit</S.Span>
             </a>{' '}
-            e estou cursando Análise e Desenvolvimento de Sistema.
-            <br />
+            como estágiário para estudar programação, hoje sou Desenvolvedor
+            Front-end Júnior e estou cursando Análise e Desenvolvimento de
+            Sistema.
             <br />
             Gosto de trabalhar em equipe mas tem momentos que também gosto de
             trabalhar sozinho e as vezes de madrugada, sou proativo e bem
@@ -91,12 +91,8 @@ const AboutMe = () => {
             As tecnologias que tenho um conhecimento mais sólido para criação de
             sites é React.js, Typescript e Styled Component. Hoje venho me
             aventurando no mundo do Vue.js e busco aprender outras tecnologias
-            para ampliar meus conhecimentos.
-            <br />
-            <br />
-            Além de trabalhar hoje com programação eu também faço montagem de
-            computador, faço uma consultoria para ajudar pessoas a escolherem as
-            melhores peças para cada tipo de uso.
+            para ampliar meus conhecimentos. Abaixo segue algumas tecnologias e
+            ferramentas que utilizo:
           </S.Text>
         </S.AboutText>
         <S.SkillsCard>

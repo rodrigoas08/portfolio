@@ -69,9 +69,9 @@ export const AboutText = styled.div`
 
 export const Text = styled.p`
   ${({ theme }) => css`
-    line-height: 120%;
+    line-height: 160%;
+    font-family: sans-serif;
     font-size: ${theme.font.sizes.medium};
-    font-family: ${theme.font.family.montserrat};
   `}
 
   a {
@@ -99,7 +99,7 @@ export const Div = styled.div`
     display: grid;
     align-items: end;
     justify-content: center;
-    row-gap: ${theme.spacings.large};
+    row-gap: ${theme.spacings.medium};
     column-gap: ${theme.spacings.small};
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(5, 1fr);

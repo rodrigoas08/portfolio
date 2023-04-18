@@ -26,6 +26,10 @@ const Header = () => {
       id: 'sobre'
     },
     {
+      name: 'Habilidades',
+      id: 'habilidades'
+    },
+    {
       name: 'Portfólio',
       id: 'portfolio'
     },

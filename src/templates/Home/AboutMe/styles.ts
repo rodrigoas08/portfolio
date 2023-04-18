@@ -21,11 +21,6 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
       ${AboutText} {
         display: none;
       }
-
-      ${Div} {
-        grid-template-rows: repeat(4, 1fr);
-        grid-template-columns: repeat(3, 1fr);
-      }
     }
 
     @media (max-width: ${theme.breakpoints.tablet}) {
@@ -38,7 +33,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
       }
 
       ${AboutText} {
-        padding-inline: 10rem;
+        padding-inline: 5rem;
         word-break: keep-all;
       }
     }
@@ -51,13 +46,10 @@ export const Section = styled.section`
     height: auto;
     display: grid;
     justify-items: center;
-    gap: ${theme.spacings.small};
-    grid-template-rows: 1fr 0.6fr;
-    grid-template-columns: 34rem 3fr;
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: ${theme.spacings.small};
     margin-top: ${theme.spacings.xxlarge};
-    grid-template-areas:
-      'aboutCard aboutText'
-      'aboutCard skills';
+    grid-template-areas: 'aboutCard aboutText';
   `}
 `;
 
@@ -82,35 +74,5 @@ export const Text = styled.p`
 export const Span = styled.span`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
-  `}
-`;
-
-export const SkillsCard = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: end;
-  grid-area: skills;
-  justify-content: center;
-`;
-
-export const Div = styled.div`
-  ${({ theme }) => css`
-    display: grid;
-    align-items: end;
-    justify-content: center;
-    row-gap: ${theme.spacings.medium};
-    column-gap: ${theme.spacings.small};
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-
-    div svg {
-      opacity: 0.4;
-    }
-
-    div:hover svg {
-      opacity: 1;
-      transform: scale(1.1);
-    }
   `}
 `;

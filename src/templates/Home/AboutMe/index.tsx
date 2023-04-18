@@ -3,21 +3,9 @@ import 'aos/dist/aos.css';
 import * as S from './styles';
 import { Title } from 'components';
 import EuPedro from 'img/euPedro.jpg';
+import ProfileCard from './ProfileCard';
 import { openLinkInNewTab } from 'utils/functions';
 import { FaLinkedin, FaWhatsapp, FaInstagram, FaGithub } from 'react-icons/fa';
-import {
-  HtmlIcon,
-  CssIcon,
-  JSIcon,
-  ReactIcon,
-  TSIcon,
-  GitIcon,
-  VueIcon,
-  VSCodeIcon,
-  NpmIcon,
-  VuetifyIcon
-} from 'components/Icons';
-import ProfileCard from './ProfileCard';
 
 const AboutMe = () => {
   const ProfilecardIcons = [
@@ -91,24 +79,9 @@ const AboutMe = () => {
             As tecnologias que tenho um conhecimento mais sólido para criação de
             sites é React.js, Typescript e Styled Component. Hoje venho me
             aventurando no mundo do Vue.js e busco aprender outras tecnologias
-            para ampliar meus conhecimentos. Abaixo segue algumas tecnologias e
-            ferramentas que utilizo:
+            para ampliar meus conhecimentos.
           </S.Text>
         </S.AboutText>
-        <S.SkillsCard>
-          <S.Div>
-            <HtmlIcon />
-            <CssIcon />
-            <JSIcon />
-            <ReactIcon />
-            <TSIcon />
-            <VueIcon />
-            <VuetifyIcon />
-            <VSCodeIcon />
-            <GitIcon />
-            <NpmIcon />
-          </S.Div>
-        </S.SkillsCard>
       </S.Section>
     </S.Wrapper>
   );

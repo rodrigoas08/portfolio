@@ -1,5 +1,5 @@
 import * as S from './styles';
-import { Portfolio, AboutMe, Contact } from 'templates';
+import { Portfolio, AboutMe, Contact, Skills } from 'templates';
 import { GitHubIcon, LinkedInIcon } from 'components/Icons';
 import { openLinkInNewTab } from 'utils/functions';
 
@@ -30,6 +30,7 @@ const Home = () => {
         </S.NavIcons>
       </S.Wrapper>
       <AboutMe />
+      <Skills />
       <Portfolio />
       <Contact />
     </>

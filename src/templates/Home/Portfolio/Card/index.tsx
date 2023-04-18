@@ -32,7 +32,6 @@ const Card = ({ title, background, link, repository }: CardProps) => {
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
         <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
-        {(repository || link) && <S.HR />}
         <S.ButtonWrapper>
           {repository && (
             <Button secondary onClick={() => openLinkInNewTab(`${repository}`)}>

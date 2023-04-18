@@ -44,17 +44,17 @@ export const Card = styled.div`
       ${ButtonWrapper} {
         display: flex;
         opacity: 1;
-        transition: all 1.1s linear ease;
-        transform: translateY(1rem);
+        transform: translateY(3rem);
         animation: animate 1s linear;
+        transition: all 1.1s linear ease;
       }
       @keyframes animate {
         from {
           display: none;
-          transform: translateY(-8px);
+          transform: translateY(0rem);
         }
         to {
-          transform: translateY(1rem);
+          transform: translateY(3rem);
         }
       }
     }
@@ -74,6 +74,7 @@ export const CardImage = styled.div<CardProps>`
 export const CardInfo = styled.div`
   ${({ theme }) => css`
     display: flex;
+    position: relative;
     align-items: center;
     flex-direction: column;
     justify-content: center;
@@ -95,9 +96,11 @@ export const CardTitle = styled.h1`
 export const ButtonWrapper = styled.div`
   ${({ theme }) => css`
     opacity: 0;
+    top: 6.5rem;
     display: flex;
-    transition: all 1.1s ease;
+    position: absolute;
     justify-content: center;
+    transition: all 1.1s ease;
     gap: ${theme.spacings.large};
 
     ${ButtonStyles.Wrapper} {
@@ -115,11 +118,4 @@ export const ButtonWrapper = styled.div`
       }
     }
   `}
-`;
-
-export const HR = styled.hr`
-  opacity: 0.1;
-  z-index: 2;
-  width: 100%;
-  height: 0.2rem;
 `;

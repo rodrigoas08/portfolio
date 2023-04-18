@@ -5,7 +5,7 @@ type ProfileCardprops = {
   name: string;
   githubName: string;
   localization: string;
-  icons: JSX.Element[];
+  // icons: JSX.Element[];
   image: string;
   occupation: string;
   skills: string;
@@ -15,7 +15,6 @@ const ProfileCard = ({
   githubName,
   localization,
   name,
-  icons,
   image,
   occupation,
   skills
@@ -56,7 +55,7 @@ const ProfileCard = ({
         <S.Text>
           {skills}
         </S.Text>
-        <S.DivIcons>{icons}</S.DivIcons>
+        {/* <S.DivIcons>{icons}</S.DivIcons> */}
       </S.TopInfo>
     </S.AboutCard>
   );

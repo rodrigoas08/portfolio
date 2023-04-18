@@ -30,7 +30,7 @@ export const TopInfo = styled.div`
       ${theme.spacings.small};
     background: linear-gradient(
       to top,
-      ${theme.colors.grayIce} 32rem,
+      ${theme.colors.grayIce} 26rem,
       ${theme.colors.primary} 0%
     );
   `}
@@ -70,20 +70,20 @@ export const Title = styled.h1`
   `}
 `;
 
-export const DivIcons = styled.div`
-  ${({ theme }) => css`
-    display: flex;
-    justify-content: center;
-    gap: ${theme.spacings.medium};
-    margin-top: ${theme.spacings.small};
+// export const DivIcons = styled.div`
+//   ${({ theme }) => css`
+//     display: flex;
+//     justify-content: center;
+//     gap: ${theme.spacings.medium};
+//     margin-top: ${theme.spacings.small};
 
-    svg {
-      transition: 1s ease;
-    }
+//     svg {
+//       transition: 1s ease;
+//     }
 
-    svg:hover {
-      transition: 1s ease;
-      fill: ${theme.colors.primary};
-    }
-  `}
-`;
+//     svg:hover {
+//       transition: 1s ease;
+//       fill: ${theme.colors.primary};
+//     }
+//   `}
+// `;

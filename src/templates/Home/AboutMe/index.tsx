@@ -11,7 +11,7 @@ const AboutMe = () => {
   const ProfilecardIcons = [
     <FaGithub
       onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}
-      size={20}
+      size={30}
       cursor="pointer"
       title="Github"
     />,
@@ -19,7 +19,7 @@ const AboutMe = () => {
       onClick={() =>
         openLinkInNewTab('https://www.linkedin.com/in/rodrigo-sobral-302012aa/')
       }
-      size={20}
+      size={30}
       cursor="pointer"
       title="LinkedIn"
     />,
@@ -27,7 +27,7 @@ const AboutMe = () => {
       onClick={() =>
         openLinkInNewTab('https://www.instagram.com/orodrigosobral/')
       }
-      size={20}
+      size={30}
       cursor="pointer"
       title="Instagram"
     />,
@@ -35,7 +35,7 @@ const AboutMe = () => {
       onClick={() =>
         openLinkInNewTab('https://api.whatsapp.com/send?phone=5521985141580')
       }
-      size={20}
+      size={30}
       cursor="pointer"
       title="Whatsapp"
     />
@@ -52,7 +52,6 @@ const AboutMe = () => {
           occupation="Desenvolvedor Front-end"
           skills="HTML | CSS | JavaScript | ReactJs | Typescript | Styled Components"
           image={EuPedro}
-          icons={ProfilecardIcons}
         />
         <S.AboutText
           data-aos="fade-left"
@@ -81,6 +80,10 @@ const AboutMe = () => {
             aventurando no mundo do Vue.js e busco aprender outras tecnologias
             para ampliar meus conhecimentos.
           </S.Text>
+          <S.DivIcons>
+            <h2>Conheça minhas redes sociais:</h2>
+            {ProfilecardIcons}
+          </S.DivIcons>
         </S.AboutText>
       </S.Section>
     </S.Wrapper>

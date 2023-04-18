@@ -18,19 +18,28 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
         justify-content: center;
       }
 
-      ${SkillsCard}, ${AboutText} {
+      ${AboutText} {
         display: none;
+      }
+
+      ${Div} {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
     }
 
     @media (max-width: ${theme.breakpoints.tablet}) {
       ${Section} {
         display: flex;
+        align-items: center;
+        flex-direction: column;
         justify-content: center;
+        gap: ${theme.spacings.medium};
       }
 
-      ${SkillsCard}, ${AboutText} {
-        display: none;
+      ${AboutText} {
+        padding-inline: 10rem;
+        word-break: keep-all;
       }
     }
   `}
@@ -89,9 +98,9 @@ export const Div = styled.div`
   ${({ theme }) => css`
     display: grid;
     align-items: end;
-    column-gap: 8rem;
     justify-content: center;
-    row-gap: ${theme.spacings.xxlarge};
+    row-gap: ${theme.spacings.large};
+    column-gap: ${theme.spacings.small};
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(5, 1fr);
 

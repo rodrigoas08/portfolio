@@ -54,7 +54,6 @@ const ProfileCard = ({
           <b>{occupation}</b>
         </S.Text>
         <S.Text>
-          <br />
           {skills}
         </S.Text>
         <S.DivIcons>{icons}</S.DivIcons>

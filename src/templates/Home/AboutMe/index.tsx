@@ -88,13 +88,10 @@ const AboutMe = () => {
             Gosto de trabalhar em equipe mas tem momentos que também gosto de
             trabalhar sozinho e as vezes de madrugada, sou proativo e bem
             comunicativo. <br />
-            Venho me atualizando, me aprimorando para desenvolver sistemas web
-            aplicando técnicas SEO (Search Engine Optimization), tudo isso
-            visando sites responsivos, alta performance e boa acessibilidade
-            web. As tecnologias que tenho um conhecimento mais sólido para
-            criação de sites é React.js, Typescript e Styled Component. Hoje
-            venho me aventurando no mundo do Vue.js e busco aprender outras
-            tecnologias para ampliar meus conhecimentos.
+            As tecnologias que tenho um conhecimento mais sólido para criação de
+            sites é React.js, Typescript e Styled Component. Hoje venho me
+            aventurando no mundo do Vue.js e busco aprender outras tecnologias
+            para ampliar meus conhecimentos.
             <br />
             <br />
             Além de trabalhar hoje com programação eu também faço montagem de

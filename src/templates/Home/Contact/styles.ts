@@ -95,15 +95,15 @@ export const Textarea = styled.textarea`
 export const CTAWrapper = styled.div`
   ${({ theme }) => css`
     width: auto;
-    height: 40rem;
+    height: auto;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
-    padding: ${theme.spacings.small};
+    padding: 0 ${theme.spacings.small};
     margin-top: ${theme.spacings.xlarge};
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.xxlarge};
 
     > h1 {
       font-size: 3.9rem;

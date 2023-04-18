@@ -55,7 +55,6 @@ const ProfileCard = ({
         <S.Text>
           {skills}
         </S.Text>
-        {/* <S.DivIcons>{icons}</S.DivIcons> */}
       </S.TopInfo>
     </S.AboutCard>
   );

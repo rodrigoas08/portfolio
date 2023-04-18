@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    font-weight: ${({ theme }) => theme.font.light};
     color: ${({ theme }) => theme.colors.alabaster};
   }
   

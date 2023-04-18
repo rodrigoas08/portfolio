@@ -83,8 +83,7 @@ export const AboutText = styled.div`
 
 export const Text = styled.p`
   ${({ theme }) => css`
-    line-height: 160%;
-    font-family: sans-serif;
+    line-height: 3rem;
     font-size: ${theme.font.sizes.medium};
   `}
 
@@ -108,7 +107,6 @@ export const DivIcons = styled.div`
     margin-top: ${theme.spacings.small};
 
     h2 {
-      font-family: sans-serif;
       font-size: 2.4rem;
     }
 

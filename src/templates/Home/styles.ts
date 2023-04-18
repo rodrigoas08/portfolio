@@ -41,22 +41,12 @@ export const WrapperText = styled.div`
   `}
 `;
 
-export const Welcome = styled.p`
-  ${({ theme }) => css`
-    padding-left: 0.2rem;
-    color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.large};
-    font-family: ${theme.font.family.josefin};
-  `}
-`;
-
-export const Name = styled.p`
+export const Name = styled.h1`
   ${({ theme }) => css`
     font-size: 7rem;
     font-weight: ${theme.font.bold};
     padding: ${theme.spacings.xsmall} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
-    font-family: ${theme.font.family.montserrat};
     filter: drop-shadow(-0.1rem 0.1rem 0px ${theme.colors.primary});
 
     :hover {
@@ -65,17 +55,23 @@ export const Name = styled.p`
   `}
 `;
 
-export const CarrerName = styled(Welcome)`
+export const CarrerName = styled.h2`
   ${({ theme }) => css`
-    color: white;
+    padding-left: 0.2rem;
     background-clip: text;
     text-transform: uppercase;
     -webkit-background-clip: text;
     font-weight: ${theme.font.bold};
+    color: ${theme.colors.alabaster};
     -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
-    background-image: linear-gradient(to right, #00aace, #fafafa, steelblue);
+    background-image: linear-gradient(
+      to right,
+      ${theme.colors.primary},
+      ${theme.colors.alabaster},
+      steelblue
+    );
   `}
 `;
 

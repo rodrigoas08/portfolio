@@ -70,7 +70,6 @@ export const ErrorMessage = styled.p`
     top: 3.1rem;
     display: block;
     position: absolute;
-    font-family: sans-serif;
     color: ${theme.colors.primary};
     font-size: ${theme.font.sizes.xsmall};
   `}

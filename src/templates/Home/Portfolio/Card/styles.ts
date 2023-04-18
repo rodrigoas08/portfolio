@@ -87,8 +87,8 @@ export const CardTitle = styled.h1`
   ${({ theme }) => css`
     letter-spacing: 0.2rem;
     color: ${theme.colors.black};
+    font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.xlarge};
-    font-family: ${theme.font.family.roboto};
   `}
 `;
 

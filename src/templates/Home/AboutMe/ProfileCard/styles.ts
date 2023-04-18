@@ -1,17 +1,9 @@
 import styled, { css } from 'styled-components';
 
 export const AboutCard = styled.div`
-  ${({ theme }) => css`
-    width: 32rem;
-    height: auto;
-    grid-area: aboutCard;
-
-    @media (max-width: ${theme.breakpoints.tablet}) {
-    }
-
-    @media (max-width: ${theme.breakpoints.ipad}) {
-    }
-  `}
+  width: 32rem;
+  height: auto;
+  grid-area: aboutCard;
 `;
 
 export const TopInfo = styled.div`
@@ -49,12 +41,7 @@ export const Image = styled.img`
 export const Text = styled.p`
   ${({ theme }) => css`
     text-align: center;
-    font-family: sans-serif;
     color: ${theme.colors.text};
-
-    b {
-      font-family: inherit;
-    }
 
     a {
       color: inherit;
@@ -65,25 +52,6 @@ export const Text = styled.p`
 
 export const Title = styled.h1`
   ${({ theme }) => css`
-    font-family: sans-serif;
     margin-top: ${theme.spacings.small};
   `}
 `;
-
-// export const DivIcons = styled.div`
-//   ${({ theme }) => css`
-//     display: flex;
-//     justify-content: center;
-//     gap: ${theme.spacings.medium};
-//     margin-top: ${theme.spacings.small};
-
-//     svg {
-//       transition: 1s ease;
-//     }
-
-//     svg:hover {
-//       transition: 1s ease;
-//       fill: ${theme.colors.primary};
-//     }
-//   `}
-// `;

@@ -7,8 +7,6 @@ type IconProps = {
 
 export const Wrapper = styled.div<IconProps>`
   ${({ theme, sideText, ballonText }) => css`
-    width: 7rem;
-    height: 7rem;
     display: flex;
     position: relative;
     align-items: center;
@@ -16,8 +14,6 @@ export const Wrapper = styled.div<IconProps>`
     flex-direction: column;
     font-size: ${theme.font.sizes.small};
     column-gap: ${theme.spacings.xxsmall};
-    border-radius: ${theme.border.radius};
-    background-color: ${theme.colors.grayIce};
 
     ${ballonText &&
     css`

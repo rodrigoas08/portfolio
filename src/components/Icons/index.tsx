@@ -120,7 +120,6 @@ export const NameIcon = () => {
 export const VuetifyIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="Vuetify"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -148,7 +147,6 @@ export const VuetifyIcon = ({ text }: IconProps) => {
 export const NpmIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="Npm"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -171,7 +169,6 @@ export const NpmIcon = ({ text }: IconProps) => {
 export const TSIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="Typescript"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -196,7 +193,6 @@ export const TSIcon = ({ text }: IconProps) => {
 export const GitIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="Git"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -219,7 +215,6 @@ export const GitIcon = ({ text }: IconProps) => {
 export const VueIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="Vue.js"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -250,7 +245,6 @@ export const VueIcon = ({ text }: IconProps) => {
 export const VSCodeIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="VS Code"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -285,7 +279,6 @@ export const VSCodeIcon = ({ text }: IconProps) => {
 export const JSIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="Javascript"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -309,7 +302,6 @@ export const JSIcon = ({ text }: IconProps) => {
 export const ReactIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="React.js"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -332,7 +324,6 @@ export const ReactIcon = ({ text }: IconProps) => {
 export const CssIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="CSS 3"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
@@ -375,7 +366,6 @@ export const CssIcon = ({ text }: IconProps) => {
 export const HtmlIcon = ({ text }: IconProps) => {
   return (
     <S.Wrapper
-      ballonText="HTML 5"
       data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"

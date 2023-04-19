@@ -7,45 +7,32 @@ export const Wrapper = styled.div.attrs({ id: 'habilidades' })`
     display: flex;
     padding: 9rem 0;
     align-items: center;
-    row-gap: 4rem;
     flex-direction: column;
     justify-content: center;
+    row-gap: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      ${Div} {
+      ${SkillsContent} {
         grid-template-rows: repeat(4, 1fr);
         grid-template-columns: repeat(3, 1fr);
+      }
+
+      ${Subtitle} {
+        text-align: center;
+        font-size: ${theme.font.sizes.small};
+        padding-inline: ${theme.spacings.medium};
       }
     } ;
   `}
 `;
 
-export const SkillsCard = styled.div`
-  width: 100%;
-  height: 100%;
+export const SkillsContent = styled.div`
   display: flex;
-  align-items: end;
-  grid-area: skills;
+  align-items: center;
+  flex-direction: column;
   justify-content: center;
 `;
 
-export const Div = styled.div`
-  ${({ theme }) => css`
-    display: grid;
-    align-items: end;
-    justify-content: center;
-    row-gap: ${theme.spacings.medium};
-    column-gap: ${theme.spacings.small};
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(5, 1fr);
-
-    div svg {
-      opacity: 0.4;
-    }
-
-    div:hover svg {
-      opacity: 1;
-      transform: scale(1.1);
-    }
-  `}
+export const Subtitle = styled.h2`
+  font-size: ${({ theme }) => theme.font.sizes.medium};
 `;

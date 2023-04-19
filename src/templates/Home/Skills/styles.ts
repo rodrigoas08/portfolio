@@ -34,5 +34,8 @@ export const SkillsContent = styled.div`
 `;
 
 export const Subtitle = styled.h2`
-  font-size: ${({ theme }) => theme.font.sizes.medium};
+  ${({ theme }) => css`
+    font-size: ${theme.font.sizes.medium};
+    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
+  `}
 `;

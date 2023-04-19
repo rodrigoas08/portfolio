@@ -39,6 +39,7 @@ export const SubTitle = styled.h2`
     font-weight: lighter;
     padding-top: ${theme.spacings.large};
     font-size: ${theme.font.sizes.medium};
+    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
 `;
 

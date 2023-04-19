@@ -119,15 +119,7 @@ export const NameIcon = () => {
 // START : ICONS COLORED ABOUT ME SECTION
 export const VuetifyIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path d="M64.004 0H34.102l29.902 61.848" fill="#1697F6"></path>
         <path
@@ -146,15 +138,7 @@ export const VuetifyIcon = ({ text }: IconProps) => {
 
 export const NpmIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path
           fill="#cb3837"
@@ -168,15 +152,7 @@ export const NpmIcon = ({ text }: IconProps) => {
 
 export const TSIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path fill="#fff" d="M22.67 47h99.67v73.67H22.67z"></path>
         <path
@@ -192,15 +168,7 @@ export const TSIcon = ({ text }: IconProps) => {
 
 export const GitIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path
           fill="#F34F29"
@@ -214,15 +182,7 @@ export const GitIcon = ({ text }: IconProps) => {
 
 export const VueIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path
           d="M0 8.934l49.854.158 14.167 24.47 14.432-24.47L128 8.935l-63.834 110.14zm126.98.637l-24.36.02-38.476 66.053L25.691 9.592.942 9.572l63.211 107.89zm-25.149-.008l-22.745.168-15.053 24.647L49.216 9.73l-22.794-.168 37.731 64.476zm-75.834-.17l23.002.009m-23.002-.01l23.002.01"
@@ -244,15 +204,7 @@ export const VueIcon = ({ text }: IconProps) => {
 
 export const VSCodeIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path
           d="M3.656 45.043s-3.027-2.191.61-5.113l8.468-7.594s2.426-2.559 4.989-.328l78.175 59.328v28.45s-.039 4.468-5.757 3.976zm0 0"
@@ -278,15 +230,7 @@ export const VSCodeIcon = ({ text }: IconProps) => {
 
 export const JSIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path>
         <path
@@ -301,15 +245,7 @@ export const JSIcon = ({ text }: IconProps) => {
 
 export const ReactIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <g fill="#61DAFB">
           <circle cx="64" cy="64" r="11.4"></circle>
@@ -323,15 +259,7 @@ export const ReactIcon = ({ text }: IconProps) => {
 
 export const CssIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path
           fill="#1572B6"
@@ -365,15 +293,7 @@ export const CssIcon = ({ text }: IconProps) => {
 
 export const GithubIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <g fill="#fff">
           <path
@@ -391,15 +311,7 @@ export const GithubIcon = ({ text }: IconProps) => {
 
 export const HtmlIcon = ({ text }: IconProps) => {
   return (
-    <S.Wrapper
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="1500"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
-    >
+    <S.Wrapper>
       <svg viewBox="0 0 128 128" width="4.5rem" height="4.5rem">
         <path
           fill="#E44D26"

@@ -67,7 +67,16 @@ const SkillCard = () => {
     <Wrapper>
       {ListSkillCards.map((item, index) => {
         return (
-          <Card key={index}>
+          <Card
+            data-aos="zoom-in"
+            data-aos-offset="2"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-once="false"
+            key={index}
+          >
             {item.icon}
             <h2>{item.title}</h2>
             <p>{item.description}</p>

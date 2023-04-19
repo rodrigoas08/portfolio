@@ -20,7 +20,7 @@ const ProfileCard = ({
 }: ProfileCardprops) => {
   return (
     <S.AboutCard
-      data-aos="zoom-in"
+      data-aos="fade-right"
       data-aos-offset="2"
       data-aos-delay="50"
       data-aos-duration="1500"
@@ -30,13 +30,6 @@ const ProfileCard = ({
     >
       <S.TopInfo>
         <S.Image
-          data-aos="flip-left"
-          data-aos-offset="2"
-          data-aos-delay="100"
-          data-aos-duration="1500"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
           loading="lazy"
           src={image}
           alt="Eu segurando meu filho na praia"

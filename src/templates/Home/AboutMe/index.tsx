@@ -14,6 +14,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="Github"
+      key={0}
     />,
     <FaLinkedin
       onClick={() =>
@@ -22,6 +23,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="LinkedIn"
+      key={1}
     />,
     <FaInstagram
       onClick={() =>
@@ -30,6 +32,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="Instagram"
+      key={2}
     />,
     <FaWhatsapp
       onClick={() =>
@@ -38,6 +41,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="Whatsapp"
+      key={3}
     />
   ];
 

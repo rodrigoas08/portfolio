@@ -44,7 +44,7 @@ export const NavWrapper = styled.ul`
   ${({ theme }) => css`
     display: flex;
     list-style: none;
-    gap: ${theme.spacings.xlarge};
+    gap: ${theme.spacings.medium};
   `}
 `;
 

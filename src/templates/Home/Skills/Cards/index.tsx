@@ -34,6 +34,7 @@ const Card = styled.div`
     align-items: center;
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
+    border: 0.1rem solid transparent;
     padding: ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
     background-color: ${theme.colors.grayIce};
@@ -43,7 +44,6 @@ const Card = styled.div`
     }
 
     :hover {
-      transform: scale(1.1);
       border: 0.1rem solid ${theme.colors.primary};
     }
 

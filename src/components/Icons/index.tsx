@@ -1,5 +1,3 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import * as S from './styles';
 import theme from 'styles/theme';
 
@@ -335,6 +333,3 @@ export const HtmlIcon = ({ text }: IconProps) => {
   );
 };
 // FINAL : ICONS COLORED ABOUT ME SECTION
-
-AOS.init();
-AOS.refresh();

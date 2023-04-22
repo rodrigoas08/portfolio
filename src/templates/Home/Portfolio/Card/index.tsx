@@ -1,4 +1,3 @@
-import AOS from 'aos';
 import * as S from './styles';
 import { Button } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
@@ -49,5 +48,3 @@ const Card = ({ title, background, link, repository }: CardProps) => {
   );
 };
 export default Card;
-AOS.init();
-AOS.refresh();

@@ -1,5 +1,3 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import * as S from './styles';
 import { Title } from 'components';
 import EuPedro from 'img/euPedro.jpg';
@@ -95,5 +93,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-AOS.init();
-AOS.refresh();

@@ -1,3 +1,5 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import * as S from './styles';
 import { Portfolio, AboutMe, Contact, Skills } from 'templates';
 import { GitHubIcon, LinkedInIcon } from 'components/Icons';
@@ -36,3 +38,5 @@ const Home = () => {
   );
 };
 export default Home;
+AOS.init();
+AOS.refresh();

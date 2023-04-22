@@ -39,12 +39,12 @@ const Card = styled.div`
     border-radius: ${theme.border.radius};
     background-color: ${theme.colors.grayIce};
 
-    svg {
-      filter: drop-shadow(0 0.4rem 0.2rem ${theme.colors.black});
-    }
-
     :hover {
       border: 0.1rem solid ${theme.colors.primary};
+    }
+
+    svg {
+      filter: drop-shadow(0 0.4rem 0.2rem ${theme.colors.black});
     }
 
     h2 {
@@ -68,14 +68,11 @@ const SkillCard = () => {
       {ListSkillCards.map((item, index) => {
         return (
           <Card
+            key={index}
             data-aos="zoom-in"
-            data-aos-offset="2"
             data-aos-delay="50"
             data-aos-duration="1500"
             data-aos-easing="ease-in-out"
-            data-aos-mirror="true"
-            data-aos-once="false"
-            key={index}
           >
             {item.icon}
             <h2>{item.title}</h2>

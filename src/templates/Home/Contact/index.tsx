@@ -44,7 +44,15 @@ const Contact = () => {
   return (
     <S.Wrapper>
       <Title text="Contato" />
-      <S.Content>
+      <S.Content
+        data-aos="zoom-in"
+        data-aos-offset="2"
+        data-aos-delay="50"
+        data-aos-duration="1500"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+      >
         <S.CTAWrapper>
           <h1>Vamos conversar?</h1>
           <p>

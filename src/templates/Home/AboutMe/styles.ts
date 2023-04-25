@@ -9,8 +9,6 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.9);
-    box-shadow: 0.1rem 0.4rem 1rem rgba(0, 0, 0, 0.9);
 
     @media (max-width: ${theme.breakpoints.desktop}) {
       ${DivIcons} h2 {
@@ -72,19 +70,25 @@ export const Section = styled.section`
 `;
 
 export const AboutText = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  align-items: start;
-  grid-area: aboutText;
-  flex-direction: column;
-  justify-content: space-around;
+  ${({ theme }) => css`
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: start;
+    grid-area: aboutText;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: ${theme.border.radius};
+    padding: ${theme.spacings.small};
+    background-color: ${theme.colors.grayIce};
+  `}
 `;
 
 export const Text = styled.p`
   ${({ theme }) => css`
     line-height: 3rem;
     font-size: ${theme.font.sizes.medium};
+    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
 
   a {

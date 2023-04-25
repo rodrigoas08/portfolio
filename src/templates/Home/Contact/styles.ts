@@ -10,8 +10,6 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
     padding: 8rem 0;
     align-items: center;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.9);
-    box-shadow: 0.1rem -0.4rem 1rem rgba(0, 0, 0, 0.9);
 
     @media (max-width: ${theme.breakpoints.ipad}) {
       padding: 8rem ${theme.spacings.small};

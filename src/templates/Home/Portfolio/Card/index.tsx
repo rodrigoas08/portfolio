@@ -1,8 +1,8 @@
-import AOS from 'aos';
 import * as S from './styles';
 import { Button } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
 import ImageEmConstrucao from 'img/portfolios/em_construcao.jpg';
+import { FaEye, FaGithub } from 'react-icons/fa';
 
 export type CardProps = {
   link?: string;
@@ -23,7 +23,7 @@ const Card = ({ title, background, link, repository }: CardProps) => {
       data-aos="fade-up"
       data-aos-offset="2"
       data-aos-delay="50"
-      data-aos-duration="1000"
+      data-aos-duration="2000"
       data-aos-easing="ease-in-out"
       data-aos-mirror="true"
       data-aos-once="false"
@@ -31,22 +31,20 @@ const Card = ({ title, background, link, repository }: CardProps) => {
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
         <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
-        <div>
+        <S.ButtonWrapper>
           {repository && (
-            <Button rippling onClick={() => openLinkInNewTab(`${repository}`)}>
-              GitHub
+            <Button secondary onClick={() => openLinkInNewTab(`${repository}`)}>
+              <FaGithub /> Repositório
             </Button>
           )}
           {link && (
-            <Button rippling onClick={() => openLinkInNewTab(`${link}`)}>
-              Site
+            <Button secondary onClick={() => openLinkInNewTab(`${link}`)}>
+              Visitar <FaEye />
             </Button>
           )}
-        </div>
+        </S.ButtonWrapper>
       </S.CardInfo>
     </S.Card>
   );
 };
 export default Card;
-AOS.init();
-AOS.refresh();

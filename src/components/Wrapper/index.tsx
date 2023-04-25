@@ -2,6 +2,7 @@ import './editor.css';
 import * as S from './styles';
 import ParticlesBg from 'particles-bg';
 import { Header, Footer } from 'components';
+import theme from 'styles/theme';
 
 type WrapperProps = {
   children: React.ReactChild;
@@ -10,7 +11,12 @@ type WrapperProps = {
 const Wrapper = ({ children }: WrapperProps) => {
   return (
     <S.Wrapper>
-      <ParticlesBg color="#00ACEE" num={50} type="cobweb" bg={false} />
+      <ParticlesBg
+        color={theme.colors.primary}
+        num={50}
+        type="cobweb"
+        bg={false}
+      />
       <Header />
       {children}
       <Footer />

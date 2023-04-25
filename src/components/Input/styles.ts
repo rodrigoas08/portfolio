@@ -26,7 +26,7 @@ export const Wrapper = styled.div`
 
 export const Icon = styled.div`
   ${({ theme }) => css`
-    width: 3rem;
+    width: 3.5rem;
     height: 100%;
     display: flex;
     position: absolute;

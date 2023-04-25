@@ -47,11 +47,7 @@ export const Name = styled.h1`
     font-weight: ${theme.font.bold};
     padding: ${theme.spacings.xsmall} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
-    filter: drop-shadow(-0.1rem 0.1rem 0px ${theme.colors.primary});
-
-    :hover {
-      filter: none;
-    }
+    text-shadow: 0.1rem 0.2rem 0 ${theme.colors.primary};
   `}
 `;
 
@@ -75,9 +71,14 @@ export const CarrerName = styled.h2`
   `}
 `;
 
-export const NavIcons = styled.nav`
+export const NavIcons = styled.div`
   ${({ theme }) => css`
     display: flex;
     column-gap: ${theme.spacings.medium};
+
+    svg:hover {
+      transition: 1s ease;
+      fill: ${theme.colors.primary};
+    }
   `}
 `;

@@ -39,10 +39,6 @@ const Card = styled.div`
     border-radius: ${theme.border.radius};
     background-color: ${theme.colors.grayIce};
 
-    :hover {
-      border: 0.1rem solid ${theme.colors.primary};
-    }
-
     svg {
       filter: drop-shadow(0 0.4rem 0.2rem ${theme.colors.black});
     }

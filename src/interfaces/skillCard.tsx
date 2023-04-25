@@ -9,7 +9,8 @@ import {
   VSCodeIcon,
   NpmIcon,
   VuetifyIcon,
-  GithubIcon
+  GithubIcon,
+  StyledCompIcon
 } from 'components/Icons';
 
 interface ISkillCard {
@@ -50,6 +51,12 @@ export const ListSkillCards: ISkillCard[] = [
       'TypeScript é um superset do JavaScript, com ele temos possibilidade de aplicar uma tipagem estática juntamente com interfaces em um sistema construído com JavaScript.'
   },
   {
+    icon: <StyledCompIcon />,
+    title: 'Styled Components',
+    description:
+      'Styled components é uma biblioteca que possibilita escrever códigos CSS dentro do JavaScript.'
+  },
+  {
     icon: <VueIcon />,
     title: 'Vue',
     description:
@@ -68,6 +75,12 @@ export const ListSkillCards: ISkillCard[] = [
       'Git é um sistema de controle de versões distribuído, usado para controlar histórico de alterações de arquivos. '
   },
   {
+    icon: <GithubIcon />,
+    title: 'GitHub',
+    description:
+      'GitHub é uma plataforma feita para gerenciar seu código, compartilhar entre os desenvolvedores e utiliza o Git como controle de versões.'
+  },
+  {
     icon: <NpmIcon />,
     title: 'Node Package Manager',
     description:
@@ -78,11 +91,5 @@ export const ListSkillCards: ISkillCard[] = [
     title: 'VS Code',
     description:
       'O Visual Studio Code é um editor de código-fonte (ou editor de texto) desenvolvido pela Microsoft.'
-  },
-  {
-    icon: <GithubIcon />,
-    title: 'GitHub',
-    description:
-      'GitHub é uma plataforma feita para gerenciar seu código, compartilhar entre os desenvolvedores e utiliza o Git como controle de versões.'
   }
 ];

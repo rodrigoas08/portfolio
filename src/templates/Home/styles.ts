@@ -6,8 +6,8 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
     height: 100vh;
     display: flex;
     padding: 0 15rem;
+    align-items: center;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
     gap: ${theme.spacings.small};
 
@@ -33,6 +33,8 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
 
 export const WrapperText = styled.div`
   ${({ theme }) => css`
+    text-align: center;
+    
     h2:nth-of-type(2) {
       color: ${theme.colors.alabaster};
       font-size: ${theme.font.sizes.small};

@@ -53,6 +53,7 @@ export const Input = styled.input<InputType>`
     outline: none;
     position: relative;
     border-radius: 0.1rem;
+    color: ${theme.colors.alabaster};
     border: 0.1rem solid transparent;
     background-color: ${theme.colors.grayIce};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.large};

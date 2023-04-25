@@ -73,11 +73,10 @@ const AboutMe = () => {
             onde comecei como estágiário em dezembro de 2021.
             <br />
             Meu foco é desenvolver interfaces modernas de alta performance,
-            responsivas e SEO. <br />
-            As tecnologias que tenho um conhecimento mais sólido para criação de
-            sites é React.js, Typescript e Styled Component. Hoje venho me
-            aventurando no mundo do Vue.js e busco aprender outras tecnologias
-            para ampliar meus conhecimentos.
+            responsivas e SEO. As tecnologias que tenho um conhecimento mais
+            sólido para criação de sites é React.js, Typescript e Styled
+            Component. Hoje venho me aventurando no mundo do Vue.js e busco
+            aprender outras tecnologias para ampliar meus conhecimentos.
           </S.Text>
           <S.DivIcons>
             <h2>Conheça minhas redes sociais:</h2>

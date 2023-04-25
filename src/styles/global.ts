@@ -5,15 +5,14 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: ${({ theme }) => theme.font.light};
-    color: ${({ theme }) => theme.colors.alabaster};
   }
   
   body {
     height: auto;
     overflow-x: hidden;
-    background-color: #161616;
+    font-family: sans-serif;
+    background-color: #161616;    
+    color: ${({ theme }) => theme.colors.alabaster};
       
     ::-webkit-scrollbar {
       width: 0.5rem;

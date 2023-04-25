@@ -23,7 +23,7 @@ const Card = ({ title, background, link, repository }: CardProps) => {
       data-aos="fade-up"
       data-aos-offset="2"
       data-aos-delay="50"
-      data-aos-duration="1000"
+      data-aos-duration="2000"
       data-aos-easing="ease-in-out"
       data-aos-mirror="true"
       data-aos-once="false"

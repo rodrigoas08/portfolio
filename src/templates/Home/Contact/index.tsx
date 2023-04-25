@@ -48,7 +48,7 @@ const Contact = () => {
         data-aos="zoom-in"
         data-aos-offset="2"
         data-aos-delay="50"
-        data-aos-duration="1500"
+        data-aos-duration="2000"
         data-aos-easing="ease-in-out"
         data-aos-mirror="true"
         data-aos-once="false"

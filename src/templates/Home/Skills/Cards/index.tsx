@@ -67,7 +67,7 @@ const SkillCard = () => {
             key={index}
             data-aos="zoom-in"
             data-aos-delay="50"
-            data-aos-duration="1500"
+            data-aos-duration="2000"
             data-aos-easing="ease-in-out"
           >
             {item.icon}

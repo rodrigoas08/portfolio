@@ -8,7 +8,15 @@ import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa';
 const Home = () => {
   return (
     <>
-      <S.Wrapper>
+      <S.Wrapper
+        data-aos="fade-down"
+        data-aos-offset="2"
+        data-aos-delay="50"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+      >
         <S.WrapperText>
           <S.Name>Rodrigo Sobral</S.Name>
           <S.CarrerName>desenvolvedor front-end</S.CarrerName>

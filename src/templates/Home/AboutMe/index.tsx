@@ -59,24 +59,21 @@ const AboutMe = () => {
           data-aos="fade-left"
           data-aos-offset="2"
           data-aos-delay="50"
-          data-aos-duration="1500"
+          data-aos-duration="2000"
           data-aos-easing="ease-in-out"
           data-aos-mirror="true"
           data-aos-once="false"
         >
           <S.Text>
-            Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro. Em
-            dezembro de 2021 entrei na{' '}
+            Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro. <br />
+            Atualmente sou Desenvolvedor Front-end Jr na{' '}
             <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
               <S.Span>Usabit</S.Span>
             </a>{' '}
-            como estágiário para estudar programação, hoje sou Desenvolvedor
-            Front-end Júnior e estou cursando Análise e Desenvolvimento de
-            Sistema.
+            onde comecei como estágiário em dezembro de 2021.
             <br />
-            Gosto de trabalhar em equipe mas tem momentos que também gosto de
-            trabalhar sozinho e as vezes de madrugada, sou proativo e bem
-            comunicativo. <br />
+            Meu foco é desenvolver interfaces modernas de alta performance,
+            responsivas e SEO. <br />
             As tecnologias que tenho um conhecimento mais sólido para criação de
             sites é React.js, Typescript e Styled Component. Hoje venho me
             aventurando no mundo do Vue.js e busco aprender outras tecnologias

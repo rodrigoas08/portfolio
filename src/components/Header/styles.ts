@@ -52,9 +52,12 @@ export type LinkMenuProps = {
   activeLink?: boolean;
 };
 
-export const LinkText = styled.p<LinkMenuProps>`
+export const LinkText = styled.button<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
+    border: none;
+    outline: none;
     cursor: pointer;
+    background: none;
     color: ${theme.colors.alabaster};
     font-size: ${theme.font.sizes.large};
 
@@ -87,7 +90,8 @@ export const LinkText = styled.p<LinkMenuProps>`
       transition: 1s all ease-in-out;
     }
 
-    :hover {
+    :hover,
+    :focus {
       :after {
         width: 100%;
       }

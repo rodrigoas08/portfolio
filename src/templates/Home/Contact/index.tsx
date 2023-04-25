@@ -45,7 +45,7 @@ const Contact = () => {
     <S.Wrapper>
       <Title text="Contato" />
       <S.Content
-        data-aos="zoom-in"
+        data-aos="fade-up"
         data-aos-offset="2"
         data-aos-delay="50"
         data-aos-duration="2000"

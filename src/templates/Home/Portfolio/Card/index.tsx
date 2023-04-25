@@ -20,7 +20,7 @@ const Card = ({ title, background, link, repository }: CardProps) => {
 
   return (
     <S.Card
-      data-aos="fade-up"
+      data-aos="zoom-in"
       data-aos-offset="2"
       data-aos-delay="50"
       data-aos-duration="2000"

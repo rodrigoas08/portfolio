@@ -31,7 +31,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
       }
 
       ${DivIcons} h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
       }
     }
 
@@ -45,12 +45,16 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
         display: none;
       }
 
-      ${DivIcons} {
-        flex-wrap: wrap;
+      ${AboutText} {
+        width: 32rem;
       }
 
-      ${DivIcons} h2 {
-        font-size: 1.6rem;
+      ${DivIcons} {
+        flex-wrap: wrap;
+
+        h2 {
+          font-size: 1.4rem;
+        }
       }
     }
   `}
@@ -58,11 +62,10 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
 
 export const Section = styled.section`
   ${({ theme }) => css`
-    width: 90%;
     height: auto;
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr auto;
     column-gap: ${theme.spacings.small};
     margin-top: ${theme.spacings.xxlarge};
     grid-template-areas: 'aboutCard aboutText';
@@ -71,7 +74,7 @@ export const Section = styled.section`
 
 export const AboutText = styled.div`
   ${({ theme }) => css`
-    width: 100%;
+    width: 64rem;
     height: auto;
     display: flex;
     align-items: start;

@@ -7,6 +7,22 @@ type IconProps = {
   handleClick?: () => void;
 };
 
+export const CodingImage = () => {
+  return (
+    <S.Wrapper
+      data-aos="fade-left"
+      data-aos-offset="2"
+      data-aos-delay="50"
+      data-aos-duration="2000"
+      data-aos-easing="ease-in-out"
+      data-aos-mirror="true"
+      data-aos-once="false"
+    >
+      <img src="src/img/Hand-coding.png"></img>
+    </S.Wrapper>
+  );
+};
+
 export const SubjectIcon = () => {
   return (
     <svg

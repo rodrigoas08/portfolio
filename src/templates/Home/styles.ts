@@ -6,10 +6,7 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
     height: 100vh;
     display: flex;
     padding: 0 15rem;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: ${theme.spacings.small};
+    align-items: center;
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       align-items: center;
@@ -33,6 +30,10 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
 
 export const WrapperText = styled.div`
   ${({ theme }) => css`
+    display: flex;
+    flex-direction: column;
+    gap: ${theme.spacings.small};
+
     h2:nth-of-type(2) {
       color: ${theme.colors.alabaster};
       font-size: ${theme.font.sizes.small};

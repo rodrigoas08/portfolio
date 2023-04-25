@@ -5,173 +5,125 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
     width: 100%;
     height: auto;
     display: flex;
-    padding-top: 8rem;
-    align-items: start;
+    padding: 9rem 0;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
 
-    @media (max-width: ${theme.breakpoints.largeDestkop}) {
-      ${Card} {
-        font-size: ${theme.font.sizes.small};
-      }
-
-      ${About} {
-        display: inline;
-        > img {
-          float: left;
-        }
-        > p {
-          font-size: ${theme.font.sizes.medium};
-        }
+    @media (max-width: ${theme.breakpoints.desktop}) {
+      ${DivIcons} h2 {
+        font-size: 1.8rem;
       }
     }
 
     @media (max-width: ${theme.breakpoints.tablet}) {
-      ${Container} {
-        align-items: center;
-        padding: 8rem ${theme.spacings.small};
-      }
-
-      ${About} {
+      ${Section} {
         display: flex;
         align-items: center;
         flex-direction: column;
+        justify-content: center;
+        gap: ${theme.spacings.medium};
+      }
 
-        > img {
-          margin: 0;
-        }
+      ${AboutText} {
+        padding-inline: 5rem;
+        word-break: keep-all;
+      }
 
-        > p {
-          text-align: center;
-          word-break: keep-all;
-          padding: ${theme.spacings.xxsmall};
-          font-size: ${theme.font.sizes.small};
-        }
+      ${DivIcons} h2 {
+        font-size: 2rem;
       }
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
       ${Section} {
-        > div {
-          width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      ${AboutText} ${Text} {
+        display: none;
+      }
+
+      ${AboutText} {
+        width: 32rem;
+      }
+
+      ${DivIcons} {
+        flex-wrap: wrap;
+
+        h2 {
+          font-size: 1.4rem;
         }
       }
     }
   `}
 `;
 
-export const Container = styled.div`
-  ${({ theme }) => css`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.9);
-    padding: ${theme.spacings.xlarge} 15rem;
-    box-shadow: 0.1rem 0.4rem 1rem rgba(0, 0, 0, 0.9);
-  `}
-`;
-
-export const About = styled.div`
-  ${({ theme }) => css`
-    width: 80%;
-    display: grid;
-    grid-template-columns: auto auto;
-    margin-top: ${theme.spacings.large};
-
-    > p {
-      width: 100%;
-      font-size: 1.8rem;
-      line-height: 150%;
-      align-self: center;
-      word-break: keep-all;
-      font-family: ${theme.font.family.josefin};
-    }
-    a {
-      cursor: pointer;
-    }
-  `}
-`;
-
-export const Image = styled.img`
-  ${({ theme }) => css`
-    width: 20rem;
-    height: 20rem;
-    filter: saturate(210%);
-    margin-right: ${theme.spacings.large};
-    border-radius: ${theme.border.radius};
-  `}
-`;
-
 export const Section = styled.section`
   ${({ theme }) => css`
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: ${theme.spacings.small};
-    margin-top: ${theme.spacings.large};
+    height: auto;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr auto;
+    column-gap: ${theme.spacings.small};
+    margin-top: ${theme.spacings.xxlarge};
+    grid-template-areas: 'aboutCard aboutText';
   `}
 `;
 
-export const Card = styled.div`
+export const AboutText = styled.div`
   ${({ theme }) => css`
-    width: 40%;
+    width: 64rem;
     height: auto;
     display: flex;
-    align-items: center;
+    align-items: start;
+    grid-area: aboutText;
     flex-direction: column;
-    padding: ${theme.spacings.small};
+    justify-content: space-around;
     border-radius: ${theme.border.radius};
-    font-size: ${theme.font.sizes.medium};
-    column-gap: ${theme.spacings.xxsmall};
+    padding: ${theme.spacings.small};
     background-color: ${theme.colors.grayIce};
-    border-top: 0.3rem solid ${theme.colors.primary};
-
-    > p {
-      color: ${theme.colors.text};
-      line-height: 140%;
-    }
-    > ul {
-      align-self: flex-start;
-      padding-left: ${theme.spacings.small};
-    }
-    > ul,
-    li {
-      color: ${theme.colors.text};
-      padding-bottom: ${theme.spacings.xsmall};
-    }
-    li::marker {
-      color: ${theme.colors.primary};
-    }
-    li a {
-      cursor: pointer;
-    }
   `}
 `;
 
-export const TitleCard = styled.h1`
+export const Text = styled.p`
   ${({ theme }) => css`
-    text-decoration: underline;
-    text-underline-offset: 0.3rem;
-    font-weight: ${theme.font.normal};
-    font-size: ${theme.font.sizes.large};
-    padding-bottom: ${theme.spacings.xsmall};
+    line-height: 3rem;
+    font-size: ${theme.font.sizes.medium};
+    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
-`;
 
-export const DivIcons = styled.div`
-  ${({ theme }) => css`
-    width: 100%;
-    display: grid;
-    gap: ${theme.spacings.xxsmall};
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-  `}
+  a {
+    cursor: pointer;
+  }
 `;
 
 export const Span = styled.span`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
+  `}
+`;
+
+export const DivIcons = styled.div`
+  ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: ${theme.spacings.medium};
+    margin-top: ${theme.spacings.small};
+
+    h2 {
+      font-size: 2.4rem;
+    }
+
+    svg {
+      transition: 1s ease;
+    }
+
+    svg:hover {
+      transition: 1s ease;
+      fill: ${theme.colors.primary};
+    }
   `}
 `;

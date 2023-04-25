@@ -9,7 +9,14 @@ const Portfolio = () => {
   const [search, setSearch] = useState('');
 
   const filteredPortfolios = useMemo(() => {
-    const lowerSearch = search.toLowerCase();
+    const lowerSearch = search
+      .toLowerCase()
+      .replace(/[áàâãä]/gi, 'a')
+      .replace(/[éèêë]/gi, 'e')
+      .replace(/[íìîï]/gi, 'i')
+      .replace(/[óòôõö]/gi, 'o')
+      .replace(/[úùûü]/gi, 'u')
+      .replace(/[ç]/gi, 'c');
     return CardList.filter((portfolio) =>
       portfolio.projectName.toLowerCase().includes(lowerSearch)
     );
@@ -19,9 +26,7 @@ const Portfolio = () => {
     <S.Wrapper>
       <S.Container>
         <Title text="Portfólio" />
-        <S.SubTitle>
-          Veja aqui alguns trabalhos feitos por mim.
-        </S.SubTitle>
+        <S.SubTitle>Veja aqui alguns trabalhos feitos por mim.</S.SubTitle>
         <InputSearch search={search} setSearch={setSearch} />
         <S.Section>
           {filteredPortfolios.length > 0 ? (

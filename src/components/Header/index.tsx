@@ -26,6 +26,10 @@ const Header = () => {
       id: 'sobre'
     },
     {
+      name: 'Habilidades',
+      id: 'habilidades'
+    },
+    {
       name: 'Portfólio',
       id: 'portfolio'
     },
@@ -45,7 +49,11 @@ const Header = () => {
           setTitle({ name: Links[0].name }), changeTitleOfPage(Links[0].name);
         }}
       >
-        <S.ImgProfile src={FotoProfile} alt="Minha foto para perfil" />
+        <S.ImgProfile
+          loading="lazy"
+          src={FotoProfile}
+          alt="Minha foto para perfil"
+        />
       </Link>
       <S.NavWrapper>
         {Links.map((link, index) => {

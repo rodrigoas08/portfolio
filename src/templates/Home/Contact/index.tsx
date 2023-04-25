@@ -1,16 +1,18 @@
 import * as S from './styles';
-import { Button, Input, Title } from 'components';
-import { useForm } from 'react-hook-form';
-import { FormState } from 'interfaces/form';
 import emailjs from 'emailjs-com';
+import { useForm } from 'react-hook-form';
+import { FormStateProps } from 'interfaces/form';
+import { Button, Input, Title } from 'components';
+import { openLinkInNewTab } from 'utils/functions';
+import { SubjectIcon, NameIcon, EmailIcon } from 'components/Icons';
 
 const Contact = () => {
-  const { register, handleSubmit, formState } = useForm<FormState>({
+  const { register, handleSubmit, formState } = useForm<FormStateProps>({
     mode: 'onChange'
   });
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function onSubmit(values: FormState, e: any) {
+  function onSubmit(values: FormStateProps, e: any) {
     e.preventDefault();
     try {
       emailjs
@@ -23,9 +25,9 @@ const Contact = () => {
         .then(
           (result) => {
             if (result.status == 200) {
-              alert('Email enviado com suecesso');
+              alert('Email enviado com sucesso');
             } else {
-              alert('Algo deu errado');
+              alert('Falha ao enviar email');
             }
           },
           (error) => {
@@ -41,51 +43,92 @@ const Contact = () => {
 
   return (
     <S.Wrapper>
-      <S.Container>
-        <Title text="Contato" />
-        <S.Form onSubmit={handleSubmit(onSubmit)}>
+      <Title text="Contato" />
+      <S.Content
+        data-aos="fade-up"
+        data-aos-offset="2"
+        data-aos-delay="50"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+      >
+        <S.CTAWrapper>
+          <h1>Vamos conversar?</h1>
+          <p>
+            Você pode entrar em contato
+            <br /> preenchendo o <strong>formulário</strong>
+          </p>
+          <h2>ou</h2>
+          <p>
+            Iniciar uma conversa por
+            <br />
+            <strong>whatsapp</strong>
+            <br />
+            <sup>(21) 98514-1580</sup>
+          </p>
+          <Button
+            onClick={() =>
+              openLinkInNewTab(
+                'https://api.whatsapp.com/send?phone=5521985141580&text=Ol%C3%A1%20gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20seus%20servi%C3%A7os'
+              )
+            }
+          >
+            conversar agora <S.ZapIcon />
+          </Button>
+        </S.CTAWrapper>
+        <S.Form
+          onSubmit={handleSubmit(onSubmit)}
+          style={{ position: 'relative' }}
+        >
           <Input
             fullWidth
-            label="Nome *"
+            icon={<NameIcon />}
+            error={formState.errors}
+            name="name"
             autoComplete="off"
             placeholder="Digite seu nome"
             register={() =>
               register('name', {
-                required: true
+                required: 'Este campo é obrigatório'
               })
             }
           />
           <Input
             fullWidth
-            label="Email *"
+            icon={<EmailIcon />}
+            error={formState.errors}
             type="email"
+            name="email"
             autoComplete="off"
-            placeholder="exemplo@email.com.br"
+            placeholder="Digite seu email"
             register={() =>
               register('email', {
-                required: 'Required field',
+                required: 'Este campo é obrigatório',
                 pattern: {
                   value:
                     /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-z]{2,3}\.?[a-z]{1,2}/,
-                  message: 'Invalid E-mail'
+                  message: 'Digite um e-mail válido'
                 }
               })
             }
           />
           <Input
             fullWidth
-            label="Assunto *"
+            icon={<SubjectIcon />}
+            error={formState.errors}
+            name="subject"
             autoComplete="off"
-            placeholder="Digite sobre o que quer falar"
+            placeholder="Digite um assunto"
             register={() =>
               register('subject', {
-                required: true
+                required: 'Este campo é obrigatório'
               })
             }
           />
           <S.Textarea
             {...register('message', { required: true })}
-            placeholder="Escreva aqui sua mensagem..."
+            placeholder="Escreva aqui sobre o assunto..."
           />
           <Button
             type="submit"
@@ -100,7 +143,7 @@ const Contact = () => {
               : 'Enviar formulário'}
           </Button>
         </S.Form>
-      </S.Container>
+      </S.Content>
     </S.Wrapper>
   );
 };

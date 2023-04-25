@@ -23,7 +23,7 @@ export default InputSearch;
 
 const Wrapper = styled.div`
   width: 30rem;
-  margin-top: 2rem;
+  margin-top: ${({ theme }) => theme.spacings.small};
 `;
 
 const SearchInput = styled(Input)`
@@ -33,6 +33,7 @@ const SearchInput = styled(Input)`
     text-overflow: ellipsis;
     transition: all 1.5s ease-in-out;
     background: ${theme.colors.grayIce};
+    padding-left: ${theme.spacings.xxsmall};
     padding-right: ${theme.spacings.medium};
 
     :focus {

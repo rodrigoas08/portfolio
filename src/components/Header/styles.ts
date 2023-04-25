@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.header`
   ${({ theme, color }) => css`
-    z-index: 2;
+    z-index: 3;
     width: 100%;
     height: 8rem;
     display: flex;
@@ -34,9 +34,9 @@ export const Wrapper = styled.header`
 export const ImgProfile = styled.img`
   ${({ theme }) => css`
     cursor: pointer;
-    border-radius: 50%;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
+    border-radius: ${theme.border.rounded};
   `}
 `;
 
@@ -44,7 +44,7 @@ export const NavWrapper = styled.ul`
   ${({ theme }) => css`
     display: flex;
     list-style: none;
-    gap: ${theme.spacings.xlarge};
+    gap: ${theme.spacings.medium};
   `}
 `;
 
@@ -52,9 +52,12 @@ export type LinkMenuProps = {
   activeLink?: boolean;
 };
 
-export const LinkText = styled.p<LinkMenuProps>`
+export const LinkText = styled.button<LinkMenuProps>`
   ${({ theme, activeLink }) => css`
+    border: none;
+    outline: none;
     cursor: pointer;
+    background: none;
     color: ${theme.colors.alabaster};
     font-size: ${theme.font.sizes.large};
 
@@ -87,7 +90,8 @@ export const LinkText = styled.p<LinkMenuProps>`
       transition: 1s all ease-in-out;
     }
 
-    :hover {
+    :hover,
+    :focus {
       :after {
         width: 100%;
       }

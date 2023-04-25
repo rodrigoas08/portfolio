@@ -1,6 +1,7 @@
 export default {
   border: {
-    radius: '0.5rem'
+    radius: '0.5rem',
+    rounded: '50%'
   },
   font: {
     family: {
@@ -48,14 +49,15 @@ export default {
     text: '#777777',
     success: '#28A745',
     barberry: '#DED717',
-    grayIce: '#ffffff1a'
+    grayIce: '#ffffff1a',
+    whatsapp: '#40c351'
   },
   breakpoints: {
-    mobile: '600px',
-    ipad: '768px',
-    smallTablet: '992px',
-    tablet: '1024px',
-    desktop: '1200px',
-    largeDestkop: '1640px'
+    mobile: '599px',
+    ipad: '767px',
+    smallTablet: '991px',
+    tablet: '1023px',
+    desktop: '1199px',
+    largeDestkop: '1639px'
   }
 } as const;

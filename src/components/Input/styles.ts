@@ -5,20 +5,39 @@ type InputType = Pick<InputProps, 'fullWidth'>;
 
 export const Wrapper = styled.div`
   position: relative;
+
+  :focus-within #icon {
+    animation: bg 1s;
+    filter: brightness(50%);
+    transition: all 1s linear ease;
+
+    @keyframes bg {
+      from {
+        transform: rotate(0deg);
+        background-color: transparent;
+      }
+      to {
+        transform: rotate(360deg);
+        background-color: transparent;
+      }
+    }
+  }
 `;
 
-export const Label = styled.label`
+export const Icon = styled.div`
   ${({ theme }) => css`
-    top: 0;
-    left: 0.8rem;
+    width: 3.5rem;
+    height: 100%;
+    display: flex;
     position: absolute;
-    pointer-events: none;
-    letter-spacing: 0.05rem;
-    transition: all 0.3s ease;
-    transform: translateY(-50%);
-    color: ${theme.colors.primary};
-    font-weight: ${theme.font.bold};
-    font-size: ${theme.font.sizes.xsmall};
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease-in-out;
+    background-color: ${theme.colors.grayIce};
+
+    path {
+      fill: ${theme.colors.primary};
+    }
   `}
 `;
 
@@ -32,11 +51,27 @@ export const Input = styled.input<InputType>`
   ${({ theme, fullWidth }) => css`
     height: 3rem;
     outline: none;
+    position: relative;
     border-radius: 0.1rem;
+    color: ${theme.colors.alabaster};
     border: 0.1rem solid transparent;
     background-color: ${theme.colors.grayIce};
-    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
+    padding: ${theme.spacings.xxxsmall} ${theme.spacings.large};
 
     ${fullWidth && InputModifiers.fullWidth()}
+
+    :focus {
+      border: 0.1rem solid ${theme.colors.primary};
+    }
+  `}
+`;
+
+export const ErrorMessage = styled.p`
+  ${({ theme }) => css`
+    top: 3.1rem;
+    display: block;
+    position: absolute;
+    color: ${theme.colors.primary};
+    font-size: ${theme.font.sizes.xsmall};
   `}
 `;

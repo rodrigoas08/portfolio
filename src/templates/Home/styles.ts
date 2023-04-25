@@ -6,14 +6,12 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
     height: 100vh;
     display: flex;
     padding: 0 15rem;
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: ${theme.spacings.small};
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       align-items: center;
-      padding: 0 2rem;
+      padding: 0 ${theme.spacings.small};
 
       ${WrapperText} {
         display: flex;
@@ -33,6 +31,11 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
 
 export const WrapperText = styled.div`
   ${({ theme }) => css`
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: ${theme.spacings.small};
+
     h2:nth-of-type(2) {
       color: ${theme.colors.alabaster};
       font-size: ${theme.font.sizes.small};
@@ -41,47 +44,44 @@ export const WrapperText = styled.div`
   `}
 `;
 
-export const Welcome = styled.p`
-  ${({ theme }) => css`
-    padding-left: 0.2rem;
-    color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.large};
-    font-family: ${theme.font.family.josefin};
-  `}
-`;
-
-export const Name = styled.p`
+export const Name = styled.h1`
   ${({ theme }) => css`
     font-size: 7rem;
     font-weight: ${theme.font.bold};
     padding: ${theme.spacings.xsmall} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
-    font-family: ${theme.font.family.montserrat};
-    filter: drop-shadow(-1px 1px 0px ${theme.colors.primary});
-
-    :hover {
-      filter: none;
-    }
+    text-shadow: 0.1rem 0.2rem 0 ${theme.colors.primary};
   `}
 `;
 
-export const CarrerName = styled(Welcome)`
+export const CarrerName = styled.h2`
   ${({ theme }) => css`
-    color: white;
+    padding-left: 0.2rem;
     background-clip: text;
     text-transform: uppercase;
     -webkit-background-clip: text;
     font-weight: ${theme.font.bold};
+    color: ${theme.colors.alabaster};
     -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
-    background-image: linear-gradient(to right, #00aace, #fafafa, steelblue);
+    background-image: linear-gradient(
+      to right,
+      ${theme.colors.primary},
+      ${theme.colors.alabaster},
+      steelblue
+    );
   `}
 `;
 
-export const NavIcons = styled.nav`
+export const NavIcons = styled.div`
   ${({ theme }) => css`
     display: flex;
     column-gap: ${theme.spacings.medium};
+
+    svg:hover {
+      transition: 1s ease;
+      fill: ${theme.colors.primary};
+    }
   `}
 `;

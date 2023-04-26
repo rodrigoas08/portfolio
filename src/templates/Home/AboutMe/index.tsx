@@ -12,7 +12,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="Github"
-      key={0}
+      key={crypto.randomUUID()}
     />,
     <FaLinkedin
       onClick={() =>
@@ -21,7 +21,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="LinkedIn"
-      key={1}
+      key={crypto.randomUUID()}
     />,
     <FaInstagram
       onClick={() =>
@@ -30,7 +30,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="Instagram"
-      key={2}
+      key={crypto.randomUUID()}
     />,
     <FaWhatsapp
       onClick={() =>
@@ -39,7 +39,7 @@ const AboutMe = () => {
       size={30}
       cursor="pointer"
       title="Whatsapp"
-      key={3}
+      key={crypto.randomUUID()}
     />
   ];
 

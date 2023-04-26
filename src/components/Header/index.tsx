@@ -56,9 +56,9 @@ const Header = () => {
         />
       </Link>
       <S.NavWrapper>
-        {Links.map((link, index) => {
+        {Links.map((link) => {
           return (
-            <li key={index}>
+            <li key={crypto.randomUUID()}>
               <Link to={link.id} spy={true} smooth={true}>
                 <S.LinkText
                   onClick={() => {

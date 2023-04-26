@@ -30,10 +30,10 @@ const Portfolio = () => {
         <InputSearch search={search} setSearch={setSearch} />
         <S.Section>
           {filteredPortfolios.length > 0 ? (
-            filteredPortfolios.map((card, index) => {
+            filteredPortfolios.map((card) => {
               return (
                 <Card
-                  key={index}
+                  key={crypto.randomUUID()}
                   link={card.link}
                   repository={card.repository}
                   background={card.background}

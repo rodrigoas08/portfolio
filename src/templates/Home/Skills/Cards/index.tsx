@@ -61,10 +61,10 @@ const Card = styled.div`
 const SkillCard = () => {
   return (
     <Wrapper>
-      {ListSkillCards.map((item, index) => {
+      {ListSkillCards.map((item) => {
         return (
           <Card
-            key={index}
+            key={crypto.randomUUID()}
             data-aos="zoom-in"
             data-aos-delay="50"
             data-aos-duration="2000"

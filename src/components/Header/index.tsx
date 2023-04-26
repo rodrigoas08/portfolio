@@ -42,6 +42,7 @@ const Header = () => {
   return (
     <S.Wrapper color={colorHeader.color}>
       <Link
+        href="#"
         to={Links[0].id}
         spy={true}
         smooth={true}
@@ -59,7 +60,7 @@ const Header = () => {
         {Links.map((link) => {
           return (
             <li key={crypto.randomUUID()}>
-              <Link to={link.id} spy={true} smooth={true}>
+              <Link href="#" to={link.id} spy={true} smooth={true}>
                 <S.LinkText
                   onClick={() => {
                     setTitle({ name: link.name }), changeTitleOfPage(link.name);

@@ -19,23 +19,28 @@ const Header = () => {
   const Links = [
     {
       name: 'Início',
-      id: 'inicio'
+      id: 'inicio',
+      ariaText: 'Direciona para o inicio do site'
     },
     {
       name: 'Sobre',
-      id: 'sobre'
+      id: 'sobre',
+      ariaText: 'Direciona para a área que fala sobre mim do site'
     },
     {
       name: 'Habilidades',
-      id: 'habilidades'
+      id: 'habilidades',
+      ariaText: 'Direciona para a área que exibe habilidades do site'
     },
     {
       name: 'Portfólio',
-      id: 'portfolio'
+      id: 'portfolio',
+      ariaText: 'Direciona para a área que exibe portfólios do site'
     },
     {
       name: 'Contato',
-      id: 'contato'
+      id: 'contato',
+      ariaText: 'Direciona para a área de contato do site'
     }
   ];
 
@@ -43,6 +48,7 @@ const Header = () => {
     <S.Wrapper color={colorHeader.color}>
       <Link
         href="#"
+        aria-label={Links[0].ariaText}
         to={Links[0].id}
         spy={true}
         smooth={true}
@@ -60,7 +66,13 @@ const Header = () => {
         {Links.map((link) => {
           return (
             <li key={crypto.randomUUID()}>
-              <Link href="#" to={link.id} spy={true} smooth={true}>
+              <Link
+                href="#"
+                aria-label={link.ariaText}
+                to={link.id}
+                spy={true}
+                smooth={true}
+              >
                 <S.LinkText
                   onClick={() => {
                     setTitle({ name: link.name }), changeTitleOfPage(link.name);

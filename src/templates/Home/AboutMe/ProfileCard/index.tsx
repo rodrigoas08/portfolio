@@ -36,7 +36,11 @@ const ProfileCard = ({
         />
         <S.Title>{name}</S.Title>
         <S.Text>
-          <a href='#' onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}>
+          <a
+            href="#"
+            aria-label="Abre uma nova aba direcionando para meu perfil do github"
+            onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}
+          >
             {githubName}
           </a>
         </S.Text>

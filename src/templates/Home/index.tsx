@@ -26,7 +26,7 @@ const Home = () => {
               size={30}
               cursor="pointer"
               title="Github"
-              key={0}
+              key={crypto.randomUUID()}
             />
 
             <FaLinkedin
@@ -38,7 +38,7 @@ const Home = () => {
               size={30}
               cursor="pointer"
               title="LinkedIn"
-              key={1}
+              key={crypto.randomUUID()}
             />
             <FaWhatsapp
               onClick={() =>
@@ -49,7 +49,7 @@ const Home = () => {
               size={30}
               cursor="pointer"
               title="Whatsapp"
-              key={3}
+              key={crypto.randomUUID()}
             />
           </S.NavIcons>
         </S.WrapperText>

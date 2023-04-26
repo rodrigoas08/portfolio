@@ -44,7 +44,9 @@ export const Text = styled.p`
     color: ${theme.colors.text};
 
     a {
+      color: inherit;
       cursor: pointer;
+      text-decoration: none;
     }
 
     b {

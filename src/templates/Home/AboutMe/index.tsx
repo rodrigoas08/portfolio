@@ -67,7 +67,7 @@ const AboutMe = () => {
           <S.Text>
             Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro. <br />
             Atualmente sou Desenvolvedor Front-end Jr na{' '}
-            <a onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
+            <a href='#' onClick={() => openLinkInNewTab('https://www.usabit.com.br')}>
               <S.Span>Usabit</S.Span>
             </a>{' '}
             onde comecei como estágiário em dezembro de 2021.

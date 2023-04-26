@@ -36,7 +36,7 @@ const ProfileCard = ({
         />
         <S.Title>{name}</S.Title>
         <S.Text>
-          <a onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}>
+          <a href='#' onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}>
             {githubName}
           </a>
         </S.Text>

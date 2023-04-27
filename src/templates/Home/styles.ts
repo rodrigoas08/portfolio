@@ -50,7 +50,7 @@ export const Name = styled.h1`
     font-weight: ${theme.font.bold};
     padding: ${theme.spacings.xsmall} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
-    text-shadow: 0.1rem 0.2rem 0 ${theme.colors.primary};
+    text-shadow: 0.1rem 0.2rem 0.2rem ${theme.colors.primary};
   `}
 `;
 
@@ -65,6 +65,7 @@ export const CarrerName = styled.h2`
     -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
+    text-shadow: 0.1rem 0.1rem .9rem ${theme.colors.black};
     background-image: linear-gradient(
       to right,
       ${theme.colors.primary},

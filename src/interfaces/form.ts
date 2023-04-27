@@ -1,4 +1,4 @@
-export interface FormState {
+export interface FormStateProps {
   name: string;
   subject: string;
   email: string;

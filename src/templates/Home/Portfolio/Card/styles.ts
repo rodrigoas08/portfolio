@@ -1,81 +1,121 @@
 import { CardProps } from '.';
 import styled, { css } from 'styled-components';
+import * as ButtonStyles from 'components/Button/styles';
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 40%;
+    width: 25%;
     display: grid;
-    row-gap: 0.1rem;
-    min-height: 30rem;
-    backdrop-filter: blur(1.5rem);
+    height: 30rem;
     grid-template-rows: 1fr 0.8fr;
-    transition: all 0.8s ease-in-out;
+    padding: ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
-    background-color: ${theme.colors.grayIce};
-    border-top: 0.3rem solid ${theme.colors.primary};
+    background-color: ${theme.colors.alabaster};
 
-    :hover {
-      grid-template-rows: 0.2fr 1fr;
-
-      ${CardImage} {
-        opacity: 0.2;
-      }
-
-      ${CardInfo} {
-        background: transparent;
-      }
-    }
-
-    @media (max-width: ${theme.breakpoints.mobile}) {
-      width: 80%;
+    @media (max-width: ${theme.breakpoints.desktop}) {
+      width: 35%;
     }
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      width: 100%;
+      width: 50%;
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      width: 30rem;
+      padding: ${theme.spacings.xxsmall};
+
+      ${ButtonWrapper} {
+        gap: ${theme.spacings.small};
+      }
+
+      ${CardTitle} {
+        font-size: ${theme.font.sizes.medium};
+      }
+    }
+
+    :hover {
+      background-color: ${theme.colors.primary};
+
+      ${CardImage} {
+        transition: all 1s linear;
+        transform: scale(103%);
+      }
+
+      ${ButtonWrapper} {
+        display: flex;
+        opacity: 1;
+        transform: translateY(3rem);
+        animation: animate 1s linear;
+        transition: all 1.1s linear ease;
+      }
+      @keyframes animate {
+        from {
+          display: none;
+          transform: translateY(0rem);
+        }
+        to {
+          transform: translateY(3rem);
+        }
+      }
     }
   `}
 `;
 
 export const CardImage = styled.div<CardProps>`
-  ${({ background }) => css`
+  ${({ background, theme }) => css`
     background-size: cover;
-    transition: 0.8s ease-in-out;
+    transition: all 1s linear;
     background-image: url(${background});
+    border-radius: ${theme.border.radius};
+    box-shadow: 0 0 0.3rem ${theme.colors.black};
   `}
 `;
 
 export const CardInfo = styled.div`
   ${({ theme }) => css`
-    opacity: 0.9;
     display: flex;
+    position: relative;
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    transition: 0.8s ease-in-out;
-    gap: ${theme.spacings.xxsmall};
-    border-radius: 0 0 0.3rem 0.3rem;
+    gap: ${theme.spacings.xxxsmall};
     padding: ${theme.spacings.xxsmall};
-    background: ${theme.colors.primary};
-    box-shadow: 0.1rem 0rem 1.5rem rgba(0, 0, 0, 1);
-
-    > div {
-      display: flex;
-      justify-content: center;
-      gap: ${theme.spacings.xxsmall};
-    }
-
-    > a {
-      cursor: pointer;
-      font-family: inherit;
-      text-decoration: none;
-    }
+    border-radius: 0 0 0.5rem 0.5rem;
   `}
 `;
 
 export const CardTitle = styled.h1`
   ${({ theme }) => css`
-    font-family: 'Gotham';
     letter-spacing: 0.2rem;
+    color: ${theme.colors.black};
+    font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.xlarge};
+  `}
+`;
+
+export const ButtonWrapper = styled.div`
+  ${({ theme }) => css`
+    opacity: 0;
+    top: 6.5rem;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    transition: all 1.1s ease;
+    gap: ${theme.spacings.large};
+
+    ${ButtonStyles.Wrapper} {
+      padding: 0;
+      display: flex;
+      align-items: end;
+      gap: ${theme.spacings.xxsmall};
+
+      path {
+        fill: ${theme.colors.black};
+      }
+
+      :hover path {
+        fill: ${theme.colors.alabaster};
+      }
+    }
   `}
 `;

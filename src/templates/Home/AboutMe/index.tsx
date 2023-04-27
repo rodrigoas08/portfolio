@@ -1,6 +1,6 @@
 import * as S from './styles';
 import { Title } from 'components';
-import EuPedro from 'img/euPedro.jpg';
+import EuPedro from 'img/euPedro.webp';
 import ProfileCard from './ProfileCard';
 import { openLinkInNewTab } from 'utils/functions';
 import { FaLinkedin, FaWhatsapp, FaInstagram, FaGithub } from 'react-icons/fa';

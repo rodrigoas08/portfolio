@@ -32,7 +32,6 @@ export const Image = styled.img`
   ${({ theme }) => css`
     width: 15rem;
     height: 15rem;
-    filter: saturate(210%);
     border-radius: ${theme.border.rounded};
     border: 0.4rem solid ${theme.colors.primary};
   `}

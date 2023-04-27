@@ -1,4 +1,4 @@
-import Ecbporto from 'img/portfolios/ecbporto.png';
+import Ecbporto from 'img/portfolios/ecbporto.webp';
 
 export const CardList = [
   {

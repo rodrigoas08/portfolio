@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { FormStateProps } from 'interfaces/form';
 import { Button, Input, Title } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
-import { SubjectIcon, NameIcon, EmailIcon } from 'components/Icons';
+import { SubjectIcon, NameIcon, EmailIcon } from '../Contact/Icons';
 
 const Contact = () => {
   const { register, handleSubmit, formState } = useForm<FormStateProps>({

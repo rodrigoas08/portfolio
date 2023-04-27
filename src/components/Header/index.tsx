@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import FotoProfile from 'img/profile.jpeg';
+import FotoProfile from 'img/profile.webp';
 import { IColorProps } from 'interfaces/header';
 import { useState, memo, useLayoutEffect } from 'react';
 import { changeTitleOfPage, handleScrollPosition } from './functions';

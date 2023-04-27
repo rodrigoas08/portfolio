@@ -2,17 +2,19 @@ import * as S from './styles';
 import { Button } from 'components';
 import { useForm } from 'react-hook-form';
 import { useEffect, useState } from 'react';
-import { FormState } from 'interfaces/form';
+import { FormStateProps } from 'interfaces/form';
 
 type ModalProps = {
   handleClose: () => void;
 };
 
 const Modal = ({ handleClose }: ModalProps) => {
-  const { handleSubmit } = useForm<FormState>();
+  const { handleSubmit } = useForm<FormStateProps>({
+    mode: 'onSubmit'
+  });
   const [modalSuccess, setModalSuccess] = useState(false);
 
-  async function onSubmit(values: FormState) {
+  async function onSubmit(values: FormStateProps) {
     console.log(values);
     setModalSuccess(true);
   }

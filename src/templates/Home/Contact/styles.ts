@@ -66,6 +66,7 @@ export const Form = styled.form`
     background-color: ${theme.colors.grayIce};
 
     ${ButtonStyles.Wrapper} {
+      height: 3.5rem;
       border-radius: 0;
       text-transform: uppercase;
     }

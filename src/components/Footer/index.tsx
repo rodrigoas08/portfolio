@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <S.Footer>
       <S.TextCopyright>
-        &copy; Copyright 2022 Rodrigo Sobral - Todos os direitos reservados.
+        &copy; Copyright 2023 Rodrigo Sobral - Todos os direitos reservados.
       </S.TextCopyright>
     </S.Footer>
   );

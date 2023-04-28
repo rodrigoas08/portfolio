@@ -22,6 +22,12 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
         width: 100%;
       }
 
+      ${Textarea} {
+        :focus {
+          font-size: ${theme.font.sizes.medium};
+        }
+      }
+
       ${CTAWrapper} {
         width: 100%;
         height: auto;
@@ -88,7 +94,10 @@ export const Textarea = styled.textarea`
 
     :focus {
       border-color: ${theme.colors.primary};
-      font-size: ${theme.font.sizes.medium};
+
+      ::placeholder {
+        color: transparent;
+      }
     }
   `}
 `;

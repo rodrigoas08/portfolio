@@ -89,6 +89,10 @@ export const Textarea = styled.textarea`
     :focus {
       border-color: ${theme.colors.primary};
       font-size: ${theme.font.sizes.medium};
+
+      ::placeholder {
+        color: transparent;
+      }
     }
   `}
 `;

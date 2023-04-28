@@ -43,7 +43,7 @@ export const Wrapper = styled.header<HeaderProps>`
       }
 
       svg {
-        top: 5rem;
+        top: 4.8rem;
         right: 8rem;
         cursor: pointer;
         position: absolute;

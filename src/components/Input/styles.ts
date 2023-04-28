@@ -62,6 +62,16 @@ export const Input = styled.input<InputType>`
 
     :focus {
       border: 0.1rem solid ${theme.colors.primary};
+
+      ::placeholder {
+        color: transparent;
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      :focus {
+        font-size: ${theme.font.sizes.medium};
+      }
     }
   `}
 `;

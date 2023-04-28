@@ -7,8 +7,8 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
     width: 100%;
     height: auto;
     display: flex;
-    padding: 14rem 0 10rem;
     align-items: center;
+    padding: 14rem 0 10rem;
     flex-direction: column;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
@@ -20,6 +20,12 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
 
       ${Form} {
         width: 100%;
+      }
+
+      ${Textarea} {
+        :focus {
+          font-size: ${theme.font.sizes.medium};
+        }
       }
 
       ${CTAWrapper} {
@@ -88,6 +94,10 @@ export const Textarea = styled.textarea`
 
     :focus {
       border-color: ${theme.colors.primary};
+
+      ::placeholder {
+        color: transparent;
+      }
     }
   `}
 `;

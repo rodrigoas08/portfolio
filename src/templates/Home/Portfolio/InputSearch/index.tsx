@@ -11,11 +11,12 @@ const InputSearch = ({ search, setSearch }: IInputSearchProps) => {
   return (
     <Wrapper>
       <SearchInput
+        type="text"
         value={search}
         placeholder="Buscar"
         onChange={(event) => setSearch(event.target.value)}
       />
-      <Icon size={15} title="Ícone de busca" />
+      <IconSearch size={15} title="Ícone de busca" />
     </Wrapper>
   );
 };
@@ -30,9 +31,11 @@ const SearchInput = styled(Input)`
   ${({ theme }) => css`
     width: 100%;
     border-radius: 0;
+    text-transform: none;
     text-overflow: ellipsis;
     transition: all 1.5s ease-in-out;
     background: ${theme.colors.grayIce};
+    font-size: ${theme.font.sizes.medium};
     padding-left: ${theme.spacings.xxsmall};
     padding-right: ${theme.spacings.medium};
 
@@ -41,11 +44,15 @@ const SearchInput = styled(Input)`
       border: 0.1rem solid transparent;
       transition: all 1.5s ease-in-out;
       border-bottom: 0.1rem solid ${theme.colors.primary};
+
+      ::placeholder {
+        color: transparent;
+      }
     }
   `}
 `;
 
-const Icon = styled(SearchAlt)`
+const IconSearch = styled(SearchAlt)`
   position: absolute;
   transform: translate(-150%, 50%);
 `;

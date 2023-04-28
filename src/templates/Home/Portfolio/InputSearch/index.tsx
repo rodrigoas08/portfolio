@@ -15,7 +15,7 @@ const InputSearch = ({ search, setSearch }: IInputSearchProps) => {
         placeholder="Buscar"
         onChange={(event) => setSearch(event.target.value)}
       />
-      <Icon size={15} title="Ícone de busca" />
+      <IconSearch size={15} title="Ícone de busca" />
     </Wrapper>
   );
 };
@@ -46,7 +46,7 @@ const SearchInput = styled(Input)`
   `}
 `;
 
-const Icon = styled(SearchAlt)`
+const IconSearch = styled(SearchAlt)`
   position: absolute;
   transform: translate(-150%, 50%);
 `;

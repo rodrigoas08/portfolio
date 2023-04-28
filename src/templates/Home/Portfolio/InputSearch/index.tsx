@@ -42,12 +42,11 @@ const SearchInput = styled(Input)`
       background: transparent;
       border: 0.1rem solid transparent;
       transition: all 1.5s ease-in-out;
+      font-size: ${theme.font.sizes.medium};
       border-bottom: 0.1rem solid ${theme.colors.primary};
-    }
 
-    @media (max-width: ${theme.breakpoints.ipad}) {
-      :focus {
-        font-size: ${theme.font.sizes.medium};
+      ::placeholder {
+        color: transparent;
       }
     }
   `}

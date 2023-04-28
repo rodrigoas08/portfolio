@@ -27,7 +27,7 @@ export const Wrapper = styled.header<HeaderProps>`
     ${isOpen &&
     css`
       width: 100%;
-      height: 50%;
+      height: 50rem;
       align-items: center;
       flex-direction: column;
       justify-content: start;

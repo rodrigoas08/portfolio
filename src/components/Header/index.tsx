@@ -3,14 +3,27 @@ import * as S from './styles';
 import { Link } from 'react-scroll';
 import FotoProfile from 'img/profile.webp';
 import { IColorProps } from 'interfaces/header';
-import { useState, memo, useLayoutEffect } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { useState, memo, useLayoutEffect, useEffect } from 'react';
 import { changeTitleOfPage, handleScrollPosition } from './functions';
 
 const Header = () => {
   const [title, setTitle] = useState({ name: 'Início' });
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
   });
+
+  useEffect(() => {
+    if (menuIsOpen) setMenuIsOpen(false);
+
+    const handleEsc = ({ key }: KeyboardEvent) => {
+      key === 'Escape' && setMenuIsOpen(false);
+    };
+    document.addEventListener('keyup', handleEsc);
+
+    return () => document.removeEventListener('keyup', handleEsc);
+  }, []);
 
   useLayoutEffect(() => {
     handleScrollPosition(setColorHeader);
@@ -45,7 +58,7 @@ const Header = () => {
   ];
 
   return (
-    <S.Wrapper color={colorHeader.color}>
+    <S.Wrapper isOpen={menuIsOpen} color={colorHeader.color}>
       <Link
         href="#"
         aria-label={Links[0].ariaText}
@@ -59,10 +72,11 @@ const Header = () => {
         <S.ImgProfile
           loading="lazy"
           src={FotoProfile}
+          isOpen={menuIsOpen}
           alt="Minha foto para perfil"
         />
       </Link>
-      <S.NavWrapper>
+      <S.NavWrapper isOpen={menuIsOpen}>
         {Links.map((link) => {
           return (
             <li key={crypto.randomUUID()}>
@@ -74,8 +88,11 @@ const Header = () => {
                 smooth={true}
               >
                 <S.LinkText
+                  isOpen={menuIsOpen}
                   onClick={() => {
-                    setTitle({ name: link.name }), changeTitleOfPage(link.name);
+                    setTitle({ name: link.name }),
+                      changeTitleOfPage(link.name),
+                      setMenuIsOpen(false);
                   }}
                   activeLink={title.name === link.name}
                 >
@@ -86,6 +103,11 @@ const Header = () => {
           );
         })}
       </S.NavWrapper>
+      {menuIsOpen ? (
+        <FaTimes size={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
+      ) : (
+        <FaBars size={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
+      )}
     </S.Wrapper>
   );
 };

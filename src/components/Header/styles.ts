@@ -1,56 +1,88 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.header`
-  ${({ theme, color }) => css`
+export type HeaderProps = {
+  isOpen?: boolean;
+};
+
+export const Wrapper = styled.header<HeaderProps>`
+  ${({ theme, color, isOpen }) => css`
     z-index: 3;
     width: 100%;
-    height: 8rem;
+    height: 12rem;
     display: flex;
     position: fixed;
     align-items: center;
     background: ${color};
     justify-content: space-between;
-    transition: all 0.1s ease-in-out;
     padding: ${theme.spacings.xxsmall} 15rem;
     box-shadow: ${color === 'black'
       ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
       : 'transparent'};
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      justify-content: center;
-      padding: 0 ${theme.spacings.small};
+    svg {
+      display: none;
+      fill: ${theme.colors.primary};
+    }
 
-      ${ImgProfile} {
-        display: none;
-      }
+    ${isOpen &&
+    css`
+      width: 100%;
+      height: 50rem;
+      align-items: center;
+      flex-direction: column;
+      justify-content: start;
+      background-color: ${theme.colors.black};
+    `}
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      padding: 0 8rem;
 
       ${NavWrapper} {
-        gap: ${theme.spacings.small};
+        gap: ${theme.spacings.large};
+        display: ${isOpen ? 'flex' : 'none'};
+      }
+
+      svg {
+        top: 5rem;
+        right: 8rem;
+        cursor: pointer;
+        position: absolute;
+        display: inline-block;
+        fill: ${theme.colors.primary};
       }
     }
   `}
 `;
 
-export const ImgProfile = styled.img`
-  ${({ theme }) => css`
+export const ImgProfile = styled.img<HeaderProps>`
+  ${({ theme, isOpen }) => css`
     cursor: pointer;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
     border-radius: ${theme.border.rounded};
+
+    ${isOpen &&
+    css`
+      display: none;
+    `}
   `}
 `;
 
-export const NavWrapper = styled.ul`
-  ${({ theme }) => css`
+export const NavWrapper = styled.ul<HeaderProps>`
+  ${({ theme, isOpen }) => css`
     display: flex;
     list-style: none;
+    align-items: center;
+    justify-content: center;
     gap: ${theme.spacings.medium};
+    padding: ${theme.spacings.xlarge} 0;
+    flex-direction: ${isOpen ? 'column' : 'row'};
   `}
 `;
 
-export type LinkMenuProps = {
+export interface LinkMenuProps extends HeaderProps {
   activeLink?: boolean;
-};
+}
 
 export const LinkText = styled.button<LinkMenuProps>`
   ${({ theme, activeLink }) => css`

@@ -83,6 +83,7 @@ export const Textarea = styled.textarea`
     font-family: sans-serif;
     color: ${theme.colors.alabaster};
     border: 0.1rem solid transparent;
+    font-size: ${theme.font.sizes.medium};
     background-color: ${theme.colors.grayIce};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall};
 

@@ -7,7 +7,7 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
     width: 100%;
     height: auto;
     display: flex;
-    padding: 8rem 0;
+    padding: 14rem 0 10rem;
     align-items: center;
     flex-direction: column;
 

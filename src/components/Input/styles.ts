@@ -61,7 +61,12 @@ export const Input = styled.input<InputType>`
     ${fullWidth && InputModifiers.fullWidth()}
 
     :focus {
+      font-size: ${theme.font.sizes.medium};
       border: 0.1rem solid ${theme.colors.primary};
+
+      ::placeholder {
+        color: transparent;
+      }
     }
   `}
 `;

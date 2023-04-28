@@ -1,9 +1,9 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import { FaBars, FaTimes } from 'react-icons/fa';
 import FotoProfile from 'img/profile.webp';
 import { IColorProps } from 'interfaces/header';
+import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState, memo, useLayoutEffect, useEffect } from 'react';
 import { changeTitleOfPage, handleScrollPosition } from './functions';
 

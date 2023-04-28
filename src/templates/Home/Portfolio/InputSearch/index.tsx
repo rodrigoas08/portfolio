@@ -35,6 +35,7 @@ const SearchInput = styled(Input)`
     text-overflow: ellipsis;
     transition: all 1.5s ease-in-out;
     background: ${theme.colors.grayIce};
+    font-size: ${theme.font.sizes.medium};
     padding-left: ${theme.spacings.xxsmall};
     padding-right: ${theme.spacings.medium};
 
@@ -42,7 +43,6 @@ const SearchInput = styled(Input)`
       background: transparent;
       border: 0.1rem solid transparent;
       transition: all 1.5s ease-in-out;
-      font-size: ${theme.font.sizes.medium};
       border-bottom: 0.1rem solid ${theme.colors.primary};
 
       ::placeholder {

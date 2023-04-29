@@ -35,7 +35,7 @@ export const Wrapper = styled.header<HeaderProps>`
     `}
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding: 0 8rem;
+      padding: 0 ${theme.spacings.large};
 
       ${NavWrapper} {
         gap: ${theme.spacings.large};
@@ -44,7 +44,7 @@ export const Wrapper = styled.header<HeaderProps>`
 
       svg {
         top: 4.8rem;
-        right: 8rem;
+        right: 4rem;
         cursor: pointer;
         position: absolute;
         display: inline-block;

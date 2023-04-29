@@ -49,7 +49,7 @@ const InputModifiers = {
 
 export const Input = styled.input<InputType>`
   ${({ theme, fullWidth }) => css`
-    height: 3rem;
+    height: 3.5rem;
     outline: none;
     position: relative;
     border-radius: 0.1rem;

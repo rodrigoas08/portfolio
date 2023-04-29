@@ -82,6 +82,6 @@ export const ErrorMessage = styled.p`
     display: block;
     position: absolute;
     color: ${theme.colors.primary};
-    font-size: ${theme.font.sizes.xsmall};
+    font-size: ${theme.font.sizes.xsmall}!important;
   `}
 `;

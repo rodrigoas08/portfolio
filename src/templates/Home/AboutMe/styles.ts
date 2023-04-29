@@ -101,7 +101,7 @@ export const Text = styled.p`
   }
 `;
 
-export const Span = styled.span`
+export const Span = styled.b`
   ${({ theme }) => css`
     color: ${theme.colors.primary};
   `}

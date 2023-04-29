@@ -78,7 +78,7 @@ export const Input = styled.input<InputType>`
 
 export const ErrorMessage = styled.p`
   ${({ theme }) => css`
-    top: 3.1rem;
+    top: 3.5rem;
     display: block;
     position: absolute;
     color: ${theme.colors.primary};

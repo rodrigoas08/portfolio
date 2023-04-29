@@ -11,7 +11,7 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       align-items: center;
-      padding: 0 ${theme.spacings.small};
+      padding: 0 ${theme.spacings.xxsmall};
 
       ${WrapperText} {
         display: flex;

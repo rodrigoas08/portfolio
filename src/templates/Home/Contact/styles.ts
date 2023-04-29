@@ -8,11 +8,11 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
     height: auto;
     display: flex;
     align-items: center;
-    padding: 14rem 0 10rem;
+    padding-bottom: 14rem;
     flex-direction: column;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      padding: 8rem ${theme.spacings.small};
+      padding: 8rem 0;
 
       ${Content} {
         width: 90%;
@@ -31,11 +31,7 @@ export const Wrapper = styled.div.attrs({ id: 'contato' })`
       ${CTAWrapper} {
         width: 100%;
         height: auto;
-        font-size: ${theme.font.sizes.xsmall};
-
-        > p {
-          font-size: ${theme.font.sizes.small};
-        }
+        font-size: ${theme.font.sizes.large};
       }
     }
 

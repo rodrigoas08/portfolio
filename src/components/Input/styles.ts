@@ -49,7 +49,7 @@ const InputModifiers = {
 
 export const Input = styled.input<InputType>`
   ${({ theme, fullWidth }) => css`
-    height: 3rem;
+    height: 3.5rem;
     outline: none;
     position: relative;
     border-radius: 0.1rem;
@@ -78,7 +78,7 @@ export const Input = styled.input<InputType>`
 
 export const ErrorMessage = styled.p`
   ${({ theme }) => css`
-    top: 3.1rem;
+    top: 3.5rem;
     display: block;
     position: absolute;
     color: ${theme.colors.primary};

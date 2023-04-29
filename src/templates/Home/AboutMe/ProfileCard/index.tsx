@@ -46,7 +46,7 @@ const ProfileCard = ({
         </S.Text>
         <S.Text>{localization}</S.Text>
         <S.Text>
-          <b>{occupation}</b>
+          <strong>{occupation}</strong>
         </S.Text>
         <S.Text>{skills}</S.Text>
       </S.TopInfo>

@@ -48,7 +48,7 @@ export const Text = styled.p`
       text-decoration: none;
     }
 
-    b {
+    strong {
       color: ${theme.colors.alabaster};
     }
   `}

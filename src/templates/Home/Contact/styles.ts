@@ -55,6 +55,10 @@ export const Content = styled.div`
     display: flex;
     justify-content: center;
     gap: ${theme.spacings.xlarge};
+
+    p:nth-child(3n) {
+      font-size: ${theme.font.sizes.xxxlarge};
+    }
   `}
 `;
 
@@ -124,7 +128,7 @@ export const CTAWrapper = styled.div`
     > p {
       line-height: 150%;
 
-      > strong {
+      > b {
         text-transform: uppercase;
         color: ${theme.colors.primary};
       }

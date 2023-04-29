@@ -57,13 +57,13 @@ const Contact = () => {
           <h1>Vamos conversar?</h1>
           <p>
             Você pode entrar em contato
-            <br /> preenchendo o <strong>formulário</strong>
+            <br /> preenchendo o <b>formulário</b>
           </p>
-          <h2>ou</h2>
+          <p>ou</p>
           <p>
             Iniciar uma conversa por
             <br />
-            <strong>whatsapp</strong>
+            <b>whatsapp</b>
             <br />
             <sup>(21) 98514-1580</sup>
           </p>

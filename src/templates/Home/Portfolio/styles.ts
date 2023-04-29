@@ -6,36 +6,21 @@ export const Wrapper = styled.div.attrs({ id: 'portfolio' })`
     height: auto;
     display: flex;
     padding: 14rem 0;
-    align-items: start;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
       ${SubTitle} {
-        text-align: center;
-        padding: ${theme.spacings.large} ${theme.spacings.small} 0
-          ${theme.spacings.small};
         font-size: ${theme.font.sizes.small};
       }
     } ;
   `}
 `;
 
-export const Container = styled.div`
+export const SubTitle = styled.p`
   ${({ theme }) => css`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding-bottom: ${theme.spacings.xlarge};
-
-    @media (max-width: ${theme.breakpoints.ipad}) {
-      align-items: center;
-      flex-direction: column;
-    }
-  `}
-`;
-
-export const SubTitle = styled.h2`
-  ${({ theme }) => css`
+    text-align: center;
     font-weight: lighter;
     padding-top: ${theme.spacings.large};
     font-size: ${theme.font.sizes.medium};

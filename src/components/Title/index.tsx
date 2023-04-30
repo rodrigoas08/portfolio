@@ -7,7 +7,6 @@ const H1 = styled.h1`
     cursor: default;
     font-size: 3rem;
     position: relative;
-    white-space: nowrap;
     text-transform: uppercase;
     font-weight: ${theme.font.extraBold};
 

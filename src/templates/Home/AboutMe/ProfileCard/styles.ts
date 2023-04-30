@@ -40,7 +40,7 @@ export const Image = styled.img`
 export const Text = styled.p`
   ${({ theme }) => css`
     text-align: center;
-    color: ${theme.colors.text};
+    color: ${theme.colors.gray};
 
     a {
       color: inherit;

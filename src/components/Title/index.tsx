@@ -18,7 +18,7 @@ const H1 = styled.h1`
       width: 110%;
       z-index: -1;
       height: 100%;
-      opacity: 0.5;
+      opacity: 0.1;
       position: absolute;
       border-radius: 1rem 4rem;
       transform: translate(-50%, -50%);

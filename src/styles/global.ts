@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
     height: auto;
     overflow-x: hidden;
     font-family: sans-serif;
-    background-color: #161616;    
     color: ${({ theme }) => theme.colors.alabaster};
+    background-color: ${({ theme }) => theme.colors.background};
       
     ::-webkit-scrollbar {
       width: 0.5rem;

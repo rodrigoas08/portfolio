@@ -43,12 +43,10 @@ export default {
     black: '#000000',
     error: '#FF6262',
     primary: '#00ACEE',
-    blueRibbon: '#87CEEB',
+    secondary: '#9AE5F3',
     gray: '#8E8E8E',
-    lightGray: '#D3D3D3',
     text: '#777777',
     success: '#28A745',
-    barberry: '#DED717',
     grayIce: '#ffffff1a',
     whatsapp: '#40c351'
   },

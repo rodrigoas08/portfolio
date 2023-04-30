@@ -105,7 +105,7 @@
 //     border-style: none;
 //     text-transform: lowercase;
 //     border-radius: ${theme.border.radius};
-//     border: 0.1rem solid ${theme.colors.lightGray};
+//     border: 0.1rem solid ${theme.colors.gray};
 //     border-left: 1rem solid ${theme.colors.primary};
 //     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 
@@ -126,7 +126,7 @@
 //     height: 15rem;
 //     outline: none;
 //     border-radius: ${theme.border.radius};
-//     border: 0.1rem solid ${theme.colors.lightGray};
+//     border: 0.1rem solid ${theme.colors.gray};
 //     border-left: 1rem solid ${theme.colors.primary};
 //     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxxsmall};
 

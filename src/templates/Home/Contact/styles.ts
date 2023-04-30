@@ -114,6 +114,7 @@ export const CTAWrapper = styled.div`
     padding: 0 ${theme.spacings.small};
     margin-top: ${theme.spacings.xlarge};
     font-size: ${theme.font.sizes.xxlarge};
+    text-shadow: 0.1rem 0.4rem .2rem ${theme.colors.black};
 
     > h1 {
       font-size: 3.9rem;

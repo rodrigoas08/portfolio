@@ -39,15 +39,16 @@ export default {
     xxlarge: '6rem'
   },
   colors: {
+    primary: '#00ACEE',
+    secondary: '#9AE5F3',
+    background: '#161616',
     alabaster: '#fafafa',
     black: '#000000',
     error: '#FF6262',
-    primary: '#00ACEE',
-    secondary: '#9AE5F3',
     gray: '#8E8E8E',
-    text: '#777777',
-    success: '#28A745',
     grayIce: '#ffffff1a',
+    success: '#28A745',
+    text: '#777777',
     whatsapp: '#40c351'
   },
   breakpoints: {

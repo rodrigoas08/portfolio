@@ -54,5 +54,5 @@ const SearchInput = styled(Input)`
 
 const IconSearch = styled(SearchAlt)`
   position: absolute;
-  transform: translate(-150%, 50%);
+  transform: translate(-150%, 70%);
 `;

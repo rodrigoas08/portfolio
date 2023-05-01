@@ -1,61 +1,31 @@
 import { CardProps } from '.';
 import styled, { css } from 'styled-components';
-import * as ButtonStyles from 'components/Button/styles';
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 25%;
+    width: 45rem;
     display: grid;
-    height: 30rem;
+    height: 40rem;
     grid-template-rows: 1fr 0.8fr;
+    border: 0.1rem solid transparent;
     padding: ${theme.spacings.xxsmall};
     border-radius: ${theme.border.radius};
-    background-color: ${theme.colors.alabaster};
+    background-color: ${theme.colors.grayIce};
 
-    @media (max-width: ${theme.breakpoints.desktop}) {
-      width: 35%;
-    }
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      width: 50%;
+    :hover {
+      border: 0.1rem solid ${theme.colors.primary};
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      width: 30rem;
+      width: 35rem;
       padding: ${theme.spacings.xxsmall};
 
-      ${ButtonWrapper} {
+      ${IconWrapper} {
         gap: ${theme.spacings.small};
       }
 
       ${CardTitle} {
         font-size: ${theme.font.sizes.medium};
-      }
-    }
-
-    :hover {
-      background-color: ${theme.colors.primary};
-
-      ${CardImage} {
-        transition: all 1s linear;
-        transform: scale(103%);
-      }
-
-      ${ButtonWrapper} {
-        display: flex;
-        opacity: 1;
-        transform: translateY(3rem);
-        animation: animate 1s linear;
-        transition: all 1.1s linear ease;
-      }
-      @keyframes animate {
-        from {
-          display: none;
-          transform: translateY(0rem);
-        }
-        to {
-          transform: translateY(3rem);
-        }
       }
     }
   `}
@@ -67,7 +37,7 @@ export const CardImage = styled.div<CardProps>`
     transition: all 1s linear;
     background-image: url(${background});
     border-radius: ${theme.border.radius};
-    box-shadow: 0 0 0.3rem ${theme.colors.black};
+    box-shadow: 0 0 0.2rem ${theme.colors.alabaster};
   `}
 `;
 
@@ -75,47 +45,57 @@ export const CardInfo = styled.div`
   ${({ theme }) => css`
     display: flex;
     position: relative;
-    align-items: center;
+    align-items: start;
     flex-direction: column;
-    justify-content: center;
-    gap: ${theme.spacings.xxxsmall};
-    padding: ${theme.spacings.xxsmall};
+    justify-content: space-between;
+    color: ${theme.colors.alabaster};
     border-radius: 0 0 0.5rem 0.5rem;
+    padding: ${theme.spacings.xxsmall} 0;
+    text-shadow: 0 0.1rem 0.4rem ${theme.colors.black};
   `}
 `;
 
 export const CardTitle = styled.h1`
   ${({ theme }) => css`
-    letter-spacing: 0.2rem;
-    color: ${theme.colors.black};
+    color: ${theme.colors.primary};
     font-weight: ${theme.font.bold};
     font-size: ${theme.font.sizes.xlarge};
   `}
 `;
 
-export const ButtonWrapper = styled.div`
+export const CardDescription = styled.p`
   ${({ theme }) => css`
-    opacity: 0;
-    top: 6.5rem;
+    font-size: ${theme.font.sizes.medium};
+  `}
+`;
+
+export const CardStack = styled.p`
+  ${({ theme }) => css`
+    align-self: end;
+    color: ${theme.colors.text};
+    font-size: ${theme.font.sizes.small};
+  `}
+`;
+
+export const IconWrapper = styled.div`
+  ${({ theme }) => css`
+    top: 0;
     display: flex;
+    align-self: end;
     position: absolute;
     justify-content: center;
-    transition: all 1.1s ease;
-    gap: ${theme.spacings.large};
+    gap: ${theme.spacings.small};
+    margin-top: ${theme.spacings.xxsmall};
 
-    ${ButtonStyles.Wrapper} {
-      padding: 0;
-      display: flex;
-      align-items: end;
-      gap: ${theme.spacings.xxsmall};
+    svg {
+      cursor: pointer;
+      transition: 1.1s ease;
+      fill: ${theme.colors.text};
+    }
 
-      path {
-        fill: ${theme.colors.black};
-      }
-
-      :hover path {
-        fill: ${theme.colors.alabaster};
-      }
+    svg:hover {
+      transition: 1.1s ease;
+      fill: ${theme.colors.primary};
     }
   `}
 `;

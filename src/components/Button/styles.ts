@@ -6,10 +6,10 @@ const ButtonModifier = {
     ${({ theme }) => css`
       border: none;
       background: transparent;
-      color: ${theme.colors.black};
+      color: ${theme.colors.alabaster};
 
       :hover {
-        color: ${theme.colors.alabaster};
+        opacity: 0.5;
       }
     `}
   `,

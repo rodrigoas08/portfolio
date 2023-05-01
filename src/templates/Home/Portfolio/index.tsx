@@ -18,7 +18,7 @@ const Portfolio = () => {
       .replace(/[úùûü]/gi, 'u')
       .replace(/[ç]/gi, 'c');
     return CardList.filter((portfolio) =>
-      portfolio.projectName.toLowerCase().includes(lowerSearch)
+      portfolio.title.toLowerCase().includes(lowerSearch)
     );
   }, [search]);
 
@@ -36,7 +36,9 @@ const Portfolio = () => {
                 link={card.link}
                 repository={card.repository}
                 background={card.background}
-                title={card.projectName.toUpperCase()}
+                title={card.title.toUpperCase()}
+                description={card.description}
+                stack={card.stack}
               />
             );
           })

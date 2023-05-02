@@ -65,7 +65,7 @@ const Card = styled.div`
 const SkillCard = () => {
   return (
     <Wrapper>
-      {ListSkillCards.map((item) => {
+      {ListSkillCards.sort(() => Math.random() - 0.5).map((item) => {
         return (
           <Card
             key={crypto.randomUUID()}

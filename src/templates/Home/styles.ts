@@ -65,12 +65,12 @@ export const CarrerName = styled.h2`
     -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
-    text-shadow: 0.1rem 0.1rem .9rem ${theme.colors.black};
+    text-shadow: 0.1rem 0.1rem 0.9rem ${theme.colors.black};
     background-image: linear-gradient(
       to right,
       ${theme.colors.primary},
       ${theme.colors.alabaster},
-      steelblue
+      ${theme.colors.primary}
     );
   `}
 `;

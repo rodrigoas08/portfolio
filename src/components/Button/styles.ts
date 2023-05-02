@@ -61,9 +61,17 @@ export const Wrapper = styled.button<
     cursor: pointer;
     text-decoration: none;
     color: ${theme.colors.alabaster};
-    background: ${theme.colors.primary};
+    background-image: linear-gradient(
+      to right,
+      ${theme.colors.primary},
+      ${theme.colors.secondary}
+    );
     border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
+
+    :hover {
+      opacity: 0.9;
+    }
 
     ${secondary && ButtonModifier.secondary()}
     ${fullWidth && ButtonModifier.fullWidth()}

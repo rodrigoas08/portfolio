@@ -25,7 +25,11 @@ const GlobalStyle = createGlobalStyle`
 
     ::-webkit-scrollbar-thumb {
       border-radius: 0.1rem;
-      background: ${({ theme }) => theme.colors.primary};
+      background-image: linear-gradient(
+        to bottom,
+        ${({ theme }) => theme.colors.primary},
+        ${({ theme }) => theme.colors.secondary}
+      );
     }
 
   }

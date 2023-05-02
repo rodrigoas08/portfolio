@@ -9,6 +9,7 @@ const H1 = styled.h1`
     position: relative;
     text-transform: uppercase;
     font-weight: ${theme.font.extraBold};
+    text-shadow: 0 0.2rem 0.2rem ${theme.colors.black};
 
     :before {
       content: '';
@@ -17,11 +18,14 @@ const H1 = styled.h1`
       width: 110%;
       z-index: -1;
       height: 100%;
-      opacity: 0.5;
       position: absolute;
       border-radius: 1rem 4rem;
       transform: translate(-50%, -50%);
-      background-color: ${theme.colors.primary};
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.primary},
+        ${theme.colors.secondary}
+      );
     }
   `}
 `;

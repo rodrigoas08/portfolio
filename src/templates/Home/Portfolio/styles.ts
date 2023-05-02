@@ -36,6 +36,7 @@ export const Section = styled.section`
     flex-wrap: wrap;
     justify-content: center;
     gap: ${theme.spacings.small};
+    padding: ${theme.spacings.xxsmall};
     margin-top: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.desktop}) {

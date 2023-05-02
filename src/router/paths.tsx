@@ -1,8 +1,8 @@
 import routes from './routes';
 import * as T from 'templates';
 import theme from 'styles/theme';
+import { Wrapper } from 'components';
 import GlobalStyle from 'styles/global';
-import Wrapper from 'components/Wrapper';
 import { ThemeProvider } from 'styled-components';
 import {
   BrowserRouter as Router,

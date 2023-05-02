@@ -2,16 +2,27 @@
 import * as S from './styles';
 import { Link } from 'react-scroll';
 import FotoProfile from 'img/profile.webp';
+import { ProgressiveBar } from 'components';
 import { IColorProps } from 'interfaces/header';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState, memo, useLayoutEffect, useEffect } from 'react';
-import { changeTitleOfPage, handleScrollPosition } from './functions';
+import {
+  changeTitleOfPage,
+  handleScrollPosition,
+  updateProgressiveBar
+} from './functions';
 
 const Header = () => {
   const [title, setTitle] = useState({ name: 'Início' });
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
+  });
+
+  useEffect(() => {
+    //não remover para funcionamento correto deste evento
+    window.addEventListener('scroll', updateProgressiveBar);
+    return () => window.removeEventListener('scroll', updateProgressiveBar);
   });
 
   useEffect(() => {
@@ -108,6 +119,7 @@ const Header = () => {
       ) : (
         <FaBars size={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
       )}
+      <ProgressiveBar />
     </S.Wrapper>
   );
 };

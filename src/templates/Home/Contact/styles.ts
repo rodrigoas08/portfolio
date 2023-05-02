@@ -114,7 +114,7 @@ export const CTAWrapper = styled.div`
     padding: 0 ${theme.spacings.small};
     margin-top: ${theme.spacings.xlarge};
     font-size: ${theme.font.sizes.xxlarge};
-    text-shadow: 0.1rem 0.4rem .2rem ${theme.colors.black};
+    text-shadow: 0.1rem 0.4rem 0.2rem ${theme.colors.black};
 
     > h1 {
       font-size: 3.9rem;
@@ -137,12 +137,8 @@ export const CTAWrapper = styled.div`
       align-items: center;
       text-transform: uppercase;
       gap: ${theme.spacings.xxsmall};
+      background: ${theme.colors.whatsapp};
       font-size: ${theme.font.sizes.medium};
-      background-color: ${theme.colors.whatsapp};
-
-      :hover {
-        opacity: 0.9;
-      }
     }
   `}
 `;

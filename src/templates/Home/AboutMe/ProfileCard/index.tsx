@@ -28,7 +28,7 @@ const ProfileCard = ({
       data-aos-mirror="true"
       data-aos-once="false"
     >
-      <S.TopInfo>
+      <S.Content>
         <S.Image
           loading="lazy"
           src={image}
@@ -49,7 +49,7 @@ const ProfileCard = ({
           <strong>{occupation}</strong>
         </S.Text>
         <S.Text>{skills}</S.Text>
-      </S.TopInfo>
+      </S.Content>
     </S.AboutCard>
   );
 };

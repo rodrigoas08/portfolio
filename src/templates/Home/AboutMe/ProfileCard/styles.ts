@@ -6,7 +6,7 @@ export const AboutCard = styled.div`
   grid-area: aboutCard;
 `;
 
-export const TopInfo = styled.div`
+export const Content = styled.div`
   ${({ theme }) => css`
     width: 100%;
     height: auto;

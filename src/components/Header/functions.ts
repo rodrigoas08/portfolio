@@ -19,3 +19,13 @@ export function handleScrollPosition(
     document.removeEventListener('scroll', () => {});
   };
 }
+
+export function updateProgressiveBar() {
+  const pixelsFromTop = window.scrollY;
+  const documentHeight = document.documentElement.scrollHeight;
+  const windowHeight = window.innerHeight;
+  const difference = documentHeight - windowHeight;
+  const percentage = (100 * pixelsFromTop) / difference;
+  const element = document.getElementById('bar');
+  if (element) element.style.width = `${percentage}%`;
+}

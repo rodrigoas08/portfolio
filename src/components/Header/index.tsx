@@ -2,16 +2,23 @@
 import * as S from './styles';
 import { Link } from 'react-scroll';
 import FotoProfile from 'img/profile.webp';
+import { ProgressiveBar } from 'components';
 import { IColorProps } from 'interfaces/header';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState, memo, useLayoutEffect, useEffect } from 'react';
-import { changeTitleOfPage, handleScrollPosition } from './functions';
+import { handleScrollPosition, updateProgressiveBar } from './functions';
 
 const Header = () => {
   const [title, setTitle] = useState({ name: 'Início' });
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
+  });
+
+  useEffect(() => {
+    //não remover para funcionamento correto deste evento
+    window.addEventListener('scroll', updateProgressiveBar);
+    return () => window.removeEventListener('scroll', updateProgressiveBar);
   });
 
   useEffect(() => {
@@ -66,7 +73,7 @@ const Header = () => {
         spy={true}
         smooth={true}
         onClick={() => {
-          setTitle({ name: Links[0].name }), changeTitleOfPage(Links[0].name);
+          setTitle({ name: Links[0].name });
         }}
       >
         <S.ImgProfile
@@ -90,9 +97,7 @@ const Header = () => {
                 <S.LinkText
                   isOpen={menuIsOpen}
                   onClick={() => {
-                    setTitle({ name: link.name }),
-                      changeTitleOfPage(link.name),
-                      setMenuIsOpen(false);
+                    setTitle({ name: link.name }), setMenuIsOpen(false);
                   }}
                   activeLink={title.name === link.name}
                 >
@@ -108,6 +113,7 @@ const Header = () => {
       ) : (
         <FaBars size={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
       )}
+      <ProgressiveBar />
     </S.Wrapper>
   );
 };

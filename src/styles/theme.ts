@@ -4,13 +4,6 @@ export default {
     rounded: '50%'
   },
   font: {
-    family: {
-      nunito: "'Nunito Sans', sans-serif",
-      inter: "'Inter', sans-serif",
-      josefin: "'Josefin Sans', sans-serif",
-      roboto: "'Roboto', sans-serif",
-      montserrat: "'Montserrat', sans-serif"
-    },
     italic: 'italic',
     light: 100,
     normal: 400,

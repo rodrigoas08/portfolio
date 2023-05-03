@@ -16,12 +16,6 @@ const Header = () => {
   });
 
   useEffect(() => {
-    //não remover para funcionamento correto deste evento
-    window.addEventListener('scroll', updateProgressiveBar);
-    return () => window.removeEventListener('scroll', updateProgressiveBar);
-  });
-
-  useEffect(() => {
     if (menuIsOpen) setMenuIsOpen(false);
 
     const handleEsc = ({ key }: KeyboardEvent) => {
@@ -34,6 +28,7 @@ const Header = () => {
 
   useLayoutEffect(() => {
     handleScrollPosition(setColorHeader);
+    updateProgressiveBar();
   }, []);
 
   const Links = [
@@ -53,8 +48,8 @@ const Header = () => {
       ariaText: 'Direciona para a área que exibe habilidades do site'
     },
     {
-      name: 'Portfólio',
-      id: 'portfolio',
+      name: 'Projetos',
+      id: 'projetos',
       ariaText: 'Direciona para a área que exibe portfólios do site'
     },
     {

@@ -62,7 +62,7 @@ const Header = () => {
   return (
     <S.Wrapper isOpen={menuIsOpen} color={colorHeader.color}>
       <Link
-        href="#"
+        href={Links[0].id}
         aria-label={Links[0].ariaText}
         to={Links[0].id}
         spy={true}
@@ -83,7 +83,7 @@ const Header = () => {
           return (
             <li key={crypto.randomUUID()}>
               <Link
-                href="#"
+                href={link.id}
                 aria-label={link.ariaText}
                 to={link.id}
                 spy={true}

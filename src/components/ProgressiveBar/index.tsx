@@ -4,8 +4,8 @@ const Div = styled.div`
   ${({ theme }) => css`
     left: 0;
     width: 0%;
-    top: 12rem;
     height: 0.1rem;
+    bottom: -0.1rem;
     position: absolute;
     background-image: linear-gradient(
       to right,

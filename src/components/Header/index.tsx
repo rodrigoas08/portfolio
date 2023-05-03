@@ -48,8 +48,8 @@ const Header = () => {
       ariaText: 'Direciona para a área que exibe habilidades do site'
     },
     {
-      name: 'Portfólio',
-      id: 'portfolio',
+      name: 'Projetos',
+      id: 'projetos',
       ariaText: 'Direciona para a área que exibe portfólios do site'
     },
     {

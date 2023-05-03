@@ -24,7 +24,7 @@ const Portfolio = () => {
 
   return (
     <S.Wrapper>
-      <Title text="Portfólio" />
+      <Title text="Projetos" />
       <S.SubTitle>Veja aqui alguns trabalhos feitos por mim.</S.SubTitle>
       <InputSearch search={search} setSearch={setSearch} />
       <S.Section>

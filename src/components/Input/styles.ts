@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   :focus-within #icon {
     animation: bg 1s;
     filter: brightness(50%);
-    transition: all 1s linear ease;
+    transition: all 1s linear;
 
     @keyframes bg {
       from {
@@ -78,10 +78,10 @@ export const Input = styled.input<InputType>`
 
 export const ErrorMessage = styled.p`
   ${({ theme }) => css`
-    top: 3.5rem;
+    top: 3.8rem;
     display: block;
     position: absolute;
-    color: ${theme.colors.primary};
+    color: ${theme.colors.error};
     font-size: ${theme.font.sizes.xsmall}!important;
   `}
 `;

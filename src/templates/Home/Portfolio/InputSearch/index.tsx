@@ -54,5 +54,6 @@ const SearchInput = styled(Input)`
 
 const IconSearch = styled(SearchAlt)`
   position: absolute;
+  fill: url('#gradient');
   transform: translate(-150%, 70%);
 `;

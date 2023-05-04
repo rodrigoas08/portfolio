@@ -80,9 +80,9 @@ export const AboutText = styled.div`
     align-items: start;
     grid-area: aboutText;
     flex-direction: column;
-    justify-content: space-around;
-    border-radius: ${theme.border.radius};
+    justify-content: space-between;
     padding: ${theme.spacings.small};
+    border-radius: ${theme.border.radius};
     background-color: ${theme.colors.grayIce};
   `}
 `;
@@ -110,8 +110,6 @@ export const Span = styled.b`
 export const DivIcons = styled.div`
   ${({ theme }) => css`
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: ${theme.spacings.medium};
     margin-top: ${theme.spacings.small};
 

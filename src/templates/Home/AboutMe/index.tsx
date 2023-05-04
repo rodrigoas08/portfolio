@@ -9,7 +9,7 @@ const AboutMe = () => {
   const ProfilecardIcons = [
     <FaGithub
       onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}
-      size={30}
+      size={25}
       cursor="pointer"
       title="Github"
       key={crypto.randomUUID()}
@@ -18,7 +18,7 @@ const AboutMe = () => {
       onClick={() =>
         openLinkInNewTab('https://www.linkedin.com/in/rodrigo-sobral-302012aa/')
       }
-      size={30}
+      size={25}
       cursor="pointer"
       title="LinkedIn"
       key={crypto.randomUUID()}
@@ -27,7 +27,7 @@ const AboutMe = () => {
       onClick={() =>
         openLinkInNewTab('https://www.instagram.com/orodrigosobral/')
       }
-      size={30}
+      size={25}
       cursor="pointer"
       title="Instagram"
       key={crypto.randomUUID()}
@@ -36,7 +36,7 @@ const AboutMe = () => {
       onClick={() =>
         openLinkInNewTab('https://api.whatsapp.com/send?phone=5521985141580')
       }
-      size={30}
+      size={25}
       cursor="pointer"
       title="Whatsapp"
       key={crypto.randomUUID()}

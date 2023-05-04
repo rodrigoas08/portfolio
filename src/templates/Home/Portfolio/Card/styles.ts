@@ -89,13 +89,12 @@ export const IconWrapper = styled.div`
 
     svg {
       cursor: pointer;
-      transition: 1.1s ease;
-      fill: ${theme.colors.text};
+      fill: url('#gradient');
     }
 
     svg:hover {
-      transition: 1.1s ease;
-      fill: ${theme.colors.primary};
+      opacity: 0.3;
+      transition: 1s linear;
     }
   `}
 `;

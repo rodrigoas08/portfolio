@@ -76,10 +76,7 @@ const Contact = () => {
             conversar agora <S.ZapIcon />
           </Button>
         </S.CTAWrapper>
-        <S.Form
-          onSubmit={handleSubmit(onSubmit)}
-          style={{ position: 'relative' }}
-        >
+        <S.Form onSubmit={handleSubmit(onSubmit)}>
           <Input
             fullWidth
             icon={<NameIcon />}

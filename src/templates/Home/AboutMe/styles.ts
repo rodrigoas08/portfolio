@@ -120,12 +120,12 @@ export const DivIcons = styled.div`
     }
 
     svg {
-      transition: 1s ease;
+      fill: url('#gradient');
     }
 
     svg:hover {
-      transition: 1s ease;
-      fill: ${theme.colors.primary};
+      opacity: 0.3;
+      transition: 1s linear;
     }
   `}
 `;

@@ -34,10 +34,6 @@ export const Icon = styled.div`
     justify-content: center;
     transition: 1s ease-in-out;
     background-color: ${theme.colors.grayIce};
-
-    path {
-      fill: ${theme.colors.primary};
-    }
   `}
 `;
 

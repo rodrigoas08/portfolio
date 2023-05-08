@@ -56,4 +56,5 @@ const IconSearch = styled(SearchAlt)`
   position: absolute;
   fill: url('#gradient');
   transform: translate(-150%, 70%);
+  filter: drop-shadow(0 0.3rem 0.2rem ${({ theme }) => theme.colors.black});
 `;

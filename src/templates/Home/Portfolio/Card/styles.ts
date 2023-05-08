@@ -90,6 +90,7 @@ export const IconWrapper = styled.div`
     svg {
       cursor: pointer;
       fill: url('#gradient');
+      filter: drop-shadow(0 0.3rem 0.1rem ${theme.colors.black});
     }
 
     svg:hover {

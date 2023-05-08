@@ -69,7 +69,7 @@ const Contact = () => {
           <Button
             onClick={() =>
               openLinkInNewTab(
-                'https://api.whatsapp.com/send?phone=5521985141580&text=Ol%C3%A1%20gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20seus%20servi%C3%A7os'
+                'https://api.whatsapp.com/send?phone=5521985141580'
               )
             }
           >

@@ -12,7 +12,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
 
     @media (max-width: ${theme.breakpoints.desktop}) {
       ${DivIcons} h2 {
-        font-size: 1.8rem;
+        font-size: ${theme.font.sizes.large};
       }
     }
 
@@ -26,12 +26,12 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
       }
 
       ${AboutText} {
-        padding-inline: 5rem;
         word-break: keep-all;
+        padding-inline: ${theme.spacings.xlarge};
       }
 
       ${DivIcons} h2 {
-        font-size: 2rem;
+        font-size: ${theme.font.sizes.xlarge};
       }
     }
 
@@ -53,7 +53,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
         flex-wrap: wrap;
 
         h2 {
-          font-size: 1.4rem;
+          font-size: ${theme.font.sizes.small};
         }
       }
     }
@@ -115,10 +115,12 @@ export const DivIcons = styled.div`
 
     h2 {
       font-size: 2.4rem;
+      text-shadow: 0.1rem 0.4rem 0.2rem ${theme.colors.black};
     }
 
     svg {
       fill: url('#gradient');
+      filter: drop-shadow(0.1rem 0.3rem 0.2rem ${theme.colors.black});
     }
 
     svg:hover {

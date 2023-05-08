@@ -82,6 +82,7 @@ export const NavIcons = styled.div`
 
     svg {
       fill: url('#gradient');
+      filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
     }
 
     svg:hover {

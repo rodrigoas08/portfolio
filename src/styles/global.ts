@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: auto;
     overflow-x: hidden;
-    font-family: sans-serif;
+    font-family: ${({ theme }) => theme.font.Saira}, sans-serif;
     color: ${({ theme }) => theme.colors.alabaster};
     background-color: ${({ theme }) => theme.colors.background};
       

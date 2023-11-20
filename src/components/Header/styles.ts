@@ -80,12 +80,8 @@ export const NavWrapper = styled.ul<HeaderProps>`
   `}
 `;
 
-export interface LinkMenuProps extends HeaderProps {
-  activeLink?: boolean;
-}
-
-export const LinkText = styled.button<LinkMenuProps>`
-  ${({ theme, activeLink }) => css`
+export const LinkText = styled.button<HeaderProps>`
+  ${({ theme }) => css`
     border: none;
     outline: none;
     cursor: pointer;
@@ -93,12 +89,6 @@ export const LinkText = styled.button<LinkMenuProps>`
     font-family: ${theme.font.Saira};
     color: ${theme.colors.alabaster};
     font-size: ${theme.font.sizes.large};
-
-    ${activeLink &&
-    css`
-      transition: all 1.5s ease-in-out;
-      color: ${theme.colors.primary};
-    `}
 
     :first-child {
       margin-left: 0rem;

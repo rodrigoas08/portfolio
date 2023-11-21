@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div.attrs({ id: 'inicio' })`
+export const Wrapper = styled.section.attrs({ id: 'inicio' })`
   ${({ theme }) => css`
     width: 100%;
     height: 100vh;

@@ -5,7 +5,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
     width: 100%;
     height: auto;
     display: flex;
-    padding: 14rem 0;
+    padding: 15rem 0;
     align-items: center;
     flex-direction: column;
     justify-content: center;

@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import * as ButtonStyles from 'components/Button/styles';
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp';
 
-export const Wrapper = styled.div.attrs({ id: 'contato' })`
+export const Wrapper = styled.section.attrs({ id: 'contato' })`
   ${({ theme }) => css`
     width: 100%;
     height: auto;

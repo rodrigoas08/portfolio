@@ -92,6 +92,7 @@ export const NavWrapper = styled.ul<HeaderProps>`
   ${({ theme, isOpen }) => css`
     display: flex;
     list-style: none;
+    position: relative;
     align-items: center;
     justify-content: center;
     gap: ${theme.spacings.medium};

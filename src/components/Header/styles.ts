@@ -7,13 +7,14 @@ export type HeaderProps = {
 export const Wrapper = styled.header<HeaderProps>`
   ${({ theme, color, isOpen }) => css`
     z-index: 3;
-    width: 100%;
-    height: 12rem;
+    width: 100vw;
     display: flex;
     position: fixed;
     align-items: center;
     background: ${color};
+    transition: height 0.3s ease-in;
     justify-content: space-between;
+    height: ${color === 'black' ? '12rem' : '10rem'};
     padding: ${theme.spacings.xxsmall} 15rem;
     box-shadow: ${color === 'black'
       ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
@@ -26,15 +27,15 @@ export const Wrapper = styled.header<HeaderProps>`
 
     ${isOpen &&
     css`
-      width: 100%;
       height: 50rem;
       align-items: center;
       flex-direction: column;
-      justify-content: start;
+      justify-content: center;
       background-color: ${theme.colors.black};
     `}
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
+      transition: 0s;
       padding: 0 ${theme.spacings.large};
 
       ${NavWrapper} {
@@ -42,11 +43,17 @@ export const Wrapper = styled.header<HeaderProps>`
         display: ${isOpen ? 'flex' : 'none'};
       }
 
+      ${isOpen &&
+      css`
+        svg {
+          top: 4rem;
+          right: 4rem;
+          position: absolute;
+        }
+      `}
+
       svg {
-        top: 4.8rem;
-        right: 4rem;
         cursor: pointer;
-        position: absolute;
         display: inline-block;
         fill: ${theme.colors.primary};
       }

@@ -1,7 +1,7 @@
 import * as S from './styles';
 import { FaEye, FaGithub } from 'react-icons/fa';
 import { openLinkInNewTab } from 'utils/functions';
-import ImageEmConstrucao from 'img/portfolios/em_construcao.webp';
+import ImageEmConstrucao from 'assets/portfolios/em_construcao.webp';
 
 export type CardProps = {
   link?: string;

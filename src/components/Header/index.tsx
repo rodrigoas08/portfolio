@@ -1,7 +1,7 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import FotoProfile from 'img/profile.webp';
+import FotoProfile from 'assets/profile.webp';
 import { ProgressiveBar } from 'components';
 import { IColorProps } from 'interfaces/header';
 import { FaBars, FaTimes } from 'react-icons/fa';

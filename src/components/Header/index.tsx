@@ -9,7 +9,6 @@ import { useState, memo, useLayoutEffect, useEffect } from 'react';
 import { handleScrollPosition, updateProgressiveBar } from './functions';
 
 const Header = () => {
-  const [title, setTitle] = useState({ name: 'Início' });
   const [menuIsOpen, setMenuIsOpen] = useState(false);
   const [colorHeader, setColorHeader] = useState<IColorProps>({
     color: 'transparent'
@@ -67,9 +66,6 @@ const Header = () => {
         to={Links[0].id}
         spy={true}
         smooth={true}
-        onClick={() => {
-          setTitle({ name: Links[0].name });
-        }}
       >
         <S.ImgProfile
           loading="lazy"
@@ -92,9 +88,8 @@ const Header = () => {
                 <S.LinkText
                   isOpen={menuIsOpen}
                   onClick={() => {
-                    setTitle({ name: link.name }), setMenuIsOpen(false);
+                    setMenuIsOpen(false);
                   }}
-                  activeLink={title.name === link.name}
                 >
                   {link.name}
                 </S.LinkText>

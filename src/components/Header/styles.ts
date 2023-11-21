@@ -80,12 +80,8 @@ export const NavWrapper = styled.ul<HeaderProps>`
   `}
 `;
 
-export interface LinkMenuProps extends HeaderProps {
-  activeLink?: boolean;
-}
-
-export const LinkText = styled.button<LinkMenuProps>`
-  ${({ theme, activeLink }) => css`
+export const LinkText = styled.button<HeaderProps>`
+  ${({ theme }) => css`
     border: none;
     outline: none;
     cursor: pointer;
@@ -93,12 +89,6 @@ export const LinkText = styled.button<LinkMenuProps>`
     font-family: ${theme.font.Saira};
     color: ${theme.colors.alabaster};
     font-size: ${theme.font.sizes.large};
-
-    ${activeLink &&
-    css`
-      transition: all 1.5s ease-in-out;
-      color: ${theme.colors.primary};
-    `}
 
     :first-child {
       margin-left: 0rem;
@@ -111,7 +101,12 @@ export const LinkText = styled.button<LinkMenuProps>`
       height: 0.1rem;
       display: block;
       transition: all 1s ease-in-out;
-      background-color: ${theme.colors.primary};
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.black}
+      );
     }
 
     :before {
@@ -130,7 +125,12 @@ export const LinkText = styled.button<LinkMenuProps>`
       }
       :before {
         width: 0%;
-        background-color: ${theme.colors.primary};
+        background-image: linear-gradient(
+          to right,
+          ${theme.colors.primary},
+          ${theme.colors.secondary},
+          ${theme.colors.black}
+        );
       }
     }
   `}

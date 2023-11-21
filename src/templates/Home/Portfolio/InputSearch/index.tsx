@@ -61,10 +61,6 @@ const SearchInput = styled(Input)`
       border: 0.1rem solid transparent;
       transition: all 1.5s ease-in-out;
       border-bottom: 0.1rem solid ${theme.colors.primary};
-
-      ::placeholder {
-        color: transparent;
-      }
     }
   `}
 `;

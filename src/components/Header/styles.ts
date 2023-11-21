@@ -6,8 +6,9 @@ export type HeaderProps = {
 
 export const Wrapper = styled.header<HeaderProps>`
   ${({ theme, color, isOpen }) => css`
+    left: 0;
     z-index: 3;
-    width: 100vw;
+    width: 100%;
     display: flex;
     position: fixed;
     align-items: center;
@@ -22,6 +23,7 @@ export const Wrapper = styled.header<HeaderProps>`
 
     svg {
       display: none;
+      cursor: pointer;
       fill: ${theme.colors.primary};
     }
 
@@ -53,10 +55,21 @@ export const Wrapper = styled.header<HeaderProps>`
       `}
 
       svg {
-        cursor: pointer;
         display: inline-block;
-        fill: ${theme.colors.primary};
       }
+    }
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      padding: 2rem;
+
+      ${isOpen &&
+      css`
+        svg {
+          top: 4rem;
+          right: 2rem;
+          position: absolute;
+        }
+      `}
     }
   `}
 `;

@@ -1,8 +1,16 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const Wrapper = styled.main`
-  inset: 0;
-  position: absolute;
+  ${({ theme }) => css`
+    inset: 0;
+    position: absolute;
+    padding: 0 15rem;
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      padding: 0 1rem;
+      width: 100vw;
+    } ;
+  `}
 `;
 
 /* opacity: 0.9;

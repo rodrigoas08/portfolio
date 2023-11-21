@@ -3,9 +3,8 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.div.attrs({ id: 'inicio' })`
   ${({ theme }) => css`
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
-    padding: 0 15rem;
     align-items: center;
     justify-content: center;
 
@@ -25,6 +24,9 @@ export const Wrapper = styled.div.attrs({ id: 'inicio' })`
         white-space: nowrap;
         font-size: ${theme.font.sizes.xsmall};
       }
+    }
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
     }
   `}
 `;

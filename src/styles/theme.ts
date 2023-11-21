@@ -4,11 +4,11 @@ export default {
     rounded: '50%'
   },
   font: {
-    italic: 'italic',
-    light: 100,
+    Saira: 'Saira',
+    light: 300,
     normal: 400,
-    bold: 600,
-    extraBold: 900,
+    medium: 500,
+    bold: 700,
 
     sizes: {
       xxsmall: '1rem',

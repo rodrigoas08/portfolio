@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     height: auto;
     overflow-x: hidden;
-    font-family: sans-serif;
     color: ${({ theme }) => theme.colors.alabaster};
+    font-family: ${({ theme }) => theme.font.Saira}, sans-serif;
     background-color: ${({ theme }) => theme.colors.background};
       
     ::-webkit-scrollbar {

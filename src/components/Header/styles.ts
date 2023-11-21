@@ -25,23 +25,30 @@ export const Wrapper = styled.header<HeaderProps>`
       fill: ${theme.colors.primary};
     }
 
-    ${isOpen &&
-    css`
-      width: 100%;
-      height: 50rem;
-      align-items: center;
-      flex-direction: column;
-      justify-content: start;
-      background-color: ${theme.colors.black};
-    `}
-
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       height: 12rem;
+      transition: 0s;
       padding: 0 ${theme.spacings.large};
+
+      ${isOpen &&
+      css`
+        width: 100%;
+        height: 50rem;
+        transition: 0s;
+        align-items: center;
+        flex-direction: column;
+        justify-content: start;
+        background-color: ${theme.colors.black};
+
+        ${ImgProfile} {
+          display: none;
+        }
+      `}
 
       ${NavWrapper} {
         gap: ${theme.spacings.large};
         display: ${isOpen ? 'flex' : 'none'};
+        flex-direction: ${isOpen ? 'column' : 'row'};
       }
 
       svg {
@@ -57,28 +64,22 @@ export const Wrapper = styled.header<HeaderProps>`
 `;
 
 export const ImgProfile = styled.img<HeaderProps>`
-  ${({ theme, isOpen }) => css`
+  ${({ theme }) => css`
     cursor: pointer;
     width: ${theme.spacings.xlarge};
     height: ${theme.spacings.xlarge};
     border-radius: ${theme.border.rounded};
-
-    ${isOpen &&
-    css`
-      display: none;
-    `}
   `}
 `;
 
 export const NavWrapper = styled.ul<HeaderProps>`
-  ${({ theme, isOpen }) => css`
+  ${({ theme }) => css`
     display: flex;
     list-style: none;
     align-items: center;
     justify-content: center;
     gap: ${theme.spacings.medium};
     padding: ${theme.spacings.xlarge} 0;
-    flex-direction: ${isOpen ? 'column' : 'row'};
   `}
 `;
 

@@ -8,12 +8,13 @@ export const Wrapper = styled.header<HeaderProps>`
   ${({ theme, color, isOpen }) => css`
     z-index: 3;
     width: 100%;
-    height: 12rem;
     display: flex;
     position: fixed;
     align-items: center;
     background: ${color};
     justify-content: space-between;
+    height: ${color === 'black' ? '14rem' : '10rem'};
+    transition: height 0.4s ease-in-out;
     padding: ${theme.spacings.xxsmall} 15rem;
     box-shadow: ${color === 'black'
       ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
@@ -35,6 +36,7 @@ export const Wrapper = styled.header<HeaderProps>`
     `}
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
+      height: 12rem;
       padding: 0 ${theme.spacings.large};
 
       ${NavWrapper} {

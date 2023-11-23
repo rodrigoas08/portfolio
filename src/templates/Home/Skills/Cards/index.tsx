@@ -22,6 +22,10 @@ const Wrapper = styled.div`
     @media (max-width: ${theme.breakpoints.ipad}) {
       grid-template-columns: 1fr;
     }
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      padding-inline: ${theme.spacings.medium};
+    }
   `}
 `;
 
@@ -35,7 +39,7 @@ const Card = styled.div`
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
     border: 0.1rem solid transparent;
-    padding: ${theme.spacings.xxsmall};
+    padding: ${theme.spacings.small};
     background-color: ${theme.colors.black};
 
     :after {
@@ -73,10 +77,6 @@ const Card = styled.div`
       );
     }
 
-    :hover {
-      border: 0.1rem solid ${theme.colors.primary};
-    }
-
     svg {
       filter: drop-shadow(0 0.4rem 0.2rem ${theme.colors.black});
     }
@@ -93,6 +93,10 @@ const Card = styled.div`
       line-height: 130%;
       font-size: ${theme.font.sizes.small};
       text-shadow: 0 0.2rem 0.2rem ${theme.colors.black};
+    }
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      width: 100%;
     }
   `}
 `;

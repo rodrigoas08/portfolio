@@ -36,8 +36,42 @@ const Card = styled.div`
     gap: ${theme.spacings.xxsmall};
     border: 0.1rem solid transparent;
     padding: ${theme.spacings.xxsmall};
-    border-radius: ${theme.border.radius};
-    background-color: ${theme.colors.grayIce};
+    background-color: ${theme.colors.black};
+
+    :after {
+      content: '';
+      bottom: 0;
+      left: 0rem;
+      width: 100%;
+      height: 0.1rem;
+      position: absolute;
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
+    }
+
+    :before {
+      content: '';
+      top: 0;
+      left: 0rem;
+      width: 100%;
+      height: 0.1rem;
+      position: absolute;
+      border-radius: 0.5rem;
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
+    }
 
     :hover {
       border: 0.1rem solid ${theme.colors.primary};
@@ -47,11 +81,12 @@ const Card = styled.div`
       filter: drop-shadow(0 0.4rem 0.2rem ${theme.colors.black});
     }
 
-    h2 {
+    h3,
+    strong {
       text-transform: capitalize;
-      font-weight: ${theme.font.bold};
+      font-weight: ${theme.font.medium};
+      font-size: ${theme.font.sizes.small};
       margin-bottom: ${theme.spacings.xxsmall};
-      text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
     }
 
     p {
@@ -75,7 +110,9 @@ const SkillCard = () => {
             data-aos-easing="ease-in-out"
           >
             {item.icon}
-            <h2>{item.title}</h2>
+            <h3>
+              <strong>{item.title}</strong>
+            </h3>
             <p>{item.description}</p>
           </Card>
         );

@@ -8,17 +8,31 @@ export const Wrapper = styled.header<HeaderProps>`
   ${({ theme, color, isOpen }) => css`
     z-index: 3;
     width: 100%;
+    height: 10rem;
     display: flex;
     position: fixed;
     align-items: center;
     background: ${color};
     justify-content: space-between;
-    height: ${color === 'black' ? '14rem' : '10rem'};
-    transition: height 0.4s ease-in-out;
     padding: ${theme.spacings.xxsmall} 15rem;
-    box-shadow: ${color === 'black'
-      ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
-      : 'transparent'};
+    transition: height 0.4s ease-in-out;
+
+    :after {
+      content: '';
+      bottom: 0;
+      left: 0rem;
+      height: 0.1rem;
+      position: absolute;
+      width: ${color === 'black' ? '100%' : 0};
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
+    }
 
     svg {
       display: none;

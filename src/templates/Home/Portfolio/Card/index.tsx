@@ -20,12 +20,6 @@ const Card = ({
   repository,
   description
 }: CardProps) => {
-  // useLayoutEffect(() => {
-  //   showCardModal
-  //     ? (document.body.style.overflowY = 'hidden')
-  //     : (document.body.style.overflowY = 'scroll');
-  // });
-
   return (
     <S.Card
       data-aos="zoom-in"
@@ -38,7 +32,7 @@ const Card = ({
     >
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
-        <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
+        <S.CardTitle>{title ? title : 'Em Breve'}</S.CardTitle>
         <S.CardDescription>{description}</S.CardDescription>
         <S.IconWrapper>
           {link && (
@@ -51,7 +45,12 @@ const Card = ({
             />
           )}
         </S.IconWrapper>
-        <S.CardStack>{stack}</S.CardStack>
+
+        <S.WrapperStacks>
+          <S.WrapperStack>
+            <S.CardStack>{stack}</S.CardStack>
+          </S.WrapperStack>
+        </S.WrapperStacks>
       </S.CardInfo>
     </S.Card>
   );

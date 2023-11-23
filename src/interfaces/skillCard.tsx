@@ -30,7 +30,7 @@ export const ListSkillCards: ISkillCard[] = [
     icon: <CssIcon />,
     title: 'CSS',
     description:
-      'Cascading Style Sheet é uma linguagem de folha de estilo utilizada ma criação de páginas web junto com HTML sendo responsável pela parte visual.'
+      'Cascading Style Sheet é uma linguagem de folha de estilo utilizada na criação de páginas web junto com HTML sendo responsável pela parte visual.'
   },
   {
     icon: <JSIcon />,

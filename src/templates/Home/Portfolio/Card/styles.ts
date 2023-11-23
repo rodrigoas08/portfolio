@@ -3,17 +3,46 @@ import styled, { css } from 'styled-components';
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 45rem;
+    width: 35rem;
     display: grid;
     height: 40rem;
     grid-template-rows: 1fr 0.8fr;
-    border: 0.1rem solid transparent;
     padding: ${theme.spacings.xxsmall};
-    border-radius: ${theme.border.radius};
-    background-color: ${theme.colors.grayIce};
+    background-color: ${theme.colors.black};
 
-    :hover {
-      border: 0.1rem solid ${theme.colors.primary};
+    :after {
+      content: '';
+      bottom: 0;
+      left: 0rem;
+      width: 100%;
+      height: 0.1rem;
+      position: absolute;
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
+    }
+
+    :before {
+      content: '';
+      top: 0;
+      left: 0rem;
+      width: 100%;
+      height: 0.1rem;
+      position: absolute;
+      border-radius: 0.5rem;
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
@@ -34,7 +63,6 @@ export const Card = styled.div`
 export const CardImage = styled.div<CardProps>`
   ${({ background, theme }) => css`
     background-size: cover;
-    transition: all 1s linear;
     background-image: url(${background});
     border-radius: ${theme.border.radius};
     box-shadow: 0 0 0.2rem ${theme.colors.alabaster};
@@ -47,7 +75,8 @@ export const CardInfo = styled.div`
     position: relative;
     align-items: start;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
+    gap: ${theme.spacings.xxsmall};
     color: ${theme.colors.alabaster};
     border-radius: 0 0 0.5rem 0.5rem;
     padding: ${theme.spacings.xxsmall} 0;
@@ -55,17 +84,41 @@ export const CardInfo = styled.div`
   `}
 `;
 
-export const CardTitle = styled.h1`
+export const CardTitle = styled.h2`
   ${({ theme }) => css`
+    text-transform: capitalize;
     color: ${theme.colors.primary};
-    font-weight: ${theme.font.bold};
+    font-weight: ${theme.font.medium};
     font-size: ${theme.font.sizes.xlarge};
   `}
 `;
 
 export const CardDescription = styled.p`
   ${({ theme }) => css`
-    font-size: ${theme.font.sizes.medium};
+    font-weight: ${theme.font.light};
+    font-size: ${theme.font.sizes.small};
+  `}
+`;
+
+export const WrapperStacks = styled.div`
+  ${({ theme }) => css`
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: ${theme.spacings.xxxsmall};
+  `}
+`;
+
+export const WrapperStack = styled.div`
+  ${({ theme }) => css`
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    padding-inline: 0.8rem;
+    border-radius: 50rem;
+    background-color: ${theme.colors.grayIce};
   `}
 `;
 
@@ -73,7 +126,7 @@ export const CardStack = styled.p`
   ${({ theme }) => css`
     align-self: end;
     color: ${theme.colors.text};
-    font-size: ${theme.font.sizes.small};
+    font-size: ${theme.font.sizes.xsmall};
   `}
 `;
 
@@ -90,6 +143,7 @@ export const IconWrapper = styled.div`
     svg {
       cursor: pointer;
       fill: url('#gradient');
+      transition: 1s linear;
       filter: drop-shadow(0 0.3rem 0.1rem ${theme.colors.black});
     }
 

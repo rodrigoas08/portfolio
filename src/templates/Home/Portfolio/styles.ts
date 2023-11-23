@@ -11,22 +11,23 @@ export const Wrapper = styled.section.attrs({ id: 'projetos' })`
     justify-content: center;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      ${SubTitle} {
+      ${TextAlert} {
         font-size: ${theme.font.sizes.small};
       }
     } ;
   `}
 `;
 
-export const SubTitle = styled.p`
+export const TextSearch = styled.p`
   ${({ theme }) => css`
     text-align: center;
-    font-weight: lighter;
     padding-top: ${theme.spacings.large};
     font-size: ${theme.font.sizes.medium};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
 `;
+
+export const TextAlert = styled(TextSearch)``;
 
 export const Section = styled.section`
   ${({ theme }) => css`

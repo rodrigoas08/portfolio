@@ -8,7 +8,7 @@ const H1 = styled.h1`
     font-size: 3rem;
     position: relative;
     text-transform: uppercase;
-    font-weight: ${theme.font.extraBold};
+    font-weight: ${theme.font.bold};
     text-shadow: 0 0.2rem 0.2rem ${theme.colors.black};
 
     :before {

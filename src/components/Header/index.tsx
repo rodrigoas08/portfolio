@@ -6,7 +6,7 @@ import { ProgressiveBar } from 'components';
 import { IColorProps } from 'interfaces/header';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useState, memo, useLayoutEffect, useEffect } from 'react';
-import { handleScrollPosition, updateProgressiveBar } from './functions';
+import { handleScrollPosition } from './functions';
 
 const Header = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
@@ -27,7 +27,7 @@ const Header = () => {
 
   useLayoutEffect(() => {
     handleScrollPosition(setColorHeader);
-    updateProgressiveBar();
+    // updateProgressiveBar();
   }, []);
 
   const Links = [

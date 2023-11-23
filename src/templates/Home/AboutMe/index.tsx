@@ -87,7 +87,6 @@ const AboutMe = () => {
         </S.Text>
         <S.DivIcons>{ProfilecardIcons}</S.DivIcons>
       </S.Content>
-      <div></div>
     </S.Wrapper>
   );
 };

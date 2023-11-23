@@ -30,6 +30,8 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
+      padding-inline: 2.4rem;
+
       ${Content} {
         display: flex;
         justify-content: center;
@@ -37,10 +39,6 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
 
       ${DivIcons} {
         flex-wrap: wrap;
-
-        h2 {
-          font-size: ${theme.font.sizes.small};
-        }
       }
     }
   `}
@@ -48,7 +46,7 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    width: 68rem;
+    max-width: 68rem;
     height: auto;
     position: relative;
     padding: ${theme.spacings.small};
@@ -88,6 +86,9 @@ export const Content = styled.div`
         ${theme.colors.primary},
         ${theme.colors.black}
       );
+    }
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
     }
   `}
 `;

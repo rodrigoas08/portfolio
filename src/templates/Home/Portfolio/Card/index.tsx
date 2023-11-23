@@ -33,7 +33,6 @@ const Card = ({
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
         <S.CardTitle>{title ? title : 'Em Breve'}</S.CardTitle>
-        <S.CardDescription>{description}</S.CardDescription>
         <S.IconWrapper>
           {link && (
             <FaEye size={18} onClick={() => openLinkInNewTab(`${link}`)} />
@@ -45,6 +44,7 @@ const Card = ({
             />
           )}
         </S.IconWrapper>
+        <S.CardDescription>{description}</S.CardDescription>
 
         <S.WrapperStacks>
           <S.WrapperStack>

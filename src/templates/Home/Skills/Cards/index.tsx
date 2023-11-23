@@ -91,8 +91,8 @@ const Card = styled.div`
 
     p {
       line-height: 130%;
+      font-weight: ${theme.font.light};
       font-size: ${theme.font.sizes.small};
-      text-shadow: 0 0.2rem 0.2rem ${theme.colors.black};
     }
 
     @media (max-width: ${theme.breakpoints.mobile}) {

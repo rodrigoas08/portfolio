@@ -7,7 +7,7 @@ export const Card = styled.div`
     display: grid;
     height: 40rem;
     grid-template-rows: 1fr 0.8fr;
-    padding: ${theme.spacings.xxsmall};
+    padding: ${theme.spacings.small};
     background-color: ${theme.colors.black};
 
     :after {
@@ -132,11 +132,10 @@ export const CardStack = styled.p`
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    top: 0;
+    top: 0.7rem;
     display: flex;
     align-self: end;
     position: absolute;
-    justify-content: center;
     gap: ${theme.spacings.small};
     margin-top: ${theme.spacings.xxsmall};
 

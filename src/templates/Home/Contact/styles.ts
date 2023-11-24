@@ -35,7 +35,7 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       ${Content} {
-        width: 90%;
+        width: 100%;
       }
 
       ${Form} {

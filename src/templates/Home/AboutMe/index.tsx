@@ -60,7 +60,7 @@ const AboutMe = () => {
           alt="Eu segurando meu filho na praia"
         />
         <S.Text>
-          Olá, meu nome é Rodrigo e sou do Rio de Janeiro. <br />
+          Olá, me chamo Rodrigo e sou do Rio de Janeiro. <br />
           Minha jornada começou como estagiário na{' '}
           <a
             href="#"

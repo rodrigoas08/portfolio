@@ -41,6 +41,12 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
         flex-wrap: wrap;
       }
     }
+
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      ${Text} {
+        font-size: ${theme.font.sizes.medium};
+      }
+    }
   `}
 `;
 
@@ -87,9 +93,6 @@ export const Content = styled.div`
         ${theme.colors.black}
       );
     }
-
-    @media (max-width: ${theme.breakpoints.mobile}) {
-    }
   `}
 `;
 
@@ -113,11 +116,11 @@ export const Text = styled.p`
       cursor: pointer;
       text-decoration: none;
       color: ${theme.colors.primary};
+      font-weight: ${theme.font.medium};
     }
 
     strong {
-      font-weight: ${theme.font.medium};
-
+      font-weight: ${theme.font.thin};
       :not(:first-of-type) {
         color: ${theme.colors.primary};
         font-weight: ${theme.font.medium};

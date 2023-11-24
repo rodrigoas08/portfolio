@@ -135,11 +135,7 @@ const Contact = () => {
               formState.isSubmitSuccessful
             }
           >
-            {formState.isSubmitSuccessful || formState.isValid
-              ? formState.errors
-                ? 'Enviar novamente'
-                : 'Formulário enviado'
-              : 'Enviar'}
+            Enviar
             <S.SendIcon />
           </Button>
         </S.Form>

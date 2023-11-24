@@ -84,6 +84,13 @@ export const CardInfo = styled.div`
   `}
 `;
 
+export const CardHeader = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 export const CardTitle = styled.h2`
   ${({ theme }) => css`
     text-transform: capitalize;
@@ -132,12 +139,8 @@ export const CardStack = styled.p`
 
 export const IconWrapper = styled.div`
   ${({ theme }) => css`
-    top: 0.7rem;
     display: flex;
-    align-self: end;
-    position: absolute;
     gap: ${theme.spacings.small};
-    margin-top: ${theme.spacings.xxsmall};
 
     svg {
       cursor: pointer;

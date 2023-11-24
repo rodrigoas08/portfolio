@@ -32,18 +32,21 @@ const Card = ({
     >
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
-        <S.CardTitle>{title ? title : 'Em Breve'}</S.CardTitle>
-        <S.IconWrapper>
-          {link && (
-            <FaEye size={18} onClick={() => openLinkInNewTab(`${link}`)} />
-          )}
-          {repository && (
-            <FaGithub
-              size={18}
-              onClick={() => openLinkInNewTab(`${repository}`)}
-            />
-          )}
-        </S.IconWrapper>
+        <S.CardHeader>
+          <S.CardTitle>{title ? title : 'Em Breve'}</S.CardTitle>
+          <S.IconWrapper>
+            {link && (
+              <FaEye size={18} onClick={() => openLinkInNewTab(`${link}`)} />
+            )}
+            {repository && (
+              <FaGithub
+                size={18}
+                onClick={() => openLinkInNewTab(`${repository}`)}
+              />
+            )}
+          </S.IconWrapper>
+        </S.CardHeader>
+
         <S.CardDescription>{description}</S.CardDescription>
 
         <S.WrapperStacks>

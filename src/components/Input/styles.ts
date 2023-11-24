@@ -82,12 +82,12 @@ export const Input = styled.input`
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
     ::placeholder {
-      font-size: ${theme.font.sizes.small};
+      font-size: ${theme.font.sizes.medium};
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
       :focus {
-        font-size: ${theme.font.sizes.small};
+        font-size: ${theme.font.sizes.medium};
       }
     }
   `}
@@ -108,18 +108,18 @@ export const Textarea = styled.textarea`
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall} 0 0;
 
     ::placeholder {
-      font-size: ${theme.font.sizes.small};
+      font-size: ${theme.font.sizes.medium};
     }
   `}
 `;
 
 export const ErrorMessage = styled.p<InputType>`
   ${({ theme, textArea }) => css`
-    top: ${textArea ? '10rem' : '3.5rem'};
     display: block;
     position: absolute;
     padding-left: 0.5rem;
     color: ${theme.colors.error};
+    top: ${textArea ? '10rem' : '3.5rem'};
     font-size: ${theme.font.sizes.xsmall}!important;
   `}
 `;

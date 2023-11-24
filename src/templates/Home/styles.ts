@@ -5,11 +5,15 @@ export const Wrapper = styled.section.attrs({ id: 'inicio' })`
     width: 100%;
     height: 100vh;
     display: flex;
-    padding: 0 15rem;
     align-items: center;
     justify-content: center;
+    padding: 0 ${theme.spacings.small};
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      padding: 0 ${theme.spacings.xxsmall};
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
       align-items: center;
       padding: 0 ${theme.spacings.xxsmall};
 
@@ -23,7 +27,7 @@ export const Wrapper = styled.section.attrs({ id: 'inicio' })`
       }
       ${CarrerName} {
         white-space: nowrap;
-        font-size: ${theme.font.sizes.xsmall};
+        font-size: ${theme.font.sizes.medium};
       }
     }
   `}
@@ -63,7 +67,7 @@ export const CarrerName = styled.h2`
     font-weight: ${theme.font.bold};
     color: ${theme.colors.alabaster};
     -webkit-text-fill-color: transparent;
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.xxlarge};
     letter-spacing: ${theme.spacings.xxxsmall};
     text-shadow: 0.1rem 0.1rem 0.9rem ${theme.colors.black};
     background-image: linear-gradient(

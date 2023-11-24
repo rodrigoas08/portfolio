@@ -8,7 +8,7 @@ const Skills = () => {
       <Title text="Habilidades" />
       <S.SkillsContent>
         <S.Subtitle>
-          Conheça algumas das tecnologias e ferramentas que uso nos projetos:
+          Conheça algumas das tecnologias e ferramentas que uso nos projetos
         </S.Subtitle>
         <SkillCard />
       </S.SkillsContent>

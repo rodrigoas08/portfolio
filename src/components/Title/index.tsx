@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import styled, { css } from 'styled-components';
 
-const H1 = styled.h1`
+const H2 = styled.h2`
   ${({ theme }) => css`
     z-index: 1;
     cursor: default;
@@ -35,6 +35,6 @@ type TitleProps = {
 };
 
 const Title = ({ text }: TitleProps) => {
-  return <H1>{text}</H1>;
+  return <H2>{text}</H2>;
 };
 export default memo(Title);

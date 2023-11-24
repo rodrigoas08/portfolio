@@ -25,7 +25,7 @@ const Portfolio = () => {
   return (
     <S.Wrapper>
       <Title text="Projetos" />
-      <S.TextSearch>Veja aqui alguns trabalhos feitos por mim.</S.TextSearch>
+      <S.Subtitle>Veja aqui alguns trabalhos feitos por mim</S.Subtitle>
       <InputSearch search={search} setSearch={setSearch} />
       <S.Section>
         {filteredPortfolios.length > 0 ? (

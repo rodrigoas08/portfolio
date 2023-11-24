@@ -104,6 +104,7 @@ export const Textarea = styled.textarea`
     background-color: transparent;
     color: ${theme.colors.alabaster};
     border: 0.1rem solid transparent;
+    font-size: ${theme.font.sizes.medium};
     border-bottom: 0.1rem solid ${theme.colors.primary};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall} 0 0;
 

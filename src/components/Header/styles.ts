@@ -103,7 +103,6 @@ export const LinkText = styled.button<HeaderProps>`
     outline: none;
     cursor: pointer;
     background: none;
-    font-family: ${theme.font.Saira};
     color: ${theme.colors.alabaster};
     font-size: ${theme.font.sizes.large};
 

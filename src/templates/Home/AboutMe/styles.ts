@@ -106,6 +106,7 @@ export const Image = styled.img`
 export const Text = styled.p`
   ${({ theme }) => css`
     line-height: 3rem;
+    font-weight: ${theme.font.thin};
     font-size: ${theme.font.sizes.large};
 
     a {
@@ -115,7 +116,7 @@ export const Text = styled.p`
     }
 
     strong {
-      font-weight: ${theme.font.light};
+      font-weight: ${theme.font.medium};
 
       :not(:first-of-type) {
         color: ${theme.colors.primary};

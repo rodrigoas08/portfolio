@@ -38,6 +38,7 @@ const Contact = () => {
     } catch (error) {
       console.log(error);
       alert('Algo errado aconteceu');
+      formState.errors;
     }
   }
 
@@ -53,18 +54,10 @@ const Contact = () => {
         data-aos-once="false"
       >
         <S.CTAWrapper>
-          <h1>Vamos conversar?</h1>
+          <S.SubTitle>VAMOS CONVERSAR?</S.SubTitle>
           <p>
-            Você pode entrar em contato
-            <br /> preenchendo o <b>formulário</b>
-          </p>
-          <p>ou</p>
-          <p>
-            Iniciar uma conversa por
-            <br />
-            <b>whatsapp</b>
-            <br />
-            <sup>(21) 98514-1580</sup>
+            Você pode entrar em contato preenchendo o formulário ou iniciar uma
+            conversa por whatsapp
           </p>
           <Button
             onClick={() =>
@@ -73,70 +66,81 @@ const Contact = () => {
               )
             }
           >
-            conversar agora <S.ZapIcon />
+            Conversar agora <S.ZapIcon />
           </Button>
         </S.CTAWrapper>
         <S.Form onSubmit={handleSubmit(onSubmit)}>
+          <S.SubTitle>PREENCHA O FORMULÁRIO</S.SubTitle>
           <Input
-            fullWidth
             icon={<NameIcon />}
             error={formState.errors}
             name="name"
+            label="Nome"
             autoComplete="off"
             placeholder="Digite seu nome"
             register={() =>
               register('name', {
-                required: 'Este campo é obrigatório'
+                required: 'É obrigatório digitar seu nome.'
               })
             }
           />
           <Input
-            fullWidth
             icon={<EmailIcon />}
             error={formState.errors}
             type="email"
             name="email"
+            label="E-mail"
             autoComplete="off"
-            placeholder="Digite seu email"
+            placeholder="Digite seu e-mail"
             register={() =>
               register('email', {
-                required: 'Este campo é obrigatório',
+                required: 'É obrigatório digitar seu e-mail.',
                 pattern: {
                   value:
                     /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-z]+\.[a-z]{2,3}\.?[a-z]{1,2}/,
-                  message: 'Digite um e-mail válido'
+                  message: 'Você precisa digitar um e-mail válido.'
                 }
               })
             }
           />
           <Input
-            fullWidth
             icon={<SubjectIcon />}
             error={formState.errors}
             name="subject"
+            label="Assunto"
             autoComplete="off"
             placeholder="Digite um assunto"
             register={() =>
               register('subject', {
-                required: 'Este campo é obrigatório'
+                required: 'É obrigatório digitar um assunto.'
               })
             }
           />
-          <S.Textarea
-            {...register('message', { required: true })}
-            placeholder="Escreva aqui sobre o assunto..."
+          <Input
+            textArea
+            error={formState.errors}
+            name="message"
+            label="Mensagem"
+            placeholder="Digite aqui a mensagem"
+            register={() =>
+              register('message', {
+                required: 'É obrigatório digitar uma mensagem.'
+              })
+            }
           />
           <Button
             type="submit"
-            fullWidth
             disabled={
               (!formState.isValid && !formState.isSubmitting) ||
               formState.isSubmitSuccessful
             }
           >
-            {formState.isSubmitSuccessful
-              ? 'Formulário enviado'
-              : 'Enviar formulário'}
+            {formState.isSubmitSuccessful || formState.isValid
+              ? formState.errors
+                ? 'Enviar novamente'
+                : 'Formulário enviado'
+              : 'Enviar'}
+            <S.SendIcon />
           </Button>
         </S.Form>
       </S.Content>

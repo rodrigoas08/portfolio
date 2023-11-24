@@ -102,7 +102,7 @@ export const CardTitle = styled.h2`
 
 export const CardDescription = styled.p`
   ${({ theme }) => css`
-    font-weight: ${theme.font.light};
+    font-weight: ${theme.font.thin};
     font-size: ${theme.font.sizes.small};
   `}
 `;

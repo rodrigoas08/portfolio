@@ -91,7 +91,7 @@ const Card = styled.div`
 
     p {
       line-height: 130%;
-      font-weight: ${theme.font.light};
+      font-weight: ${theme.font.thin};
       font-size: ${theme.font.sizes.small};
     }
 

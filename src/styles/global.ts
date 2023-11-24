@@ -5,13 +5,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: ${({ theme }) => theme.font.Saira}, sans-serif;
   }
   
   body {
     height: auto;
     overflow-x: hidden;
     color: ${({ theme }) => theme.colors.alabaster};
-    font-family: ${({ theme }) => theme.font.Saira}, sans-serif;
     background-color: ${({ theme }) => theme.colors.background};
       
     ::-webkit-scrollbar {

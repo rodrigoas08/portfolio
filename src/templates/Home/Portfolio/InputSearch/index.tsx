@@ -14,7 +14,6 @@ const InputSearch = ({ search, setSearch }: IInputSearchProps) => {
         <IconSearch size={15} title="Ícone de busca" />
       </Icon>
       <SearchInput
-        fullWidth
         type="text"
         value={search}
         placeholder="Buscar"
@@ -53,29 +52,21 @@ const SearchInput = styled(Input)`
     text-transform: none;
     border-radius: 0.1rem;
     text-overflow: ellipsis;
+    border: 0.1rem solid transparent;
     font-size: ${theme.font.sizes.medium};
-    padding-left: ${theme.spacings.large};
-    padding-right: ${theme.spacings.medium};
-
-    :focus {
-      border: 0.1rem solid transparent;
-      transition: all 1.5s ease-in-out;
-      border-bottom: 0.1rem solid ${theme.colors.primary};
-    }
+    border-bottom: 0.1rem solid ${theme.colors.primary};
   `}
 `;
 
 export const Icon = styled.div`
-  ${({ theme }) => css`
-    width: 3.5rem;
-    height: 100%;
-    display: flex;
-    position: absolute;
-    align-items: center;
-    justify-content: center;
-    transition: 1s ease-in-out;
-    background-color: ${theme.colors.grayIce};
-  `}
+  width: auto;
+  height: 100%;
+  left: 0.8rem;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  transition: 1s linear;
+  justify-content: center;
 `;
 
 const IconSearch = styled(SearchAlt)`

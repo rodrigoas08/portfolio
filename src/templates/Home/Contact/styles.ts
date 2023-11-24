@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import * as ButtonStyles from 'components/Button/styles';
 import { Whatsapp } from '@styled-icons/bootstrap/Whatsapp';
+import { LuSendHorizonal } from 'react-icons/lu';
 
 export const Wrapper = styled.section.attrs({ id: 'contato' })`
   ${({ theme }) => css`
@@ -20,11 +21,27 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
 
       ${Form} {
         width: 100%;
+        :after {
+          display: none;
+        }
       }
 
-      ${Textarea} {
-        :focus {
-          font-size: ${theme.font.sizes.medium};
+      ${CTAWrapper} {
+        width: 100%;
+        height: auto;
+        font-size: ${theme.font.sizes.large};
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      ${Content} {
+        width: 90%;
+      }
+
+      ${Form} {
+        width: 100%;
+        :after {
+          display: none;
         }
       }
 
@@ -47,10 +64,10 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: center;
-    gap: ${theme.spacings.xlarge};
+    gap: ${theme.spacings.xxxsmall};
 
     p:nth-child(3n) {
       font-size: ${theme.font.sizes.xxxlarge};
@@ -60,81 +77,79 @@ export const Content = styled.div`
 
 export const Form = styled.form`
   ${({ theme }) => css`
-    width: 45rem;
-    height: 40rem;
+    width: 30%;
+    height: auto;
     display: flex;
+    position: relative;
     flex-direction: column;
     gap: ${theme.spacings.small};
-    padding: ${theme.spacings.small};
-    font-size: ${theme.font.sizes.large};
+    background-color: transparent;
+    padding: 0 ${theme.spacings.small};
     margin-top: ${theme.spacings.xlarge};
     border-radius: ${theme.border.radius};
-    background-color: ${theme.colors.grayIce};
 
     ${ButtonStyles.Wrapper} {
-      height: 3.5rem;
+      height: 4rem;
+      display: flex;
+      min-width: 12rem;
       border-radius: 0;
-      text-transform: uppercase;
+      align-items: center;
+      align-self: flex-end;
+      justify-content: center;
+      gap: ${theme.spacings.xxxsmall};
+      font-size: ${theme.font.sizes.medium};
+    }
+
+    :after {
+      content: '';
+      top: 1px;
+      left: -2rem;
+      height: 100%;
+      width: 0.1rem;
+      position: absolute;
+      background-image: linear-gradient(
+        to bottom,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
     }
   `}
 `;
 
-export const Textarea = styled.textarea`
+export const SubTitle = styled.h2`
   ${({ theme }) => css`
-    width: 100%;
-    resize: none;
-    height: 15rem;
-    outline: none;
-    border-radius: 0.1rem;
-    color: ${theme.colors.alabaster};
-    border: 0.1rem solid transparent;
-    background-color: ${theme.colors.grayIce};
-    padding: ${theme.spacings.xxxsmall} ${theme.spacings.xxsmall};
-
-    :focus {
-      border-color: ${theme.colors.primary};
-
-      ::placeholder {
-        color: transparent;
-      }
-    }
+    color: ${theme.colors.primary};
+    font-weight: ${theme.font.medium};
+    margin-bottom: ${theme.spacings.small};
+    font-size: ${theme.font.sizes.xxxlarge};
+    text-shadow: 0.1rem 0.4rem 0.2rem ${theme.colors.black};
   `}
 `;
 
 export const CTAWrapper = styled.div`
   ${({ theme }) => css`
-    width: auto;
+    width: 30%;
     height: auto;
     display: flex;
     text-align: center;
     align-items: center;
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
-    padding: 0 ${theme.spacings.small};
+    padding: 0 ${theme.spacings.large};
     margin-top: ${theme.spacings.xlarge};
-    font-size: ${theme.font.sizes.xxlarge};
-    text-shadow: 0.1rem 0.4rem 0.2rem ${theme.colors.black};
-
-    > h1 {
-      font-size: 3.9rem;
-      color: ${theme.colors.primary};
-      margin-bottom: ${theme.spacings.small};
-    }
 
     > p {
       line-height: 150%;
-
-      > b {
-        text-transform: uppercase;
-        color: ${theme.colors.primary};
-      }
+      font-size: ${theme.font.sizes.large};
     }
 
     ${ButtonStyles.Wrapper} {
       height: 4rem;
       display: flex;
       align-items: center;
-      text-transform: uppercase;
       gap: ${theme.spacings.xxsmall};
       background: ${theme.colors.whatsapp};
       font-size: ${theme.font.sizes.medium};
@@ -143,5 +158,9 @@ export const CTAWrapper = styled.div`
 `;
 
 export const ZapIcon = styled(Whatsapp)`
+  width: 2rem;
+`;
+
+export const SendIcon = styled(LuSendHorizonal)`
   width: 2rem;
 `;

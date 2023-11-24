@@ -19,7 +19,7 @@ const ButtonModifier = {
   `,
   disabled: (theme: DefaultTheme) => css`
     cursor: not-allowed;
-    background: ${theme.colors.gray};
+    /* background: ${theme.colors.gray}; */
   `,
 
   rippling: () => css`
@@ -66,7 +66,6 @@ export const Wrapper = styled.button<
       ${theme.colors.primary},
       ${theme.colors.secondary}
     );
-    border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
     :hover {

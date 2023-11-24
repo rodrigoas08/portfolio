@@ -35,7 +35,7 @@ export const SkillsContent = styled.div`
 
 export const Subtitle = styled.h2`
   ${({ theme }) => css`
-    font-weight: ${theme.font.light};
+    font-weight: ${theme.font.medium};
     font-size: ${theme.font.sizes.medium};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}

@@ -9,7 +9,7 @@ const H2 = styled.h2`
     position: relative;
     text-transform: uppercase;
     font-weight: ${theme.font.bold};
-    text-shadow: 0 0.2rem 0.2rem ${theme.colors.black};
+    text-shadow: 0.1rem 0.2rem 0 ${theme.colors.black};
 
     :before {
       content: '';
@@ -23,11 +23,13 @@ const H2 = styled.h2`
       transform: translate(-50%, -50%);
       background-image: linear-gradient(
         to right,
+        transparent,
         ${theme.colors.black},
         ${theme.colors.primary},
         ${theme.colors.secondary},
         ${theme.colors.primary},
-        ${theme.colors.black}
+        ${theme.colors.black},
+        transparent
       );
     }
   `}

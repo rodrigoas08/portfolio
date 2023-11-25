@@ -8,49 +8,10 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
     width: 100%;
     height: auto;
     display: flex;
+    position: relative;
     align-items: center;
     padding-bottom: 14rem;
     flex-direction: column;
-
-    @media (max-width: ${theme.breakpoints.ipad}) {
-      padding: 8rem 0;
-
-      ${Content} {
-        width: 90%;
-      }
-
-      ${Form} {
-        width: 100%;
-        :after {
-          display: none;
-        }
-      }
-
-      ${CTAWrapper} {
-        width: 100%;
-        height: auto;
-        font-size: ${theme.font.sizes.large};
-      }
-    }
-
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      ${Content} {
-        width: 100%;
-      }
-
-      ${Form} {
-        width: 100%;
-        :after {
-          display: none;
-        }
-      }
-
-      ${CTAWrapper} {
-        width: 100%;
-        height: auto;
-        font-size: ${theme.font.sizes.large};
-      }
-    }
 
     @media (max-width: ${theme.breakpoints.tablet}) {
       ${Content} {
@@ -59,18 +20,73 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
         flex-direction: column;
       }
     }
+
+    @media (max-width: ${theme.breakpoints.smallTablet}) {
+      ${Content} {
+        padding-inline: ${theme.spacings.small};
+        :after {
+          display: none;
+        }
+      }
+
+      ${Form} {
+        width: 100%;
+      }
+
+      ${CTAWrapper} {
+        width: 100%;
+        height: auto;
+        font-size: ${theme.font.sizes.large};
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      padding: 8rem 0;
+
+      ${Form} {
+        width: 100%;
+        :after {
+          display: none;
+        }
+      }
+
+      ${CTAWrapper} {
+        width: 100%;
+        height: auto;
+        text-align: center;
+        font-size: ${theme.font.sizes.large};
+      }
+    }
   `}
 `;
 
 export const Content = styled.div`
   ${({ theme }) => css`
+    gap: 20rem;
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: ${theme.spacings.xxxsmall};
 
     p:nth-child(3n) {
       font-size: ${theme.font.sizes.xxxlarge};
+    }
+
+    :after {
+      content: '';
+      top: 9.7rem;
+      left: 50%;
+      opacity: 0.1;
+      height: 67.7%;
+      width: 0.1rem;
+      position: absolute;
+      background-image: linear-gradient(
+        to bottom,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
     }
   `}
 `;
@@ -84,9 +100,7 @@ export const Form = styled.form`
     flex-direction: column;
     gap: ${theme.spacings.small};
     background-color: transparent;
-    padding: 0 ${theme.spacings.small};
     margin-top: ${theme.spacings.xlarge};
-    border-radius: ${theme.border.radius};
 
     ${ButtonStyles.Wrapper} {
       height: 4rem;
@@ -98,23 +112,6 @@ export const Form = styled.form`
       justify-content: center;
       gap: ${theme.spacings.xxxsmall};
       font-size: ${theme.font.sizes.medium};
-    }
-
-    :after {
-      content: '';
-      top: 1px;
-      left: -2rem;
-      height: 100%;
-      width: 0.1rem;
-      position: absolute;
-      background-image: linear-gradient(
-        to bottom,
-        ${theme.colors.black},
-        ${theme.colors.primary},
-        ${theme.colors.secondary},
-        ${theme.colors.primary},
-        ${theme.colors.black}
-      );
     }
   `}
 `;
@@ -134,16 +131,16 @@ export const CTAWrapper = styled.div`
     width: 30%;
     height: auto;
     display: flex;
-    text-align: center;
+    text-align: left;
     align-items: center;
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
-    padding: 0 ${theme.spacings.large};
     margin-top: ${theme.spacings.xlarge};
 
     > p {
       line-height: 150%;
       font-size: ${theme.font.sizes.large};
+      margin-bottom: 2rem;
     }
 
     ${ButtonStyles.Wrapper} {

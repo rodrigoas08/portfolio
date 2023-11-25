@@ -36,9 +36,10 @@ export const Section = styled.section`
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    word-break: break-all;
     justify-content: center;
     gap: ${theme.spacings.small};
-    padding: ${theme.spacings.xxsmall};
+    padding: ${theme.spacings.small};
     margin-top: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.desktop}) {

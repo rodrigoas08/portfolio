@@ -56,8 +56,8 @@ const Contact = () => {
         <S.CTAWrapper>
           <S.SubTitle>VAMOS CONVERSAR?</S.SubTitle>
           <p>
-            Você pode entrar em contato preenchendo o formulário ou iniciar uma
-            conversa por whatsapp
+            Você pode entrar em contato preenchendo o formulário ao lado ou
+            iniciar uma conversa por whatsapp
           </p>
           <Button
             onClick={() =>

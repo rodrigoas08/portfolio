@@ -1,6 +1,7 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
+import ImageHome from 'assets/developer_activity.svg';
 import { openLinkInNewTab } from 'utils/functions';
 import { Portfolio, AboutMe, Contact, Skills } from 'templates';
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa';
@@ -19,6 +20,7 @@ const Home = () => {
       >
         <S.WrapperText>
           <S.Name>Rodrigo Sobral</S.Name>
+          <S.Image src={ImageHome}></S.Image>
           <S.CarrerName>desenvolvedor front-end</S.CarrerName>
           <S.NavIcons>
             <FaGithub

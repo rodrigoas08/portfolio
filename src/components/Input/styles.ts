@@ -20,6 +20,10 @@ export const Wrapper = styled.div<InputType>`
       filter: brightness(50%);
     }
 
+    svg {
+      fill: url('#gradient');
+    }
+
     :focus-within #icon {
       animation: bg 1s;
       filter: brightness(50%);

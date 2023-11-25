@@ -4,6 +4,12 @@ export const Wrapper = styled.main`
   inset: 0;
   position: absolute;
 
+  /*
+  *****************************************
+      CÓDIGO PRESERVADO PARA USO FUTURO
+  *****************************************
+  */
+
   /* opacity: 0.9;
   background-size: cover;
   background-repeat: no-repeat;

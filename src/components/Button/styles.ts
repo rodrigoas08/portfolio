@@ -5,7 +5,7 @@ const ButtonModifier = {
   secondary: () => css`
     ${({ theme }) => css`
       border: none;
-      background: transparent;
+      background-color: transparent;
       color: ${theme.colors.text};
 
       :hover {
@@ -19,14 +19,14 @@ const ButtonModifier = {
   `,
   disabled: (theme: DefaultTheme) => css`
     cursor: not-allowed;
-    /* background: ${theme.colors.gray}; */
+    /* background-color: ${theme.colors.gray}; */
   `,
 
   rippling: () => css`
     ${({ theme }) => css`
       position: relative;
       color: ${theme.colors.primary};
-      background: ${theme.colors.text};
+      background-color: ${theme.colors.text};
 
       ::before {
         inset: 0;

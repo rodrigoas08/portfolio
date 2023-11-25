@@ -34,7 +34,7 @@ export const Card = styled.div`
       width: 100%;
       height: 0.1rem;
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: ${theme.border.radius};;
       background-image: linear-gradient(
         to right,
         ${theme.colors.black},

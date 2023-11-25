@@ -54,22 +54,18 @@ export const Name = styled.h1`
 export const CarrerName = styled.h2`
   ${({ theme }) => css`
     padding-left: 0.2rem;
-    background-clip: text;
     text-transform: uppercase;
     color: ${theme.colors.text};
-    -webkit-background-clip: text;
-    font-weight: ${theme.font.thin};
-    -webkit-text-fill-color: transparent;
+    font-weight: ${theme.font.medium};
     font-size: ${theme.font.sizes.xxlarge};
     letter-spacing: ${theme.spacings.xxxsmall};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
-    background-image: linear-gradient(
-      to right,
-      ${theme.colors.primary},
-      ${theme.colors.text},
-      ${theme.colors.primary}
-    );
   `}
+`;
+
+export const Image = styled.img`
+  width: 30rem;
+  height: 30rem;
 `;
 
 export const NavIcons = styled.div`
@@ -79,12 +75,12 @@ export const NavIcons = styled.div`
 
     svg {
       fill: url('#gradient');
+      transition: 0.2s linear;
       filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
     }
 
     svg:hover {
-      opacity: 0.3;
-      transition: 1s linear;
+      scale: 1.2;
     }
   `}
 `;

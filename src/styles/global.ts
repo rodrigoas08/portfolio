@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
     
     ::-webkit-scrollbar-track {
-      background: ${({ theme }) => theme.colors.black};
+      background-color: ${({ theme }) => theme.colors.black};
     }
 
     ::-webkit-scrollbar-thumb {

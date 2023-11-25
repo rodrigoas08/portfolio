@@ -75,7 +75,7 @@ export const Content = styled.div`
       content: '';
       top: 9.7rem;
       left: 50%;
-      opacity: 0.1;
+      opacity: 0.2;
       height: 67.7%;
       width: 0.1rem;
       position: absolute;
@@ -147,8 +147,8 @@ export const CTAWrapper = styled.div`
       display: flex;
       align-items: center;
       gap: ${theme.spacings.xxsmall};
-      background: ${theme.colors.whatsapp};
       font-size: ${theme.font.sizes.medium};
+      background: ${theme.colors.whatsapp};
     }
   `}
 `;

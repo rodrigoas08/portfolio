@@ -41,7 +41,12 @@ const Input = ({
     <S.Wrapper fullWidth={fullWidth}>
       <S.Icon id="icon">{icon}</S.Icon>
       <S.Label id="label">{label} *</S.Label>
-      <S.Input placeholder={placeholder} {...register()} {...props} />
+      <S.Input
+        autoComplete="off"
+        placeholder={placeholder}
+        {...register()}
+        {...props}
+      />
       <ErrorMessage
         errors={error}
         name={name}

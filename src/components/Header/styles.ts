@@ -5,73 +5,32 @@ export type HeaderProps = {
 };
 
 export const Wrapper = styled.header<HeaderProps>`
-  ${({ theme, color, isOpen }) => css`
+  ${({ theme }) => css`
     z-index: 3;
-    width: 100%;
-    height: 10rem;
+    top: 50%;
+    right: 1rem;
+    width: 6rem;
+    height: auto;
     display: flex;
     position: fixed;
     align-items: center;
-    background: ${color};
+    border-radius: 1rem;
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+    transform: translateY(-50%);
+    gap: ${theme.spacings.large};
     justify-content: space-between;
-    padding: ${theme.spacings.xxsmall} 15rem;
-    transition: height 0.4s ease-in-out;
-
-    :after {
-      content: '';
-      bottom: 0;
-      left: 0rem;
-      height: 0.1rem;
-      position: absolute;
-      width: ${color === 'black' ? '100%' : 0};
-      background-image: linear-gradient(
-        to right,
-        ${theme.colors.black},
-        ${theme.colors.primary},
-        ${theme.colors.secondary},
-        ${theme.colors.primary},
-        ${theme.colors.black}
-      );
-    }
+    padding: ${theme.spacings.small};
+    background-color: rgba(0, 0, 0, 0.08);
 
     svg {
-      display: none;
-      fill: ${theme.colors.primary};
-    }
+      scale: 1.5;
+      transition: 0.2s linear;
+      fill: url('#gradient');
+      filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      height: 12rem;
-      transition: 0s;
-      padding: 0 ${theme.spacings.large};
-
-      ${isOpen &&
-      css`
-        width: 100%;
-        height: 50rem;
-        transition: 0s;
-        align-items: center;
-        flex-direction: column;
-        justify-content: start;
-        background-color: ${theme.colors.black};
-
-        ${ImgProfile} {
-          display: none;
-        }
-      `}
-
-      ${NavWrapper} {
-        gap: ${theme.spacings.large};
-        display: ${isOpen ? 'flex' : 'none'};
-        flex-direction: ${isOpen ? 'column' : 'row'};
-      }
-
-      svg {
-        top: 4.8rem;
-        right: 4rem;
-        cursor: pointer;
-        position: absolute;
-        display: inline-block;
-        fill: ${theme.colors.primary};
+      :hover {
+        scale: 1.8;
       }
     }
   `}
@@ -91,26 +50,33 @@ export const NavWrapper = styled.ul<HeaderProps>`
     display: flex;
     list-style: none;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     gap: ${theme.spacings.medium};
-    padding: ${theme.spacings.xlarge} 0;
   `}
 `;
 
 export const LinkText = styled.button<HeaderProps>`
   ${({ theme }) => css`
+    width: 10rem;
     border: none;
     outline: none;
+    display: flex;
     cursor: pointer;
-    background: none;
+    align-items: center;
+    flex-direction: column;
     color: ${theme.colors.text};
-    font-size: ${theme.font.sizes.large};
+    background-color: transparent;
+    font-size: ${theme.font.sizes.medium};
 
-    :first-child {
-      margin-left: 0rem;
-    }
+    /*
+    *****************************************
+        CÓDIGO PRESERVADO PARA USO FUTURO
+        efeito linha quando passa o mouse
+    *****************************************
+    */
 
-    :after {
+    /* :after {
       content: '';
       width: 0%;
       opacity: 0.5;
@@ -148,6 +114,6 @@ export const LinkText = styled.button<HeaderProps>`
           ${theme.colors.black}
         );
       }
-    }
+    } */
   `}
 `;

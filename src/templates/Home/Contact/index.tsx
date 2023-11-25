@@ -4,7 +4,9 @@ import { useForm } from 'react-hook-form';
 import { FormStateProps } from 'interfaces/form';
 import { Button, Input, Title } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
-import { SubjectIcon, NameIcon, EmailIcon } from '../Contact/Icons';
+import { SubjectIcon } from '../Contact/Icons';
+import { FaRegUser } from 'react-icons/fa';
+import { FaAt } from 'react-icons/fa6';
 
 const Contact = () => {
   const { register, handleSubmit, formState } = useForm<FormStateProps>({
@@ -56,8 +58,10 @@ const Contact = () => {
         <S.CTAWrapper>
           <S.SubTitle>VAMOS CONVERSAR?</S.SubTitle>
           <p>
-            Você pode entrar em contato preenchendo o formulário ao lado ou
-            iniciar uma conversa por whatsapp
+            Gostou do meu trabalho, quer tirar dúvidas ou dar um feedback? Fique
+            a vontade para me chamar no whatsapp, é só clicar no botão abaixo ou
+            você pode entrar em contato preenchendo o formulário. Desde já
+            agradeço pelo contato!
           </p>
           <Button
             onClick={() =>
@@ -72,11 +76,11 @@ const Contact = () => {
         <S.Form onSubmit={handleSubmit(onSubmit)}>
           <S.SubTitle>PREENCHA O FORMULÁRIO</S.SubTitle>
           <Input
-            icon={<NameIcon />}
+            id="name"
+            icon={<FaRegUser />}
             error={formState.errors}
             name="name"
             label="Nome"
-            autoComplete="off"
             placeholder="Digite seu nome"
             register={() =>
               register('name', {
@@ -85,12 +89,12 @@ const Contact = () => {
             }
           />
           <Input
-            icon={<EmailIcon />}
+            id="email"
+            icon={<FaAt />}
             error={formState.errors}
             type="email"
             name="email"
             label="E-mail"
-            autoComplete="off"
             placeholder="Digite seu e-mail"
             register={() =>
               register('email', {
@@ -104,11 +108,11 @@ const Contact = () => {
             }
           />
           <Input
+            id="subject"
             icon={<SubjectIcon />}
             error={formState.errors}
             name="subject"
             label="Assunto"
-            autoComplete="off"
             placeholder="Digite um assunto"
             register={() =>
               register('subject', {
@@ -117,6 +121,7 @@ const Contact = () => {
             }
           />
           <Input
+            id="message"
             textArea
             error={formState.errors}
             name="message"

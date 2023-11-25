@@ -84,7 +84,7 @@ export const Content = styled.div`
       width: 100%;
       height: 0.1rem;
       position: absolute;
-      border-radius: 0.5rem;
+      border-radius: ${theme.border.radius};
       background-image: linear-gradient(
         to right,
         ${theme.colors.black},
@@ -140,13 +140,12 @@ export const DivIcons = styled.div`
 
     svg {
       fill: url('#gradient');
-      transition: 1s linear;
+      transition: 0.2s linear;
       filter: drop-shadow(0.1rem 0.3rem 0.2rem ${theme.colors.black});
     }
 
     svg:hover {
-      opacity: 0.3;
-      transition: 1s linear;
+      scale: 1.2;
     }
   `}
 `;

@@ -11,8 +11,10 @@ export const Wrapper = styled.section.attrs({ id: 'projetos' })`
     justify-content: center;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      ${TextAlert} {
-        font-size: ${theme.font.sizes.small};
+      padding-inline: ${theme.spacings.small};
+
+      ${TextAlert}, ${Subtitle} {
+        font-size: ${theme.font.sizes.large};
       }
     } ;
   `}

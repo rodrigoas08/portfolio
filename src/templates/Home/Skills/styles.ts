@@ -19,7 +19,7 @@ export const Wrapper = styled.section.attrs({ id: 'habilidades' })`
 
       ${Subtitle} {
         text-align: center;
-        font-size: ${theme.font.sizes.small};
+        font-size: ${theme.font.sizes.large};
         padding-inline: ${theme.spacings.medium};
       }
     } ;

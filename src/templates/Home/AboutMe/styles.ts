@@ -44,7 +44,8 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
 
     @media (max-width: ${theme.breakpoints.mobile}) {
       ${Text} {
-        font-size: ${theme.font.sizes.medium};
+        text-align: center;
+        font-size: ${theme.font.sizes.small};
       }
     }
   `}

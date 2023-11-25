@@ -38,13 +38,7 @@ export const WrapperText = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: ${theme.spacings.small};
-
-    h2:nth-of-type(2) {
-      color: ${theme.colors.alabaster};
-      font-size: ${theme.font.sizes.small};
-      padding-top: ${theme.spacings.xxsmall};
-    }
+    gap: ${theme.spacings.xxsmall};
   `}
 `;
 
@@ -52,7 +46,6 @@ export const Name = styled.h1`
   ${({ theme }) => css`
     font-size: 7rem;
     font-weight: ${theme.font.bold};
-    padding: ${theme.spacings.xsmall} 0;
     letter-spacing: ${theme.spacings.xxxsmall};
     text-shadow: 0.1rem 0.2rem 0.2rem ${theme.colors.primary};
   `}
@@ -64,7 +57,7 @@ export const CarrerName = styled.h2`
     background-clip: text;
     text-transform: uppercase;
     -webkit-background-clip: text;
-    font-weight: ${theme.font.bold};
+    font-weight: ${theme.font.thin};
     color: ${theme.colors.alabaster};
     -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.xxlarge};

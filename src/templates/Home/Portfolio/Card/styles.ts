@@ -132,7 +132,7 @@ export const WrapperStack = styled.div`
 export const CardStack = styled.p`
   ${({ theme }) => css`
     align-self: end;
-    color: ${theme.colors.text};
+    color: ${theme.colors.gray};
     font-size: ${theme.font.sizes.xsmall};
   `}
 `;

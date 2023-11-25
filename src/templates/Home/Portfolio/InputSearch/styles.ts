@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 import { Input } from 'components/Input/styles';
 import { FaSearch } from 'react-icons/fa';
+import { BiSearchAlt } from 'react-icons/bi';
 
 export const Wrapper = styled.div`
   width: 30rem;
@@ -47,9 +48,9 @@ export const Icon = styled.div`
   justify-content: center;
 `;
 
-export const IconSearch = styled(FaSearch)`
-  width: 1rem;
-  height: 1rem;
+export const IconSearch = styled(BiSearchAlt)`
+  width: 1.5rem;
+  height: 1.5rem;
   position: absolute;
   fill: url('#gradient');
   filter: drop-shadow(0 0.3rem 0.2rem ${({ theme }) => theme.colors.black});

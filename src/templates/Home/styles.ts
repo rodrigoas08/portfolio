@@ -45,9 +45,9 @@ export const WrapperText = styled.div`
 export const Name = styled.h1`
   ${({ theme }) => css`
     font-size: 7rem;
-    font-weight: ${theme.font.bold};
+    font-weight: ${theme.font.medium};
     letter-spacing: ${theme.spacings.xxxsmall};
-    text-shadow: 0.1rem 0.2rem 0.2rem ${theme.colors.primary};
+    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
 `;
 
@@ -56,13 +56,13 @@ export const CarrerName = styled.h2`
     padding-left: 0.2rem;
     background-clip: text;
     text-transform: uppercase;
+    color: ${theme.colors.text};
     -webkit-background-clip: text;
     font-weight: ${theme.font.thin};
-    color: ${theme.colors.text};
     -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.xxlarge};
     letter-spacing: ${theme.spacings.xxxsmall};
-    text-shadow: 0.1rem 0.1rem 0.9rem ${theme.colors.black};
+    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
     background-image: linear-gradient(
       to right,
       ${theme.colors.primary},

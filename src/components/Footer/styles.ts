@@ -15,5 +15,5 @@ export const Footer = styled.footer`
 
 export const TextCopyright = styled.p`
   text-align: center;
-  color: ${({ theme }) => theme.colors.alabaster};
+  color: ${({ theme }) => theme.colors.text};
 `;

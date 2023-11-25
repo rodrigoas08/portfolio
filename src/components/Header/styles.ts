@@ -103,7 +103,7 @@ export const LinkText = styled.button<HeaderProps>`
     outline: none;
     cursor: pointer;
     background: none;
-    color: ${theme.colors.alabaster};
+    color: ${theme.colors.text};
     font-size: ${theme.font.sizes.large};
 
     :first-child {

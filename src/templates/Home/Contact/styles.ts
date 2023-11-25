@@ -106,7 +106,6 @@ export const Form = styled.form`
       height: 4rem;
       display: flex;
       min-width: 12rem;
-      border-radius: 0;
       align-items: center;
       align-self: flex-end;
       justify-content: center;
@@ -140,7 +139,7 @@ export const CTAWrapper = styled.div`
     > p {
       line-height: 150%;
       font-size: ${theme.font.sizes.large};
-      margin-bottom: 2rem;
+      margin-bottom: ${theme.spacings.small};
     }
 
     ${ButtonStyles.Wrapper} {

@@ -77,7 +77,7 @@ export const Input = styled.input`
     position: relative;
     border-radius: 0.1rem;
     background-color: transparent;
-    color: ${theme.colors.alabaster};
+    color: ${theme.colors.text};
     font-size: ${theme.font.sizes.medium};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
@@ -102,7 +102,7 @@ export const Textarea = styled.textarea`
     position: relative;
     border-radius: 0.1rem;
     background-color: transparent;
-    color: ${theme.colors.alabaster};
+    color: ${theme.colors.text};
     border: 0.1rem solid transparent;
     font-size: ${theme.font.sizes.medium};
     border-bottom: 0.1rem solid ${theme.colors.primary};

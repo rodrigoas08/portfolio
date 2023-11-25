@@ -35,13 +35,12 @@ export default {
     primary: '#00ACEE',
     secondary: '#9AE5F3',
     background: '#161616',
-    alabaster: '#fafafa',
+    text: '#fafafa',
     black: '#000000',
     error: '#FF6262',
     gray: '#8E8E8E',
     grayIce: '#ffffff1a',
     success: '#28A745',
-    text: '#777777',
     whatsapp: '#40c351'
   },
   breakpoints: {

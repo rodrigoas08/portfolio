@@ -65,7 +65,7 @@ export const CardImage = styled.div<CardProps>`
     background-size: cover;
     background-image: url(${background});
     border-radius: ${theme.border.radius};
-    box-shadow: 0 0 0.2rem ${theme.colors.alabaster};
+    box-shadow: 0 0 0.2rem ${theme.colors.text};
   `}
 `;
 
@@ -76,8 +76,8 @@ export const CardInfo = styled.div`
     align-items: start;
     flex-direction: column;
     justify-content: start;
+    color: ${theme.colors.text};
     gap: ${theme.spacings.xxsmall};
-    color: ${theme.colors.alabaster};
     border-radius: 0 0 0.5rem 0.5rem;
     padding: ${theme.spacings.xxsmall} 0;
     text-shadow: 0 0.1rem 0.4rem ${theme.colors.black};
@@ -119,12 +119,12 @@ export const WrapperStacks = styled.div`
 
 export const WrapperStack = styled.div`
   ${({ theme }) => css`
-    width: fit-content;
     display: flex;
-    justify-content: center;
+    width: fit-content;
     height: fit-content;
-    padding-inline: 0.8rem;
     border-radius: 50rem;
+    padding-inline: 0.8rem;
+    justify-content: center;
     background-color: ${theme.colors.grayIce};
   `}
 `;

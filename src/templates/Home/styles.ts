@@ -58,7 +58,7 @@ export const CarrerName = styled.h2`
     text-transform: uppercase;
     -webkit-background-clip: text;
     font-weight: ${theme.font.thin};
-    color: ${theme.colors.alabaster};
+    color: ${theme.colors.text};
     -webkit-text-fill-color: transparent;
     font-size: ${theme.font.sizes.xxlarge};
     letter-spacing: ${theme.spacings.xxxsmall};
@@ -66,7 +66,7 @@ export const CarrerName = styled.h2`
     background-image: linear-gradient(
       to right,
       ${theme.colors.primary},
-      ${theme.colors.alabaster},
+      ${theme.colors.text},
       ${theme.colors.primary}
     );
   `}

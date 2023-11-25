@@ -6,7 +6,7 @@ const ButtonModifier = {
     ${({ theme }) => css`
       border: none;
       background: transparent;
-      color: ${theme.colors.alabaster};
+      color: ${theme.colors.text};
 
       :hover {
         opacity: 0.5;
@@ -26,14 +26,14 @@ const ButtonModifier = {
     ${({ theme }) => css`
       position: relative;
       color: ${theme.colors.primary};
-      background: ${theme.colors.alabaster};
+      background: ${theme.colors.text};
 
       ::before {
         inset: 0;
         content: '';
         position: absolute;
         border-radius: ${theme.border.radius};
-        border: 0.6rem solid ${theme.colors.alabaster};
+        border: 0.6rem solid ${theme.colors.text};
       }
 
       :hover,
@@ -60,7 +60,7 @@ export const Wrapper = styled.button<
     border: none;
     cursor: pointer;
     text-decoration: none;
-    color: ${theme.colors.alabaster};
+    color: ${theme.colors.text};
     background-image: linear-gradient(
       to right,
       ${theme.colors.primary},

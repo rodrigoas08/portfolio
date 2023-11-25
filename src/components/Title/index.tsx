@@ -17,14 +17,17 @@ const H2 = styled.h2`
       left: 50%;
       width: 110%;
       z-index: -1;
-      height: 100%;
+      height: 10%;
       position: absolute;
-      border-radius: 1rem 4rem;
+      border-radius: 50rem;
       transform: translate(-50%, -50%);
       background-image: linear-gradient(
         to right,
+        ${theme.colors.black},
         ${theme.colors.primary},
-        ${theme.colors.secondary}
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
       );
     }
   `}

@@ -20,7 +20,7 @@ const Div = styled.div`
     @media (max-width: ${theme.breakpoints.ipad}) {
       left: 0;
       width: 0%;
-      top: 8rem;
+      top: 8.1rem;
       height: 0.1rem;
       padding-inline: 0;
     }

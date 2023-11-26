@@ -14,12 +14,12 @@ export const Wrapper = styled.header<HeaderProps>`
     display: flex;
     position: fixed;
     align-items: center;
-    border-radius: 1rem;
     flex-direction: column;
     backdrop-filter: blur(3px);
     transform: translateY(-50%);
     gap: ${theme.spacings.large};
     justify-content: space-between;
+    border-radius: 0 0.1rem 0.1rem 0;
     padding: ${theme.spacings.small};
     background-color: rgba(0, 0, 0, 0.08);
 

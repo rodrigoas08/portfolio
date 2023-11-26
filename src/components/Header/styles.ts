@@ -46,7 +46,6 @@ export const Wrapper = styled.header<HeaderProps>`
       justify-content: center;
       transform: translateX(-50%);
       gap: ${theme.spacings.small};
-      padding-inline: ${theme.spacings.large};
 
       a:has(${ImgProfile}) {
         display: none;
@@ -56,7 +55,7 @@ export const Wrapper = styled.header<HeaderProps>`
         width: 100%;
         height: 4rem;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
       }
     }
   `}

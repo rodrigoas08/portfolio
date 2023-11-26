@@ -24,6 +24,10 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
         gap: ${theme.spacings.medium};
       }
 
+      ${Image} {
+        padding: 0;
+      }
+
       ${DivIcons} h2 {
         font-size: ${theme.font.sizes.xlarge};
       }
@@ -44,8 +48,8 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
 
     @media (max-width: ${theme.breakpoints.mobile}) {
       ${Text} {
-        text-align: center;
-        font-size: ${theme.font.sizes.small};
+        text-align: left;
+        font-size: ${theme.font.sizes.medium};
       }
     }
   `}

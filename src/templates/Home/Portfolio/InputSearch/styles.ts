@@ -30,7 +30,6 @@ export const SearchInput = styled(Input)`
     text-transform: none;
     border-radius: 0.1rem;
     text-overflow: ellipsis;
-    border: 0.1rem solid transparent;
     font-size: ${theme.font.sizes.medium};
     border-bottom: 0.1rem solid ${theme.colors.primary};
   `}

@@ -18,11 +18,17 @@ const Div = styled.div`
     );
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      left: 0;
+      top: 8rem;
       width: 0%;
-      top: 8.1rem;
       height: 0.1rem;
-      padding-inline: 0;
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
     }
   `}
 `;

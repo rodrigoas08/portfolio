@@ -45,9 +45,14 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
 
       ${Form} {
         width: 100%;
+        text-align: center;
         :after {
           display: none;
         }
+      }
+
+      ${SubTitle} {
+        font-size: ${theme.font.sizes.xxlarge};
       }
 
       ${CTAWrapper} {

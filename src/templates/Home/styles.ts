@@ -23,11 +23,18 @@ export const Wrapper = styled.section.attrs({ id: 'inicio' })`
         flex-direction: column;
       }
       ${Name} {
+        font-size: 5rem;
         text-align: center;
+        line-height: 105%;
       }
       ${CarrerName} {
         white-space: nowrap;
         font-size: ${theme.font.sizes.medium};
+      }
+
+      ${Image} {
+        width: 20rem;
+        height: 20rem;
       }
     }
   `}

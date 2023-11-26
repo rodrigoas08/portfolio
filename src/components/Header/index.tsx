@@ -22,31 +22,31 @@ const Header = () => {
     {
       name: 'Início',
       id: 'inicio',
-      icon: <FaHome title="Início" />,
+      icon: <FaHome title="Início" name="Início" />,
       ariaText: 'Direciona para o inicio do site'
     },
     {
       name: 'Sobre',
       id: 'sobre',
-      icon: <FaIdCard title="Sobre" />,
+      icon: <FaIdCard title="Sobre" name="Sobre" />,
       ariaText: 'Direciona para a área que fala sobre mim do site'
     },
     {
       name: 'Habilidades',
       id: 'habilidades',
-      icon: <FaList title="Habilidades" />,
+      icon: <FaList title="Habilidades" name="Habilidades" />,
       ariaText: 'Direciona para a área que exibe habilidades do site'
     },
     {
       name: 'Projetos',
       id: 'projetos',
-      icon: <FaLaptopCode title="Projetos" />,
+      icon: <FaLaptopCode title="Projetos" name="Projetos" />,
       ariaText: 'Direciona para a área que exibe portfólios do site'
     },
     {
       name: 'Contato',
       id: 'contato',
-      icon: <FaEnvelope title="Contato" />,
+      icon: <FaEnvelope title="Contato" name="Contato" />,
       ariaText: 'Direciona para a área de contato do site'
     }
   ];

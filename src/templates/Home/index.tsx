@@ -20,7 +20,10 @@ const Home = () => {
       >
         <S.WrapperText>
           <S.Name>Rodrigo Sobral</S.Name>
-          <S.Image src={ImageHome}></S.Image>
+          <S.Image
+            src={ImageHome}
+            alt="Desenho em vetor de um garoto com fone de ouvido mexendo no computador"
+          ></S.Image>
           <S.CarrerName>desenvolvedor front-end</S.CarrerName>
           <S.NavIcons>
             <FaGithub

@@ -15,6 +15,7 @@ export const Card = styled.div`
       bottom: 0;
       left: 0rem;
       width: 100%;
+      opacity: 0.2;
       height: 0.1rem;
       position: absolute;
       background-image: linear-gradient(
@@ -32,6 +33,7 @@ export const Card = styled.div`
       top: 0;
       left: 0rem;
       width: 100%;
+      opacity: 0.2;
       height: 0.1rem;
       position: absolute;
       border-radius: ${theme.border.radius};;

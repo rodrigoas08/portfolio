@@ -31,6 +31,7 @@ export function updateProgressiveBar() {
     const element = document.getElementById('bar');
     if (element) {
       element.style.height = `${percentage}%`;
+      element.style.width = `0.1rem`;
     }
     if (windowWidth < 767) {
       if (element) {

@@ -79,8 +79,8 @@ export const Card = styled.div`
     }
 
     svg {
-      width: 3.5rem;
-      height: 3.5rem;
+      width: 3rem;
+      height: 3rem;
       filter: drop-shadow(0 0.4rem 0.2rem ${theme.colors.black});
     }
 

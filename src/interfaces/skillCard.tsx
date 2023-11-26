@@ -24,7 +24,7 @@ export const ListSkillCards: ISkillCard[] = [
     icon: <HtmlIcon />,
     title: 'HTML',
     description:
-      'Hyper Text Markup Language é uma linguagem de marcação hipertexo utilizada na construção de páginas web sendo responsável pela estrutura dos elementos.'
+      'É uma linguagem de marcação hipertexo utilizada na construção de páginas web sendo responsável pela estrutura dos elementos.'
   },
   {
     icon: <CssIcon />,
@@ -48,7 +48,7 @@ export const ListSkillCards: ISkillCard[] = [
     icon: <TSIcon />,
     title: 'TypeScript',
     description:
-      'TypeScript é um superset do JavaScript, com ele temos possibilidade de aplicar uma tipagem estática juntamente com interfaces em um sistema construído com JavaScript.'
+      'TypeScript é um superset do JavaScript, com ele aplicamos uma tipagem estática juntamente com interfaces em um sistema construído com JavaScript.'
   },
   {
     icon: <StyledCompIcon />,
@@ -60,7 +60,7 @@ export const ListSkillCards: ISkillCard[] = [
     icon: <VueIcon />,
     title: 'Vue',
     description:
-      'Vue.js é um framework JavaScript de código-aberto, focado no desenvolvimento de aplicações SPA(Single Page Applications) e possibilita criar aplicações de forma reativa.'
+      'Vue.js é um framework focado no desenvolvimento de aplicações SPA(Single Page Applications) e possibilita criar aplicações de forma reativa.'
   },
   {
     icon: <VuetifyIcon />,
@@ -84,7 +84,7 @@ export const ListSkillCards: ISkillCard[] = [
     icon: <NpmIcon />,
     title: 'Node Package Manager',
     description:
-      'NPM é uma ferramenta do Node.js para o gerenciamento de pacotes. Ele permite instalar, desinstalar e atualizar dependências em uma aplicação.'
+      'NPM é uma ferramenta do Node.js que permite instalar, desinstalar e atualizar dependências de uma aplicação.'
   },
   {
     icon: <VSCodeIcon />,

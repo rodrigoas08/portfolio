@@ -11,7 +11,7 @@ export const Wrapper = styled.section.attrs({ id: 'projetos' })`
     justify-content: center;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      padding-inline: ${theme.spacings.small};
+      padding-inline: ${theme.spacings.xxxsmall};
 
       ${TextAlert}, ${Subtitle} {
         font-size: ${theme.font.sizes.large};
@@ -41,7 +41,6 @@ export const Section = styled.section`
     word-break: break-all;
     justify-content: center;
     gap: ${theme.spacings.small};
-    padding: ${theme.spacings.small};
     margin-top: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.desktop}) {

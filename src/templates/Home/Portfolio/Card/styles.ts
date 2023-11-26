@@ -3,17 +3,17 @@ import styled, { css } from 'styled-components';
 
 export const Card = styled.div`
   ${({ theme }) => css`
-    width: 35rem;
+    width: 30rem;
     display: grid;
     height: 40rem;
     grid-template-rows: 1fr 0.8fr;
-    padding: ${theme.spacings.small};
+    padding: ${theme.spacings.xsmall};
     background-color: ${theme.colors.black};
 
     :after {
       content: '';
+      left: 0;
       bottom: 0;
-      left: 0rem;
       width: 100%;
       opacity: 0.2;
       height: 0.1rem;
@@ -31,12 +31,12 @@ export const Card = styled.div`
     :before {
       content: '';
       top: 0;
-      left: 0rem;
+      left: 0;
       width: 100%;
       opacity: 0.2;
       height: 0.1rem;
       position: absolute;
-      border-radius: ${theme.border.radius};;
+      border-radius: ${theme.border.radius};
       background-image: linear-gradient(
         to right,
         ${theme.colors.black},
@@ -48,7 +48,7 @@ export const Card = styled.div`
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      width: 35rem;
+      max-width: 30rem;
       padding: ${theme.spacings.xxsmall};
 
       ${IconWrapper} {
@@ -76,6 +76,8 @@ export const CardInfo = styled.div`
     display: flex;
     position: relative;
     align-items: start;
+    word-break: normal;
+    word-wrap: break-word;
     flex-direction: column;
     justify-content: start;
     color: ${theme.colors.text};

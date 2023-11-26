@@ -80,8 +80,8 @@ export const Input = styled.input`
     height: 3.5rem;
     position: relative;
     border-radius: 0.1rem;
-    background-color: transparent;
     color: ${theme.colors.text};
+    background-color: transparent;
     font-size: ${theme.font.sizes.medium};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
@@ -104,9 +104,8 @@ export const Textarea = styled.textarea`
     height: 10rem;
     outline: none;
     position: relative;
-    border-radius: 0.1rem;
-    background-color: transparent;
     color: ${theme.colors.text};
+    background-color: transparent;
     border: 0.1rem solid transparent;
     font-size: ${theme.font.sizes.medium};
     border-bottom: 0.1rem solid ${theme.colors.primary};

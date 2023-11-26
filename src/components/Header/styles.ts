@@ -65,8 +65,8 @@ export const Wrapper = styled.header<HeaderProps>`
 export const ImgProfile = styled.img<HeaderProps>`
   ${({ theme }) => css`
     cursor: pointer;
-    width: ${theme.spacings.xlarge};
-    height: ${theme.spacings.xlarge};
+    width: ${theme.spacings.large};
+    height: ${theme.spacings.large};
     border-radius: ${theme.border.rounded};
   `}
 `;

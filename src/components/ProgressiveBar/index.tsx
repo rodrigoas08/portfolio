@@ -16,6 +16,14 @@ const Div = styled.div`
       ${theme.colors.primary},
       ${theme.colors.black}
     );
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      left: 0;
+      width: 0%;
+      top: 8rem;
+      height: 0.1rem;
+      padding-inline: 0;
+    }
   `}
 `;
 

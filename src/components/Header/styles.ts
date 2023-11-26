@@ -25,12 +25,38 @@ export const Wrapper = styled.header<HeaderProps>`
 
     svg {
       scale: 1.5;
-      transition: 0.2s linear;
       fill: url('#gradient');
+      transition: 0.2s linear;
       filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
 
       :hover {
         scale: 1.8;
+      }
+    }
+
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      top: 0;
+      left: 50%;
+      width: 100%;
+      height: 8rem;
+      position: fixed;
+      border-radius: 0;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      transform: translateX(-50%);
+      gap: ${theme.spacings.small};
+      padding-inline: ${theme.spacings.large};
+
+      a:has(${ImgProfile}) {
+        display: none;
+      }
+
+      ${NavWrapper} {
+        width: 100%;
+        height: 4rem;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
   `}
@@ -58,11 +84,13 @@ export const NavWrapper = styled.ul<HeaderProps>`
 
 export const LinkText = styled.button<HeaderProps>`
   ${({ theme }) => css`
-    width: 10rem;
+    width: auto;
+    height: auto;
     border: none;
     outline: none;
     display: flex;
     cursor: pointer;
+    position: relative;
     align-items: center;
     flex-direction: column;
     color: ${theme.colors.text};

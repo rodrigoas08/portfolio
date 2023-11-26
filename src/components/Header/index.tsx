@@ -22,45 +22,34 @@ const Header = () => {
     {
       name: 'Início',
       id: 'inicio',
-      icon: <FaHome title="Início" name="Início" />,
-      ariaText: 'Direciona para o inicio do site'
+      icon: <FaHome title="Início" />
     },
     {
       name: 'Sobre',
       id: 'sobre',
-      icon: <FaIdCard title="Sobre" name="Sobre" />,
-      ariaText: 'Direciona para a área que fala sobre mim do site'
+      icon: <FaIdCard title="Sobre" />
     },
     {
       name: 'Habilidades',
       id: 'habilidades',
-      icon: <FaList title="Habilidades" name="Habilidades" />,
-      ariaText: 'Direciona para a área que exibe habilidades do site'
+      icon: <FaList title="Habilidades" />
     },
     {
       name: 'Projetos',
       id: 'projetos',
-      icon: <FaLaptopCode title="Projetos" name="Projetos" />,
-      ariaText: 'Direciona para a área que exibe portfólios do site'
+      icon: <FaLaptopCode title="Projetos" />
     },
     {
       name: 'Contato',
       id: 'contato',
-      icon: <FaEnvelope title="Contato" name="Contato" />,
-      ariaText: 'Direciona para a área de contato do site'
+      icon: <FaEnvelope title="Contato" />
     }
   ];
 
   return (
     <S.Wrapper>
       <ProgressiveBar />
-      <Link
-        href={Links[0].id}
-        aria-label={Links[0].ariaText}
-        to={Links[0].id}
-        spy={true}
-        smooth={true}
-      >
+      <Link href={Links[0].id} to={Links[0].id} spy={true} smooth={true}>
         <S.ImgProfile
           loading="lazy"
           src={FotoProfile}
@@ -72,8 +61,8 @@ const Header = () => {
           return (
             <S.Li key={crypto.randomUUID()}>
               <Link
+                role="link"
                 href={link.id}
-                aria-label={link.ariaText}
                 to={link.id}
                 spy={true}
                 smooth={true}

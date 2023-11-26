@@ -82,29 +82,36 @@ export const NavWrapper = styled.ul<HeaderProps>`
   `}
 `;
 
-export const LinkText = styled.button<HeaderProps>`
+export const Li = styled.li<HeaderProps>`
   ${({ theme }) => css`
-    width: auto;
-    height: auto;
-    border: none;
-    outline: none;
-    display: flex;
-    cursor: pointer;
-    position: relative;
-    align-items: center;
-    flex-direction: column;
-    color: ${theme.colors.text};
-    background-color: transparent;
-    font-size: ${theme.font.sizes.medium};
+    > a {
+      width: auto;
+      height: auto;
+      display: flex;
+      cursor: pointer;
+      font-size: 0.9rem;
+      align-items: center;
+      text-decoration: none;
+      flex-direction: column;
+      color: ${theme.colors.text};
+      gap: ${theme.spacings.xxsmall};
+      font-weight: ${theme.font.thin};
 
-    /*
+      svg {
+        font-size: 1.4rem;
+      }
+    }
+  `}
+`;
+
+/*
     *****************************************
         CÓDIGO PRESERVADO PARA USO FUTURO
         efeito linha quando passa o mouse
     *****************************************
     */
 
-    /* :after {
+/* :after {
       content: '';
       width: 0%;
       opacity: 0.5;
@@ -143,5 +150,3 @@ export const LinkText = styled.button<HeaderProps>`
         );
       }
     } */
-  `}
-`;

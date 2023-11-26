@@ -70,7 +70,7 @@ const Header = () => {
       <S.NavWrapper>
         {Links.map((link) => {
           return (
-            <li key={crypto.randomUUID()}>
+            <S.Li key={crypto.randomUUID()}>
               <Link
                 href={link.id}
                 aria-label={link.ariaText}
@@ -78,9 +78,10 @@ const Header = () => {
                 spy={true}
                 smooth={true}
               >
-                <S.LinkText>{link.icon}</S.LinkText>
+                {link.icon}
+                <p>{link.name}</p>
               </Link>
-            </li>
+            </S.Li>
           );
         })}
       </S.NavWrapper>

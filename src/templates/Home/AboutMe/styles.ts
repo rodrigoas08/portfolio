@@ -5,7 +5,7 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
     width: 100%;
     height: auto;
     display: flex;
-    padding: 15rem 0;
+    padding: 15rem 8rem;
     align-items: center;
     flex-direction: column;
 
@@ -57,13 +57,11 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    max-width: 68rem;
+    width: 100%;
     height: auto;
     position: relative;
     padding: ${theme.spacings.small};
     margin-top: ${theme.spacings.xxlarge};
-    background-color: ${theme.colors.black};
-
     :after {
       content: '';
       bottom: 0;

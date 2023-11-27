@@ -11,8 +11,6 @@ export const Wrapper = styled.section.attrs({ id: 'projetos' })`
     justify-content: center;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      padding-inline: ${theme.spacings.xxxsmall};
-
       ${TextAlert}, ${Subtitle} {
         font-size: ${theme.font.sizes.large};
       }
@@ -29,8 +27,6 @@ export const Subtitle = styled.h3`
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
 `;
-
-export const TextAlert = styled(Subtitle)``;
 
 export const Section = styled.section`
   ${({ theme }) => css`
@@ -52,3 +48,5 @@ export const Section = styled.section`
     }
   `}
 `;
+
+export const TextAlert = styled(Subtitle)``;

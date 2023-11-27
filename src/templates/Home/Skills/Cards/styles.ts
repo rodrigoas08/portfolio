@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
     margin-top: ${theme.spacings.large};
     column-gap: ${theme.spacings.small};
     grid-template-columns: repeat(4, 1fr);
+    padding-inline: ${theme.spacings.xxsmall};
 
     @media (max-width: ${theme.breakpoints.desktop}) {
       grid-template-columns: repeat(3, 1fr);
@@ -21,10 +22,6 @@ export const Wrapper = styled.div`
     @media (max-width: ${theme.breakpoints.ipad}) {
       grid-template-columns: 1fr;
     }
-
-    @media (max-width: ${theme.breakpoints.mobile}) {
-      padding-inline: ${theme.spacings.medium};
-    }
   `}
 `;
 
@@ -36,9 +33,8 @@ export const Card = styled.div`
     text-align: center;
     align-items: center;
     flex-direction: column;
-    gap: ${theme.spacings.xxsmall};
     border: 0.1rem solid transparent;
-    padding: ${theme.spacings.small};
+    padding: ${theme.spacings.xsmall};
     background-color: ${theme.colors.black};
 
     :after {
@@ -81,6 +77,7 @@ export const Card = styled.div`
     svg {
       width: 3rem;
       height: 3rem;
+      margin-bottom: ${theme.spacings.xxsmall};
       filter: drop-shadow(0 0.4rem 0.2rem ${theme.colors.black});
     }
 
@@ -96,10 +93,6 @@ export const Card = styled.div`
       line-height: 130%;
       font-weight: ${theme.font.thin};
       font-size: ${theme.font.sizes.medium};
-    }
-
-    @media (max-width: ${theme.breakpoints.mobile}) {
-      width: 100%;
     }
   `}
 `;

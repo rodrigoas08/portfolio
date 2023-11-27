@@ -7,34 +7,22 @@ export const Wrapper = styled.section.attrs({ id: 'inicio' })`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0 ${theme.spacings.small};
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      padding: 0 ${theme.spacings.xxsmall};
-    }
-
-    @media (max-width: ${theme.breakpoints.ipad}) {
-      align-items: center;
-      padding: 0 ${theme.spacings.xxsmall};
+      padding: 0 ${theme.spacings.small};
 
       ${WrapperText} {
         display: flex;
+        text-align: center;
         align-items: center;
         flex-direction: column;
       }
       ${Name} {
         font-size: 5rem;
-        text-align: center;
         line-height: 105%;
       }
       ${CarrerName} {
-        white-space: nowrap;
-        font-size: ${theme.font.sizes.medium};
-      }
-
-      ${Image} {
-        width: 20rem;
-        height: 20rem;
+        font-size: ${theme.font.sizes.xlarge};
       }
     }
   `}
@@ -46,6 +34,7 @@ export const WrapperText = styled.div`
     align-items: center;
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
+    letter-spacing: ${theme.spacings.xxxsmall};
   `}
 `;
 
@@ -53,26 +42,18 @@ export const Name = styled.h1`
   ${({ theme }) => css`
     font-size: 7rem;
     font-weight: ${theme.font.medium};
-    letter-spacing: ${theme.spacings.xxxsmall};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
 `;
 
 export const CarrerName = styled.h2`
   ${({ theme }) => css`
-    padding-left: 0.2rem;
     text-transform: uppercase;
     color: ${theme.colors.text};
     font-weight: ${theme.font.medium};
     font-size: ${theme.font.sizes.xxlarge};
-    letter-spacing: ${theme.spacings.xxxsmall};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
-`;
-
-export const Image = styled.img`
-  width: 30rem;
-  height: 30rem;
 `;
 
 export const NavIcons = styled.div`

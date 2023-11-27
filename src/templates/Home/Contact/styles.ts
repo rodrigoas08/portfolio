@@ -23,7 +23,7 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
 
     @media (max-width: ${theme.breakpoints.smallTablet}) {
       ${Content} {
-        padding-inline: ${theme.spacings.small};
+        padding-right: ${theme.spacings.xxlarge};
         :after {
           display: none;
         }
@@ -31,6 +31,7 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
 
       ${Form} {
         width: 100%;
+        padding-inline: 0;
       }
 
       ${CTAWrapper} {
@@ -43,9 +44,13 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
     @media (max-width: ${theme.breakpoints.ipad}) {
       padding: 8rem 0;
 
+      ${Content} {
+        padding-right: 0;
+      }
+
       ${Form} {
         width: 100%;
-        text-align: center;
+        padding-inline: 0;
         :after {
           display: none;
         }
@@ -58,7 +63,7 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
       ${CTAWrapper} {
         width: 100%;
         height: auto;
-        text-align: center;
+        padding-inline: 0;
         font-size: ${theme.font.sizes.large};
       }
     }
@@ -67,7 +72,6 @@ export const Wrapper = styled.section.attrs({ id: 'contato' })`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    gap: 20rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -98,14 +102,16 @@ export const Content = styled.div`
 
 export const Form = styled.form`
   ${({ theme }) => css`
-    width: 30%;
+    width: 100%;
     height: auto;
     display: flex;
     position: relative;
+    text-align: center;
     flex-direction: column;
     gap: ${theme.spacings.small};
     background-color: transparent;
     margin-top: ${theme.spacings.xlarge};
+    padding-inline: ${theme.spacings.xlarge};
 
     ${ButtonStyles.Wrapper} {
       height: 4rem;
@@ -132,14 +138,15 @@ export const SubTitle = styled.h2`
 
 export const CTAWrapper = styled.div`
   ${({ theme }) => css`
-    width: 30%;
+    width: 100%;
     height: auto;
     display: flex;
-    text-align: left;
+    text-align: center;
     align-items: center;
     flex-direction: column;
     gap: ${theme.spacings.xxsmall};
     margin-top: ${theme.spacings.xlarge};
+    padding-inline: ${theme.spacings.small};
 
     > p {
       line-height: 150%;

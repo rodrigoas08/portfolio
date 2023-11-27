@@ -11,7 +11,7 @@ import {
   VuetifyIcon,
   GithubIcon,
   StyledCompIcon
-} from 'templates/Home/Skills/Icons';
+} from 'assets/Icons';
 
 interface ISkillCard {
   icon: JSX.Element;

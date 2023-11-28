@@ -5,59 +5,57 @@ export type HeaderProps = {
 };
 
 export const Wrapper = styled.header<HeaderProps>`
-  ${({ theme, color, isOpen }) => css`
+  ${({ theme }) => css`
     z-index: 3;
-    width: 100%;
+    top: 50%;
+    right: 1rem;
+    width: 6rem;
+    height: auto;
     display: flex;
     position: fixed;
     align-items: center;
-    background: ${color};
+    flex-direction: column;
+    backdrop-filter: blur(3px);
+    transform: translateY(-50%);
+    gap: ${theme.spacings.large};
     justify-content: space-between;
-    height: ${color === 'black' ? '14rem' : '10rem'};
-    transition: height 0.4s ease-in-out;
-    padding: ${theme.spacings.xxsmall} 15rem;
-    box-shadow: ${color === 'black'
-      ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
-      : 'transparent'};
+    border-radius: 0 0.1rem 0.1rem 0;
+    padding: ${theme.spacings.small};
+    background-color: rgba(0, 0, 0, 0.08);
 
     svg {
-      display: none;
-      fill: ${theme.colors.primary};
+      scale: 1.5;
+      fill: url('#gradient');
+      transition: 0.2s linear;
+      filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
+
+      :hover {
+        scale: 1.8;
+      }
     }
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      height: 12rem;
-      transition: 0s;
-      padding: 0 ${theme.spacings.large};
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      top: 0;
+      left: 50%;
+      width: 100%;
+      height: 8rem;
+      position: fixed;
+      border-radius: 0;
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+      transform: translateX(-50%);
+      gap: ${theme.spacings.small};
 
-      ${isOpen &&
-      css`
-        width: 100%;
-        height: 50rem;
-        transition: 0s;
-        align-items: center;
-        flex-direction: column;
-        justify-content: start;
-        background-color: ${theme.colors.black};
-
-        ${ImgProfile} {
-          display: none;
-        }
-      `}
-
-      ${NavWrapper} {
-        gap: ${theme.spacings.large};
-        display: ${isOpen ? 'flex' : 'none'};
-        flex-direction: ${isOpen ? 'column' : 'row'};
+      a:has(${ImgProfile}) {
+        display: none;
       }
 
-      svg {
-        top: 4.8rem;
-        right: 4rem;
-        cursor: pointer;
-        position: absolute;
-        display: inline-block;
-        fill: ${theme.colors.primary};
+      ${NavWrapper} {
+        width: 100%;
+        height: 4rem;
+        flex-direction: row;
+        justify-content: space-around;
       }
     }
   `}
@@ -66,8 +64,8 @@ export const Wrapper = styled.header<HeaderProps>`
 export const ImgProfile = styled.img<HeaderProps>`
   ${({ theme }) => css`
     cursor: pointer;
-    width: ${theme.spacings.xlarge};
-    height: ${theme.spacings.xlarge};
+    width: ${theme.spacings.large};
+    height: ${theme.spacings.large};
     border-radius: ${theme.border.rounded};
   `}
 `;
@@ -77,63 +75,29 @@ export const NavWrapper = styled.ul<HeaderProps>`
     display: flex;
     list-style: none;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     gap: ${theme.spacings.medium};
-    padding: ${theme.spacings.xlarge} 0;
   `}
 `;
 
-export const LinkText = styled.button<HeaderProps>`
+export const Li = styled.li<HeaderProps>`
   ${({ theme }) => css`
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: none;
-    font-family: ${theme.font.Saira};
-    color: ${theme.colors.alabaster};
-    font-size: ${theme.font.sizes.large};
+    > a {
+      width: auto;
+      height: auto;
+      display: flex;
+      cursor: pointer;
+      font-size: 0.9rem;
+      align-items: center;
+      text-decoration: none;
+      flex-direction: column;
+      color: ${theme.colors.text};
+      gap: ${theme.spacings.xxsmall};
+      font-weight: ${theme.font.thin};
 
-    :first-child {
-      margin-left: 0rem;
-    }
-
-    :after {
-      content: '';
-      width: 0%;
-      opacity: 0.5;
-      height: 0.1rem;
-      display: block;
-      transition: all 1s ease-in-out;
-      background-image: linear-gradient(
-        to right,
-        ${theme.colors.primary},
-        ${theme.colors.secondary},
-        ${theme.colors.black}
-      );
-    }
-
-    :before {
-      content: '';
-      width: 100%;
-      opacity: 0.5;
-      height: 0.1rem;
-      display: block;
-      transition: 1s all ease-in-out;
-    }
-
-    :hover,
-    :focus {
-      :after {
-        width: 100%;
-      }
-      :before {
-        width: 0%;
-        background-image: linear-gradient(
-          to right,
-          ${theme.colors.primary},
-          ${theme.colors.secondary},
-          ${theme.colors.black}
-        );
+      svg {
+        font-size: 1.4rem;
       }
     }
   `}

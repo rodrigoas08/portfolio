@@ -1,32 +1,20 @@
 /* eslint-disable */
 import * as S from './styles';
 import { Link } from 'react-scroll';
-import FotoProfile from 'img/profile.webp';
+import FotoProfile from 'assets/profile.webp';
 import { ProgressiveBar } from 'components';
-import { IColorProps } from 'interfaces/header';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import { useState, memo, useLayoutEffect, useEffect } from 'react';
-import { handleScrollPosition, updateProgressiveBar } from './functions';
+import { memo, useLayoutEffect } from 'react';
+import { updateProgressiveBar } from './functions';
+import {
+  FaEnvelope,
+  FaHome,
+  FaIdCard,
+  FaLaptopCode,
+  FaList
+} from 'react-icons/fa';
 
 const Header = () => {
-  const [menuIsOpen, setMenuIsOpen] = useState(false);
-  const [colorHeader, setColorHeader] = useState<IColorProps>({
-    color: 'transparent'
-  });
-
-  useEffect(() => {
-    if (menuIsOpen) setMenuIsOpen(false);
-
-    const handleEsc = ({ key }: KeyboardEvent) => {
-      key === 'Escape' && setMenuIsOpen(false);
-    };
-    document.addEventListener('keyup', handleEsc);
-
-    return () => document.removeEventListener('keyup', handleEsc);
-  }, []);
-
   useLayoutEffect(() => {
-    handleScrollPosition(setColorHeader);
     updateProgressiveBar();
   }, []);
 
@@ -34,76 +22,58 @@ const Header = () => {
     {
       name: 'Início',
       id: 'inicio',
-      ariaText: 'Direciona para o inicio do site'
+      icon: <FaHome title="Início" />
     },
     {
       name: 'Sobre',
       id: 'sobre',
-      ariaText: 'Direciona para a área que fala sobre mim do site'
+      icon: <FaIdCard title="Sobre" />
     },
     {
       name: 'Habilidades',
       id: 'habilidades',
-      ariaText: 'Direciona para a área que exibe habilidades do site'
+      icon: <FaList title="Habilidades" />
     },
     {
       name: 'Projetos',
       id: 'projetos',
-      ariaText: 'Direciona para a área que exibe portfólios do site'
+      icon: <FaLaptopCode title="Projetos" />
     },
     {
       name: 'Contato',
       id: 'contato',
-      ariaText: 'Direciona para a área de contato do site'
+      icon: <FaEnvelope title="Contato" />
     }
   ];
 
   return (
-    <S.Wrapper isOpen={menuIsOpen} color={colorHeader.color}>
-      <Link
-        href={Links[0].id}
-        aria-label={Links[0].ariaText}
-        to={Links[0].id}
-        spy={true}
-        smooth={true}
-      >
+    <S.Wrapper>
+      <ProgressiveBar />
+      <Link href={Links[0].id} to={Links[0].id} spy={true} smooth={true}>
         <S.ImgProfile
           loading="lazy"
           src={FotoProfile}
-          isOpen={menuIsOpen}
           alt="Minha foto para perfil"
         />
       </Link>
-      <S.NavWrapper isOpen={menuIsOpen}>
+      <S.NavWrapper>
         {Links.map((link) => {
           return (
-            <li key={crypto.randomUUID()}>
+            <S.Li key={crypto.randomUUID()}>
               <Link
+                role="link"
                 href={link.id}
-                aria-label={link.ariaText}
                 to={link.id}
                 spy={true}
                 smooth={true}
               >
-                <S.LinkText
-                  isOpen={menuIsOpen}
-                  onClick={() => {
-                    setMenuIsOpen(false);
-                  }}
-                >
-                  {link.name}
-                </S.LinkText>
+                {link.icon}
+                <p>{link.name}</p>
               </Link>
-            </li>
+            </S.Li>
           );
         })}
       </S.NavWrapper>
-      {menuIsOpen ? (
-        <FaTimes size={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
-      ) : (
-        <FaBars size={25} onClick={() => setMenuIsOpen(!menuIsOpen)} />
-      )}
-      <ProgressiveBar />
     </S.Wrapper>
   );
 };

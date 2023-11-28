@@ -1,7 +1,6 @@
 import * as S from './styles';
 import { Title } from 'components';
-import EuPedro from 'img/euPedro.webp';
-import ProfileCard from './ProfileCard';
+import EuPedro from 'assets/euPedro.webp';
 import { openLinkInNewTab } from 'utils/functions';
 import { FaLinkedin, FaWhatsapp, FaInstagram, FaGithub } from 'react-icons/fa';
 
@@ -46,48 +45,48 @@ const AboutMe = () => {
   return (
     <S.Wrapper>
       <Title text="Sobre mim" />
-      <S.Section>
-        <ProfileCard
-          name="Rodrigo Sobral"
-          githubName="@rodrigoas08"
-          localization="Rio de janeiro, Brasil"
-          occupation="Desenvolvedor Front-end"
-          skills="HTML | CSS | JavaScript | ReactJs | Typescript | Styled Components"
-          image={EuPedro}
+      <S.Content
+        data-aos="fade-up"
+        data-aos-offset="2"
+        data-aos-delay="50"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+      >
+        <S.Image
+          loading="lazy"
+          src={EuPedro}
+          alt="Eu segurando meu filho na praia"
         />
-        <S.AboutText
-          data-aos="fade-left"
-          data-aos-offset="2"
-          data-aos-delay="50"
-          data-aos-duration="2000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-        >
-          <S.Text>
-            Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro. <br />
-            Atualmente sou Desenvolvedor Front-end Jr na{' '}
-            <a
-              href="#"
-              aria-label="Abre uma nova aba direcionando para o site da Usabit"
-              onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
-            >
-              <S.Span>Usabit</S.Span>
-            </a>{' '}
-            onde comecei como estágiário em dezembro de 2021.
-            <br />
-            Meu foco é desenvolver interfaces modernas de alta performance,
-            responsivas e SEO. As tecnologias que tenho um conhecimento mais
-            sólido para criação de sites é React.js, Typescript e Styled
-            Component. Hoje venho me aventurando no mundo do Vue.js e busco
-            aprender outras tecnologias para ampliar meus conhecimentos.
-          </S.Text>
-          <S.DivIcons>
-            <h2>Conheça minhas redes sociais:</h2>
-            {ProfilecardIcons}
-          </S.DivIcons>
-        </S.AboutText>
-      </S.Section>
+        <S.Text>
+          Olá, me chamo Rodrigo e sou do Rio de Janeiro. <br />
+          Minha jornada começou como estagiário na{' '}
+          <a
+            href="#"
+            aria-label="Abre uma nova aba direcionando para o site da Usabit"
+            onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
+          >
+            Usabit
+          </a>
+          , onde mergulhei de cabeça no mundo da <strong>programação</strong> e
+          hoje sou <strong>desenvolvedor front-end</strong>.
+          <br />
+          <br />
+          Possuo domínio sólido em <strong>HTML</strong>, <strong>CSS</strong> e{' '}
+          <strong>JavaScript</strong>, enriquecido com{' '}
+          <strong>TypeScript</strong> e incluindo poderosos frameworks como{' '}
+          <strong>React</strong> e <strong>Vue.js</strong>. Meu comprometimento
+          é em entregar soluções de alta qualidade, com interfaces modernas,
+          responsivas e aplicando SEO.
+          <br />
+          <br />
+          Meu trabalho é focado em <strong>Aplicações Web</strong> e estou
+          sempre pronto para enfrentar novos desafios e elevar o padrão do meu
+          trabalho.
+        </S.Text>
+        <S.DivIcons>{ProfilecardIcons}</S.DivIcons>
+      </S.Content>
     </S.Wrapper>
   );
 };

@@ -1,7 +1,7 @@
 import * as S from './styles';
 import { FaEye, FaGithub } from 'react-icons/fa';
 import { openLinkInNewTab } from 'utils/functions';
-import ImageEmConstrucao from 'img/portfolios/em_construcao.webp';
+import ImageEmConstrucao from 'assets/portfolios/em_construcao.webp';
 
 export type CardProps = {
   link?: string;
@@ -20,12 +20,6 @@ const Card = ({
   repository,
   description
 }: CardProps) => {
-  // useLayoutEffect(() => {
-  //   showCardModal
-  //     ? (document.body.style.overflowY = 'hidden')
-  //     : (document.body.style.overflowY = 'scroll');
-  // });
-
   return (
     <S.Card
       data-aos="zoom-in"
@@ -38,20 +32,28 @@ const Card = ({
     >
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>
-        <S.CardTitle>{title ? title : 'EM BREVE'}</S.CardTitle>
+        <S.CardHeader>
+          <S.CardTitle>{title ? title : 'Em Breve'}</S.CardTitle>
+          <S.IconWrapper>
+            {link && (
+              <FaEye size={18} onClick={() => openLinkInNewTab(`${link}`)} />
+            )}
+            {repository && (
+              <FaGithub
+                size={18}
+                onClick={() => openLinkInNewTab(`${repository}`)}
+              />
+            )}
+          </S.IconWrapper>
+        </S.CardHeader>
+
         <S.CardDescription>{description}</S.CardDescription>
-        <S.IconWrapper>
-          {link && (
-            <FaEye size={18} onClick={() => openLinkInNewTab(`${link}`)} />
-          )}
-          {repository && (
-            <FaGithub
-              size={18}
-              onClick={() => openLinkInNewTab(`${repository}`)}
-            />
-          )}
-        </S.IconWrapper>
-        <S.CardStack>{stack}</S.CardStack>
+
+        <S.WrapperStacks>
+          <S.WrapperStack>
+            <S.CardStack>{stack}</S.CardStack>
+          </S.WrapperStack>
+        </S.WrapperStacks>
       </S.CardInfo>
     </S.Card>
   );

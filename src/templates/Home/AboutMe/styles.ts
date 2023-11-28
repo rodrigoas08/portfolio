@@ -1,14 +1,13 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div.attrs({ id: 'sobre' })`
+export const Wrapper = styled.section.attrs({ id: 'sobre' })`
   ${({ theme }) => css`
     width: 100%;
     height: auto;
     display: flex;
-    padding: 14rem 0;
+    padding: 15rem 8rem;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
 
     @media (max-width: ${theme.breakpoints.desktop}) {
       ${DivIcons} h2 {
@@ -17,7 +16,7 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
     }
 
     @media (max-width: ${theme.breakpoints.tablet}) {
-      ${Section} {
+      ${Content} {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -25,9 +24,8 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
         gap: ${theme.spacings.medium};
       }
 
-      ${AboutText} {
-        word-break: keep-all;
-        padding-inline: ${theme.spacings.xlarge};
+      ${Image} {
+        padding: 0;
       }
 
       ${DivIcons} h2 {
@@ -36,96 +34,120 @@ export const Wrapper = styled.div.attrs({ id: 'sobre' })`
     }
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      ${Section} {
+      padding-inline: 2.4rem;
+
+      ${Content} {
         display: flex;
         justify-content: center;
       }
 
-      ${AboutText} ${Text} {
-        display: none;
-      }
-
-      ${AboutText} {
-        width: 32rem;
-      }
-
       ${DivIcons} {
         flex-wrap: wrap;
+      }
+    }
 
-        h2 {
-          font-size: ${theme.font.sizes.small};
-        }
+    @media (max-width: ${theme.breakpoints.mobile}) {
+      ${Text} {
+        text-align: left;
+        font-size: ${theme.font.sizes.medium};
       }
     }
   `}
 `;
 
-export const Section = styled.section`
+export const Content = styled.div`
   ${({ theme }) => css`
+    width: 100%;
     height: auto;
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr auto;
-    column-gap: ${theme.spacings.small};
+    position: relative;
+    padding: ${theme.spacings.small};
     margin-top: ${theme.spacings.xxlarge};
-    grid-template-areas: 'aboutCard aboutText';
+    :after {
+      content: '';
+      bottom: 0;
+      left: 0rem;
+      width: 100%;
+      height: 0.1rem;
+      position: absolute;
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
+    }
+
+    :before {
+      content: '';
+      top: 0;
+      left: 0rem;
+      width: 100%;
+      height: 0.1rem;
+      position: absolute;
+      border-radius: ${theme.border.radius};
+      background-image: linear-gradient(
+        to right,
+        ${theme.colors.black},
+        ${theme.colors.primary},
+        ${theme.colors.secondary},
+        ${theme.colors.primary},
+        ${theme.colors.black}
+      );
+    }
   `}
 `;
 
-export const AboutText = styled.div`
+export const Image = styled.img`
   ${({ theme }) => css`
-    width: 64rem;
-    height: auto;
-    display: flex;
-    align-items: start;
-    grid-area: aboutText;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: ${theme.spacings.small};
-    border-radius: ${theme.border.radius};
-    background-color: ${theme.colors.grayIce};
+    float: left;
+    width: 15rem;
+    height: 15rem;
+    padding: ${theme.spacings.xxsmall} ${theme.spacings.small}
+      ${theme.spacings.small} 0;
   `}
 `;
 
 export const Text = styled.p`
   ${({ theme }) => css`
     line-height: 3rem;
-    font-size: ${theme.font.sizes.medium};
-    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
-  `}
+    font-weight: ${theme.font.thin};
+    font-size: ${theme.font.sizes.large};
 
-  a {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-  }
-`;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      color: ${theme.colors.primary};
+      font-weight: ${theme.font.medium};
+    }
 
-export const Span = styled.b`
-  ${({ theme }) => css`
-    color: ${theme.colors.primary};
+    strong {
+      font-weight: ${theme.font.thin};
+      :not(:first-of-type) {
+        color: ${theme.colors.primary};
+        font-weight: ${theme.font.medium};
+      }
+    }
   `}
 `;
 
 export const DivIcons = styled.div`
   ${({ theme }) => css`
+    width: 100%;
     display: flex;
+    justify-content: center;
     gap: ${theme.spacings.medium};
     margin-top: ${theme.spacings.small};
 
-    h2 {
-      font-size: 2.4rem;
-      text-shadow: 0.1rem 0.4rem 0.2rem ${theme.colors.black};
-    }
-
     svg {
       fill: url('#gradient');
+      transition: 0.2s linear;
       filter: drop-shadow(0.1rem 0.3rem 0.2rem ${theme.colors.black});
     }
 
     svg:hover {
-      opacity: 0.3;
-      transition: 1s linear;
+      scale: 1.2;
     }
   `}
 `;

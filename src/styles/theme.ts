@@ -5,13 +5,12 @@ export default {
   },
   font: {
     Saira: 'Saira',
-    light: 300,
+    thin: 100,
     normal: 400,
     medium: 500,
     bold: 700,
 
     sizes: {
-      xxsmall: '1rem',
       xsmall: '1.2rem',
       small: '1.4rem',
       medium: '1.6rem',
@@ -35,13 +34,12 @@ export default {
     primary: '#00ACEE',
     secondary: '#9AE5F3',
     background: '#161616',
-    alabaster: '#fafafa',
+    text: '#fafafa',
     black: '#000000',
     error: '#FF6262',
     gray: '#8E8E8E',
     grayIce: '#ffffff1a',
     success: '#28A745',
-    text: '#777777',
     whatsapp: '#40c351'
   },
   breakpoints: {

@@ -1,11 +1,29 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import * as S from './styles';
+import theme from 'styles/theme';
+import { HomeIllustration } from 'assets/Illustrations';
 import { openLinkInNewTab } from 'utils/functions';
 import { Portfolio, AboutMe, Contact, Skills } from 'templates';
 import { FaLinkedin, FaWhatsapp, FaGithub } from 'react-icons/fa';
+import { useLayoutEffect, useState } from 'react';
 
 const Home = () => {
+  const [sizeIllustration, setSizeIllustration] = useState('30rem');
+
+  useLayoutEffect(() => {
+    if (window.innerWidth <= parseInt(theme.breakpoints.ipad))
+      setSizeIllustration('20rem');
+
+    window.addEventListener('resize', function () {
+      if (this.window.innerWidth > parseInt(theme.breakpoints.ipad)) {
+        setSizeIllustration('30rem');
+      } else {
+        setSizeIllustration('20rem');
+      }
+    });
+  }, []);
+
   return (
     <>
       <S.Wrapper
@@ -19,6 +37,10 @@ const Home = () => {
       >
         <S.WrapperText>
           <S.Name>Rodrigo Sobral</S.Name>
+          <HomeIllustration
+            width={sizeIllustration}
+            height={sizeIllustration}
+          />
           <S.CarrerName>desenvolvedor front-end</S.CarrerName>
           <S.NavIcons>
             <FaGithub

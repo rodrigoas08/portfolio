@@ -5,13 +5,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: ${({ theme }) => theme.font.Saira}, sans-serif;
   }
   
   body {
     height: auto;
     overflow-x: hidden;
-    color: ${({ theme }) => theme.colors.alabaster};
-    font-family: ${({ theme }) => theme.font.Saira}, sans-serif;
+    color: ${({ theme }) => theme.colors.text};
     background-color: ${({ theme }) => theme.colors.background};
       
     ::-webkit-scrollbar {
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
     
     ::-webkit-scrollbar-track {
-      background: ${({ theme }) => theme.colors.black};
+      background-color: ${({ theme }) => theme.colors.black};
     }
 
     ::-webkit-scrollbar-thumb {

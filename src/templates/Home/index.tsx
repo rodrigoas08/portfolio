@@ -16,11 +16,9 @@ const Home = () => {
       setSizeIllustration('20rem');
 
     window.addEventListener('resize', function () {
-      if (this.window.innerWidth > parseInt(theme.breakpoints.ipad)) {
-        setSizeIllustration('30rem');
-      } else {
-        setSizeIllustration('20rem');
-      }
+      window.innerWidth > parseInt(theme.breakpoints.ipad)
+        ? setSizeIllustration('30rem')
+        : setSizeIllustration('20rem');
     });
   }, []);
 

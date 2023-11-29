@@ -22,13 +22,13 @@ const Card = ({
 }: CardProps) => {
   return (
     <S.Card
-      data-aos="zoom-in"
-      data-aos-offset="2"
-      data-aos-delay="50"
-      data-aos-duration="2000"
-      data-aos-easing="ease-in-out"
-      data-aos-mirror="true"
-      data-aos-once="false"
+    // data-aos="zoom-in"
+    // data-aos-offset="2"
+    // data-aos-delay="50"
+    // data-aos-duration="2000"
+    // data-aos-easing="ease-in-out"
+    // data-aos-mirror="true"
+    // data-aos-once="false"
     >
       <S.CardImage background={background ? background : ImageEmConstrucao} />
       <S.CardInfo>

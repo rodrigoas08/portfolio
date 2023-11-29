@@ -6,6 +6,7 @@ export const Card = styled.div`
     width: 30rem;
     display: grid;
     height: 40rem;
+    position: relative;
     grid-template-rows: 1fr 0.8fr;
     padding: ${theme.spacings.xsmall};
     background-color: ${theme.colors.black};

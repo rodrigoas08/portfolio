@@ -27,5 +27,21 @@ export const CardList = [
     stack: '',
     repository: '',
     link: ''
+  },
+  {
+    title: '',
+    background: '',
+    description: '',
+    stack: '',
+    repository: '',
+    link: ''
+  },
+  {
+    title: '',
+    background: '',
+    description: '',
+    stack: '',
+    repository: '',
+    link: ''
   }
 ];

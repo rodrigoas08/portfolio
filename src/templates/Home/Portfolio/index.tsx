@@ -4,31 +4,33 @@ import { CardList } from './mock';
 import { Title } from 'components';
 import InputSearch from './InputSearch';
 import { useMemo, useState } from 'react';
+import SwiperJS from './Swiper';
 
 const Portfolio = () => {
-  const [search, setSearch] = useState('');
+  // const [search, setSearch] = useState('');
 
-  const filteredPortfolios = useMemo(() => {
-    const lowerSearch = search
-      .toLowerCase()
-      .replace(/[áàâãä]/gi, 'a')
-      .replace(/[éèêë]/gi, 'e')
-      .replace(/[íìîï]/gi, 'i')
-      .replace(/[óòôõö]/gi, 'o')
-      .replace(/[úùûü]/gi, 'u')
-      .replace(/[ç]/gi, 'c');
-    return CardList.filter((portfolio) =>
-      portfolio.title.toLowerCase().includes(lowerSearch)
-    );
-  }, [search]);
+  // const filteredPortfolios = useMemo(() => {
+  //   const lowerSearch = search
+  //     .toLowerCase()
+  //     .replace(/[áàâãä]/gi, 'a')
+  //     .replace(/[éèêë]/gi, 'e')
+  //     .replace(/[íìîï]/gi, 'i')
+  //     .replace(/[óòôõö]/gi, 'o')
+  //     .replace(/[úùûü]/gi, 'u')
+  //     .replace(/[ç]/gi, 'c');
+  //   return CardList.filter((portfolio) =>
+  //     portfolio.title.toLowerCase().includes(lowerSearch)
+  //   );
+  // }, [search]);
 
   return (
     <S.Wrapper>
       <Title text="Projetos" />
       <S.Subtitle>Veja aqui alguns trabalhos feitos por mim</S.Subtitle>
-      <InputSearch search={search} setSearch={setSearch} />
+      {/* <InputSearch search={search} setSearch={setSearch} /> */}
       <S.Section>
-        {filteredPortfolios.length > 0 ? (
+        <SwiperJS />
+        {/* {filteredPortfolios.length > 0 ? (
           filteredPortfolios.map((card) => {
             return (
               <Card
@@ -46,7 +48,7 @@ const Portfolio = () => {
           <S.TextAlert>
             Nenhum resultado encontrado para "{search.valueOf()}".
           </S.TextAlert>
-        )}
+        )} */}
       </S.Section>
     </S.Wrapper>
   );

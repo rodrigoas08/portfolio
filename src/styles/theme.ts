@@ -43,6 +43,7 @@ export default {
     whatsapp: '#40c351'
   },
   breakpoints: {
+    smallMobile: '374px',
     mobile: '599px',
     ipad: '767px',
     smallTablet: '991px',

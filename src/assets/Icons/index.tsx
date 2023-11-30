@@ -1,5 +1,5 @@
 import theme from 'styles/theme';
-
+import * as S from './styles';
 /*
 ************************
   ICONS SECTION SKILLS
@@ -248,5 +248,23 @@ export const SubjectIcon = () => {
       </defs>
       <path d="M60 82.2857H0V96H60V82.2857ZM96 27.4286H0V41.1429H96V27.4286ZM0 68.5714H96V54.8571H0V68.5714ZM0 0V13.7143H96V0H0Z" />
     </svg>
+  );
+};
+
+/*
+************************
+    POLYGON ICONS
+************************
+*/
+
+type IconProps = {
+  children: React.ReactChild;
+};
+
+export const PolygonIcon = ({ children }: IconProps) => {
+  return (
+    <S.Span>
+      <S.WrapperIcon>{children}</S.WrapperIcon>
+    </S.Span>
   );
 };

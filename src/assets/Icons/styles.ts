@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { IconProps } from '.';
 
 export const Span = styled.span`
   ${({ theme }) => css`
@@ -6,8 +7,8 @@ export const Span = styled.span`
   `}
 `;
 
-export const WrapperIcon = styled.div`
-  ${({ theme }) => css`
+export const WrapperIcon = styled.div<IconProps>`
+  ${({ theme, width, height }) => css`
     width: auto;
     height: auto;
     display: flex;
@@ -30,11 +31,15 @@ export const WrapperIcon = styled.div`
 
     svg {
       padding: 1rem;
-      width: 5rem;
-      height: 5rem;
+      width: ${width}rem;
+      height: ${height}rem;
       fill: url('#gradient');
       transition: 0.2s linear;
       filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
+
+      :hover {
+        transform: scale(1.2);
+      }
     }
   `}
 `;

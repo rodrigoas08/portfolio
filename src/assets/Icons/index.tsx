@@ -257,14 +257,18 @@ export const SubjectIcon = () => {
 ************************
 */
 
-type IconProps = {
+export type IconProps = {
   children: React.ReactChild;
+  height?: number;
+  width?: number;
 };
 
-export const PolygonIcon = ({ children }: IconProps) => {
+export const PolygonIcon = ({ children, height = 5, width = 5 }: IconProps) => {
   return (
     <S.Span>
-      <S.WrapperIcon>{children}</S.WrapperIcon>
+      <S.WrapperIcon width={width} height={height}>
+        {children}
+      </S.WrapperIcon>
     </S.Span>
   );
 };

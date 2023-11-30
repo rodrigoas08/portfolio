@@ -15,7 +15,7 @@ export const Wrapper = styled.header<HeaderProps>`
     position: fixed;
     align-items: center;
     flex-direction: column;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1rem);
     transform: translateY(-50%);
     gap: ${theme.spacings.large};
     justify-content: space-between;
@@ -39,9 +39,7 @@ export const Wrapper = styled.header<HeaderProps>`
       left: 50%;
       width: 100%;
       height: 8rem;
-      position: fixed;
       border-radius: 0;
-      align-items: center;
       flex-direction: row;
       justify-content: center;
       transform: translateX(-50%);

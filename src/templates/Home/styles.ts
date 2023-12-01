@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Wrapper = styled.section.attrs({ id: 'inicio' })`
   ${({ theme }) => css`
     width: 100%;
+    height: 100dvh;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -21,8 +22,19 @@ export const Wrapper = styled.section.attrs({ id: 'inicio' })`
         font-size: 5rem;
         line-height: 105%;
       }
+    }
+
+    @media (max-width: ${theme.breakpoints.smallMobile}) {
+      ${WrapperText} {
+        gap: ${theme.spacings.xxxsmall};
+      }
+
+      ${Name} {
+        font-size: 4rem;
+      }
+
       ${CarrerName} {
-        font-size: ${theme.font.sizes.xlarge};
+        font-size: ${theme.font.sizes.large};
       }
     }
   `}
@@ -33,7 +45,7 @@ export const WrapperText = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: ${theme.spacings.xxsmall};
+    gap: ${theme.spacings.small};
     letter-spacing: ${theme.spacings.xxxsmall};
   `}
 `;

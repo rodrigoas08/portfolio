@@ -6,7 +6,7 @@ import theme from 'styles/theme';
 *****************************
 */
 
-export const HomeIllustration = ({ width = '25rem', height = '25rem' }) => {
+export const HomeIllustration = ({ width = '20rem', height = '20rem' }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

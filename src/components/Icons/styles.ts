@@ -1,19 +1,24 @@
 import styled, { css } from 'styled-components';
 import { IconProps } from '.';
 
-export const Span = styled.span`
-  ${({ theme }) => css`
-    filter: drop-shadow(0rem 0rem 0.2rem ${theme.colors.primary});
+export const Wrapper = styled.div<IconProps>`
+  ${({ theme, isShaded }) => css`
+    ${isShaded &&
+    css`
+      filter: drop-shadow(0rem 0rem 0.2rem ${theme.colors.primary});
+    `}
   `}
 `;
 
-export const WrapperIcon = styled.div<IconProps>`
-  ${({ theme, width, height }) => css`
+export const Icon = styled.div<IconProps>`
+  ${({ theme, size, isHover }) => css`
     width: auto;
     height: auto;
     display: flex;
     align-items: center;
+    border-radius: 35%;
     justify-content: center;
+    background-color: ${theme.colors.black};
     clip-path: polygon(
       25% 0%,
       75% 0%,
@@ -27,18 +32,16 @@ export const WrapperIcon = styled.div<IconProps>`
       0% 25%
     );
 
-    background-color: rgba(0, 0, 0);
-
     svg {
       padding: 1rem;
-      width: ${width}rem;
-      height: ${height}rem;
+      width: ${size}rem;
+      height: ${size}rem;
       fill: url('#gradient');
       transition: 0.2s linear;
       filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
 
       :hover {
-        transform: scale(1.2);
+        transform: ${isHover ? 'scale(1.1)' : 'scale(1)'};
       }
     }
   `}

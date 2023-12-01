@@ -259,16 +259,22 @@ export const SubjectIcon = () => {
 
 export type IconProps = {
   children: React.ReactChild;
-  height?: number;
-  width?: number;
+  size?: number;
+  isHover?: boolean;
+  isShaded?: boolean;
 };
 
-export const PolygonIcon = ({ children, height = 5, width = 5 }: IconProps) => {
+export const PolygonIcon = ({
+  children,
+  size = 5,
+  isHover,
+  isShaded
+}: IconProps) => {
   return (
-    <S.Span>
-      <S.WrapperIcon width={width} height={height}>
+    <S.Wrapper isShaded={isShaded}>
+      <S.Icon size={size} isHover={isHover} isShaded={isShaded}>
         {children}
-      </S.WrapperIcon>
-    </S.Span>
+      </S.Icon>
+    </S.Wrapper>
   );
 };

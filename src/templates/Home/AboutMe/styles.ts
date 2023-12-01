@@ -1,18 +1,22 @@
 import styled, { css } from 'styled-components';
+import EuPedro from 'assets/euPedro.webp';
 
 export const Wrapper = styled.section.attrs({ id: 'sobre' })`
   ${({ theme }) => css`
     width: 100%;
     height: auto;
     display: flex;
-    padding: 15rem 8rem;
     align-items: center;
+    padding: 8rem 8rem 0;
     flex-direction: column;
 
-    @media (max-width: ${theme.breakpoints.desktop}) {
-      ${DivIcons} h2 {
-        font-size: ${theme.font.sizes.large};
+    @media (max-width: ${theme.breakpoints.largeDestkop}) {
+      ${Content} {
+        width: 100%;
       }
+    }
+
+    @media (max-width: ${theme.breakpoints.desktop}) {
     }
 
     @media (max-width: ${theme.breakpoints.tablet}) {
@@ -24,12 +28,8 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
         gap: ${theme.spacings.medium};
       }
 
-      ${Image} {
-        padding: 0;
-      }
-
-      ${DivIcons} h2 {
-        font-size: ${theme.font.sizes.xlarge};
+      ${Text} {
+        text-align: center;
       }
     }
 
@@ -40,15 +40,11 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
         display: flex;
         justify-content: center;
       }
-
-      ${DivIcons} {
-        flex-wrap: wrap;
-      }
     }
 
     @media (max-width: ${theme.breakpoints.mobile}) {
+      padding-inline: 0;
       ${Text} {
-        text-align: left;
         font-size: ${theme.font.sizes.medium};
       }
     }
@@ -57,63 +53,38 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
 
 export const Content = styled.div`
   ${({ theme }) => css`
-    width: 100%;
+    width: 75%;
     height: auto;
-    position: relative;
     padding: ${theme.spacings.small};
-    margin-top: ${theme.spacings.xxlarge};
-    :after {
-      content: '';
-      bottom: 0;
-      left: 0rem;
-      width: 100%;
-      height: 0.1rem;
-      position: absolute;
-      background-image: linear-gradient(
-        to right,
-        ${theme.colors.black},
-        ${theme.colors.primary},
-        ${theme.colors.secondary},
-        ${theme.colors.primary},
-        ${theme.colors.black}
-      );
-    }
-
-    :before {
-      content: '';
-      top: 0;
-      left: 0rem;
-      width: 100%;
-      height: 0.1rem;
-      position: absolute;
-      border-radius: ${theme.border.radius};
-      background-image: linear-gradient(
-        to right,
-        ${theme.colors.black},
-        ${theme.colors.primary},
-        ${theme.colors.secondary},
-        ${theme.colors.primary},
-        ${theme.colors.black}
-      );
-    }
+    margin-top: ${theme.spacings.large};
   `}
 `;
 
-export const Image = styled.img`
+export const AboutImage = styled.div`
+  float: left;
+  width: 30rem;
+  height: 30rem;
+  position: relative;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.4rem 0.9rem rgba(0, 0, 0, 0.9);
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6)),
+    url(${EuPedro});
+`;
+
+export const Aside = styled.aside`
   ${({ theme }) => css`
-    float: left;
-    width: 15rem;
-    height: 15rem;
-    padding: ${theme.spacings.xxsmall} ${theme.spacings.small}
-      ${theme.spacings.small} 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: ${theme.spacings.small};
   `}
 `;
 
 export const Text = styled.p`
   ${({ theme }) => css`
-    line-height: 3rem;
-    font-weight: ${theme.font.thin};
-    font-size: ${theme.font.sizes.large};
+    letter-spacing: 0.1rem;
+    font-size: ${theme.font.sizes.xlarge};
 
     a {
       cursor: pointer;
@@ -123,31 +94,22 @@ export const Text = styled.p`
     }
 
     strong {
-      font-weight: ${theme.font.thin};
+      font-weight: ${theme.font.medium};
       :not(:first-of-type) {
         color: ${theme.colors.primary};
-        font-weight: ${theme.font.medium};
       }
     }
   `}
 `;
 
-export const DivIcons = styled.div`
-  ${({ theme }) => css`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: ${theme.spacings.medium};
-    margin-top: ${theme.spacings.small};
+// export const WrapperAboutIcons = styled.div`
+//   ${({ theme }) => css`
+//     display: flex;
+//     justify-content: center;
+//     column-gap: ${theme.spacings.xxsmall};
 
-    svg {
-      fill: url('#gradient');
-      transition: 0.2s linear;
-      filter: drop-shadow(0.1rem 0.3rem 0.2rem ${theme.colors.black});
-    }
-
-    svg:hover {
-      scale: 1.2;
-    }
-  `}
-`;
+//     span:nth-of-type(2) {
+//       transform: rotateY(180deg);
+//     }
+//   `}
+// `;

@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { FormStateProps } from 'interfaces/form';
 import { Button, Input, Title } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
-import { SubjectIcon } from 'assets/Icons';
+import { SubjectIcon } from 'components/Icons';
 import { FaRegUser } from 'react-icons/fa';
 import { FaAt } from 'react-icons/fa6';
 

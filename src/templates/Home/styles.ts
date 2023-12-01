@@ -49,7 +49,7 @@ export const Name = styled.h1`
 export const CarrerName = styled.h2`
   ${({ theme }) => css`
     text-transform: uppercase;
-    color: ${theme.colors.text};
+    color: ${theme.colors.primary};
     font-weight: ${theme.font.medium};
     font-size: ${theme.font.sizes.xxlarge};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
@@ -60,15 +60,5 @@ export const NavIcons = styled.div`
   ${({ theme }) => css`
     display: flex;
     column-gap: ${theme.spacings.medium};
-
-    svg {
-      fill: url('#gradient');
-      transition: 0.2s linear;
-      filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
-    }
-
-    svg:hover {
-      scale: 1.2;
-    }
   `}
 `;

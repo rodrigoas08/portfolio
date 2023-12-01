@@ -1,11 +1,6 @@
 import * as S from './styles';
 import { Title } from 'components';
 import { openLinkInNewTab } from 'utils/functions';
-// import { MdDevices } from 'react-icons/md';
-// import { IoMdSpeedometer } from 'react-icons/io';
-// import { FaHandsAslInterpreting } from 'react-icons/fa6';
-// import { FaGlobe } from 'react-icons/fa';
-// import { PolygonIcon } from 'assets/Icons';
 
 const AboutMe = () => {
   return (
@@ -40,28 +35,6 @@ const AboutMe = () => {
             priorizando performance, acessibilidade, responsividade e a
             semântica do código.
           </S.Text>
-          {/* <S.WrapperAboutIcons>
-            <PolygonIcon
-              size={8}
-              children={<MdDevices title="Responsividade" />}
-              key={crypto.randomUUID()}
-            />
-            <PolygonIcon
-              size={8}
-              children={<IoMdSpeedometer title="Performance" />}
-              key={crypto.randomUUID()}
-            />
-            <PolygonIcon
-              size={8}
-              children={<FaHandsAslInterpreting title="Acessibilidade" />}
-              key={crypto.randomUUID()}
-            />
-            <PolygonIcon
-              size={8}
-              children={<FaGlobe title="SEO" />}
-              key={crypto.randomUUID()}
-            />
-          </S.WrapperAboutIcons> */}
         </S.Aside>
       </S.Content>
     </S.Wrapper>

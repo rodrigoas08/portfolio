@@ -21,7 +21,7 @@ export const Wrapper = styled.section.attrs({ id: 'projetos' })`
 export const Subtitle = styled.h2`
   ${({ theme }) => css`
     text-align: center;
-    font-weight: ${theme.font.thin};
+    font-weight: ${theme.font.medium};
     padding-top: ${theme.spacings.large};
     font-size: ${theme.font.sizes.xlarge};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};

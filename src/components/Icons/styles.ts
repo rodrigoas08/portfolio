@@ -5,15 +5,15 @@ export const Wrapper = styled.div<IconProps>`
   ${({ theme, isShaded }) => css`
     ${isShaded &&
     css`
-      filter: drop-shadow(0rem 0rem 0.2rem ${theme.colors.primary});
+      filter: drop-shadow(0rem 0rem 0.1rem ${theme.colors.primary});
     `}
   `}
 `;
 
 export const Icon = styled.div<IconProps>`
   ${({ theme, size, isHover }) => css`
-    width: auto;
-    height: auto;
+    min-width: 5rem;
+    min-height: 5rem;
     display: flex;
     align-items: center;
     border-radius: 35%;

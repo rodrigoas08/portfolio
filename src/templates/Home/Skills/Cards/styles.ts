@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     row-gap: ${theme.spacings.medium};
     margin-top: ${theme.spacings.large};
     column-gap: ${theme.spacings.small};
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding-inline: ${theme.spacings.xxsmall};
 
     @media (max-width: ${theme.breakpoints.desktop}) {

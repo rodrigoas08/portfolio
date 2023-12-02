@@ -61,6 +61,7 @@ export const Wrapper = styled.button<
     cursor: pointer;
     text-decoration: none;
     color: ${theme.colors.text};
+    border-radius: ${theme.border.radius};
     background-image: linear-gradient(
       to right,
       ${theme.colors.primary},

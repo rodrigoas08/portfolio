@@ -19,13 +19,5 @@ export const CardList = [
     stack: ['Vue', 'TypeScript'].join(' • '),
     repository: 'https://github.com/rodrigoas08/github-api',
     link: 'https://github-api-rodrigoas08.vercel.app'
-  },
-  {
-    title: '',
-    background: '',
-    description: '',
-    stack: '',
-    repository: '',
-    link: ''
   }
 ];

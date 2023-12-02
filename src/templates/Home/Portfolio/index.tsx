@@ -2,11 +2,11 @@ import Card from './Card';
 import * as S from './styles';
 import { CardList } from './mock';
 import { Title } from 'components';
-import InputSearch from './InputSearch';
+// import InputSearch from './InputSearch';
 import { useMemo, useState } from 'react';
 
 const Portfolio = () => {
-  const [search, setSearch] = useState('');
+  const [search] = useState('');
 
   const filteredPortfolios = useMemo(() => {
     const lowerSearch = search
@@ -18,7 +18,7 @@ const Portfolio = () => {
       .replace(/[úùûü]/gi, 'u')
       .replace(/[ç]/gi, 'c');
     return CardList.filter((portfolio) =>
-      portfolio.title.toLowerCase().includes(lowerSearch)
+      portfolio.stack.toLowerCase().includes(lowerSearch)
     );
   }, [search]);
 
@@ -38,7 +38,6 @@ const Portfolio = () => {
                 background={card.background}
                 title={card.title}
                 description={card.description}
-                stack={card.stack}
               />
             );
           })

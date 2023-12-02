@@ -18,7 +18,7 @@ export const Icon = styled.div<IconProps>`
     align-items: center;
     border-radius: 35%;
     justify-content: center;
-    background-color: ${theme.colors.black};
+    background-color: ${theme.colors.background};
     clip-path: polygon(
       25% 0%,
       75% 0%,

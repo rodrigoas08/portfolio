@@ -36,6 +36,10 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
     @media (max-width: ${theme.breakpoints.ipad}) {
       padding-inline: 2.4rem;
 
+      ${AboutImage} {
+        margin: 0;
+      }
+
       ${Content} {
         display: flex;
         justify-content: center;
@@ -61,23 +65,15 @@ export const Content = styled.div`
 `;
 
 export const AboutImage = styled.div`
-  float: left;
-  width: 30rem;
-  height: 30rem;
-  position: relative;
-  border-radius: 1rem;
-  box-shadow: 0.3rem 0.4rem 0.9rem rgba(0, 0, 0, 0.9);
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6)),
-    url(${EuPedro});
-`;
-
-export const Aside = styled.aside`
   ${({ theme }) => css`
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-inline: ${theme.spacings.small};
+    float: left;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.4rem 0.9rem rgba(0, 0, 0, 0.9);
+    margin: 0 ${theme.spacings.small} ${theme.spacings.small} 0;
+    background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.6)),
+      url(${EuPedro});
   `}
 `;
 
@@ -101,15 +97,3 @@ export const Text = styled.p`
     }
   `}
 `;
-
-// export const WrapperAboutIcons = styled.div`
-//   ${({ theme }) => css`
-//     display: flex;
-//     justify-content: center;
-//     column-gap: ${theme.spacings.xxsmall};
-
-//     span:nth-of-type(2) {
-//       transform: rotateY(180deg);
-//     }
-//   `}
-// `;

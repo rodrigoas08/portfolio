@@ -16,26 +16,24 @@ const AboutMe = () => {
         data-aos-once="false"
       >
         <S.AboutImage />
-        <S.Aside>
-          <S.Text>
-            Olá, me chamo Rodrigo, papai do Pedro e sou do Rio de Janeiro.{' '}
-            <br />
-            Minha jornada começou como estagiário na{' '}
-            <a
-              href="#"
-              aria-label="Abre uma nova aba direcionando para o site da Usabit"
-              onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
-            >
-              Usabit
-            </a>{' '}
-            em novembro de 2021, onde mergulhei de cabeça no mundo da{' '}
-            <strong>programação</strong> e me tornei{' '}
-            <strong>desenvolvedor front-end</strong> e hoje sou apaixonado pelo
-            que faço, desenvolvendo aplicações com interfaces atraentes,
-            priorizando performance, acessibilidade, responsividade e a
-            semântica do código.
-          </S.Text>
-        </S.Aside>
+        <S.Text>
+          Olá, me chamo Rodrigo, sou papai do Pedro e moro no Rio de Janeiro.{' '}
+          <br />
+          Minha jornada começou como estagiário na{' '}
+          <a
+            href="#"
+            aria-label="Abre uma nova aba direcionando para o site da Usabit"
+            onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
+          >
+            Usabit
+          </a>{' '}
+          em novembro de 2021, onde mergulhei de cabeça no mundo da{' '}
+          <strong>programação</strong> e me tornei{' '}
+          <strong>desenvolvedor front-end</strong> e hoje sou apaixonado pelo
+          que faço, desenvolvendo aplicações com interfaces atraentes,
+          priorizando performance, acessibilidade, responsividade e a semântica
+          do código.
+        </S.Text>
       </S.Content>
     </S.Wrapper>
   );

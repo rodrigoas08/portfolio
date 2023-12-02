@@ -2,13 +2,13 @@ import * as S from './styles';
 import { FaEye, FaGithub } from 'react-icons/fa';
 import { openLinkInNewTab } from 'utils/functions';
 
-export type CardProps = {
+export interface CardProps {
   link?: string;
   title?: string;
   background?: string;
   repository?: string;
   description?: string;
-};
+}
 
 const Card = ({
   title,

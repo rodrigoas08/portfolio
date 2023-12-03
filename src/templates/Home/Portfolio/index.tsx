@@ -2,11 +2,11 @@ import Card from './Card';
 import * as S from './styles';
 import { CardList } from './mock';
 import { Title } from 'components';
-import InputSearch from './InputSearch';
+// import InputSearch from './InputSearch';
 import { useMemo, useState } from 'react';
 
 const Portfolio = () => {
-  const [search, setSearch] = useState('');
+  const [search] = useState('');
 
   const filteredPortfolios = useMemo(() => {
     const lowerSearch = search
@@ -18,15 +18,15 @@ const Portfolio = () => {
       .replace(/[úùûü]/gi, 'u')
       .replace(/[ç]/gi, 'c');
     return CardList.filter((portfolio) =>
-      portfolio.title.toLowerCase().includes(lowerSearch)
+      portfolio.stack.toLowerCase().includes(lowerSearch)
     );
   }, [search]);
 
   return (
     <S.Wrapper>
       <Title text="Projetos" />
-      <S.SubTitle>Veja aqui alguns trabalhos feitos por mim.</S.SubTitle>
-      <InputSearch search={search} setSearch={setSearch} />
+      <S.Subtitle>Veja aqui alguns trabalhos feitos por mim</S.Subtitle>
+      {/* <InputSearch search={search} setSearch={setSearch} /> */}
       <S.Section>
         {filteredPortfolios.length > 0 ? (
           filteredPortfolios.map((card) => {
@@ -36,16 +36,15 @@ const Portfolio = () => {
                 link={card.link}
                 repository={card.repository}
                 background={card.background}
-                title={card.title.toUpperCase()}
+                title={card.title}
                 description={card.description}
-                stack={card.stack}
               />
             );
           })
         ) : (
-          <S.SubTitle>
+          <S.TextAlert>
             Nenhum resultado encontrado para "{search.valueOf()}".
-          </S.SubTitle>
+          </S.TextAlert>
         )}
       </S.Section>
     </S.Wrapper>

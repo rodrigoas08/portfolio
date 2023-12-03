@@ -1,29 +1,29 @@
 import styled, { css } from 'styled-components';
 
-export const Wrapper = styled.div.attrs({ id: 'projetos' })`
+export const Wrapper = styled.section.attrs({ id: 'projetos' })`
   ${({ theme }) => css`
     width: 100%;
     height: auto;
     display: flex;
-    padding: 14rem 0;
+    padding: 15rem 0;
     align-items: center;
     flex-direction: column;
     justify-content: center;
 
     @media (max-width: ${theme.breakpoints.ipad}) {
-      ${SubTitle} {
-        font-size: ${theme.font.sizes.small};
+      ${TextAlert}, ${Subtitle} {
+        font-size: ${theme.font.sizes.large};
       }
     } ;
   `}
 `;
 
-export const SubTitle = styled.p`
+export const Subtitle = styled.h2`
   ${({ theme }) => css`
     text-align: center;
-    font-weight: lighter;
+    font-weight: ${theme.font.medium};
     padding-top: ${theme.spacings.large};
-    font-size: ${theme.font.sizes.medium};
+    font-size: ${theme.font.sizes.xlarge};
     text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
   `}
 `;
@@ -34,9 +34,9 @@ export const Section = styled.section`
     height: auto;
     display: flex;
     flex-wrap: wrap;
+    word-break: break-all;
     justify-content: center;
     gap: ${theme.spacings.small};
-    padding: ${theme.spacings.xxsmall};
     margin-top: ${theme.spacings.large};
 
     @media (max-width: ${theme.breakpoints.desktop}) {
@@ -48,3 +48,5 @@ export const Section = styled.section`
     }
   `}
 `;
+
+export const TextAlert = styled(Subtitle)``;

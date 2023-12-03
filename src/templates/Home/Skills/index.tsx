@@ -8,7 +8,7 @@ const Skills = () => {
       <Title text="Habilidades" />
       <S.SkillsContent>
         <S.Subtitle>
-          Conheça algumas das tecnologias e ferramentas que uso nos projetos:
+          Conheça algumas tecnologias que uso nos projetos
         </S.Subtitle>
         <SkillCard />
       </S.SkillsContent>
@@ -16,4 +16,3 @@ const Skills = () => {
   );
 };
 export default Skills;
-

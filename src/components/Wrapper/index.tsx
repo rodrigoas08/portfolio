@@ -10,17 +10,19 @@ type WrapperProps = {
 
 const Wrapper = ({ children }: WrapperProps) => {
   return (
-    <S.Wrapper>
-      <ParticlesBg
-        color={theme.colors.primary}
-        num={50}
-        type="cobweb"
-        bg={false}
-      />
+    <>
       <Header />
-      {children}
+      <S.Wrapper>
+        <ParticlesBg
+          color={theme.colors.primary}
+          num={50}
+          type="cobweb"
+          bg={false}
+        />
+        {children}
+      </S.Wrapper>
       <Footer />
-    </S.Wrapper>
+    </>
   );
 };
 

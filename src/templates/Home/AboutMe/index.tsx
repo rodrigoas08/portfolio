@@ -1,93 +1,55 @@
 import * as S from './styles';
 import { Title } from 'components';
-import EuPedro from 'img/euPedro.webp';
-import ProfileCard from './ProfileCard';
 import { openLinkInNewTab } from 'utils/functions';
-import { FaLinkedin, FaWhatsapp, FaInstagram, FaGithub } from 'react-icons/fa';
+import Carousel from './Swiper';
 
 const AboutMe = () => {
-  const ProfilecardIcons = [
-    <FaGithub
-      onClick={() => openLinkInNewTab('https://github.com/rodrigoas08')}
-      size={25}
-      cursor="pointer"
-      title="Github"
-      key={crypto.randomUUID()}
-    />,
-    <FaLinkedin
-      onClick={() =>
-        openLinkInNewTab('https://www.linkedin.com/in/rodrigo-sobral-302012aa/')
-      }
-      size={25}
-      cursor="pointer"
-      title="LinkedIn"
-      key={crypto.randomUUID()}
-    />,
-    <FaInstagram
-      onClick={() =>
-        openLinkInNewTab('https://www.instagram.com/orodrigosobral/')
-      }
-      size={25}
-      cursor="pointer"
-      title="Instagram"
-      key={crypto.randomUUID()}
-    />,
-    <FaWhatsapp
-      onClick={() =>
-        openLinkInNewTab('https://api.whatsapp.com/send?phone=5521985141580')
-      }
-      size={25}
-      cursor="pointer"
-      title="Whatsapp"
-      key={crypto.randomUUID()}
-    />
-  ];
-
   return (
     <S.Wrapper>
       <Title text="Sobre mim" />
-      <S.Section>
-        <ProfileCard
-          name="Rodrigo Sobral"
-          githubName="@rodrigoas08"
-          localization="Rio de janeiro, Brasil"
-          occupation="Desenvolvedor Front-end"
-          skills="HTML | CSS | JavaScript | ReactJs | Typescript | Styled Components"
-          image={EuPedro}
-        />
-        <S.AboutText
-          data-aos="fade-left"
-          data-aos-offset="2"
-          data-aos-delay="50"
-          data-aos-duration="2000"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-        >
-          <S.Text>
-            Meu nome é Rodrigo Sobral, sou natural do Rio de janeiro. <br />
-            Atualmente sou Desenvolvedor Front-end Jr na{' '}
-            <a
-              href="#"
-              aria-label="Abre uma nova aba direcionando para o site da Usabit"
-              onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
-            >
-              <S.Span>Usabit</S.Span>
-            </a>{' '}
-            onde comecei como estágiário em dezembro de 2021.
-            <br />
-            Meu foco é desenvolver interfaces modernas de alta performance,
-            responsivas e SEO. As tecnologias que tenho um conhecimento mais
-            sólido para criação de sites é React.js, Typescript e Styled
-            Component. Hoje venho me aventurando no mundo do Vue.js e busco
-            aprender outras tecnologias para ampliar meus conhecimentos.
-          </S.Text>
-          <S.DivIcons>
-            <h2>Conheça minhas redes sociais:</h2>
-            {ProfilecardIcons}
-          </S.DivIcons>
-        </S.AboutText>
-      </S.Section>
+      <S.Content
+        data-aos="fade-up"
+        data-aos-offset="2"
+        data-aos-delay="50"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+      >
+        <S.AboutImage />
+        <S.Text>
+          Olá, me chamo Rodrigo, sou papai do Pedro e moro no Rio de Janeiro.{' '}
+          <br />
+          Minha jornada começou como estagiário na{' '}
+          <a
+            href="#"
+            aria-label="Abre uma nova aba direcionando para o site da Usabit"
+            onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
+          >
+            Usabit
+          </a>{' '}
+          em novembro de 2021, onde mergulhei de cabeça no mundo da{' '}
+          <strong>programação</strong> e me tornei{' '}
+          <strong>desenvolvedor front-end</strong> e hoje sou apaixonado pelo
+          que faço, desenvolvendo aplicações com interfaces atraentes,
+          priorizando performance, acessibilidade, responsividade e a semântica
+          do código.
+        </S.Text>
+      </S.Content>
+      <S.WrapperCertificates
+        data-aos="fade-up"
+        data-aos-offset="2"
+        data-aos-delay="100"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+      >
+        <S.CertificatesText>
+          Abaixo exibo alguns certificados concluídos
+        </S.CertificatesText>
+        <Carousel />
+      </S.WrapperCertificates>
     </S.Wrapper>
   );
 };

@@ -5,131 +5,97 @@ export type HeaderProps = {
 };
 
 export const Wrapper = styled.header<HeaderProps>`
-  ${({ theme, color, isOpen }) => css`
+  ${({ theme }) => css`
     z-index: 3;
-    width: 100%;
-    height: 12rem;
+    top: 50%;
+    right: 1rem;
+    width: 6rem;
+    height: auto;
     display: flex;
     position: fixed;
     align-items: center;
-    background: ${color};
+    flex-direction: column;
+    backdrop-filter: blur(1rem);
+    transform: translateY(-50%);
+    gap: ${theme.spacings.large};
     justify-content: space-between;
-    padding: ${theme.spacings.xxsmall} 15rem;
-    box-shadow: ${color === 'black'
-      ? '0 0.1rem 0.5rem rgba(0, 172, 238, 0.25)'
-      : 'transparent'};
+    border-radius: 0 0.1rem 0.1rem 0;
+    padding: ${theme.spacings.small};
+    background-color: rgba(0, 0, 0, 0.08);
 
     svg {
-      display: none;
-      fill: ${theme.colors.primary};
+      scale: 1.5;
+      fill: url('#gradient');
+      transition: 0.2s linear;
+      filter: drop-shadow(0 0.3rem 0.2rem ${theme.colors.black});
+
+      :hover {
+        scale: 1.8;
+      }
     }
 
-    ${isOpen &&
-    css`
+    @media (max-width: ${theme.breakpoints.ipad}) {
+      top: 0;
+      left: 50%;
       width: 100%;
-      height: 50rem;
-      align-items: center;
-      flex-direction: column;
-      justify-content: start;
-      background-color: ${theme.colors.black};
-    `}
+      height: 8rem;
+      border-radius: 0;
+      flex-direction: row;
+      justify-content: center;
+      transform: translateX(-50%);
+      gap: ${theme.spacings.small};
 
-    @media (max-width: ${theme.breakpoints.smallTablet}) {
-      padding: 0 ${theme.spacings.large};
-
-      ${NavWrapper} {
-        gap: ${theme.spacings.large};
-        display: ${isOpen ? 'flex' : 'none'};
+      a:has(${ImgProfile}) {
+        display: none;
       }
 
-      svg {
-        top: 4.8rem;
-        right: 4rem;
-        cursor: pointer;
-        position: absolute;
-        display: inline-block;
-        fill: ${theme.colors.primary};
+      ${NavWrapper} {
+        width: 100%;
+        height: 4rem;
+        flex-direction: row;
+        justify-content: space-around;
       }
     }
   `}
 `;
 
 export const ImgProfile = styled.img<HeaderProps>`
-  ${({ theme, isOpen }) => css`
+  ${({ theme }) => css`
     cursor: pointer;
-    width: ${theme.spacings.xlarge};
-    height: ${theme.spacings.xlarge};
+    width: ${theme.spacings.large};
+    height: ${theme.spacings.large};
     border-radius: ${theme.border.rounded};
-
-    ${isOpen &&
-    css`
-      display: none;
-    `}
   `}
 `;
 
 export const NavWrapper = styled.ul<HeaderProps>`
-  ${({ theme, isOpen }) => css`
+  ${({ theme }) => css`
     display: flex;
     list-style: none;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     gap: ${theme.spacings.medium};
-    padding: ${theme.spacings.xlarge} 0;
-    flex-direction: ${isOpen ? 'column' : 'row'};
   `}
 `;
 
-export interface LinkMenuProps extends HeaderProps {
-  activeLink?: boolean;
-}
+export const Li = styled.li<HeaderProps>`
+  ${({ theme }) => css`
+    > a {
+      width: auto;
+      height: auto;
+      display: flex;
+      cursor: pointer;
+      font-size: 0.9rem;
+      align-items: center;
+      text-decoration: none;
+      flex-direction: column;
+      color: ${theme.colors.text};
+      gap: ${theme.spacings.xxsmall};
+      font-weight: ${theme.font.thin};
 
-export const LinkText = styled.button<LinkMenuProps>`
-  ${({ theme, activeLink }) => css`
-    border: none;
-    outline: none;
-    cursor: pointer;
-    background: none;
-    color: ${theme.colors.alabaster};
-    font-size: ${theme.font.sizes.large};
-
-    ${activeLink &&
-    css`
-      transition: all 1.5s ease-in-out;
-      color: ${theme.colors.primary};
-    `}
-
-    :first-child {
-      margin-left: 0rem;
-    }
-
-    :after {
-      content: '';
-      width: 0%;
-      opacity: 0.5;
-      height: 0.1rem;
-      display: block;
-      transition: all 1s ease-in-out;
-      background-color: ${theme.colors.primary};
-    }
-
-    :before {
-      content: '';
-      width: 100%;
-      opacity: 0.5;
-      height: 0.1rem;
-      display: block;
-      transition: 1s all ease-in-out;
-    }
-
-    :hover,
-    :focus {
-      :after {
-        width: 100%;
-      }
-      :before {
-        width: 0%;
-        background-color: ${theme.colors.primary};
+      svg {
+        font-size: 1.4rem;
       }
     }
   `}

@@ -33,7 +33,7 @@
 //     position: absolute;
 //     flex-direction: column;
 //     animation: openModal 2s linear forwards;
-//     background-color: ${theme.colors.alabaster};
+//     background-color: ${theme.colors.text};
 //     padding: ${theme.spacings.medium} ${theme.spacings.medium};
 
 //     @keyframes openModal {

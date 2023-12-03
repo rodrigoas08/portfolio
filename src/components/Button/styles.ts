@@ -5,8 +5,8 @@ const ButtonModifier = {
   secondary: () => css`
     ${({ theme }) => css`
       border: none;
-      background: transparent;
-      color: ${theme.colors.alabaster};
+      background-color: transparent;
+      color: ${theme.colors.text};
 
       :hover {
         opacity: 0.5;
@@ -19,21 +19,21 @@ const ButtonModifier = {
   `,
   disabled: (theme: DefaultTheme) => css`
     cursor: not-allowed;
-    background: ${theme.colors.gray};
+    /* background-color: ${theme.colors.gray}; */
   `,
 
   rippling: () => css`
     ${({ theme }) => css`
       position: relative;
       color: ${theme.colors.primary};
-      background: ${theme.colors.alabaster};
+      background-color: ${theme.colors.text};
 
       ::before {
         inset: 0;
         content: '';
         position: absolute;
         border-radius: ${theme.border.radius};
-        border: 0.6rem solid ${theme.colors.alabaster};
+        border: 0.6rem solid ${theme.colors.text};
       }
 
       :hover,
@@ -60,13 +60,13 @@ export const Wrapper = styled.button<
     border: none;
     cursor: pointer;
     text-decoration: none;
-    color: ${theme.colors.alabaster};
+    color: ${theme.colors.text};
+    border-radius: ${theme.border.radius};
     background-image: linear-gradient(
       to right,
       ${theme.colors.primary},
       ${theme.colors.secondary}
     );
-    border-radius: ${theme.border.radius};
     padding: ${theme.spacings.xxxsmall} ${theme.spacings.small};
 
     :hover {

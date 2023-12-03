@@ -27,8 +27,8 @@ const Carousel = () => {
         centeredSlides={true}
         slidesPerView={1}
         autoplay={{
-          delay: 2500,
-          disableOnInteraction: false
+          delay: 5000,
+          disableOnInteraction: true
         }}
         pagination={{
           clickable: true

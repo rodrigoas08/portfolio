@@ -2,9 +2,12 @@
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin: 0 auto;
 }
 
 .swiper-slide {
+  display: flex;
+  justify-content: center;
   background-position: center;
   background-size: cover;
   width: 300px;
@@ -21,4 +24,10 @@
 
 .swiper-pagination-bullet-active {
   background: #00acee;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  color: #00acee;
+  font-size: 1.6rem;
 }

@@ -4,13 +4,13 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import './styles.css';
 
 // import required modules
-import { EffectCoverflow, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { CardProps } from 'templates/Home/Portfolio/Card';
 import styled, { css } from 'styled-components';
 
@@ -23,18 +23,19 @@ const Carousel = () => {
   return (
     <>
       <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
+        spaceBetween={30}
         centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 2
+        slidesPerView={1}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false
         }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
+        pagination={{
+          clickable: true
+        }}
+        loop={true}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -58,8 +59,8 @@ export default Carousel;
 
 export const CertificateCard = styled.div<CardProps>`
   ${({ background }) => css`
-    width: 23rem;
-    height: 15rem;
+    width: 25rem;
+    height: 17rem;
     transition: 2s;
     border-radius: 1rem;
     background-size: cover;
@@ -68,8 +69,8 @@ export const CertificateCard = styled.div<CardProps>`
     box-shadow: 0.3rem 0.4rem 0.9rem rgba(0, 0, 0, 0.9);
 
     :hover {
-      /* scale: 2;
-      z-index: 2; */
+      scale: 1.5;
+      z-index: 2;
     }
   `}
 `;

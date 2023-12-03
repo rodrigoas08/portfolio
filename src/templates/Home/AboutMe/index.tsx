@@ -16,29 +16,27 @@ const AboutMe = () => {
         data-aos-mirror="true"
         data-aos-once="false"
       >
-        <div>
-          <S.AboutImage />
-          <S.Text>
-            Olá, me chamo Rodrigo, sou papai do Pedro e moro no Rio de Janeiro.{' '}
-            <br />
-            Minha jornada começou como estagiário na{' '}
-            <a
-              href="#"
-              aria-label="Abre uma nova aba direcionando para o site da Usabit"
-              onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
-            >
-              Usabit
-            </a>{' '}
-            em novembro de 2021, onde mergulhei de cabeça no mundo da{' '}
-            <strong>programação</strong> e me tornei{' '}
-            <strong>desenvolvedor front-end</strong> e hoje sou apaixonado pelo
-            que faço, desenvolvendo aplicações com interfaces atraentes,
-            priorizando performance, acessibilidade, responsividade e a
-            semântica do código.
-          </S.Text>
-        </div>
+        <S.AboutImage />
+        <S.Text>
+          Olá, me chamo Rodrigo, sou papai do Pedro e moro no Rio de Janeiro.{' '}
+          <br />
+          Minha jornada começou como estagiário na{' '}
+          <a
+            href="#"
+            aria-label="Abre uma nova aba direcionando para o site da Usabit"
+            onClick={() => openLinkInNewTab('https://www.usabit.com.br')}
+          >
+            Usabit
+          </a>{' '}
+          em novembro de 2021, onde mergulhei de cabeça no mundo da{' '}
+          <strong>programação</strong> e me tornei{' '}
+          <strong>desenvolvedor front-end</strong> e hoje sou apaixonado pelo
+          que faço, desenvolvendo aplicações com interfaces atraentes,
+          priorizando performance, acessibilidade, responsividade e a semântica
+          do código.
+        </S.Text>
+        <Carousel />
       </S.Content>
-      <Carousel />
     </S.Wrapper>
   );
 };

@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
     row-gap: ${theme.spacings.medium};
     margin-top: ${theme.spacings.large};
     column-gap: ${theme.spacings.small};
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding-inline: ${theme.spacings.xxsmall};
 
     @media (max-width: ${theme.breakpoints.desktop}) {
@@ -35,7 +35,8 @@ export const Card = styled.div`
     flex-direction: column;
     border: 0.1rem solid transparent;
     padding: ${theme.spacings.xsmall};
-    background-color: ${theme.colors.black};
+    background-color: ${theme.colors.background};
+    box-shadow: 0.3rem 0.4rem 0.9rem rgba(0, 0, 0, 0.9);
 
     :after {
       content: '';

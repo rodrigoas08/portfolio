@@ -1,10 +1,10 @@
 import * as S from './styles';
-import { ListSkillCards } from 'interfaces/skillCard';
+import { ListSkillIcons } from 'interfaces/skillIcon';
 
 const SkillCard = () => {
   return (
     <S.Wrapper>
-      {ListSkillCards.sort(() => Math.random() - 0.5).map((item) => {
+      {ListSkillIcons.sort(() => Math.random() - 0.5).map((item) => {
         return (
           <S.Card
             key={crypto.randomUUID()}

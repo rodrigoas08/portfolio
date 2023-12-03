@@ -6,7 +6,7 @@ export const CardList = [
     title: 'ecbporto',
     background: `${Ecbporto}`,
     description:
-      'Esse trabalho foi a criação de uma Landing Page responsiva a partir do Figma usando React e Typescript.',
+      'Esse trabalho foi a criação de uma Landing Page responsiva para a empresa ECBPORTO a partir do Figma usando React e Typescript.',
     stack: ['React', 'Typescript', 'Styled Components'].join(' • '),
     repository: 'teste',
     link: 'http://www.ecbporto.com'

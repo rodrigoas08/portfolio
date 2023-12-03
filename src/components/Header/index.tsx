@@ -22,27 +22,27 @@ const Header = () => {
     {
       name: 'Início',
       id: 'inicio',
-      icon: <FaHome title="Início" />
+      icon: <FaHome size={17} title="Início" />
     },
     {
       name: 'Sobre',
       id: 'sobre',
-      icon: <FaIdCard title="Sobre" />
+      icon: <FaIdCard size={17} title="Sobre" />
     },
     {
       name: 'Habilidades',
       id: 'habilidades',
-      icon: <FaList title="Habilidades" />
+      icon: <FaList size={17} title="Habilidades" />
     },
     {
       name: 'Projetos',
       id: 'projetos',
-      icon: <FaLaptopCode title="Projetos" />
+      icon: <FaLaptopCode size={17} title="Projetos" />
     },
     {
       name: 'Contato',
       id: 'contato',
-      icon: <FaEnvelope title="Contato" />
+      icon: <FaEnvelope size={17} title="Contato" />
     }
   ];
 

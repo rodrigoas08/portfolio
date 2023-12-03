@@ -13,11 +13,7 @@ import './styles.css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { CardProps } from 'templates/Home/Portfolio/Card';
 import styled, { css } from 'styled-components';
-
-import Certificate1 from 'assets/certificates/html_css.webp';
-import Certificate2 from 'assets/certificates/acessibilidade.webp';
-import Certificate3 from 'assets/certificates/reactjs.webp';
-import Certificate4 from 'assets/certificates/frontend-one.webp';
+import { CertificatedList } from './mock';
 
 const Carousel = () => {
   return (
@@ -38,18 +34,13 @@ const Carousel = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <CertificateCard background={Certificate1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CertificateCard background={Certificate2} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CertificateCard background={Certificate3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <CertificateCard background={Certificate4} />
-        </SwiperSlide>
+        {CertificatedList.map((item) => {
+          return (
+            <SwiperSlide key={crypto.randomUUID()}>
+              <CertificateCard background={item.path} />
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </>
   );
@@ -69,8 +60,8 @@ export const CertificateCard = styled.div<CardProps>`
     box-shadow: 0.3rem 0.4rem 0.9rem rgba(0, 0, 0, 0.9);
 
     :hover {
-      scale: 1.5;
-      z-index: 2;
+      scale: 1.2;
+      z-index: 5;
     }
   `}
 `;

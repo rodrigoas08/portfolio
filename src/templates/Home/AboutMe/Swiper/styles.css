@@ -1,22 +1,20 @@
 .swiper {
   width: 70%;
+  margin: 0 auto;
   padding-top: 50px;
   padding-bottom: 50px;
-  margin: 0 auto;
 }
 
 .swiper-slide {
+  width: 300px;
   display: flex;
+  background-size: cover;
   justify-content: center;
   background-position: center;
-  background-size: cover;
-  width: 300px;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-}
+/* .swiper-slide div {
+} */
 
 .swiper-3d .swiper-slide-shadow-left {
   background-image: none;
@@ -34,10 +32,10 @@
 
 .swiper-button-next,
 .swiper-button-prev {
-  border-radius: 50%;
+  display: flex;
   width: 3.5rem;
   height: 3.5rem;
-  display: flex;
+  border-radius: 50%;
   align-items: center;
   justify-content: center;
   background-color: #161616;

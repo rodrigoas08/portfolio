@@ -35,8 +35,8 @@ const AboutMe = () => {
           priorizando performance, acessibilidade, responsividade e a semântica
           do código.
         </S.Text>
-        <Carousel />
       </S.Content>
+      <Carousel />
     </S.Wrapper>
   );
 };

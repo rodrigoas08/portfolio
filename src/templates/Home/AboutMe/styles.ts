@@ -24,6 +24,7 @@ export const Wrapper = styled.section.attrs({ id: 'sobre' })`
         display: flex;
         align-items: center;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         gap: ${theme.spacings.medium};
       }

@@ -36,7 +36,20 @@ const AboutMe = () => {
           do código.
         </S.Text>
       </S.Content>
-      <Carousel />
+      <S.WrapperCertificates
+        data-aos="fade-up"
+        data-aos-offset="2"
+        data-aos-delay="100"
+        data-aos-duration="2000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+      >
+        <S.CertificatesText>
+          Abaixo exibo alguns certificados concluídos
+        </S.CertificatesText>
+        <Carousel />
+      </S.WrapperCertificates>
     </S.Wrapper>
   );
 };

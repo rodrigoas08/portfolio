@@ -82,6 +82,7 @@ export const Text = styled.p`
   ${({ theme }) => css`
     letter-spacing: 0.1rem;
     font-size: ${theme.font.sizes.xlarge};
+    text-shadow: 0 0.4rem 0.2rem ${theme.colors.black};
 
     a {
       cursor: pointer;
@@ -96,5 +97,20 @@ export const Text = styled.p`
         color: ${theme.colors.primary};
       }
     }
+  `}
+`;
+
+export const WrapperCertificates = styled.div`
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+`;
+
+export const CertificatesText = styled(Text)`
+  ${({ theme }) => css`
+    letter-spacing: normal;
+    font-weight: ${theme.font.medium};
+    padding-top: ${theme.spacings.medium};
   `}
 `;
